@@ -1,0 +1,20 @@
+AUTOMAÇÃO — REGRA PRÁTICA
+
+A IA deve substituir somente o arquivo `index.html` e manter os demais arquivos intactos.
+
+Fluxo ideal:
+1. gerar novo conteúdo
+2. sobrescrever `index.html`
+3. commit com mensagem descritiva
+4. push para `main`
+
+Arquivos que não devem ser removidos:
+- .nojekyll
+- .github/workflows/deploy-pages.yml
+- favicon.ico
+- favicon-16x16.png
+- favicon-32x32.png
+- apple-touch-icon.png
+- android-chrome-192x192.png
+- android-chrome-512x512.png
+- site.webmanifest

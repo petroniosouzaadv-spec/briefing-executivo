@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PS Briefing executivo - 23/04/2026</title>
+    <meta name="description" content="Briefing executivo em HTML estático, publicado no GitHub Pages e atualizado por automação." />
+    <meta name="theme-color" content="#11191f" />
+    <meta property="og:title" content="PS Briefing executivo - 23/04/2026" />
+    <meta property="og:description" content="Briefing executivo em HTML estático, publicado no GitHub Pages e atualizado por automação." />
+    <meta property="og:type" content="website" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <style>
+      :root {
+        --primary-dark: #11191f;
+        --deep-wine: #561c26;
+        --deep-navy: #172b49;
+        --light-background: #dae1e8;
+        --gold-accent: #bb9d6d;
+        --soft-neutral: #c8b6ac;
+        --ink: #eef2f6;
+        --muted: #aeb9c4;
+        --line: rgba(218, 225, 232, 0.14);
+        --panel: rgba(12, 19, 27, 0.78);
+        --panel-strong: rgba(15, 25, 35, 0.92);
+        --success: #9fc99e;
+        --warning: #d9b56c;
+        --danger: #e09aa0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Montserrat, "Segoe UI", Arial, sans-serif;
+        background:
+          linear-gradient(180deg, rgba(86, 28, 38, 0.28) 0%, rgba(17, 25, 31, 0) 18%),
+          linear-gradient(135deg, #10171d 0%, #172b49 52%, #11191f 100%);
+        color: var(--ink);
+      }
+
+      a {
+        color: #f0d3a2;
+        text-decoration: none;
+      }
+
+      .page {
+        max-width: 1220px;
+        margin: 0 auto;
+        padding: 32px 20px 64px;
+      }
+
+      .hero {
+        border: 1px solid rgba(187, 157, 109, 0.28);
+        background:
+          linear-gradient(120deg, rgba(23, 43, 73, 0.82), rgba(17, 25, 31, 0.94)),
+          linear-gradient(180deg, rgba(187, 157, 109, 0.06), rgba(187, 157, 109, 0));
+        padding: 28px;
+        border-radius: 18px;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
+      }
+
+      .brand {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .brand-mark {
+        max-width: 720px;
+      }
+
+      .eyebrow {
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--soft-neutral);
+        margin-bottom: 14px;
+      }
+
+      .title {
+        font-size: clamp(32px, 4vw, 54px);
+        line-height: 0.98;
+        font-weight: 700;
+        margin: 0;
+      }
+
+      .subtitle {
+        margin: 14px 0 0;
+        max-width: 740px;
+        line-height: 1.6;
+        color: #d8e0e7;
+        font-size: 15px;
+      }
+
+      .stamp {
+        min-width: 260px;
+        padding: 18px;
+        border-radius: 14px;
+        border: 1px solid rgba(187, 157, 109, 0.18);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .stamp h2,
+      .section h2 {
+        margin: 0 0 10px;
+        font-size: 15px;
+        color: var(--soft-neutral);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .stamp p {
+        margin: 5px 0;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .rule {
+        margin: 22px 0 0;
+        width: 120px;
+        height: 2px;
+        background: linear-gradient(90deg, var(--gold-accent), rgba(187, 157, 109, 0));
+      }
+
+      .grid {
+        display: grid;
+        gap: 18px;
+        margin-top: 22px;
+      }
+
+      .grid.summary {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .grid.main {
+        grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.9fr);
+        align-items: start;
+      }
+
+      .section,
+      .metric,
+      .callout {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 22px;
+        backdrop-filter: blur(12px);
+      }
+
+      .metric .value {
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 8px;
+      }
+
+      .metric .label {
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--soft-neutral);
+      }
+
+      .metric .desc {
+        margin-top: 10px;
+        font-size: 13px;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .value.gold { color: var(--gold-accent); }
+      .value.danger { color: var(--danger); }
+      .value.warning { color: var(--warning); }
+      .value.success { color: var(--success); }
+
+      .section-header {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        align-items: flex-start;
+        margin-bottom: 16px;
+      }
+
+      .section-header p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .list {
+        display: grid;
+        gap: 12px;
+      }
+
+      .item {
+        padding: 14px 16px;
+        border-radius: 14px;
+        border: 1px solid rgba(218, 225, 232, 0.08);
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .item h3 {
+        margin: 0 0 8px;
+        font-size: 15px;
+      }
+
+      .item p {
+        margin: 0;
+        color: #d8e0e7;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .meta {
+        margin-top: 10px;
+        font-size: 12px;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .badge-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 10px;
+      }
+
+      .badge {
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-size: 11px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        border: 1px solid rgba(218, 225, 232, 0.1);
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .badge.critical { color: #ffd7db; border-color: rgba(224, 154, 160, 0.26); }
+      .badge.high { color: #ffdca8; border-color: rgba(217, 181, 108, 0.28); }
+      .badge.medium { color: #dbe7f1; border-color: rgba(218, 225, 232, 0.18); }
+      .badge.low { color: #cde4cc; border-color: rgba(159, 201, 158, 0.24); }
+
+      .source-list {
+        margin-top: 14px;
+        padding-top: 14px;
+        border-top: 1px solid rgba(218, 225, 232, 0.08);
+        font-size: 12px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .agenda-line {
+        display: flex;
+        gap: 12px;
+        align-items: baseline;
+        flex-wrap: wrap;
+      }
+
+      .agenda-time {
+        min-width: 84px;
+        color: var(--gold-accent);
+        font-weight: 700;
+        font-size: 14px;
+      }
+
+      .footnote {
+        margin-top: 20px;
+        padding: 18px 20px;
+        border-radius: 14px;
+        background: var(--panel-strong);
+        border: 1px solid rgba(187, 157, 109, 0.18);
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.7;
+      }
+
+      @media (max-width: 980px) {
+        .grid.summary,
+        .grid.main {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .page {
+          padding: 18px 14px 44px;
+        }
+
+        .hero,
+        .section,
+        .metric,
+        .callout {
+          padding: 18px;
+          border-radius: 14px;
+        }
+
+        .title {
+          font-size: 32px;
+        }
+
+        .stamp {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="callout" style="margin-bottom: 18px;">
+        <p style="margin: 0; color: #eef2f6; font-size: 15px; line-height: 1.6;">
+          Olá, Dr. Petrônio. Segue o briefing executivo das últimas 24 horas para sua leitura.
+        </p>
+      </section>
+      <section class="hero">
+        <div class="brand">
+          <div class="brand-mark">
+            <div class="eyebrow">Petrônio Souza Advogados Associados</div>
+            <h1 class="title">Briefing Executivo<br />Últimas 24 Horas</h1>
+            <p class="subtitle">
+              Janela verificada: 22/04/2026 06:29 a 23/04/2026 06:29, America/Sao_Paulo.
+              Cobertura realizada com Google Agenda, Gmail consolidado e memória de deduplicação.
+              Itens jurídicos foram tratados de forma aditiva, sem reduzir o briefing apenas a movimentações processuais.
+            </p>
+            <div class="rule"></div>
+          </div>
+          <aside class="stamp">
+            <h2>Leitura executiva</h2>
+            <p><strong>Foco imediato:</strong> conflito de agenda às 12:00, audiência às 13:00 e audiência criminal amanhã às 08:00.</p>
+            <p><strong>Risco jurídico dominante:</strong> HC 0000536-68.2025.8.17.9901 segue com prazo decorrido e exige revisão hoje.</p>
+            <p><strong>Risco operacional:</strong> recorte digital da OAB/PE informou serviço interrompido e o escritório aparece com 435 intimações pendentes no Projuris.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="grid summary">
+        <article class="metric">
+          <div class="value danger">21</div>
+          <div class="label">Processos vencidos no relatório PJe</div>
+          <div class="desc">Relatório automático de 22/04/2026 às 07:46 apontou ainda 2 itens urgentes e ação imediata necessária.</div>
+        </article>
+        <article class="metric">
+          <div class="value warning">435</div>
+          <div class="label">Intimações pendentes no escritório</div>
+          <div class="desc">Resumo do Projuris na madrugada de 23/04/2026, sem tarefas ou compromissos do dia já convertidos no sistema.</div>
+        </article>
+        <article class="metric">
+          <div class="value gold">3</div>
+          <div class="label">Compromissos de hoje no calendário</div>
+          <div class="desc">Dois eventos às 12:00 competem entre si e reduzem a margem de preparação para a audiência das 13:00.</div>
+        </article>
+        <article class="metric">
+          <div class="value success">R$ 1.019,90</div>
+          <div class="label">Pagamento liquidado no Asaas</div>
+          <div class="desc">Quitação confirmada em 22/04/2026 para Itaú; no mesmo dia houve alerta de transferência em novo dispositivo.</div>
+        </article>
+      </section>
+
+      <section class="grid main">
+        <div class="list">
+          <article class="section">
+            <div class="section-header">
+              <div>
+                <h2>Resumo executivo</h2>
+              </div>
+              <p>Fatos verificados e recomendações separadas do que ainda depende de confirmação.</p>
+            </div>
+            <div class="list">
+              <div class="item">
+                <h3>1. O maior risco jurídico continua sendo o HC com prazo decorrido, e ele volta à agenda hoje às 12:00.</h3>
+                <p>O processo <strong>0000536-68.2025.8.17.9901</strong> segue marcado como prazo decorrido desde 24/03/2026, com natureza criminal e possível necessidade de nova via urgente. O calendário reservou uma revisão exatamente no mesmo horário do compromisso financeiro com Paula Baia.</p>
+              </div>
+              <div class="item">
+                <h3>2. Há uma audiência hoje às 13:00 e outra audiência criminal já designada para amanhã, 24/04/2026 às 08:00.</h3>
+                <p>A agenda traz <strong>Audiência ANDREA x CELPE</strong> para hoje às 13:00. Além disso, a intimação do processo <strong>0011527-56.2025.8.17.2480</strong> confirmou audiência de instrução e julgamento amanhã às 08:00, exigindo preparação ainda hoje.</p>
+              </div>
+              <div class="item">
+                <h3>3. O passivo de controle processual segue alto e há risco operacional de cegueira parcial de publicações.</h3>
+                <p>O Projuris informou <strong>435 intimações pendentes</strong>. Em paralelo, o serviço de recorte digital da OAB/PE avisou <strong>serviço interrompido</strong> e registrou 10 publicações no dia, o que aumenta o risco de perda de monitoramento se o cadastro não for regularizado rapidamente.</p>
+              </div>
+              <div class="item">
+                <h3>4. A camada operacional trouxe sinais relevantes de segurança, caixa e continuidade de serviços.</h3>
+                <p>Houve alerta do Google sobre acesso do app OpenAI à conta Google, pedido de código único da Microsoft, alerta do Asaas para transferência em novo dispositivo, suspensão do plano FOX Saúde por inadimplência e aviso de IPTU em atraso encaminhado por terceiro.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="section">
+            <div class="section-header">
+              <div>
+                <h2>Prioridades críticas</h2>
+              </div>
+              <p>Ordem sugerida para a manhã de 23/04/2026.</p>
+            </div>
+            <div class="list">
+              <div class="item">
+                <h3>Resolver o conflito das 12:00 entre pagamento e revisão do HC.</h3>
+                <p>Os eventos <strong>Pagamento Paula Baia R$ 1.300,00</strong> e <strong>Revisar 0000536-68.2025.8.17.9901</strong> ocupam a mesma faixa de 12:00 a 13:00. Pela natureza criminal e pelo histórico de prazo vencido, a revisão do HC merece precedência jurídica; o compromisso financeiro precisa ser antecipado, delegado ou convertido em confirmação assíncrona.</p>
+              </div>
+              <div class="item">
+                <h3>Preparar a audiência de hoje às 13:00 e deixar fechada a pauta da audiência de amanhã às 08:00.</h3>
+                <p>Hoje já existe audiência no processo <strong>0017263-05.2024.8.17.3090</strong>. Amanhã cedo há AIJ designada no processo <strong>0011527-56.2025.8.17.2480</strong>. O ideal é não deixar a audiência criminal para preparo noturno, porque o dia já está comprimido.</p>
+              </div>
+              <div class="item">
+                <h3>Revalidar o pipeline de publicações antes do fim do expediente.</h3>
+                <p>O aviso da OAB/PE indica interrupção do recorte digital e o relatório PJe mostra 21 vencidos e 2 urgentes. Mesmo que parte do volume seja histórico, o ponto executivo é simples: o escritório não pode depender de um canal de recorte possivelmente instável.</p>
+              </div>
+              <div class="item">
+                <h3>Fazer triagem de segurança e continuidade pessoal/administrativa.</h3>
+                <p>Vale confirmar se o acesso OpenAI ao Google foi intencional, se o código único da Microsoft foi solicitado pelo próprio usuário, se a transferência do Asaas é reconhecida e se haverá regularização do FOX Saúde e do IPTU encaminhado.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="section">
+            <div class="section-header">
+              <div>
+                <h2>Agenda e preparação</h2>
+              </div>
+              <p>Não foram encontrados compromissos concluídos no trecho de 22/04/2026 06:29 a 23/04/2026 06:29. A atenção está concentrada no restante do dia de hoje.</p>
+            </div>
+            <div class="list">
+              <div class="item">
+                <div class="agenda-line">
+                  <div class="agenda-time">12:00-13:00</div>
+                  <h3>Pagamento Paula Baia R$ 1.300,00</h3>
+                </div>
+                <p>Compromisso financeiro já colocado em agenda, mas sem contexto adicional em e-mails. O principal risco aqui é operacional: ele concorre com revisão jurídica mais sensível no mesmo horário.</p>
+                <div class="source-list">Fonte: <a href="https://www.google.com/calendar/event?eid=OHNsMGdhZjJmbmhuZW5yMmhiYzB1MG82ZHNfMjAyNjA0MjNUMTUwMDAwWiBwZXRyb25pb3NvdXphLmFkdkBt&ctz=America/Sao_Paulo">Google Agenda</a></div>
+              </div>
+              <div class="item">
+                <div class="agenda-line">
+                  <div class="agenda-time">12:00-13:00</div>
+                  <h3>Revisar 0000536-68.2025.8.17.9901</h3>
+                </div>
+                <p>Evento coerente com o maior risco jurídico do dia. A descrição do calendário repete o status de prazo decorrido em HC criminal e confirma que o tema foi elevado para revisão manual hoje.</p>
+                <div class="source-list">Fonte: <a href="https://www.google.com/calendar/event?eid=ZGZkdHE4c3JibTg2bzI3NmxmMjNlYmI1cTQgcGV0cm9uaW9zb3V6YS5hZHZAbQ&ctz=America/Sao_Paulo">Google Agenda</a></div>
+              </div>
+              <div class="item">
+                <div class="agenda-line">
+                  <div class="agenda-time">13:00-14:00</div>
+                  <h3>Audiência ANDREA x CELPE</h3>
+                </div>
+                <p>O calendário associa a audiência ao processo <strong>0017263-05.2024.8.17.3090</strong>. A recomendação é entrar na audiência com objetivo, tese curta, documentos-chave e pontos de eventual proposta já separados antes do meio-dia.</p>
+                <div class="source-list">Fonte: <a href="https://www.google.com/calendar/event?eid=aWF0aDg1Y2RwZGwxMGhocmJwM3RybTlsdmMgcGV0cm9uaW9zb3V6YS5hZHZAbQ&ctz=America/Sao_Paulo">Google Agenda</a></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="section">
+            <div class="section-header">
+              <div>
+                <h2>Matérias jurídicas</h2>
+              </div>
+              <p>Extração estruturada apenas do que estava suportado pelos e-mails e agenda verificados.</p>
+            </div>
+            <div class="list">
+              <div class="item">
+                <div class="badge-row">
+                  <span class="badge critical">Risco crítico</span>
+                  <span class="badge medium">Criminal</span>
+                </div>
+                <h3>0000536-68.2025.8.17.9901</h3>
+                <p><strong>Partes:</strong> Petrônio Leonardo Ramos de Souza e outros x Juízo da 4ª Vara do Tribunal do Júri Capital. <strong>Advogado:</strong> Petrônio Leonardo Ramos de Souza, interno. <strong>Evento:</strong> prazo decorrido em HC criminal, com referência de 24/03/2026. <strong>Follow-up:</strong> revisar hoje a possibilidade de nova impetração, pedido de reconsideração ou outra medida de urgência. <strong>Por que importa:</strong> envolve processo criminal com atraso já consolidado e sem evidência, nesta coleta, de regularização posterior.</p>
+                <div class="source-list">Fontes: <a href="https://mail.google.com/mail/#all/19db4cc652e1627e">Relatório PJe</a> · <a href="https://www.google.com/calendar/event?eid=ZGZkdHE4c3JibTg2bzI3NmxmMjNlYmI1cTQgcGV0cm9uaW9zb3V6YS5hZHZAbQ&ctz=America/Sao_Paulo">Agenda</a></div>
+              </div>
+              <div class="item">
+                <div class="badge-row">
+                  <span class="badge high">Risco alto</span>
+                  <span class="badge medium">Criminal</span>
+                </div>
+                <h3>0011527-56.2025.8.17.2480</h3>
+                <p><strong>Partes:</strong> 19ª Delegacia de Homicídios e Promotoria Criminal de Caruaru x Jose Felipe Pedro da Silva e Tonis Ricardo dos Santos Junior. <strong>Advogados:</strong> Helder Marcílio Lopes e Petrônio Leonardo Ramos de Souza, internos para a defesa. <strong>Evento:</strong> intimação de designação de audiência de instrução e julgamento em <strong>24/04/2026 às 08:00</strong>. <strong>Follow-up:</strong> confirmar presença, estratégia, linha de perguntas e pendências documentais ainda hoje. <strong>Por que importa:</strong> a audiência ocorre amanhã cedo e não há margem confortável para reagir em cima da hora.</p>
+                <div class="source-list">Fontes: <a href="https://mail.google.com/mail/#all/19db543421ff7194">Intimação INT.0003459</a> · <a href="https://mail.google.com/mail/#all/19db5c9a66f941c7">Jusbrasil</a></div>
+              </div>
+              <div class="item">
+                <div class="badge-row">
+                  <span class="badge high">Risco médio-alto</span>
+                  <span class="badge medium">Família</span>
+                </div>
+                <h3>0007127-84.2026.8.17.2990</h3>
+                <p><strong>Partes:</strong> D. J. F. D. S. x J. V. D. S. L. <strong>Advogado:</strong> Petrônio Leonardo Ramos de Souza, interno, no polo ativo. <strong>Evento:</strong> intimação da parte autora para ciência do teor do ato judicial ID 236892425, publicada em 23/04/2026; o Projuris abriu tarefa sugerida como <strong>Ciência da Sentença</strong> com data prevista em 29/04/2026. <strong>Follow-up:</strong> abrir o inteiro teor imediatamente e confirmar se é sentença ou despacho, antes de confiar na classificação automática. <strong>Por que importa:</strong> existe prazo correndo, mas a natureza exata do ato ainda depende de leitura do documento.</p>
+                <div class="source-list">Fontes: <a href="https://mail.google.com/mail/#all/19db5424c15a9ed2">Intimação INT.0003458</a> · <a href="https://mail.google.com/mail/#all/19db5d3f299523de">Tarefa Projuris</a> · <a href="https://mail.google.com/mail/#all/19db5c9a66f941c7">Jusbrasil</a></div>
+              </div>
+              <div class="item">
+                <div class="badge-row">
+                  <span class="badge high">Risco alto</span>
+                  <span class="badge medium">Cível</span>
+                </div>
+                <h3>0002394-71.2023.8.17.3090</h3>
+                <p><strong>Partes:</strong> Neonergia Pernambuco x Panificadora Rainha LTDA. <strong>Advogado:</strong> Petrônio Leonardo Ramos de Souza, interno, no polo passivo. <strong>Evento:</strong> inclusão em pauta de julgamento virtual da 5ª Câmara Cível no período de <strong>04/05/2026 a 11/05/2026</strong>. <strong>Follow-up:</strong> decidir se haverá pedido de destaque, sustentação oral ou envio de memoriais, respeitando a antecedência mínima de 48 horas antes do início da sessão. <strong>Por que importa:</strong> o prazo útil é anterior ao período da sessão e pode ser perdido se o caso ficar apenas em monitoramento passivo.</p>
+                <div class="source-list">Fonte: <a href="https://mail.google.com/mail/#all/19db831fda7a3844">Intimação INT.0003462</a></div>
+              </div>
+              <div class="item">
+                <div class="badge-row">
+                  <span class="badge low">Risco baixo</span>
+                  <span class="badge medium">Criminal</span>
+                </div>
+                <h3>0006910-71.2019.8.17.0990</h3>
+                <p><strong>Partes:</strong> o e-mail do Notion aponta MPPE x Reinaldo Silva do Espírito Santo. <strong>Advogado:</strong> Petrônio Leonardo Ramos de Souza, interno. <strong>Evento:</strong> recebimento dos autos e sentença com <strong>extinção da punibilidade por cumprimento da suspensão condicional do processo</strong> em 19/04/2026. <strong>Follow-up:</strong> baixar a sentença, confirmar baixa prática no controle interno e ajustar o status do caso para encerramento favorável. <strong>Por que importa:</strong> é um bom desfecho, mas ainda precisa virar fechamento administrativo e de carteira.</p>
+                <div class="source-list">Fontes: <a href="https://mail.google.com/mail/#all/19db58aa7c3b1cfd">Andamento Projuris</a> · <a href="https://mail.google.com/mail/#all/19db7402de14fb03">Jusbrasil</a></div>
+              </div>
+              <div class="item">
+                <div class="badge-row">
+                  <span class="badge high">Risco alto</span>
+                  <span class="badge medium">Consumidor/Cível</span>
+                </div>
+                <h3>0017263-05.2024.8.17.3090</h3>
+                <p><strong>Partes:</strong> Andrea x CELPE, conforme nome do evento de agenda. <strong>Advogado:</strong> não identificado nas fontes abertas desta coleta, mas o compromisso está no calendário principal do escritório. <strong>Evento:</strong> audiência hoje, <strong>23/04/2026 às 13:00</strong>. <strong>Follow-up:</strong> revisar tese, documentos e objetivo de audiência antes do meio-dia. <strong>Por que importa:</strong> é compromisso do próprio dia e está logo após um bloco de agenda em conflito.</p>
+                <div class="source-list">Fonte: <a href="https://www.google.com/calendar/event?eid=aWF0aDg1Y2RwZGwxMGhocmJwM3RybTlsdmMgcGV0cm9uaW9zb3V6YS5hZHZAbQ&ctz=America/Sao_Paulo">Google Agenda</a></div>
+              </div>
+              <div class="item">
+                <div class="badge-row">
+                  <span class="badge medium">Risco médio</span>
+                  <span class="badge medium">Trabalhista</span>
+                </div>
+                <h3>0000742-23.2024.5.06.0121</h3>
+                <p><strong>Partes:</strong> Luana Caroline Alves da Silva x C J Antonio Dias Peças e Serviços para Autos LTDA. <strong>Advogado:</strong> não explicitado no corpo do push, mas o processo está acompanhado na conta do usuário. <strong>Evento:</strong> decurso de prazo da autora em 20/04/2026, informado em 21/04/2026 00:05. <strong>Follow-up:</strong> checar no PJe se o decurso produz vantagem prática imediata, como impulso para conclusão ou preclusão da parte adversa. <strong>Por que importa:</strong> não parece urgente como os itens acima, mas é movimento útil para monitorar posição estratégica.</p>
+                <div class="source-list">Fonte: <a href="https://mail.google.com/mail/#all/19db33ab1a356b24">Push TRT6</a></div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="list">
+          <article class="section">
+            <div class="section-header">
+              <div>
+                <h2>Operacional e financeiro</h2>
+              </div>
+              <p>Itens sem caráter processual, mas materialmente relevantes para o dia.</p>
+            </div>
+            <div class="list">
+              <div class="item">
+                <div class="badge-row"><span class="badge high">Risco alto</span></div>
+                <h3>Google e Microsoft emitiram alertas de segurança na madrugada.</h3>
+                <p>O Google informou que o app OpenAI recebeu acesso a dados da conta Google. A Microsoft enviou código único para a conta Microsoft. Se ambos foram intencionais, basta registrar; se não, a prioridade é revisar acessos e sessões.</p>
+                <div class="source-list">Fontes: <a href="https://mail.google.com/mail/#all/19db941ee89f0325">Google</a> · <a href="https://mail.google.com/mail/#all/19db97fd6e8ebacb">Microsoft</a></div>
+              </div>
+              <div class="item">
+                <div class="badge-row"><span class="badge high">Risco alto</span></div>
+                <h3>Asaas registrou transferência de R$ 25,99 em novo dispositivo.</h3>
+                <p>O alerta é de 22/04/2026 às 15:53:26 BRT. Se a operação não for reconhecida, o ideal é acionar imediatamente os canais do Asaas.</p>
+                <div class="source-list">Fonte: <a href="https://mail.google.com/mail/#all/19db68a4db30653c">Asaas segurança</a></div>
+              </div>
+              <div class="item">
+                <div class="badge-row"><span class="badge low">Risco baixo</span></div>
+                <h3>Pagamento de R$ 1.019,90 foi liquidado com sucesso.</h3>
+                <p>Liquidação feita em 22/04/2026 para <strong>Itaú Unibanco Holding S.A.</strong>, com vencimento original em 17/04/2026. Bom sinal de caixa resolvido, mas convém preservar o comprovante.</p>
+                <div class="source-list">Fonte: <a href="https://mail.google.com/mail/#all/19db6839d6f4bb0b">Asaas pagamento</a></div>
+              </div>
+              <div class="item">
+                <div class="badge-row"><span class="badge high">Risco médio-alto</span></div>
+                <h3>FOX Saúde segue inadimplente e com atendimento suspenso.</h3>
+                <p>A mensalidade com vencimento em 05/04/2026 continua em aberto, e a cobertura só volta em até 5 dias úteis após regularização confirmada.</p>
+                <div class="source-list">Fonte: <a href="https://mail.google.com/mail/#all/19db6bb2bf524dfa">FOX Saúde</a></div>
+              </div>
+              <div class="item">
+                <div class="badge-row"><span class="badge medium">Risco médio</span></div>
+                <h3>IPTU Recife 2026 tem parcela em atraso em imóvel encaminhado por terceiro.</h3>
+                <p>O e-mail encaminhado por Eduardo Gomes aponta pendência para o imóvel de Maria Josefa Gomes Coutinho. Como veio por encaminhamento, ainda vale confirmar contexto e responsabilidade antes de agir.</p>
+                <div class="source-list">Fonte: <a href="https://mail.google.com/mail/#all/19db790dd50d60a5">Encaminhamento IPTU</a></div>
+              </div>
+              <div class="item">
+                <div class="badge-row"><span class="badge medium">Risco médio</span></div>
+                <h3>Google AI Pro foi contratado por R$ 48,49/mês por 6 meses.</h3>
+                <p>Há upgrade confirmado para Google AI Pro, com reembolso do plano anterior em valor zero. É um item de despesa recorrente novo que merece validação de utilidade.</p>
+                <div class="source-list">Fontes: <a href="https://mail.google.com/mail/#all/19db746536cc0bb7">Recibo Google Play</a> · <a href="https://mail.google.com/mail/#all/19db74652c12e2a4">Confirmação do plano</a></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="section">
+            <div class="section-header">
+              <div>
+                <h2>Follow-ups</h2>
+              </div>
+              <p>Próximas ações executivas sugeridas.</p>
+            </div>
+            <div class="list">
+              <div class="item">
+                <h3>Hoje, até 11:30</h3>
+                <p>Definir quem absorve o compromisso financeiro de Paula Baia ou antecipá-lo para liberar a revisão do HC antes da audiência das 13:00.</p>
+              </div>
+              <div class="item">
+                <h3>Hoje, antes do almoço</h3>
+                <p>Abrir o inteiro teor do ato em 0007127-84.2026.8.17.2990 e fechar a pasta da audiência ANDREA x CELPE.</p>
+              </div>
+              <div class="item">
+                <h3>Hoje, até o fim do expediente</h3>
+                <p>Preparar a audiência de 24/04/2026 às 08:00 no processo 0011527-56.2025.8.17.2480 e regularizar o contato com a OAB/PE sobre o recorte digital interrompido.</p>
+              </div>
+              <div class="item">
+                <h3>Hoje, em janela curta de administração</h3>
+                <p>Conferir alertas de segurança Google/Microsoft/Asaas, decidir sobre a continuidade do Google AI Pro e verificar regularização de FOX Saúde e IPTU.</p>
+              </div>
+              <div class="item">
+                <h3>Delegação possível</h3>
+                <p>O e-mail de boas-vindas da Frutuoso Advocacia pede narrativa dos fatos e documentos. Se a contratação estiver ativa, dá para organizar envio assistido sem consumir a janela crítica da manhã.</p>
+                <div class="source-list">Fonte: <a href="https://mail.google.com/mail/#all/19db70ba18e720d1">Frutuoso Advocacia</a></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="callout">
+            <h2>Lacunas verificadas</h2>
+            <p>Não há conector de chat corporativo disponível nesta execução, então não existe cobertura automática de Slack, Teams ou similar. O calendário não trouxe contexto documental para o compromisso financeiro de Paula Baia nem para a audiência ANDREA x CELPE além do nome do evento. O inteiro teor do ato judicial em 0007127-84.2026.8.17.2990 ainda precisa ser aberto para confirmar se o gatilho real é sentença ou outro despacho.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="footnote">
+        <strong>Fontes centrais verificadas:</strong> Google Agenda do dia 23/04/2026; Gmail consolidado com mensagens materialmente relevantes recebidas entre 22/04/2026 06:29 e 23/04/2026 06:29; memória local de briefing para evitar duplicação cega; Notion pesquisado para reaproveitar registros já existentes.
+        <br />
+        <strong>Observação executiva:</strong> este briefing distingue fatos confirmados, inferências explicitadas e ações recomendadas. Onde o conteúdo fonte não trazia inteiro teor, a recomendação foi fechar a leitura antes de assumir prazo ou classificação final.
+      </section>
+    </main>
+  </body>
+</html>
