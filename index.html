@@ -168,6 +168,37 @@
         margin: 0;
       }
 
+      .hero-meta {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin: 18px 0 22px;
+      }
+
+      .hero-meta-card {
+        border-radius: var(--radius);
+        padding: 14px 15px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        backdrop-filter: blur(10px);
+      }
+
+      .hero-meta-label {
+        color: rgba(255, 255, 255, 0.66);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 8px;
+      }
+
+      .hero-meta-value {
+        color: #fff;
+        font-size: clamp(16px, 2vw, 20px);
+        font-weight: 700;
+        line-height: 1.35;
+        text-wrap: balance;
+      }
+
       .hero-side {
         display: grid;
         gap: 14px;
@@ -458,6 +489,16 @@
         .hero, .panel, .metric { padding: 18px; }
         .event { grid-template-columns: 1fr; }
         .brand-name { font-size: 19px; }
+        .hero h1 { max-width: none; }
+        .hero-copy {
+          font-size: 14px;
+          line-height: 1.72;
+          max-width: none;
+          text-wrap: pretty;
+        }
+        .hero-meta { grid-template-columns: 1fr; }
+        .hero-meta-card { padding: 13px 14px; }
+        .hero-meta-value { font-size: 17px; line-height: 1.4; }
         .panel h2 { font-size: 21px; }
       }
     </style>
@@ -472,7 +513,9 @@
       const html = htm.bind(React.createElement);
 
       const briefing = {
-        generatedAt: "23 de abril de 2026, 21:36 (-03, America/Sao_Paulo)",
+        briefingDate: "23 de abril de 2026",
+        generatedAt: "23 de abril de 2026, 22:02 (-03, America/Sao_Paulo)",
+        generationTime: "22:02 BRT",
         coverageWindow: "22 de abril de 2026, 21:32 → 23 de abril de 2026, 21:32",
         heroTitle: "Movimentação processual forte, operação sensível e um gap de publicação.",
         executiveLead: "A janela entre 22/04/2026 21:32 e 23/04/2026 21:32 concentrou sete processos com atualização material, 435 intimações pendentes no Projuris, dois alertas de segurança de acesso e um novo tropeço no deploy do briefing público.",
@@ -730,14 +773,28 @@
                   </div>
                 </div>
                 <h1>${briefing.heroTitle}</h1>
+                <div className="hero-meta">
+                  <div className="hero-meta-card">
+                    <div className="hero-meta-label">Data do briefing</div>
+                    <div className="hero-meta-value">${briefing.briefingDate}</div>
+                  </div>
+                  <div className="hero-meta-card">
+                    <div className="hero-meta-label">Gerado às</div>
+                    <div className="hero-meta-value">${briefing.generationTime}</div>
+                  </div>
+                  <div className="hero-meta-card">
+                    <div className="hero-meta-label">Janela de cobertura</div>
+                    <div className="hero-meta-value">${briefing.coverageWindow}</div>
+                  </div>
+                </div>
                 <p className="hero-copy">${briefing.executiveLead}</p>
                 <p className="hero-copy" style=${{ marginTop: "10px" }}>${briefing.executiveBody}</p>
               </div>
               <div className="hero-side">
                 <div className="glass">
-                  <div className="glass-label">Janela auditada</div>
-                  <div className="glass-value">${briefing.coverageWindow}</div>
-                  <div className="glass-note">Gerado em ${briefing.generatedAt}.</div>
+                  <div className="glass-label">Fechamento desta edição</div>
+                  <div className="glass-value">${briefing.generatedAt}</div>
+                  <div className="glass-note">A cobertura exibida abaixo reaproveita o briefing mais recente já consolidado nesta sessão.</div>
                 </div>
                 ${briefing.topCards.map(
                   (card) => html`
