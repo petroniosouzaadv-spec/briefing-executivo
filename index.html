@@ -6,13 +6,13 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PS Briefing executivo - 23/04/2026</title>
+    <title>PS Briefing executivo - 01/05/2026</title>
     <meta
       name="description"
       content="Briefing executivo em HTML estático, publicado no GitHub Pages e atualizado por automação."
     />
     <meta name="theme-color" content="#11191f" />
-    <meta property="og:title" content="PS Briefing executivo - 23/04/2026" />
+    <meta property="og:title" content="PS Briefing executivo - 01/05/2026" />
     <meta
       property="og:description"
       content="Briefing executivo em HTML estático, publicado no GitHub Pages e atualizado por automação."
@@ -513,298 +513,283 @@
       const html = htm.bind(React.createElement);
 
       const briefing = {
-        briefingDate: "23 de abril de 2026",
-        generatedAt: "23 de abril de 2026, 23:03 (-03, America/Sao_Paulo)",
-        generationTime: "23:03 BRT",
-        coverageWindow: "22 de abril de 2026, 22:58 → 23 de abril de 2026, 22:58",
-        heroTitle: "Jurídico intenso, segurança em alerta e agenda sem leitura automática nesta execução.",
-        executiveLead: "O Gmail consolidado das últimas 24 horas trouxe pressão jurídica contínua, 435 intimações pendentes no Projuris, 21 vencidos e 2 urgentes no relatório PJe, além de um bloco paralelo de segurança, cobrança e publicação que pede decisão executiva ainda hoje.",
-        executiveBody: "A agenda do Google não pôde ser auditada nesta execução porque o conector retornou permissão insuficiente em 23/04/2026 às 22:59 BRT. Por isso, o briefing abaixo se apoia apenas em fatos confirmados no Gmail consolidado, no Notion já sincronizado e na memória de deduplicação do escritório.",
+        briefingDate: "1 de maio de 2026",
+        generatedAt: "1 de maio de 2026, 13:35 (-03, America/Sao_Paulo)",
+        generationTime: "13:35 BRT",
+        coverageWindow: "30 de abril de 2026, 13:30 → 1 de maio de 2026, 13:30",
+        heroTitle: "Pressão jurídica alta, agenda vazia e um financeiro curto para resolver antes de sábado.",
+        executiveLead: "O núcleo das últimas 24 horas ficou no contencioso: o relatório PJe trouxe 21 vencidos e 2 urgentes, o TJPE e o TRT6 emitiram novos pushes processuais, um habeas corpus foi disponibilizado no DJ eletrônico e um inventário amanheceu com decurso de prazo para duas partes.",
+        executiveBody: "A agenda principal do Google Calendar foi auditada entre 30/04/2026 13:30 BRT e 01/05/2026 13:30 BRT e não trouxe reuniões registradas. No Gmail consolidado, o material executivo relevante ficou concentrado em movimentação processual, quatro encerramentos no e-Fisco, uma cobrança de R$ 485,54 com vencimento em 02/05/2026 e nenhum atraso de criação de pasta no CRM.",
         topCards: [
           {
-            label: "Ponto mais sensível",
-            value: "0007127-84.2026.8.17.2990 recebeu nova intimação publicada hoje e já tinha prazo rastreado no Projuris para 29/04/2026.",
-            note: "O inteiro teor do ato judicial de ID 236892425 ainda precisa ser lido para virar providência concreta."
+            label: "Ponto jurídico do dia",
+            value: "O passivo processual segue alto: 21 vencidos e 2 urgentes no PJe, com 0000021-06.2024.8.17.2420 e 0000982-27.2026.8.17.8223 pedindo leitura imediata do expediente.",
+            note: "O risco aqui não é só volume; é deixar ato material sem dono claro antes do próximo dia útil."
           },
           {
-            label: "Ponto estrutural",
-            value: "O escritório segue com 435 intimações pendentes, 21 vencidos e 2 urgentes no radar PJe da manhã.",
-            note: "Sem triagem objetiva, o volume tende a esconder o que exige ação real nas próximas horas."
+            label: "Ponto operacional do dia",
+            value: "Há quatro protocolos ICD encerrados no e-Fisco e uma cobrança da Aurora/Asaas confirmada pelo Ton, no valor de R$ 485,54, com vencimento em 02/05/2026.",
+            note: "O bloco é curto, mas pode virar ruído de caixa e retrabalho administrativo se ficar solto."
           }
         ],
         metrics: [
           {
-            label: "Agenda verificada",
-            value: "n/d",
-            note: "Google Calendar indisponível por permissão insuficiente do conector."
-          },
-          {
-            label: "Intimações pendentes",
-            value: "435",
-            note: "Digest Projuris recebido às 00:08 BRT."
+            label: "Reuniões na agenda",
+            value: "0",
+            note: "Nenhum evento encontrado no Google Calendar dentro da janela auditada."
           },
           {
             label: "Vencidos no PJe",
             value: "21",
-            note: "Relatório PJe enviado às 07:46 BRT."
+            note: "Relatório de 01/05/2026 às 07:46 BRT."
           },
           {
             label: "Urgentes no PJe",
             value: "2",
-            note: "Um deles é 0000021-06.2024.8.17.2420."
+            note: "0000021-06.2024.8.17.2420 e 0000982-27.2026.8.17.8223."
           },
           {
-            label: "Sinais operacionais",
-            value: "8",
-            note: "Google, CNJ, Asaas, OAB Digital, FOX Saúde, Credlocaliza e GitHub Pages."
+            label: "Avisos processuais",
+            value: "9",
+            note: "Pushes TJPE e TRT6 lidos como materialmente relevantes na janela."
+          },
+          {
+            label: "Protocolos e-Fisco",
+            value: "4",
+            note: "Quatro encerramentos ICD para consultar retorno no portal."
           }
         ],
         priorities: [
           {
-            title: "Ler e qualificar hoje a intimação de 0007127-84.2026.8.17.2990.",
-            body: "O Projuris abriu a tarefa TAR.0000584 com prazo para 29/04/2026 e o push do TJPE confirmou nova publicação de despacho/intimação às 13:40. Há risco alto porque o caso já está em curso e o comando material do ato ainda não foi traduzido em ação.",
-            tags: [["Crítico", "critical"], ["Prazo", "critical"], ["Família", "ok"]],
-            href: "https://mail.google.com/mail/#all/19dbb497cc6f92aa",
-            label: "Abrir intimação do processo"
+            title: "Reclassificar hoje o bloco de vencidos e urgentes do PJe.",
+            body: "O relatório das 07:46 BRT confirmou 21 vencidos e 2 urgentes. O problema não é apenas volume: os dois urgentes pedem abertura do teor do expediente e o vencido 0000536-68.2025.8.17.9901 continua exigindo definição de via de reação.",
+            tags: [["Crítico", "critical"], ["PJe", "critical"], ["Prioridade imediata", "watch"]],
+            href: "https://mail.google.com/mail/#all/19de3259fc6356c9",
+            label: "Abrir relatório completo"
           },
           {
-            title: "Fechar o que efetivamente mudou em 0017263-05.2024.8.17.3090.",
-            body: "O processo ANDREA x CELPE teve juntada de petição às 10:52 e ficou concluso para despacho às 14:37. Como a agenda não pôde ser auditada e não há ata ou resumo adicional no e-mail, o caso pede consolidação interna imediata do contexto e do próximo passo.",
-            tags: [["Alto", "critical"], ["Cível", "ok"], ["Sem fechamento", "watch"]],
-            href: "https://mail.google.com/mail/#all/19dbb7ffa29365ac",
-            label: "Abrir último push do caso"
+            title: "Ler o mandado e a publicação do bloco penal antes do fim do dia.",
+            body: "Em 0011527-56.2025.8.17.2480 houve recebimento de mandado para cumprimento às 10:30 de 30/04/2026. Em 0001891-81.2026.8.17.9480 o habeas corpus foi disponibilizado no DJ eletrônico em 30/04/2026. Nos dois casos, o resumo do push ainda não substitui o inteiro teor.",
+            tags: [["Alto", "critical"], ["Penal", "ok"], ["Leitura de ato", "watch"]],
+            href: "https://mail.google.com/mail/#all/19de1b1c057a0ef8",
+            label: "Abrir push do HC"
           },
           {
-            title: "Conter o bloco de segurança e acesso antes que vire incidente silencioso.",
-            body: "Foram enviados três alertas do Google informando acesso do app OpenAI à conta, dois alertas do CNJ/PDPJ por novos dispositivos e um aviso Asaas de transferência em novo dispositivo em 22/04/2026 às 15:53. Mesmo que tudo seja legítimo, o conjunto pede validação humana e rastreio do que foi autorizado.",
-            tags: [["Crítico", "critical"], ["Segurança", "critical"], ["Validação", "watch"]],
-            href: "https://mail.google.com/mail/#all/19db9fbc1a3be36a",
-            label: "Abrir alerta de segurança"
+            title: "Checar o efeito prático dos decursos e das intimações trabalhistas.",
+            body: "O inventário 0071925-24.2020.8.17.2001 amanheceu com decurso de prazo para duas partes. No TRT6, 0000223-05.2024.5.06.0103 recebeu despacho de mero expediente e intimação, enquanto 0000471-84.2018.5.06.0101 teve três decursos e outros casos vieram com documento sigiloso.",
+            tags: [["Alto", "critical"], ["TRT6", "ok"], ["Prazo", "watch"]],
+            href: "https://mail.google.com/mail/#all/19de1b4207cdd7bf",
+            label: "Abrir caso TRT6"
           },
           {
-            title: "Resolver as pendências que já afetam continuidade e visibilidade.",
-            body: "FOX Saúde informou suspensão por inadimplência desde 05/04/2026, Credlocaliza reenviou boleto vencido com multa e juros, a OAB/PE avisou interrupção do Recorte Digital e o último deploy do GitHub Pages falhou na etapa de publicação. É um bloco pequeno, mas com impacto operacional real.",
-            tags: [["Operacional", "watch"], ["Financeiro", "watch"], ["Publicação", "watch"]],
-            href: "https://mail.google.com/mail/#all/19dbada0dd7af292",
-            label: "Abrir falha de publicação"
+            title: "Fechar o bloco administrativo rápido e liberar a tarde para o jurídico.",
+            body: "Os quatro protocolos ICD encerrados no e-Fisco pedem leitura do retorno no portal. Em paralelo, a cobrança da Aurora/Asaas de R$ 485,54 vence em 02/05/2026 e já apareceu por dois canais no Gmail.",
+            tags: [["Médio", "watch"], ["Administrativo", "watch"], ["Financeiro", "watch"]],
+            href: "https://mail.google.com/mail/#all/19de09b8c588d310",
+            label: "Abrir cobrança"
           },
           {
-            title: "A pressão do contencioso precisa de triagem, não só de leitura de caixa de entrada.",
-            body: "O relatório PJe das 07:46 BRT marcou 21 vencidos e 2 urgentes, enquanto o Projuris apontou 435 intimações pendentes. Além dos casos principais, houve movimento material em 0011527-56.2025.8.17.2480, 0049944-55.2023.8.17.8201, 0000021-06.2024.8.17.2420, 0005844-05.2023.8.17.4001 e 0800038-76.2024.8.15.0411.",
-            tags: [["Crítico", "critical"], ["Backlog", "watch"], ["Triagem", "watch"]],
-            href: "https://mail.google.com/mail/#all/19db9f2ba1e97996",
-            label: "Abrir relatório PJe"
+            title: "Usar a agenda livre como janela de saneamento e não como falso alívio.",
+            body: "A agenda do Google veio sem reuniões na janela auditada. Isso libera capacidade, mas o dia já chega preenchido pelo passivo processual e pelos acompanhamentos que não podem sair do radar até segunda-feira.",
+            tags: [["Agenda livre", "ok"], ["Capacidade", "ok"], ["Execução", "watch"]],
+            href: "https://petroniosouzaadv-spec.github.io/briefing-executivo/",
+            label: "Abrir página publicada"
           }
         ],
         meetings: [
           {
-            time: "n/d",
-            title: "Agenda do Google não pôde ser auditada nesta execução",
-            body: "Às 22:59 BRT o conector do Google Calendar retornou erro 403 por permissão insuficiente. Por isso, este briefing não afirma compromissos, horários ou preparações de reunião que não tenham sido verificados na própria agenda.",
+            time: "13:30",
+            title: "Nenhuma reunião encontrada no Google Calendar dentro da janela auditada",
+            body: "A consulta ao calendário primário entre 30/04/2026 13:30 BRT e 01/05/2026 13:30 BRT retornou zero eventos. O dia, portanto, aparece sem compromisso registrado nessa fonte.",
             prep: [
-              "Não use este corte como confirmação da agenda do dia.",
-              "Os itens abaixo vêm apenas de Gmail, Notion e memória de deduplicação.",
-              "Se a permissão do conector for renovada, a leitura da agenda pode ser refeita sem mexer no link público."
+              "A ausência de reunião não reduz a urgência do passivo processual já identificado.",
+              "O melhor uso dessa folga é saneamento ativo de vencidos, urgentes e leituras de inteiro teor.",
+              "Sem conector de chat corporativo, decisões internas tomadas fora do e-mail podem não aparecer neste corte."
             ],
             href: "https://petroniosouzaadv-spec.github.io/briefing-executivo/"
           },
           {
-            time: "00:08",
-            title: "Projuris informou 0 compromissos e 0 tarefas pessoais hoje",
-            body: "Esse dado apareceu no digest operacional do Projuris, mas não substitui a verificação da agenda oficial. Ele serve apenas como referência auxiliar de contexto no dia.",
+            time: "07:46",
+            title: "A manhã foi ocupada pelo próprio sistema de gestão, não por agenda externa",
+            body: "O primeiro gatilho executivo forte do dia foi o relatório PJe com 21 vencidos e 2 urgentes. Em seguida vieram pushes processuais, encerramentos de protocolo e cobrança financeira com vencimento curto.",
             prep: [
-              "O valor executivo aqui está no passivo de 435 intimações, não no quadro de compromissos.",
-              "Sem agenda oficial, não é seguro inferir ausência de reuniões.",
-              "O painel público mantém a lacuna destacada para evitar falsa segurança."
+              "Se houver reuniões fora do Google Calendar, elas não foram verificadas nesta execução.",
+              "A leitura correta do dia continua sendo jurídica e operacional, não comercial.",
+              "A página pública mantém essa interpretação como eixo da hero."
             ],
-            href: "https://mail.google.com/mail/#all/19db84f881a93170"
-          },
-          {
-            time: "22:58",
-            title: "Janela efetiva deste briefing",
-            body: "A cobertura foi fechada exatamente no intervalo de 22/04/2026 22:58 até 23/04/2026 22:58, no fuso America/Sao_Paulo. Eventos anteriores continuam apenas como histórico de apoio e deduplicação.",
-            prep: [
-              "O Notion já continha os processos centrais desta janela, então não houve recriação de páginas.",
-              "Somente fatos novos ou ainda abertos permaneceram no resumo executivo.",
-              "O link público segue estável no mesmo endereço."
-            ],
-            href: "https://petroniosouzaadv-spec.github.io/briefing-executivo/"
+            href: "https://mail.google.com/mail/#all/19de3259fc6356c9"
           }
         ],
         legalMatters: [
           {
-            title: "0007127-84.2026.8.17.2990 | D. J. F. D. S. x J. V. D. S. L.",
-            body: "Parte representada confirmada no Notion: autor. Evento verificado: tarefa Projuris de Ciência da Sentença com data prevista para 29/04/2026 e nova publicação de despacho/intimação às 13:40 em 23/04/2026, na 1ª Vara de Família e Registro Civil de Olinda.",
-            facts: [
-              "Follow-up: abrir o inteiro teor do documento ID 236892425 e definir a providência concreta.",
-              "Risco: alto, porque o prazo está em curso e o comando material do ato ainda não foi traduzido em ação."
-            ],
-            href: "https://mail.google.com/mail/#all/19db5d3f299523de"
-          },
-          {
-            title: "0017263-05.2024.8.17.3090 | ANDREA VICTORIA BECO FRANCO e outros x NEONERGIA PERNAMBUCO",
-            body: "Parte representada confirmada no Notion: autora. Eventos verificados por push do TJPE: juntada de petição às 10:52 e conclusão para despacho às 14:37 na 2ª Vara Cível de Paulista.",
-            facts: [
-              "Follow-up: consolidar internamente o contexto do dia e monitorar o despacho subsequente.",
-              "Risco: alto, porque houve movimentação relevante e as fontes auditadas não trouxeram desfecho narrativo do dia."
-            ],
-            href: "https://mail.google.com/mail/#all/19dbb7ffa29365ac"
-          },
-          {
-            title: "0002394-71.2023.8.17.3090 | NEONERGIA PERNAMBUCO x PANIFICADORA RAINHA LTDA",
-            body: "Parte representada confirmada no Notion: ré. A intimação INT.0003462 comunicou pauta de julgamento virtual na 5ª Câmara Cível entre 04/05/2026 e 11/05/2026, com possibilidade de destaque, sustentação oral e memoriais até 48 horas antes do início da sessão virtual.",
-            facts: [
-              "Follow-up: decidir estratégia de destaque, sustentação oral e envio de memoriais até 02/05/2026.",
-              "Risco: alto, porque existe marco temporal definido e a decisão estratégica não pode ficar para a véspera."
-            ],
-            href: "https://mail.google.com/mail/#all/19db831fda7a3844"
-          },
-          {
             title: "0011527-56.2025.8.17.2480 | Central de Inquéritos de Caruaru e outros x José Felipe Pedro da Silva e outros",
-            body: "Parte representada confirmada no Notion: réu. Evento verificado: publicação de despacho/intimação às 06:50 em 23/04/2026 na Vara do Tribunal do Júri da Comarca de Caruaru.",
+            body: "Push do TJPE de 30/04/2026 às 10:31 informou recebimento do mandado para cumprimento na Vara do Tribunal do Júri de Caruaru. Trata-se de ação penal do júri e o resumo do push não informa, por si só, a providência defensiva necessária.",
             facts: [
-              "Follow-up: abrir o inteiro teor da publicação para separar ato material de mero andamento formal.",
-              "Risco: médio-alto, por se tratar de ação penal do júri com nova publicação sem efeito resumido no e-mail."
+              "Parte representada no Notion: réu.",
+              "Próximo passo: abrir o mandado e distinguir impulso cartorário de comando processual material.",
+              "Risco: alto, pela natureza penal e pela falta de leitura do teor integral."
             ],
-            href: "https://mail.google.com/mail/#all/19db9c884dff4e3a"
+            href: "https://mail.google.com/mail/#all/19dde96d5d9415fd"
           },
           {
-            title: "0049944-55.2023.8.17.8201, 0000021-06.2024.8.17.2420 e 0005844-05.2023.8.17.4001 | trio de movimentos cartorários do dia",
-            body: "O TJPE reportou às 11:23 juntada de petição e recebimento dos autos em 0049944-55.2023.8.17.8201, às 11:45 expedição de ofício e recebimento de mandado em 0000021-06.2024.8.17.2420, e às 13:52 expedição de certidão em 0005844-05.2023.8.17.4001. Os três já constam no Notion, sem duplicidade.",
+            title: "0001891-81.2026.8.17.9480 | Petrônio Leonardo Ramos de Souza x Juíza da Vara do Tribunal do Júri de Caruaru",
+            body: "Push do TJPE de 01/05/2026 às 01:00 BRT informou que o habeas corpus criminal foi disponibilizado no DJ eletrônico em 30/04/2026. O caso já está em 2ª instância, no gabinete do Des. Paulo Victor Vasconcelos de Almeida.",
             facts: [
-              "Follow-up: classificar owner, urgência real e necessidade de peça ou diligência em cada um deles.",
-              "Risco: médio, porque o problema principal aqui é visibilidade e não um prazo explícito já capturado no e-mail."
+              "Parte representada no Notion: autor.",
+              "Próximo passo: ler o DJ eletrônico e definir a providência concreta da impetração.",
+              "Risco: alto, porque publicação em HC pede leitura rápida e direção estratégica."
             ],
-            href: "https://mail.google.com/mail/#all/19dbadb6729bc0a9"
+            href: "https://mail.google.com/mail/#all/19de1b1c057a0ef8"
           },
           {
-            title: "0800038-76.2024.8.15.0411 | EDJANE MARIA DA SILVA x BANCO DAYCOVAL S/A",
-            body: "O push do TJPB informou juntada de petição às 11:28 em 23/04/2026 na Vara da Comarca Integrada de Conde. O caso apareceu no e-mail da janela, mas não tinha página correspondente localizada no Notion até esta checagem.",
+            title: "0071925-24.2020.8.17.2001 | Maria Inez da Silva e outros x Jose Carlos Pereira Irmao",
+            body: "Push do TJPE de 01/05/2026 às 00:30 BRT informou decurso de prazo, em 30/04/2026 às 23:59, para Patricia Bezerra Pereira e Rafael Carlos Pereira no inventário que tramita na 3ª Vara de Sucessões e Registros Públicos da Capital.",
             facts: [
-              "Follow-up: confirmar se o processo é matéria ativa do escritório antes de abrir novo registro estruturado.",
-              "Risco: médio-baixo, porque há movimentação material, mas ainda sem confirmação de vínculo operacional da banca."
+              "Próximo passo: verificar se o decurso destrava requerimento, decisão ou novo impulso processual.",
+              "Risco: médio, porque o efeito prático depende da posição do processo, mas o marco temporal já ocorreu."
             ],
-            href: "https://mail.google.com/mail/#all/19dbbbedcecdf2e3"
+            href: "https://mail.google.com/mail/#all/19de19650c7515e2"
+          },
+          {
+            title: "0000223-05.2024.5.06.0103 | Mayara Maria da Silva x Editora Trato Ltda",
+            body: "No TRT6, o push de 01/05/2026 às 01:02 BRT informou despacho de mero expediente, documento sigiloso e expedição de intimação para Mayara Maria da Silva em 30/04/2026 às 08:28.",
+            facts: [
+              "Próximo passo: abrir o despacho e a intimação para entender se há prazo ou apenas ajuste procedimental.",
+              "Risco: médio-alto, porque existe intimação já expedida e o teor não veio no corpo do aviso."
+            ],
+            href: "https://mail.google.com/mail/#all/19de1b4207cdd7bf"
+          },
+          {
+            title: "0000471-84.2018.5.06.0101, 0000474-36.2018.5.06.0102, 0001434-63.2016.5.06.0101 e 0000145-51.2024.5.06.0122 | bloco TRT6",
+            body: "O TRT6 concentrou avisos de decurso de prazo e documentos sigilosos. 0000471-84.2018.5.06.0101 teve três decursos de prazo; 0000474-36.2018.5.06.0102 recebeu dois documentos sigilosos; 0001434-63.2016.5.06.0101 e 0000145-51.2024.5.06.0122 também vieram com documento sigiloso.",
+            facts: [
+              "Próximo passo: separar o que é apenas juntada interna do que gera resposta do escritório.",
+              "Risco: médio-alto, porque os avisos não qualificam o conteúdo sigiloso e os decursos podem alterar postura processual."
+            ],
+            href: "https://mail.google.com/mail/#all/19de1da0a222bcfb"
+          },
+          {
+            title: "0000021-06.2024.8.17.2420, 0000982-27.2026.8.17.8223 e 0000536-68.2025.8.17.9901 | urgentes e vencido crítico do PJe",
+            body: "O relatório PJe do dia marcou 0000021-06.2024.8.17.2420 e 0000982-27.2026.8.17.8223 como urgentes, ambos por expedição de documentos e certidões, e manteve 0000536-68.2025.8.17.9901 no bloco de vencidos do HC criminal.",
+            facts: [
+              "Próximo passo: abrir o teor dos urgentes e definir via de reação para o HC vencido.",
+              "Risco: alto no bloco inteiro, com pressão imediata maior sobre os dois urgentes e risco estrutural sobre o HC vencido."
+            ],
+            href: "https://mail.google.com/mail/#all/19de3259fc6356c9"
           }
         ],
         inbox: [
           {
-            meta: "23/04/2026 00:08 • Projuris ADV • Operação",
-            title: "O digest diário mostrou 435 intimações pendentes do escritório, com 0 compromissos e 0 tarefas pessoais no painel do sistema.",
-            body: "Entre as sugestões destacadas pelo próprio Projuris estavam audiência para 0011527-56.2025.8.17.2480, manifestação em 0007127-84.2026.8.17.2990 para 27/04/2026 e outras manifestações com data já em 24/04/2026.",
-            href: "https://mail.google.com/mail/#all/19db84f881a93170"
+            meta: "01/05/2026 07:46 BRT • Sistema PJe • Prioridade máxima",
+            title: "O relatório principal do PJe abriu o dia com 21 vencidos e 2 urgentes.",
+            body: "É o sinal executivo mais importante da janela. O relatório lista passivo vencido, aponta dois urgentes e mostra que o problema do dia é triagem com ação, não leitura passiva da caixa.",
+            href: "https://mail.google.com/mail/#all/19de3259fc6356c9"
           },
           {
-            meta: "23/04/2026 07:46 • Sistema PJe • Backlog",
-            title: "O relatório PJe do dia marcou 21 vencidos e 2 urgentes e pediu ação imediata em vários processos já fora de prazo.",
-            body: "Na própria lista apareceram, entre outros, 0000536-68.2025.8.17.9901 como HC criminal com prazo decorrido e 0000021-06.2024.8.17.2420 entre os urgentes por expedição de mandado e documentos.",
-            href: "https://mail.google.com/mail/#all/19db9f2ba1e97996"
+            meta: "01/05/2026 07:09 BRT • Sistema PJe • Contexto complementar",
+            title: "Um segundo relatório automático marcou 5 vencidos e 104 movimentos diversos.",
+            body: "Ele reforça o diagnóstico de backlog e aparece mais como painel de contexto do que como fonte isolada de decisão. Ainda assim, ajuda a mostrar que o volume processual continua alto.",
+            href: "https://mail.google.com/mail/#all/19de3036effa290e"
           },
           {
-            meta: "23/04/2026 09:50 • OAB/PE Recorte Digital • Serviço",
-            title: "A OAB/PE informou interrupção do serviço de publicações e pediu atualização cadastral pelo telefone 3424-1012.",
-            body: "O e-mail confirma que houve 1 publicação no dia, mas o alerta principal é operacional: perder o Recorte Digital compromete rastreio passivo de publicações futuras.",
-            href: "https://mail.google.com/mail/#all/19db9bfb134307cd"
+            meta: "30/04/2026 10:39 a 10:42 BRT • e-Fisco • Administrativo",
+            title: "Quatro protocolos digitais de ICD foram encerrados no e-Fisco.",
+            body: "Os protocolos 202600000226998898, 202600000226996410, 202600000226993233 e 202600000226991885 pedem consulta do retorno dentro do portal para não depender só do aviso de encerramento por e-mail.",
+            href: "https://mail.google.com/mail/#all/19ddea07545607dd"
           },
           {
-            meta: "23/04/2026 04:26, 04:33 e 07:56 • Google • Segurança",
-            title: "Três alertas do Google informaram que o app OpenAI recebeu acesso a dados da conta petroniosouza.adv@gmail.com.",
-            body: "O texto não afirma fraude, mas manda revisar a atividade da conta e as conexões autorizadas. No mesmo bloco do dia, também houve novos acessos ao PDPJ por desktop e por iPhone/Chrome.",
-            href: "https://mail.google.com/mail/#all/19db941ee89f0325"
+            meta: "30/04/2026 19:56 BRT • Asaas e Ton • Financeiro",
+            title: "A cobrança da Aurora Seguros e Planos foi confirmada por dois e-mails, no valor de R$ 485,54 com vencimento em 02/05/2026.",
+            body: "O aviso do Ton e a cobrança do Asaas convergem no mesmo valor e no mesmo vencimento. O ponto aqui é decidir pagamento ou agendamento antes de sábado.",
+            href: "https://mail.google.com/mail/#all/19de09b8c588d310"
           },
           {
-            meta: "22/04/2026 19:46 e 23/04/2026 12:38 • FOX Saúde e Credlocaliza • Financeiro",
-            title: "Houve dois avisos de inadimplência com impacto concreto: cobertura de saúde suspensa e boleto vencido com juros, multa e risco de restrição.",
-            body: "FOX Saúde reportou mensalidade em aberto com vencimento em 05/04/2026 e suspensão dos atendimentos; Credlocaliza reenviou boleto 1735171 com multa de 2% e juros de 1% ao mês.",
-            href: "https://mail.google.com/mail/#all/19dbafdeb114e4de"
-          },
-          {
-            meta: "23/04/2026 14:59 • GitHub Pages • Publicação",
-            title: "O último workflow de deploy do briefing público falhou antes de concluir a publicação.",
-            body: "O aviso do GitHub informa falha total do job Deploy GitHub Pages / deploy. Esta execução substitui o index.html do repositório mantendo o link estável, mas sem esconder a falha anterior.",
-            href: "https://mail.google.com/mail/#all/19dbada0dd7af292"
+            meta: "01/05/2026 07:04 BRT • CRM do Drive • Organização",
+            title: "O relatório do CRM indicou zero clientes aguardando criação de pasta.",
+            body: "É o contraponto positivo da janela: o passivo jurídico está pesado, mas a organização de pastas no Drive aparece em dia nesta manhã.",
+            href: "https://mail.google.com/mail/#all/19de2ff0f110b62a"
           }
         ],
         todos: [
           {
-            title: "Ler o inteiro teor de 0007127-84.2026.8.17.2990 e confirmar a providência do autor.",
-            body: "A tarefa já existe no Projuris e no Notion; falta transformar a publicação de hoje em ação executiva clara.",
+            title: "Abrir o relatório PJe e separar os 2 urgentes dos 21 vencidos em uma lista de ação real.",
+            body: "0000021-06.2024.8.17.2420 e 0000982-27.2026.8.17.8223 merecem leitura imediata do expediente; 0000536-68.2025.8.17.9901 pede decisão sobre a via de reação.",
             owner: "Petrônio",
-            href: "https://mail.google.com/mail/#all/19db5d3f299523de"
+            href: "https://mail.google.com/mail/#all/19de3259fc6356c9"
           },
           {
-            title: "Consolidar o contexto e o próximo passo de 0017263-05.2024.8.17.3090.",
-            body: "Os e-mails mostram petição juntada e conclusão para despacho, mas não entregam narrativa fechada do que mudou no caso.",
+            title: "Ler o mandado de 0011527-56.2025.8.17.2480 e qualificar a providência defensiva.",
+            body: "O push confirma recebimento do mandado para cumprimento, mas ainda não diz o que isso gera na prática.",
             owner: "Petrônio",
-            href: "https://mail.google.com/mail/#all/19dbb7ffa29365ac"
+            href: "https://mail.google.com/mail/#all/19dde96d5d9415fd"
           },
           {
-            title: "Decidir destaque, sustentação oral e memoriais em 0002394-71.2023.8.17.3090.",
-            body: "A janela da sessão virtual começa em 04/05/2026 e o limite operacional cai antes disso.",
+            title: "Ler a publicação do HC 0001891-81.2026.8.17.9480 no DJ eletrônico.",
+            body: "A impetração já foi disponibilizada no DJ, então a próxima ação depende do teor integral.",
             owner: "Petrônio",
-            href: "https://mail.google.com/mail/#all/19db831fda7a3844"
+            href: "https://mail.google.com/mail/#all/19de1b1c057a0ef8"
           },
           {
-            title: "Validar as autorizações do Google, os acessos ao PDPJ e a transferência apontada pelo Asaas.",
-            body: "O conjunto de alertas é compatível com uso legítimo, mas só deixa de ser risco depois de revisão humana.",
+            title: "Checar o efeito do decurso no inventário 0071925-24.2020.8.17.2001 e das intimações do TRT6.",
+            body: "O ponto aqui é transformar aviso automático em consequência processual concreta, se houver.",
             owner: "Petrônio",
-            href: "https://mail.google.com/mail/#all/19db9fbc1a3be36a"
+            href: "https://mail.google.com/mail/#all/19de19650c7515e2"
           },
           {
-            title: "Regularizar FOX Saúde, Credlocaliza e situação cadastral do Recorte Digital da OAB/PE.",
-            body: "Esses três pontos combinam continuidade operacional, risco de restrição e perda de visibilidade de publicações futuras.",
+            title: "Consultar no e-Fisco o retorno dos quatro protocolos ICD encerrados.",
+            body: "Os e-mails confirmam encerramento, mas o detalhe útil está no portal e não no corpo do aviso automático.",
             owner: "Petrônio",
-            href: "https://mail.google.com/mail/#all/19db9bfb134307cd"
+            href: "https://mail.google.com/mail/#all/19ddea07545607dd"
           },
           {
-            title: "Acompanhar o novo deploy do briefing público até confirmar a atualização do link estável.",
-            body: "A falha anterior do GitHub Pages não deve ser tratada como ruído, porque afeta entrega externa direta.",
+            title: "Decidir pagamento ou agendamento da cobrança Aurora/Asaas de R$ 485,54.",
+            body: "O vencimento é 02/05/2026 e o boleto apareceu por dois canais distintos, o que reforça a necessidade de decisão simples e rápida.",
             owner: "Petrônio",
-            href: "https://mail.google.com/mail/#all/19dbada0dd7af292"
+            href: "https://mail.google.com/mail/#all/19de09ba57b6a2a0"
           }
         ],
         risks: [
           {
-            title: "Crítico | Prazo material em curso sem leitura do comando judicial",
-            body: "0007127-84.2026.8.17.2990 já tem tarefa aberta, prazo rastreado e nova intimação do dia, mas ainda sem tradução do inteiro teor em ação."
+            title: "Alto | Backlog jurídico acima da capacidade de leitura passiva",
+            body: "O relatório com 21 vencidos e 2 urgentes mostra um passivo que já precisa de triagem ativa, priorização e dono claro."
           },
           {
-            title: "Alto | Backlog jurídico grande demais para leitura passiva",
-            body: "435 intimações pendentes e 21 vencidos indicam necessidade de triagem ativa, não apenas monitoramento por e-mail."
+            title: "Alto | Bloco penal com atos novos sem leitura de inteiro teor",
+            body: "O mandado de 0011527-56.2025.8.17.2480 e a publicação do HC 0001891-81.2026.8.17.9480 não podem ficar só no nível de push."
           },
           {
-            title: "Alto | Segurança distribuída em múltiplas frentes no mesmo dia",
-            body: "Google, CNJ/PDPJ e Asaas emitiram sinais diferentes de acesso ou autorização. Ignorados em conjunto, podem mascarar um incidente real."
+            title: "Médio-alto | TRT6 e inventário com efeito processual ainda não qualificado",
+            body: "Decurso de prazo, documento sigiloso e intimação expedida alteram o caso apenas depois que o escritório lê o conteúdo material."
           },
           {
-            title: "Médio-alto | Continuidade operacional afetada por inadimplência e serviço interrompido",
-            body: "FOX Saúde suspendeu cobertura, Credlocaliza sinalizou atraso e a OAB/PE interrompeu o Recorte Digital até regularização cadastral."
+            title: "Médio | Quatro protocolos ICD encerrados sem leitura do retorno no portal",
+            body: "O risco aqui é administrativo e de perda de contexto, não necessariamente de prazo imediato, mas o assunto não deve sair do radar."
           },
           {
-            title: "Médio | Agenda do dia sem verificação automática nesta execução",
-            body: "A ausência de leitura da agenda oficial reduz a confiança sobre reuniões e blocos de preparação, então essa lacuna foi mantida visível."
+            title: "Médio | Cobrança financeira com vencimento em 02/05/2026",
+            body: "É um ponto simples de resolver, mas tende a gerar ruído desnecessário se ficar para depois do vencimento."
           }
         ],
         coverage: [
           {
-            title: "Gmail consolidado",
-            body: "Foram priorizados e lidos os e-mails materialmente relevantes da janela, incluindo PJe, Projuris, OAB/PE, Google, CNJ, Asaas, cobrança e GitHub."
-          },
-          {
             title: "Google Calendar",
-            body: "Tentativa de leitura em 23/04/2026 às 22:59 BRT falhou com erro 403 de permissão insuficiente do conector; nenhuma reunião foi afirmada sem essa verificação."
+            body: "A agenda primária foi consultada exatamente entre 30/04/2026 13:30 BRT e 01/05/2026 13:30 BRT. O resultado veio sem eventos."
           },
           {
-            title: "Notion e deduplicação",
-            body: "Os processos centrais desta janela já tinham páginas no Notion e continuaram sem duplicidade. O processo 0800038-76.2024.8.15.0411 segue pendente de confirmação de vínculo antes de novo cadastro."
+            title: "Gmail consolidado",
+            body: "Foi revisado o bloco materialmente relevante do inbox consolidado, incluindo mensagens originadas no Gmail e encaminhamentos úteis já presentes nessa caixa."
+          },
+          {
+            title: "Notion sem duplicidade",
+            body: "Os itens mais sensíveis desta janela foram atualizados na base (ADV) Casos/Processos sem recriação duplicada de páginas."
           },
           {
             title: "Chat corporativo",
-            body: "Não há conector de chat interno nesta sessão; decisões tomadas apenas fora do e-mail e do Notion podem não aparecer neste corte."
+            body: "Não há conector de chat interno nesta sessão. Decisões tomadas apenas fora do e-mail e do Notion podem não aparecer neste corte."
           },
           {
             title: "Link estável",
-            body: "A publicação permanece concentrada no mesmo index.html do repositório briefing-executivo, preservando o endereço público já usado pelo escritório."
+            body: "A publicação continua concentrada no mesmo index.html do repositório briefing-executivo, preservando o endereço público já usado pelo escritório."
           }
         ]
       };
@@ -845,7 +830,7 @@
                 <div className="glass">
                   <div className="glass-label">Fechamento desta edição</div>
                   <div className="glass-value">${briefing.generatedAt}</div>
-                  <div className="glass-note">O painel mantém a identidade aprovada e deixa a lacuna da agenda explícita em vez de preencher a área com inferência.</div>
+                  <div className="glass-note">A arquitetura visual aprovada foi preservada e o corte mobile manteve data, hora e janela com o mesmo peso visual do restante da hero.</div>
                 </div>
                 ${briefing.topCards.map(
                   (card) => html`
@@ -881,7 +866,7 @@
                     <h2>Prioridades críticas</h2>
                   </div>
                   <div className="head-note">
-                    O foco abaixo privilegia o que realmente ficou aberto na janela e o que pode piorar amanhã se não houver dono hoje.
+                    O foco abaixo privilegia o que efetivamente mudou nesta janela e o que precisa de decisão antes do próximo dia útil.
                   </div>
                 </div>
                 <div className="list">
@@ -904,10 +889,10 @@
                 <div className="panel-head">
                   <div>
                     <div className="eyebrow">Agenda</div>
-                    <h2>Agenda e lacunas verificadas</h2>
+                    <h2>Agenda e preparo do dia</h2>
                   </div>
                   <div className="head-note">
-                    A leitura da agenda oficial falhou hoje. Em vez de esconder isso, a página marca a limitação logo no centro da experiência.
+                    A agenda oficial foi verificada com sucesso e veio vazia. Isso muda a gestão do dia porque devolve capacidade para atacar o passivo jurídico.
                   </div>
                 </div>
                 <div className="timeline">
@@ -936,7 +921,7 @@
                     <h2>Matérias e processos monitorados</h2>
                   </div>
                   <div className="head-note">
-                    Campos ausentes ou incompletos permanecem abertos. O painel diferencia o que foi confirmado por fonte do que ainda depende de leitura complementar.
+                    O painel separa o que foi efetivamente movimentado na janela do que aparece hoje como passivo crítico já acumulado.
                   </div>
                 </div>
                 <div className="list">
@@ -962,7 +947,7 @@
                     <h2>E-mails materialmente relevantes</h2>
                   </div>
                   <div className="head-note">
-                    Promoções, newsletters e avisos sem consequência executiva ficaram fora deste corte para manter densidade e utilidade real.
+                    Newsletters, promoções e avisos sem consequência prática ficaram fora para preservar densidade executiva e leitura rápida no celular.
                   </div>
                 </div>
                 <div className="list">
@@ -1047,10 +1032,10 @@
 
           <section className="footer">
             <div className="footer-note">
-              <strong>Leitura principal:</strong> o centro da noite está em três frentes simultâneas: transformar a intimação de 0007127 em ação concreta, fechar a leitura de 0017263 e sanear segurança mais pendências operacionais antes de amanhã.
+              <strong>Leitura principal:</strong> o dia está sem reunião na agenda, mas cheio de trabalho útil e urgente. O maior ganho agora é transformar push e relatório automático em decisão concreta por caso.
             </div>
             <div className="footer-note">
-              <strong>Metodologia:</strong> tudo acima foi ancorado em Gmail consolidado, páginas já existentes do Notion e memória local de deduplicação. A agenda do Google ficou explicitamente marcada como indisponível porque não foi possível verificá-la nesta execução.
+              <strong>Metodologia:</strong> este corte foi ancorado em Google Calendar, Gmail consolidado, base do Notion e memória de deduplicação. O chat corporativo continua fora da cobertura por falta de conector nesta sessão.
             </div>
           </section>
         </main>
