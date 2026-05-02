@@ -43,7 +43,9 @@
         --shadow: 0 24px 70px rgba(17, 25, 31, 0.12);
         --radius: 8px;
       }
+
       * { box-sizing: border-box; }
+
       body {
         margin: 0;
         min-height: 100vh;
@@ -54,8 +56,20 @@
           radial-gradient(circle at 100% 0%, rgba(23, 43, 73, 0.18), transparent 30%),
           linear-gradient(180deg, #eef2f6 0%, #dae1e8 58%, #ced6de 100%);
       }
+
       a { color: inherit; text-decoration: none; }
-      .page { width: min(1280px, calc(100vw - 28px)); margin: 0 auto; padding: 18px 0 34px; }
+      code {
+        font-family: inherit;
+        font-size: inherit;
+        color: var(--navy);
+      }
+
+      .page {
+        width: min(1280px, calc(100vw - 28px));
+        margin: 0 auto;
+        padding: 18px 0 34px;
+      }
+
       .hero {
         position: relative;
         overflow: hidden;
@@ -66,6 +80,7 @@
         box-shadow: var(--shadow);
         padding: 26px;
       }
+
       .hero::before,
       .hero::after {
         content: "";
@@ -73,8 +88,10 @@
         border-radius: 999px;
         border: 1px solid rgba(187, 157, 109, 0.3);
       }
+
       .hero::before { width: 360px; height: 360px; right: -100px; top: -120px; }
       .hero::after { width: 220px; height: 220px; right: 120px; bottom: -110px; }
+
       .hero-grid {
         position: relative;
         z-index: 1;
@@ -83,7 +100,14 @@
         gap: 18px;
         align-items: stretch;
       }
-      .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 24px;
+      }
+
       .brand-mark {
         width: 58px;
         height: 58px;
@@ -95,6 +119,7 @@
         font-weight: 700;
         position: relative;
       }
+
       .brand-mark::after {
         content: "";
         position: absolute;
@@ -103,6 +128,7 @@
         border-radius: 50%;
         border: 1px solid rgba(200, 182, 172, 0.22);
       }
+
       .brand-label {
         color: rgba(255, 255, 255, 0.72);
         font-size: 11px;
@@ -110,6 +136,7 @@
         letter-spacing: 0.08em;
         margin-bottom: 6px;
       }
+
       .brand-name {
         color: #fff;
         font-size: 23px;
@@ -117,13 +144,15 @@
         font-weight: 600;
         max-width: 18ch;
       }
+
       .hero h1 {
         margin: 0 0 14px;
         color: #fff;
-        font-size: clamp(32px, 4.4vw, 58px);
+        font-size: clamp(32px, 4.3vw, 58px);
         line-height: 0.98;
-        max-width: 12ch;
+        max-width: 11ch;
       }
+
       .hero-copy {
         color: rgba(255, 255, 255, 0.8);
         font-size: 15px;
@@ -132,12 +161,14 @@
         margin: 0;
         text-wrap: pretty;
       }
+
       .hero-meta {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 12px;
         margin: 18px 0 22px;
       }
+
       .hero-meta-card {
         border-radius: var(--radius);
         padding: 14px 15px;
@@ -145,6 +176,7 @@
         border: 1px solid rgba(255, 255, 255, 0.14);
         backdrop-filter: blur(10px);
       }
+
       .hero-meta-label {
         color: rgba(255, 255, 255, 0.66);
         font-size: 11px;
@@ -152,6 +184,7 @@
         letter-spacing: 0.08em;
         margin-bottom: 8px;
       }
+
       .hero-meta-value {
         color: #fff;
         font-size: clamp(16px, 2vw, 20px);
@@ -159,7 +192,9 @@
         line-height: 1.35;
         text-wrap: balance;
       }
+
       .hero-side { display: grid; gap: 14px; }
+
       .glass {
         border-radius: var(--radius);
         background: rgba(255, 255, 255, 0.09);
@@ -167,6 +202,7 @@
         backdrop-filter: blur(12px);
         padding: 18px;
       }
+
       .glass-label,
       .mini-label {
         color: rgba(255, 255, 255, 0.64);
@@ -175,19 +211,28 @@
         letter-spacing: 0.08em;
         margin-bottom: 10px;
       }
-      .glass-value { color: #fff; font-size: 16px; font-weight: 700; line-height: 1.4; }
+
+      .glass-value {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.42;
+      }
+
       .glass-note {
         color: rgba(255, 255, 255, 0.74);
         font-size: 13px;
         line-height: 1.58;
         margin-top: 8px;
       }
+
       .metrics {
         display: grid;
         grid-template-columns: repeat(5, minmax(0, 1fr));
         gap: 14px;
         margin-top: 18px;
       }
+
       .metric,
       .panel {
         border-radius: var(--radius);
@@ -195,7 +240,9 @@
         border: 1px solid rgba(255, 255, 255, 0.55);
         box-shadow: var(--shadow);
       }
+
       .metric { padding: 18px; }
+
       .metric .label {
         color: var(--muted);
         font-size: 11px;
@@ -203,11 +250,35 @@
         letter-spacing: 0.08em;
         margin-bottom: 10px;
       }
-      .metric .value { color: var(--navy); font-size: 34px; font-weight: 800; line-height: 1; }
-      .metric .note { color: var(--muted); font-size: 13px; line-height: 1.5; margin-top: 8px; }
-      .layout { display: grid; grid-template-columns: 1.16fr 0.84fr; gap: 18px; margin-top: 18px; }
+
+      .metric .value {
+        color: var(--navy);
+        font-size: 34px;
+        font-weight: 800;
+        line-height: 1;
+      }
+
+      .metric .note {
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.5;
+        margin-top: 8px;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: 1.16fr 0.84fr;
+        gap: 18px;
+        margin-top: 18px;
+      }
+
       .stack { display: grid; gap: 18px; }
-      .panel { padding: 20px; background: var(--panel-strong); }
+
+      .panel {
+        padding: 20px;
+        background: var(--panel-strong);
+      }
+
       .panel-head {
         display: flex;
         justify-content: space-between;
@@ -215,6 +286,7 @@
         align-items: flex-start;
         margin-bottom: 16px;
       }
+
       .eyebrow {
         color: var(--wine);
         font-size: 11px;
@@ -222,10 +294,23 @@
         letter-spacing: 0.08em;
         margin-bottom: 8px;
       }
-      .panel h2 { margin: 0; font-size: 24px; line-height: 1.1; }
-      .head-note { color: var(--muted); font-size: 13px; line-height: 1.55; max-width: 34ch; }
+
+      .panel h2 {
+        margin: 0;
+        font-size: 24px;
+        line-height: 1.1;
+      }
+
+      .head-note {
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.55;
+        max-width: 34ch;
+      }
+
       .list,
       .timeline { display: grid; gap: 12px; }
+
       .item,
       .mail,
       .todo,
@@ -237,14 +322,34 @@
         border-radius: var(--radius);
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.62));
       }
+
       .item,
       .mail,
       .risk,
       .coverage,
       .legal { padding: 14px; }
-      .title { margin: 0 0 6px; font-size: 15px; line-height: 1.36; font-weight: 700; }
-      .body { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.62; }
-      .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+
+      .title {
+        margin: 0 0 6px;
+        font-size: 15px;
+        line-height: 1.36;
+        font-weight: 700;
+      }
+
+      .body {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.62;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
       .chip {
         min-height: 28px;
         border-radius: 999px;
@@ -256,12 +361,32 @@
         font-weight: 700;
         letter-spacing: 0.04em;
       }
+
       .critical { background: rgba(86, 28, 38, 0.12); color: var(--wine); }
       .watch { background: rgba(187, 157, 109, 0.18); color: #7a6540; }
       .ok { background: rgba(23, 43, 73, 0.1); color: var(--navy); }
-      .link { display: inline-flex; margin-top: 10px; font-size: 12px; font-weight: 700; color: var(--navy); }
-      .event { display: grid; grid-template-columns: 96px 1fr; gap: 14px; padding: 14px; }
-      .when { font-size: 13px; font-weight: 700; color: var(--navy); }
+
+      .link {
+        display: inline-flex;
+        margin-top: 10px;
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--navy);
+      }
+
+      .event {
+        display: grid;
+        grid-template-columns: 96px 1fr;
+        gap: 14px;
+        padding: 14px;
+      }
+
+      .when {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--navy);
+      }
+
       .prep,
       .facts {
         margin: 10px 0 0;
@@ -270,6 +395,7 @@
         display: grid;
         gap: 7px;
       }
+
       .prep li,
       .facts li {
         font-size: 13px;
@@ -277,6 +403,7 @@
         padding-left: 15px;
         position: relative;
       }
+
       .prep li::before,
       .facts li::before {
         content: "";
@@ -288,6 +415,7 @@
         border-radius: 50%;
         background: var(--gold);
       }
+
       .mail-meta {
         color: var(--muted);
         font-size: 11px;
@@ -295,7 +423,14 @@
         letter-spacing: 0.05em;
         margin-bottom: 8px;
       }
-      .todo { padding: 14px; display: grid; grid-template-columns: auto 1fr; gap: 12px; }
+
+      .todo {
+        padding: 14px;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 12px;
+      }
+
       .box {
         width: 18px;
         height: 18px;
@@ -303,6 +438,7 @@
         border: 1px solid rgba(17, 25, 31, 0.22);
         margin-top: 1px;
       }
+
       .owner {
         margin-top: 6px;
         color: var(--wine);
@@ -310,7 +446,14 @@
         text-transform: uppercase;
         letter-spacing: 0.08em;
       }
-      .footer { margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+
+      .footer {
+        margin-top: 18px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+
       .footer-note {
         padding: 18px 20px;
         border-radius: var(--radius);
@@ -320,13 +463,16 @@
         font-size: 13px;
         line-height: 1.66;
       }
+
       .footer-note strong { color: #fff; }
+
       @media (max-width: 1160px) {
         .hero-grid,
         .metrics,
         .layout,
         .footer { grid-template-columns: 1fr; }
       }
+
       @media (max-width: 760px) {
         .page { width: min(100vw - 16px, 1280px); }
         .hero,
@@ -335,7 +481,12 @@
         .event { grid-template-columns: 1fr; }
         .brand-name { font-size: 19px; }
         .hero h1 { max-width: none; }
-        .hero-copy { font-size: 14px; line-height: 1.72; max-width: none; text-wrap: pretty; }
+        .hero-copy {
+          font-size: 14px;
+          line-height: 1.72;
+          max-width: none;
+          text-wrap: pretty;
+        }
         .hero-meta { grid-template-columns: 1fr; }
         .hero-meta-card { padding: 13px 14px; }
         .hero-meta-value { font-size: 17px; line-height: 1.4; }
@@ -355,7 +506,7 @@
                 <div class="brand-name">Petrônio Souza Advogados Associados</div>
               </div>
             </div>
-            <h1>Sem reuniões formais nas últimas 24 horas; o sábado abre com PJe crítico, três atos jurídicos materiais e pendências operacionais de baixa fricção.</h1>
+            <h1>Sem reunião formal nas últimas 24 horas; o sábado concentra risco em PJe vencido, dois atos judiciais novos e alertas operacionais de resposta curta.</h1>
             <div class="hero-meta">
               <div class="hero-meta-card">
                 <div class="hero-meta-label">Data do briefing</div>
@@ -363,44 +514,44 @@
               </div>
               <div class="hero-meta-card">
                 <div class="hero-meta-label">Gerado às</div>
-                <div class="hero-meta-value">08:14 BRT</div>
+                <div class="hero-meta-value">12:13 BRT</div>
               </div>
               <div class="hero-meta-card">
                 <div class="hero-meta-label">Janela de cobertura</div>
-                <div class="hero-meta-value">1 de maio de 2026, 08:06 -> 2 de maio de 2026, 08:06</div>
+                <div class="hero-meta-value">1 de maio de 2026, 12:13 -> 2 de maio de 2026, 12:13</div>
               </div>
             </div>
             <p class="hero-copy">
-              O Google Calendar ficou limpo na janela exata das últimas 24 horas, sem reunião concluída nem compromisso de trabalho em andamento. Isso devolve espaço real de execução, mas o Gmail consolidado trouxe um bloco jurídico pesado na abertura deste sábado: dois relatórios automáticos do PJe às 07:08 e 07:46, sendo o segundo o mais relevante, com 21 vencidos e 2 urgentes ainda ativos.
+              A agenda primária não trouxe reunião executiva ou audiência formal dentro da janela. O peso do período veio do Gmail consolidado: relatório detalhado de expedientes PJe às 07:46 BRT com <strong>21 vencidos</strong> e <strong>2 urgentes</strong>, push do TRT6 na ação rescisória <strong>0002236-58.2025.5.06.0000</strong>, push do TRF5 no processo <strong>0012850-56.2025.4.05.8303</strong> e negativa recursal do INSS no protocolo <strong>1269129974</strong>.
             </p>
             <p class="hero-copy" style="margin-top: 10px;">
-              Os movimentos realmente novos e materiais da janela foram: ação rescisória 0002236-58.2025.5.06.0000 no TRT6 com carta de ordem e documento sigiloso; processo 0012850-56.2025.4.05.8303 no TRF5 com intimação publicada; e requerimento 1269129974 no INSS com recurso negado e novo prazo recursal de 30 dias. Fora do contencioso, há dois lembretes duplicados de cobrança da Aurora às 10:00, um pedido pendente de novas permissões do app Cursor no GitHub, uma autorização OAuth do ChatGPT na organização Supabase e uma atualização obrigatória dos apps OpenAI para macOS até 8 de maio de 2026.
+              Fora do contencioso, surgiram três frentes de baixa fricção e relevância real para hoje: cobrança vencida de <strong>R$ 80,00</strong> via Efí, dois lembretes de cobrança da Aurora às 10:00 no calendário e alertas de segurança/governança em <strong>GitHub</strong>, <strong>Supabase</strong>, <strong>OpenAI para macOS</strong> e <strong>Link</strong>. O melhor uso da manhã é jurídico primeiro e saneamento operacional logo depois.
             </p>
           </div>
           <div class="hero-side">
             <div class="glass">
               <div class="glass-label">Fechamento desta edição</div>
-              <div class="glass-value">2 de maio de 2026, 08:14 BRT</div>
+              <div class="glass-value">2 de maio de 2026, 12:13 BRT</div>
               <div class="glass-note">
-                Data, hora e janela permanecem com destaque forte também no mobile, preservando o padrão visual aprovado.
+                Data, hora e janela seguem com o mesmo destaque forte também no mobile, preservando o padrão visual aprovado.
               </div>
             </div>
             <div class="glass">
               <div class="glass-label">Ponto jurídico do dia</div>
               <div class="glass-value">
-                A primeira ação útil da manhã é transformar o relatório PJe das 07:46 em fila executável, começando por 0000021-06.2024.8.17.2420, 0000982-27.2026.8.17.8223 e 0000536-68.2025.8.17.9901.
+                O relatório PJe das 07:46 é a peça dominante desta execução: ele pede triagem imediata dos dois urgentes e descarte do passivo vencido que segue reaparecendo.
               </div>
               <div class="glass-note">
-                O contencioso pesa mais do que a agenda formal nesta virada de dia.
+                Prioridade de leitura: 0000021-06.2024.8.17.2420, 0000982-27.2026.8.17.8223, 0002236-58.2025.5.06.0000, 0012850-56.2025.4.05.8303 e 0000536-68.2025.8.17.9901.
               </div>
             </div>
             <div class="glass">
               <div class="glass-label">Ponto operacional do dia</div>
               <div class="glass-value">
-                Aurora às 10:00, revisão de permissões no GitHub e Supabase, e atualização dos apps OpenAI são pendências simples que não devem disputar tempo com o contencioso depois do meio da manhã.
+                Aurora, Efí, GitHub, Supabase, OpenAI e Link são pendências curtas, mas todas com risco de recorrência se ficarem sem confirmação explícita hoje.
               </div>
               <div class="glass-note">
-                São itens curtos, mas merecem fechamento explícito para não virarem ruído recorrente.
+                Nenhuma delas deve competir com a primeira hora dedicada ao contencioso.
               </div>
             </div>
           </div>
@@ -409,14 +560,19 @@
 
       <section class="metrics">
         <article class="metric">
-          <div class="label">Reuniões na janela</div>
+          <div class="label">Reuniões formais</div>
           <div class="value">0</div>
-          <div class="note">Nenhum evento entre 01/05 08:06 e 02/05 08:06 BRT.</div>
+          <div class="note">Nenhuma reunião de trabalho ou audiência foi encontrada na janela exata.</div>
+        </article>
+        <article class="metric">
+          <div class="label">Eventos na agenda</div>
+          <div class="value">2</div>
+          <div class="note">Dois lembretes idênticos de cobrança da Aurora às 10:00 BRT.</div>
         </article>
         <article class="metric">
           <div class="label">Vencidos no PJe</div>
           <div class="value">21</div>
-          <div class="note">Relatório detalhado recebido em 02/05/2026 às 07:46.</div>
+          <div class="note">Relatório detalhado recebido em 02/05/2026 às 07:46 BRT.</div>
         </article>
         <article class="metric">
           <div class="label">Urgentes no PJe</div>
@@ -424,14 +580,9 @@
           <div class="note">0000021-06.2024.8.17.2420 e 0000982-27.2026.8.17.8223.</div>
         </article>
         <article class="metric">
-          <div class="label">Atos jurídicos novos</div>
-          <div class="value">3</div>
-          <div class="note">TRT6, TRF5 e INSS com consequência prática confirmada.</div>
-        </article>
-        <article class="metric">
           <div class="label">Alertas operacionais</div>
-          <div class="value">4</div>
-          <div class="note">Aurora, Cursor, Supabase e OpenAI macOS.</div>
+          <div class="value">6</div>
+          <div class="note">Efí, Aurora, GitHub, Supabase, OpenAI macOS e login Link.</div>
         </article>
       </section>
 
@@ -444,26 +595,26 @@
                 <h2>Prioridades críticas</h2>
               </div>
               <div class="head-note">
-                O foco abaixo privilegia o que realmente mudou na janela e o que precisa de ação antes do sábado perder tração.
+                A ordem abaixo privilegia o que já tem consequência prática, prazo potencial ou ruído recorrente para o escritório.
               </div>
             </div>
             <div class="list">
               <article class="item">
-                <h3 class="title">Abrir primeiro o relatório detalhado do PJe das 07:46 e virar os dois urgentes em providência concreta.</h3>
+                <h3 class="title">Abrir imediatamente o relatório PJe das 07:46 e converter os dois urgentes em providência executável.</h3>
                 <p class="body">
-                  O relatório compacto das 07:08 é útil como visão de triagem, mas o relatório das 07:46 é a peça executiva dominante da manhã: 21 vencidos, 2 urgentes e manutenção do HC 0000536-68.2025.8.17.9901 no passivo crítico.
+                  O relatório detalhado recebido às 07:46 BRT é o centro desta janela: 21 vencidos, 2 urgentes e manutenção do HC 0000536-68.2025.8.17.9901 no bloco crítico. Isso desloca o foco do dia da agenda para a execução contenciosa.
                 </p>
                 <div class="chips">
                   <span class="chip critical">Crítico</span>
                   <span class="chip critical">PJe</span>
-                  <span class="chip watch">Prazo</span>
+                  <span class="chip watch">Prazo vencido</span>
                 </div>
                 <a class="link" href="https://mail.google.com/mail/#all/19de84c001767659" target="_blank" rel="noreferrer">Abrir relatório detalhado</a>
               </article>
               <article class="item">
                 <h3 class="title">Ler ainda no primeiro bloco útil o TRT6 0002236-58.2025.5.06.0000 e o TRF5 0012850-56.2025.4.05.8303.</h3>
                 <p class="body">
-                  A ação rescisória do TRT6 recebeu carta de ordem e documento sigiloso. No TRF5, a intimação já foi publicada. São os dois movimentos judiciais novos mais sensíveis da janela.
+                  A ação rescisória no TRT6 recebeu carta de ordem e documento sigiloso. No TRF5, a intimação já foi publicada. São os dois movimentos judiciais novos mais sensíveis do período.
                 </p>
                 <div class="chips">
                   <span class="chip critical">Alto</span>
@@ -473,9 +624,9 @@
                 <a class="link" href="https://mail.google.com/mail/#all/19de6af5e7c685b1" target="_blank" rel="noreferrer">Abrir push TRT6</a>
               </article>
               <article class="item">
-                <h3 class="title">Definir a reação do INSS 1269129974 antes de o novo prazo recursal ficar invisível.</h3>
+                <h3 class="title">Definir o encaminhamento do INSS 1269129974 antes de o novo prazo recursal sair do radar.</h3>
                 <p class="body">
-                  A negativa do recurso ordinário não encerra o tema: o próprio aviso abre 30 dias para recurso especial ou incidente ao CRPS, o que exige alinhamento com a cliente e decisão de tese.
+                  O recurso ordinário foi negado e o próprio aviso abre 30 dias para recurso especial ou incidente ao CRPS. O risco é menor que o judicial do dia, mas a decisão material já precisa entrar na pauta da cliente.
                 </p>
                 <div class="chips">
                   <span class="chip watch">Médio</span>
@@ -485,9 +636,9 @@
                 <a class="link" href="https://mail.google.com/mail/#all/19de4be65ab9e40b" target="_blank" rel="noreferrer">Abrir aviso do INSS</a>
               </article>
               <article class="item">
-                <h3 class="title">Fechar o bloco operacional simples sem deixar ele invadir a manhã jurídica.</h3>
+                <h3 class="title">Fechar o bloco operacional simples sem deixar ele contaminar a manhã jurídica.</h3>
                 <p class="body">
-                  Aurora às 10:00, revisão das permissões do Cursor e do OAuth do ChatGPT na Supabase, e atualização dos apps OpenAI para macOS são itens curtos, mas todos com data ou risco explícito.
+                  Cobrança Efí vencida, duplicidade da Aurora no calendário, pedido de permissões do Cursor, OAuth do ChatGPT na Supabase, atualização dos apps OpenAI para macOS e novo login no Link são itens curtos com dono claro.
                 </p>
                 <div class="chips">
                   <span class="chip ok">Baixa fricção</span>
@@ -506,21 +657,21 @@
                 <h2>Agenda e preparo do dia</h2>
               </div>
               <div class="head-note">
-                A agenda formal ficou leve. O ganho do dia está em usar essa folga para saneamento jurídico e fechamento das pendências operacionais.
+                A agenda formal está vazia. O valor do dia está em usar essa folga para saneamento contencioso e limpeza das pendências curtas.
               </div>
             </div>
             <div class="timeline">
               <article class="event">
                 <div class="when">Janela auditada</div>
                 <div>
-                  <h3 class="title">Nenhuma reunião foi registrada no Google Calendar entre 01/05 08:06 e 02/05 08:06 BRT.</h3>
+                  <h3 class="title">Nenhuma reunião foi registrada no Google Calendar entre 01/05 12:13 e 02/05 12:13 BRT.</h3>
                   <p class="body">
                     A ausência de reunião formal confirma que a pressão do período veio do contencioso e da caixa de entrada, não de compromissos externos.
                   </p>
                   <ul class="prep">
                     <li>Não há ata, convite ou material de reunião para preparar nesta janela.</li>
-                    <li>Sem conector de chat corporativo, alinhamentos feitos só por mensagem podem não aparecer aqui.</li>
-                    <li>Agenda limpa aumenta a expectativa de execução sobre o passivo jurídico desta manhã.</li>
+                    <li>Sem conector de chat corporativo, alinhamentos feitos apenas por mensagem podem não aparecer aqui.</li>
+                    <li>Agenda livre aumenta a expectativa de fechamento da fila jurídica ainda hoje.</li>
                   </ul>
                 </div>
               </article>
@@ -534,7 +685,7 @@
                   <ul class="prep">
                     <li>Confirmar se é duplicidade de lembrete ou duplicidade real de cobrança.</li>
                     <li>Se estiver pago, limpar a agenda para reduzir ruído nas próximas execuções.</li>
-                    <li>Se não estiver pago, decidir pagamento ou agendamento logo no primeiro bloco útil.</li>
+                    <li>Se não estiver pago, decidir pagamento ou agendamento no primeiro bloco operacional do dia.</li>
                   </ul>
                 </div>
               </article>
@@ -547,7 +698,7 @@
                   </p>
                   <ul class="prep">
                     <li>Concentrar a leitura crítica do PJe e dos pushes antes do fim da tarde.</li>
-                    <li>Evitar deixar os atos novos do TRT6 e TRF5 para depois desse horário.</li>
+                    <li>Evitar deixar os atos novos do TRT6 e do TRF5 para depois desse horário.</li>
                     <li>Usar esse compromisso como corte natural para a fila do dia.</li>
                   </ul>
                 </div>
@@ -562,20 +713,20 @@
                 <h2>Matérias e processos monitorados</h2>
               </div>
               <div class="head-note">
-                Abaixo ficam só os itens jurídicos com impacto verificável nesta janela, já consolidados na base do Notion sem duplicidade.
+                Só entram aqui os itens jurídicos com efeito verificável nesta janela e com follow-up objetivo para hoje.
               </div>
             </div>
             <div class="list">
               <article class="legal">
-                <h3 class="title">Relatório PJe das 07:46 | 21 vencidos e 2 urgentes ainda ativos</h3>
+                <h3 class="title">Relatório PJe das 07:46 | 21 vencidos e 2 urgentes</h3>
                 <p class="body">
-                  O relatório detalhado do sistema de gestão confirma uma abertura de manhã pesada. Os dois urgentes são 0000021-06.2024.8.17.2420 e 0000982-27.2026.8.17.8223. Entre os vencidos, o HC 0000536-68.2025.8.17.9901 segue como passivo mais sensível.
+                  O relatório detalhado do sistema de gestão confirma uma abertura de sábado pesada. Os urgentes são 0000021-06.2024.8.17.2420 e 0000982-27.2026.8.17.8223. Entre os vencidos, seguem no topo da atenção o HC 0000536-68.2025.8.17.9901, 0051393-53.2025.8.17.2001 e 0017706-81.2019.8.17.0001.
                 </p>
                 <ul class="facts">
-                  <li>Advogado responsável: não informado no e-mail-fonte para os itens do relatório agregado.</li>
-                  <li>Evento central: urgência ou vencimento já qualificado pelo próprio sistema de gestão.</li>
-                  <li>Follow-up: abrir os autos e separar o que exige petição, mero cumprimento ou nova estratégia.</li>
-                  <li>Risco: alto, porque o passivo já está exposto e reincidente em relatório executivo.</li>
+                  <li>Advogado responsável: o relatório agregado não individualiza responsável por cada item.</li>
+                  <li>Evento central: prazo expirado ou urgência reconhecida pelo próprio sistema do escritório.</li>
+                  <li>Follow-up: separar o que exige petição, mera verificação de autos, reação recursal ou estratégia nova.</li>
+                  <li>Risco: alto, porque o passivo já está reiterado em briefing executivo e continua aberto.</li>
                 </ul>
                 <a class="link" href="https://mail.google.com/mail/#all/19de84c001767659" target="_blank" rel="noreferrer">Abrir fonte</a>
               </article>
@@ -599,20 +750,20 @@
                 </p>
                 <ul class="facts">
                   <li>Advogado responsável: não identificado no e-mail-fonte.</li>
-                  <li>Parte representada: não confirmada a partir do push; polo ativo listado como E. G. A. B.</li>
+                  <li>Parte representada: não confirmada pelo push; polo ativo listado como E. G. A. B.</li>
                   <li>Follow-up: abrir a intimação e identificar com precisão o prazo útil e a providência material.</li>
-                  <li>Risco: alto, porque a publicação já ocorreu e o teor ainda não foi qualificado aqui.</li>
+                  <li>Risco: alto, porque a publicação já ocorreu e o teor ainda não foi qualificado neste corte.</li>
                 </ul>
                 <a class="link" href="https://mail.google.com/mail/#all/19de70d41a8da8e9" target="_blank" rel="noreferrer">Abrir fonte</a>
               </article>
               <article class="legal">
                 <h3 class="title">1269129974 | DEISE DE LIMA GOUVEIA x INSS</h3>
                 <p class="body">
-                  O aviso do INSS recebido em 01/05/2026 às 15:12 BRT informa que o recurso ordinário foi negado e abre prazo de 30 dias para recurso especial ou incidente ao CRPS.
+                  O aviso do INSS recebido em 01/05/2026 às 18:12 BRT informa que o recurso ordinário foi negado e abre prazo de 30 dias para recurso especial ou incidente ao CRPS.
                 </p>
                 <ul class="facts">
                   <li>Advogado responsável: não identificado no e-mail-fonte.</li>
-                  <li>Natureza: matéria administrativa previdenciária, já refletida como caso e prazo vinculados no Notion.</li>
+                  <li>Natureza: matéria administrativa previdenciária com prazo já registrado até 31/05/2026 no Notion.</li>
                   <li>Follow-up: alinhar estratégia com a cliente e decidir se haverá recurso à Câmara de Julgamento.</li>
                   <li>Risco: médio, porque o prazo existe, mas a janela é mais larga do que os atos judiciais do dia.</li>
                 </ul>
@@ -628,7 +779,7 @@
                 <h2>E-mails materialmente relevantes</h2>
               </div>
               <div class="head-note">
-                Esta seção concentra o que veio pelo Gmail e afeta prioridade de hoje fora da leitura jurídica já destacada acima.
+                Esta leitura concentra o que afeta hoje fora da qualificação jurídica já destacada acima.
               </div>
             </div>
             <div class="list">
@@ -636,7 +787,7 @@
                 <div class="mail-meta">02/05/2026 07:08 e 07:46 BRT • Sistema PJe • Caixa de gestão</div>
                 <h3 class="title">Chegaram dois relatórios automáticos do PJe; o segundo é o que deve guiar a manhã.</h3>
                 <p class="body">
-                  O envio das 07:08 traz a visão compacta com 5 vencidos, 104 em atenção e 109 movimentos diversos. O envio das 07:46 aprofunda o problema e detalha 21 vencidos com 2 urgentes.
+                  O envio das 07:08 traz visão compacta com 5 vencidos, 104 movimentos diversos e 109 itens no total. O envio das 07:46 aprofunda o problema e detalha 21 vencidos com 2 urgentes. A peça correta para ação é a segunda.
                 </p>
                 <a class="link" href="https://mail.google.com/mail/#all/19de829a87bd9309" target="_blank" rel="noreferrer">Abrir relatório compacto</a>
               </article>
@@ -644,7 +795,7 @@
                 <div class="mail-meta">02/05/2026 09:08 BRT • GitHub • Governança digital</div>
                 <h3 class="title">O app Cursor está pedindo permissões adicionais na conta do GitHub do escritório.</h3>
                 <p class="body">
-                  O pedido ainda pode ser ignorado sem perder as permissões atuais. Vale uma checagem curta para confirmar se a ampliação é desejada antes de aceitar qualquer mudança.
+                  O pedido pode ser ignorado sem perda das permissões atuais. Vale checagem curta para confirmar se a ampliação é desejada antes de aceitar a mudança.
                 </p>
                 <a class="link" href="https://mail.google.com/mail/#all/19de7f209c4cb96a" target="_blank" rel="noreferrer">Abrir e-mail</a>
               </article>
@@ -652,7 +803,7 @@
                 <div class="mail-meta">01/05/2026 16:10 BRT • Supabase • Governança digital</div>
                 <h3 class="title">O ChatGPT foi autorizado como app OAuth na organização da Supabase.</h3>
                 <p class="body">
-                  O e-mail informa autorização por petroniosouzaadv-spec para acesso às configurações e projetos da organização. Se foi intencional, basta confirmar. Se não foi, a revogação deve ser imediata.
+                  O e-mail informa autorização por <code>petroniosouzaadv-spec</code> para acesso às configurações e projetos da organização. Se foi intencional, basta confirmar; se não foi, a revogação deve ser imediata.
                 </p>
                 <a class="link" href="https://mail.google.com/mail/#all/19de4f2e87db019e" target="_blank" rel="noreferrer">Abrir e-mail</a>
               </article>
@@ -660,9 +811,17 @@
                 <div class="mail-meta">02/05/2026 03:09 BRT • OpenAI • Segurança</div>
                 <h3 class="title">Os apps da OpenAI para macOS precisam ser atualizados até 8 de maio de 2026.</h3>
                 <p class="body">
-                  A OpenAI renovou as credenciais de assinatura de código dos apps para macOS e informou que os aplicativos deixarão de funcionar até a atualização. iOS, Android e Windows não foram afetados.
+                  A OpenAI renovou as credenciais de assinatura dos apps para macOS e informou que eles deixarão de funcionar até a atualização. iOS, Android e Windows não foram afetados.
                 </p>
                 <a class="link" href="https://mail.google.com/mail/#all/19de74e764c10e5d" target="_blank" rel="noreferrer">Abrir e-mail</a>
+              </article>
+              <article class="mail">
+                <div class="mail-meta">02/05/2026 11:39 e 11:52 BRT • Financeiro e segurança</div>
+                <h3 class="title">Há um boleto Efí vencido e um novo login no Link a partir de Paulista/PE.</h3>
+                <p class="body">
+                  A Efí sinaliza inadimplência de cobrança nº 903136910, no valor de R$ 80,00, vencida em 30/04/2026. O Link registra novo login em iOS Chrome Mobile, às 11:52:52 BRT, validado por senha de uso único enviada ao celular.
+                </p>
+                <a class="link" href="https://mail.google.com/mail/#all/19de87c57c10834d" target="_blank" rel="noreferrer">Abrir alerta Efí</a>
               </article>
             </div>
           </section>
@@ -681,7 +840,7 @@
                 <div class="box"></div>
                 <div>
                   <h3 class="title">Abrir o relatório PJe das 07:46 e ordenar ação imediata nos urgentes 0000021 e 0000982, além do HC 0000536.</h3>
-                  <p class="body">A manhã começa aqui; o risco principal é manter o alerta como painel e não como execução por caso.</p>
+                  <p class="body">O risco principal é manter o alerta como painel e não como execução por caso.</p>
                   <div class="owner">Owner: Petrônio</div>
                   <a class="link" href="https://mail.google.com/mail/#all/19de84c001767659" target="_blank" rel="noreferrer">Abrir fonte</a>
                 </div>
@@ -698,7 +857,7 @@
               <article class="todo">
                 <div class="box"></div>
                 <div>
-                  <h3 class="title">Definir a estratégia recursal do INSS 1269129974 com base no prazo de 30 dias aberto em 01/05.</h3>
+                  <h3 class="title">Definir a estratégia recursal do INSS 1269129974 com base no prazo até 31/05/2026.</h3>
                   <p class="body">O prazo já está registrado no Notion; falta a decisão material sobre recorrer ou encerrar a frente.</p>
                   <div class="owner">Owner: Petrônio</div>
                   <a class="link" href="https://mail.google.com/mail/#all/19de4be65ab9e40b" target="_blank" rel="noreferrer">Abrir fonte</a>
@@ -707,18 +866,18 @@
               <article class="todo">
                 <div class="box"></div>
                 <div>
-                  <h3 class="title">Resolver a cobrança Aurora antes do fechamento da manhã e limpar a duplicidade na agenda.</h3>
-                  <p class="body">É o item financeiro mais imediato e não merece sobreviver ao primeiro bloco de trabalho.</p>
+                  <h3 class="title">Resolver a cobrança Aurora e o boleto Efí ainda hoje, ou descartar formalmente o que já estiver pago.</h3>
+                  <p class="body">É o bloco financeiro mais imediato e não merece sobreviver ao primeiro ciclo operacional do sábado.</p>
                   <div class="owner">Owner: Petrônio</div>
                 </div>
               </article>
               <article class="todo">
                 <div class="box"></div>
                 <div>
-                  <h3 class="title">Confirmar se o pedido de permissões do Cursor e o OAuth do ChatGPT na Supabase foram intencionais.</h3>
-                  <p class="body">Se não foram, agir na recusa ou revogação. Se foram, registrar mentalmente a checagem e seguir.</p>
+                  <h3 class="title">Confirmar se o pedido de permissões do Cursor, o OAuth do ChatGPT na Supabase e o login Link foram intencionais.</h3>
+                  <p class="body">Se não foram, agir na recusa, revogação ou revisão de atividade. Se foram, encerrar o ruído e seguir.</p>
                   <div class="owner">Owner: Petrônio</div>
-                  <a class="link" href="https://mail.google.com/mail/#all/19de7f209c4cb96a" target="_blank" rel="noreferrer">Abrir fonte</a>
+                  <a class="link" href="https://mail.google.com/mail/#all/19de92da7f95c3b0" target="_blank" rel="noreferrer">Abrir alerta Link</a>
                 </div>
               </article>
               <article class="todo">
@@ -751,15 +910,15 @@
               </article>
               <article class="risk">
                 <h3 class="title">Médio | O INSS abriu um novo prazo recursal que pode ser perdido se ficar fora da pauta material do dia.</h3>
-                <p class="body">A janela é maior do que a judicial, mas o prazo já nasceu e já pede decisão com cliente.</p>
+                <p class="body">A janela é mais longa do que a judicial, mas a decisão com a cliente já existe como pendência real.</p>
               </article>
               <article class="risk">
-                <h3 class="title">Médio | Permissões digitais em GitHub e Supabase pedem confirmação de autoria.</h3>
-                <p class="body">São itens simples, mas mexem com acesso a projetos e conta do escritório.</p>
+                <h3 class="title">Médio | Permissões e acessos digitais pedem confirmação de autoria.</h3>
+                <p class="body">GitHub, Supabase e Link mexem com acesso a projetos, serviços e conta do escritório.</p>
               </article>
               <article class="risk">
-                <h3 class="title">Baixo-médio | A cobrança Aurora é pequena, porém com vencimento já marcado para 10:00.</h3>
-                <p class="body">O custo aqui é mais de distração e recorrência do que de complexidade real.</p>
+                <h3 class="title">Baixo-médio | Aurora e Efí são itens simples, porém com potencial de recorrência e dispersão.</h3>
+                <p class="body">O custo aqui é mais de distração e reincidência do que de complexidade real.</p>
               </article>
             </div>
           </section>
@@ -774,15 +933,15 @@
             <div class="list">
               <article class="coverage">
                 <h3 class="title">Google Calendar</h3>
-                <p class="body">A agenda primária foi auditada de 01/05/2026 08:06 BRT a 02/05/2026 08:06 BRT. Não houve reuniões na janela. Para hoje, há apenas os dois lembretes da Aurora às 10:00 e um compromisso pessoal às 19:00.</p>
+                <p class="body">A agenda primária foi auditada de 01/05/2026 12:13 BRT a 02/05/2026 12:13 BRT. Não houve reuniões na janela. Para hoje, há apenas dois lembretes da Aurora às 10:00 e um compromisso pessoal às 19:00.</p>
               </article>
               <article class="coverage">
                 <h3 class="title">Gmail consolidado</h3>
-                <p class="body">Foram revisados os e-mails materialmente relevantes da janela: dois relatórios PJe, push TRT6, push TRF5, aviso do INSS, pedido de permissões do Cursor, aprovação OAuth do ChatGPT na Supabase e atualização obrigatória dos apps OpenAI para macOS.</p>
+                <p class="body">Foram revisados os e-mails materialmente relevantes da janela: dois relatórios PJe, push TRT6, push TRF5, aviso do INSS, cobrança Efí, lembretes Aurora, pedido de permissões do Cursor, aprovação OAuth do ChatGPT na Supabase, atualização obrigatória dos apps OpenAI para macOS e novo login no Link.</p>
               </article>
               <article class="coverage">
                 <h3 class="title">Notion</h3>
-                <p class="body">Os casos 0000021-06.2024.8.17.2420, 0000982-27.2026.8.17.8223, 0000536-68.2025.8.17.9901, 0012850-56.2025.4.05.8303, 0002236-58.2025.5.06.0000 e 1269129974 foram atualizados na base sem criação duplicada.</p>
+                <p class="body">Os casos 0000021-06.2024.8.17.2420, 0000982-27.2026.8.17.8223, 0000536-68.2025.8.17.9901, 0012850-56.2025.4.05.8303, 0002236-58.2025.5.06.0000 e 1269129974 foram atualizados sem duplicidade. Também foram adicionados 0051393-53.2025.8.17.2001 e 0017706-81.2019.8.17.0001 ao controle estruturado.</p>
               </article>
               <article class="coverage">
                 <h3 class="title">Chat corporativo</h3>
@@ -799,7 +958,7 @@
 
       <section class="footer">
         <div class="footer-note">
-          <strong>Leitura principal:</strong> o sábado não começou carregado de agenda, mas começou carregado de decisão. O melhor uso da manhã é jurídico: PJe, TRT6, TRF5 e INSS primeiro; operacional simples logo em seguida.
+          <strong>Leitura principal:</strong> o sábado não começou carregado de agenda, mas começou carregado de consequência. O melhor uso da manhã continua sendo jurídico: PJe, TRT6, TRF5 e INSS primeiro; operacional simples logo em seguida.
         </div>
         <div class="footer-note">
           <strong>Metodologia:</strong> este corte foi ancorado em Google Calendar, Gmail consolidado, base do Notion e memória de deduplicação. O chat corporativo continua fora da cobertura por falta de conector nesta sessão.
