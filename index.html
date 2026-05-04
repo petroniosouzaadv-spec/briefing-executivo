@@ -8,119 +8,594 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
-    :root{--bg:#dae1e8;--ink:#11191f;--wine:#561c26;--navy:#172b49;--gold:#bb9d6d;--panel:rgba(255,255,255,.94);--line:rgba(17,25,31,.12);--muted:rgba(17,25,31,.72);--radius:8px;--shadow:0 20px 60px rgba(17,25,31,.12)}
-    *{box-sizing:border-box}body{margin:0;font-family:"Montserrat",sans-serif;color:var(--ink);background:linear-gradient(180deg,#eef2f6 0,#dae1e8 58%,#ced6de 100%)}a{color:inherit;text-decoration:none}
-    .page{width:min(1160px,calc(100vw - 24px));margin:0 auto;padding:18px 0 32px}.hero,.card,.metric,.footer{border-radius:var(--radius);box-shadow:var(--shadow)}
-    .hero{padding:26px;background:linear-gradient(135deg,#11191f,#172b49);color:#fff}.brand{display:flex;gap:14px;align-items:center;margin-bottom:24px}.mark{width:56px;height:56px;border-radius:50%;border:1px solid rgba(187,157,109,.7);display:grid;place-items:center;color:var(--gold);font-weight:700}.brand small,.meta small,.eyebrow{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
-    h1{margin:0 0 14px;font-size:clamp(32px,4.2vw,56px);line-height:.98;max-width:13ch}.lead{margin:0;color:rgba(255,255,255,.82);font-size:15px;line-height:1.68;max-width:74ch}.lead + .lead{margin-top:10px}
-    .meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}.meta div,.aside{padding:14px 15px;border-radius:var(--radius);background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14)}.meta strong,.aside strong{display:block;font-size:18px;line-height:1.35}.aside{margin-top:12px}.aside p{margin:8px 0 0;color:rgba(255,255,255,.76);font-size:13px;line-height:1.55}
-    .metrics,.grid{display:grid;gap:16px}.metrics{grid-template-columns:repeat(5,minmax(0,1fr));margin-top:18px}.metric,.card{background:var(--panel);border:1px solid rgba(255,255,255,.55)}.metric{padding:18px}.metric small{display:block;color:var(--muted);font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}.metric strong{display:block;color:var(--navy);font-size:34px;line-height:1}.metric p,.card p,.card li{margin:8px 0 0;color:var(--muted);font-size:13px;line-height:1.58}
-    .grid{grid-template-columns:1.05fr .95fr;margin-top:18px}.stack{display:grid;gap:16px}.card{padding:18px}.eyebrow{color:var(--wine);margin-bottom:8px}.card h2{margin:0 0 12px;font-size:23px;line-height:1.1}.card h3{margin:0 0 6px;font-size:15px;line-height:1.36}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.chip{padding:6px 10px;border-radius:999px;font-size:11px;font-weight:700;text-transform:uppercase}.crit{background:rgba(86,28,38,.12);color:var(--wine)}.watch{background:rgba(187,157,109,.18);color:#7a6540}.ok{background:rgba(23,43,73,.1);color:var(--navy)}
-    .list{display:grid;gap:12px}.sub{border:1px solid var(--line);border-radius:var(--radius);padding:14px;background:linear-gradient(180deg,rgba(255,255,255,.82),rgba(255,255,255,.62))}.when{color:var(--navy);font-size:13px;font-weight:700}.link{display:inline-block;margin-top:10px;color:var(--navy);font-size:12px;font-weight:700}
-    ul{margin:10px 0 0;padding-left:18px}.footer{margin-top:18px;padding:18px 20px;background:#11191f;color:rgba(255,255,255,.8);font-size:13px;line-height:1.66}
-    @media (max-width:980px){.metrics,.grid,.meta{grid-template-columns:1fr}}@media (max-width:760px){.page{width:min(100vw - 16px,1160px)}.hero,.card,.metric{padding:18px}.card h2{font-size:21px}h1{max-width:none}.lead{font-size:14px;line-height:1.72}}
+    :root {
+      --bg: #dae1e8;
+      --panel: rgba(255, 255, 255, 0.94);
+      --panel-strong: rgba(255, 255, 255, 0.98);
+      --ink: #11191f;
+      --wine: #561c26;
+      --navy: #172b49;
+      --gold: #bb9d6d;
+      --stone: #c8b6ac;
+      --muted: rgba(17, 25, 31, 0.72);
+      --line: rgba(17, 25, 31, 0.12);
+      --shadow: 0 24px 70px rgba(17, 25, 31, 0.12);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Montserrat", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 0% 0%, rgba(187, 157, 109, 0.22), transparent 28%),
+        radial-gradient(circle at 100% 0%, rgba(23, 43, 73, 0.18), transparent 30%),
+        linear-gradient(180deg, #eef2f6 0%, #dae1e8 58%, #ced6de 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .page {
+      width: min(1260px, calc(100vw - 28px));
+      margin: 0 auto;
+      padding: 18px 0 34px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background:
+        linear-gradient(135deg, rgba(17, 25, 31, 0.98), rgba(23, 43, 73, 0.95)),
+        linear-gradient(180deg, rgba(86, 28, 38, 0.18), rgba(187, 157, 109, 0.08));
+      box-shadow: var(--shadow);
+      padding: 26px;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      border: 1px solid rgba(187, 157, 109, 0.3);
+    }
+
+    .hero::before {
+      width: 360px;
+      height: 360px;
+      right: -100px;
+      top: -120px;
+    }
+
+    .hero::after {
+      width: 220px;
+      height: 220px;
+      right: 120px;
+      bottom: -110px;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.5fr 0.9fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .brand-mark {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      border: 1px solid rgba(187, 157, 109, 0.72);
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      font-weight: 700;
+      position: relative;
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      width: 78px;
+      height: 78px;
+      border-radius: 50%;
+      border: 1px solid rgba(200, 182, 172, 0.22);
+    }
+
+    .brand-label,
+    .hero-label,
+    .metric .label,
+    .eyebrow,
+    .mini-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .brand-label { color: rgba(255, 255, 255, 0.7); margin-bottom: 6px; }
+    .brand-name { color: #fff; font-size: 23px; line-height: 1.08; font-weight: 600; max-width: 19ch; }
+
+    .hero h1 {
+      margin: 0 0 14px;
+      color: #fff;
+      font-size: clamp(32px, 4.4vw, 58px);
+      line-height: 0.98;
+      max-width: 11ch;
+    }
+
+    .hero-copy {
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 15px;
+      line-height: 1.7;
+      max-width: 68ch;
+      margin: 0;
+    }
+
+    .hero-copy + .hero-copy { margin-top: 10px; }
+
+    .hero-side { display: grid; gap: 14px; }
+
+    .glass {
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.09);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      padding: 18px;
+    }
+
+    .hero-label,
+    .mini-label { color: rgba(255, 255, 255, 0.68); margin-bottom: 10px; }
+
+    .hero-value {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .glass-note {
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 13px;
+      line-height: 1.58;
+      margin-top: 8px;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .metric,
+    .panel {
+      border-radius: var(--radius);
+      background: var(--panel);
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      box-shadow: var(--shadow);
+    }
+
+    .metric { padding: 18px; }
+
+    .metric .label {
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .metric .value {
+      color: var(--navy);
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .metric .note {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+      margin-top: 8px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .stack { display: grid; gap: 18px; }
+    .panel { padding: 20px; background: var(--panel-strong); }
+
+    .eyebrow {
+      color: var(--wine);
+      margin-bottom: 8px;
+    }
+
+    .panel h2 {
+      margin: 0 0 14px;
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    .list { display: grid; gap: 12px; }
+
+    .item {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 14px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.62));
+    }
+
+    .item h3 {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.42;
+    }
+
+    .item p,
+    .item li {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .when {
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .chip {
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .crit { background: rgba(86, 28, 38, 0.12); color: var(--wine); }
+    .watch { background: rgba(187, 157, 109, 0.2); color: #7a6540; }
+    .ok { background: rgba(23, 43, 73, 0.1); color: var(--navy); }
+
+    ul { margin: 10px 0 0; padding-left: 18px; }
+
+    .link {
+      display: inline-block;
+      margin-top: 10px;
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .footer {
+      margin-top: 18px;
+      padding: 18px 20px;
+      border-radius: var(--radius);
+      background: #11191f;
+      color: rgba(255, 255, 255, 0.82);
+      box-shadow: var(--shadow);
+      font-size: 13px;
+      line-height: 1.66;
+    }
+
+    @media (max-width: 1080px) {
+      .metrics { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .layout,
+      .hero-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 760px) {
+      .page { width: min(100vw - 16px, 1260px); }
+      .hero,
+      .panel,
+      .metric { padding: 18px; }
+      .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .panel h2 { font-size: 21px; }
+      .hero h1 { max-width: none; }
+      .hero-copy { font-size: 14px; line-height: 1.72; }
+      .hero-value { font-size: 17px; }
+    }
   </style>
 </head>
 <body>
   <main class="page">
     <section class="hero">
-      <div class="brand"><div class="mark">PS</div><div><small>Briefing executivo visual</small><strong>Petrônio Souza Advogados Associados</strong></div></div>
-      <h1>Nas últimas 24 horas, o foco ficou em passivo PJe, nova certidão em 0005844, recorte digital da OAB/PE interrompido e novas entradas operacionais que pedem triagem hoje.</h1>
-      <p class="lead">Janela auditada: <strong>03/05/2026 às 12:13 BRT</strong> até <strong>04/05/2026 às 12:13 BRT</strong>. Na agenda do período não houve reunião formal de trabalho concluída. Para o dia 04/05/2026, o Google Calendar mostrou apenas os blocos <strong>REVISÃO SEMANAL — Projuris + PJe + Google Calendar</strong> às 08:00 e <strong>Aniversário de namoro</strong> às 09:00.</p>
-      <p class="lead">No Gmail consolidado, o núcleo material se concentrou em <strong>cinco movimentações judiciais individualizadas</strong>, no <strong>relatório PJe das 07:46 BRT com 21 vencidos e 2 urgentes</strong>, em <strong>três documentos OAB finalizados</strong>, na <strong>interrupção do recorte digital da OAB/PE com 3 publicações não detalhadas</strong> e em um bloco operacional com <strong>cobrança Aurora/Hapvida</strong>, <strong>PR #6 do Escudo da Justiça com falhas recorrentes</strong> e <strong>três áudios recebidos sobre Flavio Dias</strong>.</p>
-      <div class="meta">
-        <div><small>Data do briefing</small><strong>4 de maio de 2026</strong></div>
-        <div><small>Gerado às</small><strong>12:13 BRT</strong></div>
-        <div><small>Janela de cobertura</small><strong>3 de maio de 2026, 12:13 -> 4 de maio de 2026, 12:13</strong></div>
+      <div class="hero-grid">
+        <div>
+          <div class="brand">
+            <div class="brand-mark">PS</div>
+            <div>
+              <div class="brand-label">Briefing executivo visual</div>
+              <div class="brand-name">Petrônio Souza Advogados Associados</div>
+            </div>
+          </div>
+          <h1>As últimas 24 horas pediram menos agenda e mais triagem jurídica fina, com reforço no passivo PJe e novas publicações no fim da tarde.</h1>
+          <p class="hero-copy">Janela auditada: <strong>03/05/2026 às 18:13 BRT</strong> até <strong>04/05/2026 às 18:13 BRT</strong>. Na agenda formal não houve reunião de trabalho concluída dentro do recorte. Para <strong>04/05/2026</strong>, o Google Calendar mostrou apenas os blocos <strong>REVISÃO SEMANAL — Projuris + PJe + Google Calendar</strong> às 08:00 e <strong>Aniversário de namoro</strong> às 09:00.</p>
+          <p class="hero-copy">No Gmail consolidado, o núcleo do dia ficou em <strong>21 vencidos e 2 urgentes no relatório PJe das 07:46 BRT</strong>, <strong>cinco pushes/processos já em radar desde a manhã</strong>, <strong>dois novos pushes TJPE às 15:24/15:25</strong>, <strong>quatro publicações de diário capturadas pelo Jusbrasil</strong>, <strong>serviço interrompido no recorte digital da OAB/PE</strong> e um bloco operacional com <strong>Aurora/Hapvida, PR #6 do Escudo da Justiça, alertas CNJ/gov.br e áudios sobre Flavio Dias</strong>.</p>
+        </div>
+        <div class="hero-side">
+          <div class="glass">
+            <div class="hero-label">Data do briefing</div>
+            <div class="hero-value">4 de maio de 2026</div>
+            <div class="glass-note">Gerado às <strong>18:13 BRT</strong>, mantendo o mesmo link estável do briefing executivo.</div>
+          </div>
+          <div class="glass">
+            <div class="hero-label">Janela de cobertura</div>
+            <div class="hero-value">3 de maio, 18:13 → 4 de maio, 18:13</div>
+            <div class="glass-note">Cobertura verificada em agenda primária do Google Calendar e no Gmail consolidado.</div>
+          </div>
+          <div class="glass">
+            <div class="hero-label">Ponto de atenção principal</div>
+            <div class="hero-value">O dia termina com fila jurídica viva.</div>
+            <div class="glass-note">A melhor próxima ação é zerar primeiro o passivo do PJe, abrir os novos movimentos 0002413 e 0024248, e depois tratar as publicações do dia 05/05 e a interrupção do recorte OAB/PE.</div>
+          </div>
+        </div>
       </div>
-      <div class="aside"><small>Ponto de atenção principal</small><strong>O dia pede execução disciplinada em quatro frentes: fila zero do PJe, checagem do novo movimento 0005844, regularização do recorte digital da OAB/PE e triagem das pendências operacionais novas.</strong><p>Fila jurídica prioritária: 0000021-06.2024.8.17.2420, 0000982-27.2026.8.17.8223, 0000536-68.2025.8.17.9901, 0051393-53.2025.8.17.2001, 0011527-56.2025.8.17.2480, 0001891-81.2026.8.17.9480, 0075599-05.2023.8.17.2001 e 0005844-05.2023.8.17.4001.</p></div>
     </section>
 
     <section class="metrics">
-      <article class="metric"><small>Reuniões formais</small><strong>0</strong><p>Nenhuma reunião formal foi encontrada na janela exata de 24 horas.</p></article>
-      <article class="metric"><small>Blocos na agenda de hoje</small><strong>2</strong><p>A agenda auditada mostrou apenas a revisão semanal das 08:00 e um compromisso pessoal às 09:00.</p></article>
-      <article class="metric"><small>Movimentos jurídicos novos</small><strong>5</strong><p>PJe apontou movimentações em 0051393, 0001891, 0075599, 0011527 e 0005844.</p></article>
-      <article class="metric"><small>Documentos OAB concluídos</small><strong>3</strong><p>Contrato de honorários, procuração/declaração e carta de preposição do lote Dias Auto Peças foram finalizados.</p></article>
-      <article class="metric"><small>Alertas operacionais</small><strong>6</strong><p>Recorte OAB interrompido, cobrança Aurora gerada, pagamento anterior confirmado, PR #6 com falhas, áudios recebidos e passivo PJe mantido.</p></article>
+      <article class="metric">
+        <div class="label">Reuniões formais</div>
+        <div class="value">0</div>
+        <div class="note">Nenhuma reunião formal de trabalho foi encontrada na janela exata.</div>
+      </article>
+      <article class="metric">
+        <div class="label">Blocos na agenda de hoje</div>
+        <div class="value">2</div>
+        <div class="note">Só a revisão semanal das 08:00 e um compromisso pessoal às 09:00.</div>
+      </article>
+      <article class="metric">
+        <div class="label">Vencidos no PJe</div>
+        <div class="value">21</div>
+        <div class="note">Fila vencida concentrada em TJPE e TJPI, com 2 casos urgentes destacados.</div>
+      </article>
+      <article class="metric">
+        <div class="label">Urgentes no PJe</div>
+        <div class="value">2</div>
+        <div class="note">0000021-06.2024.8.17.2420 e 0000982-27.2026.8.17.8223 seguem no topo da fila.</div>
+      </article>
+      <article class="metric">
+        <div class="label">Novos itens jurídicos</div>
+        <div class="value">6</div>
+        <div class="note">2 pushes TJPE no fim da tarde e 4 publicações de diário para 05/05.</div>
+      </article>
+      <article class="metric">
+        <div class="label">Alertas operacionais</div>
+        <div class="value">6</div>
+        <div class="note">OAB/PE, Aurora/Hapvida, PR #6, gov.br, CNJ e áudios de Flavio Dias.</div>
+      </article>
     </section>
 
-    <section class="grid">
+    <section class="layout">
       <div class="stack">
-        <article class="card">
+        <article class="panel">
           <div class="eyebrow">Executive Summary</div>
           <h2>Prioridades críticas</h2>
           <div class="list">
-            <div class="sub"><h3>Tratar o relatório PJe de 04/05/2026 às 07:46 BRT como fila zero do dia.</h3><p>O relatório consolidou <strong>21 vencidos</strong> e <strong>2 urgentes</strong>, mantendo <strong>0000021-06.2024.8.17.2420</strong> e <strong>0000982-27.2026.8.17.8223</strong> como urgentes e reiterando pressão imediata sobre <strong>0000536-68.2025.8.17.9901</strong> e <strong>0051393-53.2025.8.17.2001</strong>.</p><div class="chips"><span class="chip crit">Crítico</span><span class="chip ok">PJe</span><span class="chip watch">Hoje</span></div><a class="link" href="https://mail.google.com/mail/#all/19df298b7a51d83d" target="_blank" rel="noreferrer">Abrir relatório PJe 07:46</a></div>
-            <div class="sub"><h3>Não deixar o recorte digital da OAB/PE aberto sem ação.</h3><p>Às <strong>07:21 BRT</strong>, o serviço informou <strong>interrupção</strong>, orientou contato com a OAB/PE para atualização cadastral e registrou <strong>3 publicações no dia</strong> sem detalhamento, o que cria risco de cobertura jurídica incompleta.</p><div class="chips"><span class="chip crit">Cobertura</span><span class="chip watch">OAB/PE</span></div><a class="link" href="https://mail.google.com/mail/#all/19df28269707db8e" target="_blank" rel="noreferrer">Abrir aviso do recorte</a></div>
-            <div class="sub"><h3>Absorver o novo movimento 0005844-05.2023.8.17.4001 na fila de monitoramento penal.</h3><p>O processo <strong>51º Promotor de Justiça Criminal da Capital x Jevesson de Souza</strong>, ação penal por descumprimento de medida protetiva, recebeu <strong>expedição de certidão</strong> às <strong>08:48 BRT</strong>. A certidão precisa ser aberta para distinguir ato cartorário simples de impulso útil.</p><div class="chips"><span class="chip watch">Penal</span><span class="chip ok">Novo item</span></div><a class="link" href="https://mail.google.com/mail/#all/19df2dc74f872275" target="_blank" rel="noreferrer">Abrir push de 0005844</a></div>
-            <div class="sub"><h3>Fechar o bloco operacional curto para não contaminar o resto do dia.</h3><p>Entraram <strong>três áudios sobre Flavio Dias</strong>, a <strong>cobrança Aurora/Hapvida de R$ 485,54 com vencimento em 06/05/2026</strong>, a confirmação de pagamento da fatura anterior vencida em 02/05/2026 e a manutenção de risco técnico na <strong>PR #6 do Escudo da Justiça</strong>.</p><div class="chips"><span class="chip crit">Operacional</span><span class="chip watch">Financeiro</span><span class="chip ok">GitHub</span></div><a class="link" href="https://mail.google.com/mail/#all/19df23bf02bfc4ba" target="_blank" rel="noreferrer">Abrir cobrança Aurora</a></div>
+            <div class="item">
+              <h3>Fechar o dia com o relatório PJe de 04/05/2026 às 07:46 BRT ainda como centro de comando.</h3>
+              <p>O recorte trouxe <strong>21 vencidos</strong> e <strong>2 urgentes</strong>. Os urgentes seguem sendo <strong>0000021-06.2024.8.17.2420</strong> e <strong>0000982-27.2026.8.17.8223</strong>, enquanto a fila vencida continua pressionando <strong>0000536-68.2025.8.17.9901</strong>, <strong>0051393-53.2025.8.17.2001</strong>, <strong>0002413-78.2022.8.17.2810</strong> e outros casos sensíveis.</p>
+              <div class="chips">
+                <span class="chip crit">Crítico</span>
+                <span class="chip ok">PJe</span>
+                <span class="chip watch">Hoje</span>
+              </div>
+              <a class="link" href="https://mail.google.com/mail/#all/19df298b7a51d83d" target="_blank" rel="noreferrer">Abrir relatório PJe 07:46</a>
+            </div>
+            <div class="item">
+              <h3>Absorver os movimentos do fim da tarde antes que virem passivo oculto amanhã cedo.</h3>
+              <p>Depois do meio-dia entraram <strong>0005844-05.2023.8.17.4001</strong> com expedição de certidão às 08:48 BRT, <strong>0002413-78.2022.8.17.2810</strong> com alteração de parte e conclusos para despacho às 15:24/15:25 BRT, e <strong>0024248-24.2023.8.17.3090</strong> com expedição de mandado às 15:24 BRT.</p>
+              <div class="chips">
+                <span class="chip crit">Jurídico</span>
+                <span class="chip watch">Fim da tarde</span>
+              </div>
+              <a class="link" href="https://mail.google.com/mail/#all/19df4413e83e95a1" target="_blank" rel="noreferrer">Abrir push de 0002413</a>
+            </div>
+            <div class="item">
+              <h3>Não deixar o dia 05/05 começar com publicações sem triagem.</h3>
+              <p>O Jusbrasil capturou <strong>4 publicações</strong> com data de publicação em <strong>05/05/2026</strong>: <strong>0000417-34.2026.5.06.0006</strong>, <strong>0000223-05.2024.5.06.0103</strong>, <strong>0009193-27.2019.8.17.0001</strong> e o STJ/AREsp ligado à defesa de <strong>João Cabral de Arruda</strong>.</p>
+              <div class="chips">
+                <span class="chip watch">Diários</span>
+                <span class="chip ok">Jusbrasil</span>
+              </div>
+              <a class="link" href="https://mail.google.com/mail/#all/19df439b5906b231" target="_blank" rel="noreferrer">Abrir lote de 3 publicações</a>
+            </div>
+            <div class="item">
+              <h3>O recorte digital da OAB/PE segue como risco operacional aberto.</h3>
+              <p>Às <strong>10:21 BRT</strong>, o serviço informou <strong>interrupção</strong>, recomendou contato com a OAB/PE para atualização cadastral e sinalizou <strong>3 publicações do dia</strong> sem detalhamento. É um risco direto de cobertura incompleta se não houver checagem por outro canal.</p>
+              <div class="chips">
+                <span class="chip crit">Cobertura</span>
+                <span class="chip watch">OAB/PE</span>
+              </div>
+              <a class="link" href="https://mail.google.com/mail/#all/19df28269707db8e" target="_blank" rel="noreferrer">Abrir aviso do recorte</a>
+            </div>
           </div>
         </article>
 
-        <article class="card">
+        <article class="panel">
           <div class="eyebrow">Agenda</div>
           <h2>Agenda e preparo relevante</h2>
           <div class="list">
-            <div class="sub"><div class="when">04/05 • 08:00-09:00</div><h3>REVISÃO SEMANAL — Projuris + PJe + Google Calendar.</h3><p>O evento existiu como principal bloco operacional da manhã. A utilidade prática para o restante do dia segue a mesma: tratar os urgentes do PJe, abrir o novo 0005844 e verificar se as publicações não detalhadas da OAB/PE já foram rastreadas por outro canal.</p><ul><li>Reabrir primeiro 0000021, 0000982, 0000536, 0051393, 0011527, 0001891, 0075599 e 0005844.</li><li>Separar os documentos OAB já finalizados para arquivamento e circulação.</li><li>Confirmar o que ficou pendente do bloco financeiro da Aurora e dos áudios de Flavio Dias.</li></ul><a class="link" href="https://www.google.com/calendar/event?eid=dGk3ZWhpYXJvdnZoajkxdDZiaWwwZnZsYTBfMjAyNjA1MDRUMTEwMDAwWiBwZXRyb25pb3NvdXphLmFkdkBt&ctz=America/Sao_Paulo" target="_blank" rel="noreferrer">Abrir evento</a></div>
-            <div class="sub"><div class="when">04/05 • 09:00-10:00</div><h3>Aniversário de namoro.</h3><p>Compromisso pessoal registrado na agenda. Não há outras reuniões formais no restante do dia até o limite consultado de 23:59 BRT.</p><a class="link" href="https://www.google.com/calendar/event?eid=NzRvbTZkMzJja3AzOGI5bTY0cTNlYjlrY2RpNjZiOW82aGozNGI5bGNsZ2phZDFuNjhxajBjYjM2Z18yMDI2MDUwNFQxMjAwMDBaIHBldHJvbmlvc291emEuYWR2QG0&ctz=America/Sao_Paulo" target="_blank" rel="noreferrer">Abrir evento</a></div>
+            <div class="item">
+              <div class="when">04/05 • 08:00-09:00</div>
+              <h3>REVISÃO SEMANAL — Projuris + PJe + Google Calendar</h3>
+              <p>Foi o único bloco de trabalho estruturado do dia. Na prática, ele continua sendo a melhor moldura para o restante da execução: esvaziar os urgentes do PJe, abrir os novos movimentos do TJPE e organizar as publicações que amadurecem em 05/05.</p>
+              <ul>
+                <li>Reabrir primeiro 0000021, 0000982, 0000536, 0051393, 0011527, 0001891, 0075599, 0002413 e 0024248.</li>
+                <li>Confirmar se a interrupção do recorte OAB/PE já foi saneada por outro canal.</li>
+                <li>Separar o que é jurídico do que é apenas operacional no bloco Aurora, gov.br/CNJ e GitHub.</li>
+              </ul>
+              <a class="link" href="https://www.google.com/calendar/event?eid=dGk3ZWhpYXJvdnZoajkxdDZiaWwwZnZsYTBfMjAyNjA1MDRUMTEwMDAwWiBwZXRyb25pb3NvdXphLmFkdkBt&ctz=America/Sao_Paulo" target="_blank" rel="noreferrer">Abrir evento</a>
+            </div>
+            <div class="item">
+              <div class="when">04/05 • 09:00-10:00</div>
+              <h3>Aniversário de namoro</h3>
+              <p>Compromisso pessoal registrado na agenda. Não apareceram outras reuniões formais até o limite consultado de 23:59 BRT.</p>
+              <a class="link" href="https://www.google.com/calendar/event?eid=NzRvbTZkMzJja3AzOGI5bTY0cTNlYjlrY2RpNjZiOW82aGozNGI5bGNsZ2phZDFuNjhxajBjYjM2Z18yMDI2MDUwNFQxMjAwMDBaIHBldHJvbmlvc291emEuYWR2QG0&ctz=America/Sao_Paulo" target="_blank" rel="noreferrer">Abrir evento</a>
+            </div>
           </div>
         </article>
 
-        <article class="card">
+        <article class="panel">
           <div class="eyebrow">Jurídico</div>
           <h2>Mapa processual material</h2>
           <div class="list">
-            <div class="sub"><h3>0051393-53.2025.8.17.2001 • TJPE • procedimento comum cível</h3><p><strong>Partes:</strong> Paula Mayne de Almeida Sial Ferraz e outros x Angela Maria Torreao Sial e outros. <strong>Advogado:</strong> não identificado no e-mail. <strong>Movimento:</strong> conclusos para decisão em 03/05/2026 às 14:28 BRT. <strong>Follow-up:</strong> abrir o andamento e recalibrar a resposta, porque o processo segue também no bloco de vencidos do PJe. <strong>Risco:</strong> Alto, pela combinação de pendência vencida e movimentação nova.</p><a class="link" href="https://mail.google.com/mail/#all/19deee3eff98b4f9" target="_blank" rel="noreferrer">Abrir push de 0051393</a></div>
-            <div class="sub"><h3>0011527-56.2025.8.17.2480 • TJPE • ação penal do júri</h3><p><strong>Partes:</strong> Central de Inquéritos de Caruaru e outros x Jose Felipe Pedro da Silva e outros. <strong>Advogado:</strong> não identificado na fonte. <strong>Movimento:</strong> publicado despacho/intimação em 04/05/2026 às 04:12 BRT. <strong>Follow-up:</strong> abrir o teor da publicação e validar prazo ou providência defensiva. <strong>Risco:</strong> Alto.</p><a class="link" href="https://mail.google.com/mail/#all/19df1e4fec79d5e6" target="_blank" rel="noreferrer">Abrir push de 0011527</a></div>
-            <div class="sub"><h3>0001891-81.2026.8.17.9480 • TJPE 2º grau • habeas corpus criminal</h3><p><strong>Partes:</strong> Petronio Leonardo Ramos de Souza x Juíza da Vara do Tribunal do Júri de Caruaru. <strong>Advogado:</strong> não identificado no e-mail. <strong>Movimento:</strong> publicada intimação em 04/05/2026 às 00:41 BRT. <strong>Follow-up:</strong> abrir a intimação ainda hoje. <strong>Risco:</strong> Alto.</p><a class="link" href="https://mail.google.com/mail/#all/19df124c7d4094da" target="_blank" rel="noreferrer">Abrir push do HC</a></div>
-            <div class="sub"><h3>0075599-05.2023.8.17.2001 • TJPE • tratamento médico-hospitalar</h3><p><strong>Partes:</strong> E. G. D. S. e outros x YOU Assistência Médica Ltda e outros. <strong>Advogado:</strong> não identificado na fonte. <strong>Movimento:</strong> publicado despacho/intimação em 04/05/2026 às 01:16 BRT. <strong>Follow-up:</strong> abrir a publicação e identificar o comando judicial. <strong>Risco:</strong> Médio.</p><a class="link" href="https://mail.google.com/mail/#all/19df14039b0a0850" target="_blank" rel="noreferrer">Abrir push de 0075599</a></div>
-            <div class="sub"><h3>0005844-05.2023.8.17.4001 • TJPE • ação penal - procedimento sumário</h3><p><strong>Partes:</strong> 51º Promotor de Justiça Criminal da Capital x Jevesson de Souza. <strong>Advogado:</strong> não identificado na fonte. <strong>Movimento:</strong> expedição de certidão em 04/05/2026 às 08:48 BRT. <strong>Follow-up:</strong> abrir a certidão para qualificar o impacto material. <strong>Risco:</strong> Médio.</p><a class="link" href="https://mail.google.com/mail/#all/19df2dc74f872275" target="_blank" rel="noreferrer">Abrir push de 0005844</a></div>
-            <div class="sub"><h3>Passivo mantido pelo relatório PJe de 04/05/2026</h3><p><strong>Urgentes:</strong> 0000021-06.2024.8.17.2420 e 0000982-27.2026.8.17.8223. <strong>Vencidos de maior sensibilidade:</strong> 0000536-68.2025.8.17.9901 e 0051393-53.2025.8.17.2001. <strong>Follow-up:</strong> manter os quatro na fila de abertura prioritária. <strong>Risco:</strong> Crítico no conjunto.</p><a class="link" href="https://mail.google.com/mail/#all/19df298b7a51d83d" target="_blank" rel="noreferrer">Abrir relatório PJe 07:46</a></div>
+            <div class="item">
+              <h3>0051393-53.2025.8.17.2001 • TJPE • procedimento comum cível</h3>
+              <p><strong>Partes:</strong> Paula Mayne de Almeida Sial Ferraz e outros x Angela Maria Torreao Sial e outros. <strong>Advogado:</strong> não identificado no e-mail. <strong>Evento:</strong> conclusos para decisão em <strong>03/05/2026 às 14:28 BRT</strong>. <strong>Follow-up:</strong> abrir o andamento e recalibrar prazo residual, porque o caso também segue na fila vencida do relatório PJe. <strong>Risco:</strong> Alto.</p>
+              <a class="link" href="https://mail.google.com/mail/#all/19deee3eff98b4f9" target="_blank" rel="noreferrer">Abrir push de 0051393</a>
+            </div>
+            <div class="item">
+              <h3>0011527-56.2025.8.17.2480 • TJPE • ação penal do júri</h3>
+              <p><strong>Partes:</strong> Central de Inquéritos de Caruaru e outros x Jose Felipe Pedro da Silva e outros. <strong>Evento:</strong> despacho/intimação publicado em <strong>04/05/2026 às 04:12 BRT</strong>. <strong>Follow-up:</strong> abrir o teor integral e identificar prazo ou providência defensiva. <strong>Risco:</strong> Alto.</p>
+              <a class="link" href="https://mail.google.com/mail/#all/19df1e4fec79d5e6" target="_blank" rel="noreferrer">Abrir push de 0011527</a>
+            </div>
+            <div class="item">
+              <h3>0001891-81.2026.8.17.9480 • TJPE 2º grau • habeas corpus criminal</h3>
+              <p><strong>Partes:</strong> Petronio Leonardo Ramos de Souza x Juíza da Vara do Tribunal do Júri de Caruaru. <strong>Evento:</strong> intimação publicada em <strong>04/05/2026 às 00:41 BRT</strong>. <strong>Follow-up:</strong> abrir a intimação ainda hoje. <strong>Risco:</strong> Alto.</p>
+              <a class="link" href="https://mail.google.com/mail/#all/19df124c7d4094da" target="_blank" rel="noreferrer">Abrir push do HC</a>
+            </div>
+            <div class="item">
+              <h3>0075599-05.2023.8.17.2001 • TJPE • tratamento médico-hospitalar</h3>
+              <p><strong>Partes:</strong> E. G. D. S. e outros x YOU Assistência Médica Ltda e outros. <strong>Evento:</strong> despacho/intimação publicado em <strong>04/05/2026 às 01:16 BRT</strong>. <strong>Follow-up:</strong> abrir a publicação e identificar o comando judicial. <strong>Risco:</strong> Médio.</p>
+              <a class="link" href="https://mail.google.com/mail/#all/19df14039b0a0850" target="_blank" rel="noreferrer">Abrir push de 0075599</a>
+            </div>
+            <div class="item">
+              <h3>0005844-05.2023.8.17.4001 • TJPE • ação penal por descumprimento de medida protetiva</h3>
+              <p><strong>Partes:</strong> 51º Promotor de Justiça Criminal da Capital x Jevesson de Souza. <strong>Evento:</strong> expedição de certidão em <strong>04/05/2026 às 08:48 BRT</strong>. <strong>Follow-up:</strong> abrir a certidão e separar ato cartorário simples de impulso útil. <strong>Risco:</strong> Médio.</p>
+              <a class="link" href="https://mail.google.com/mail/#all/19df2dc74f872275" target="_blank" rel="noreferrer">Abrir push de 0005844</a>
+            </div>
+            <div class="item">
+              <h3>0002413-78.2022.8.17.2810 e 0024248-24.2023.8.17.3090 • TJPE • novos movimentos do fim da tarde</h3>
+              <p><strong>0002413:</strong> Rayssa Porto de Araujo Lima e outros x Uelinton Cesar de Araujo Lima, com <strong>alteração de parte</strong> e <strong>conclusos para despacho</strong> às <strong>15:24/15:25 BRT</strong>. <strong>0024248:</strong> Rosangela Maria Ferreira de Amorim x Everson Ricardo Souza Ribeiro, com <strong>expedição de mandado</strong> às <strong>15:24 BRT</strong>. <strong>Follow-up:</strong> abrir ambos antes do início de 05/05. <strong>Risco:</strong> Alto para 0002413 e Médio para 0024248.</p>
+              <a class="link" href="https://mail.google.com/mail/#all/19df4414edf85c30" target="_blank" rel="noreferrer">Abrir push de 0024248</a>
+            </div>
+            <div class="item">
+              <h3>Publicações do dia 05/05 já capturadas em 04/05</h3>
+              <p><strong>0000417-34.2026.5.06.0006</strong>, <strong>0000223-05.2024.5.06.0103</strong> e <strong>0009193-27.2019.8.17.0001</strong> apareceram no Jusbrasil com disponibilização em 04/05 e publicação em 05/05. No último caso, a fonte também aponta o <strong>AREsp 3169660/PE</strong>, relatoria do Ministro <strong>Og Fernandes</strong>, com Petrônio como advogado de João Cabral de Arruda. <strong>Risco:</strong> Médio, mas com necessidade de abertura já no primeiro horário útil.</p>
+              <a class="link" href="https://mail.google.com/mail/#all/19df39de80392263" target="_blank" rel="noreferrer">Abrir publicação adicional</a>
+            </div>
           </div>
         </article>
       </div>
 
       <div class="stack">
-        <article class="card">
+        <article class="panel">
           <div class="eyebrow">Inbox</div>
           <h2>E-mails materialmente relevantes</h2>
           <div class="list">
-            <div class="sub"><h3>03/05 • 12:31-12:51 BRT • Portal OAB</h3><p>O lote foi processado e três documentos foram finalizados: <strong>CONTRATO DE HONORÁRIOS 2026 - DIAS AUTO PEÇAS 05 ACORDOS TRABALHISTAS</strong>, <strong>PROCURAÇÃO E DECLARAÇÃO DE HIP</strong> e <strong>CARTA DE PREPOSIÇÃO</strong>. O que resta é arquivamento e distribuição.</p><a class="link" href="https://mail.google.com/mail/#all/19dee857ed6ce6ed" target="_blank" rel="noreferrer">Abrir documento finalizado</a></div>
-            <div class="sub"><h3>04/05 • 06:05-08:07 BRT • Aurora/Hapvida</h3><p>Foi gerada nova cobrança de <strong>R$ 485,54</strong> com vencimento em <strong>06/05/2026</strong>. Em seguida, entrou a confirmação de pagamento da fatura anterior, vencida em <strong>02/05/2026</strong>, também no valor de <strong>R$ 485,54</strong>. A situação financeira imediata ficou mais clara, mas a nova cobrança permanece aberta.</p><a class="link" href="https://mail.google.com/mail/#all/19df2ac4d8c328a1" target="_blank" rel="noreferrer">Abrir confirmação de pagamento</a></div>
-            <div class="sub"><h3>04/05 • 07:21 BRT • Recorte Digital OAB/PE</h3><p>O serviço informou <strong>interrupção</strong> e recomendou contato com a OAB/PE para atualização cadastral. O mesmo e-mail sinaliza <strong>3 publicações no dia</strong>, sem trazer o detalhamento necessário para trabalho jurídico seguro.</p><a class="link" href="https://mail.google.com/mail/#all/19df28269707db8e" target="_blank" rel="noreferrer">Abrir aviso do recorte</a></div>
-            <div class="sub"><h3>04/05 • 07:44 BRT • Áudios Flavio Dias</h3><p>Priscila Vanderley encaminhou <strong>três arquivos de áudio</strong>. O material entrou sem síntese no corpo do e-mail e precisa de triagem para descobrir se gera ação jurídica, operacional ou apenas registro.</p><a class="link" href="https://mail.google.com/mail/#all/19df2971755567a3" target="_blank" rel="noreferrer">Abrir e-mail dos áudios</a></div>
-            <div class="sub"><h3>03/05 • 22:14-23:36 BRT • GitHub / Projeto Escudo da Justiça</h3><p>A <strong>PR #6</strong> recebeu várias notificações de falha no workflow <strong>Security & Build</strong>. No GitHub, há um comentário de revisão não resolvido alertando que a troca para <strong>sessionStorage</strong> pode quebrar o fluxo de confirmação em nova aba e fazer perder a etapa de criptografia de identificadores pendentes.</p><a class="link" href="https://github.com/petroniosouzaadv-spec/rojeto-escudo-da-justi-a/pull/6" target="_blank" rel="noreferrer">Abrir PR #6</a></div>
+            <div class="item">
+              <h3>Recorte Digital OAB/PE interrompido</h3>
+              <p>O e-mail das <strong>10:21 BRT</strong> informou interrupção do serviço, pediu contato com a OAB/PE para atualização cadastral e apenas avisou que houve <strong>3 publicações</strong> no dia, sem trazer o conteúdo. É risco de visibilidade jurídica, não mero ruído.</p>
+              <a class="link" href="https://mail.google.com/mail/#all/19df28269707db8e" target="_blank" rel="noreferrer">Abrir aviso do recorte</a>
+            </div>
+            <div class="item">
+              <h3>Aurora/Hapvida com novo boleto e confirmação da fatura anterior</h3>
+              <p>Entrou uma nova cobrança de <strong>R$ 485,54</strong> com vencimento em <strong>06/05/2026</strong>, e depois a confirmação do pagamento da fatura anterior, também de <strong>R$ 485,54</strong>, que venceu em <strong>02/05/2026</strong> e foi paga em <strong>04/05/2026</strong>.</p>
+              <a class="link" href="https://mail.google.com/mail/#all/19df23bf02bfc4ba" target="_blank" rel="noreferrer">Abrir cobrança Aurora</a>
+            </div>
+            <div class="item">
+              <h3>Segurança de acesso: gov.br e CNJ exigem leitura consciente</h3>
+              <p>Houve <strong>alerta de mudança de senha no gov.br às 00:37</strong>, mais acessos novos no <strong>PDPJ/TRT6</strong> por <strong>certificado digital</strong> às 03:04 e por <strong>gov.br via Safari/iOS</strong> às 13:23. Se foram acessos legítimos, fecham como FYI; se algum deles não for reconhecido, o risco sobe imediatamente.</p>
+              <a class="link" href="https://mail.google.com/mail/#all/19df10ffab714eec" target="_blank" rel="noreferrer">Abrir aviso do gov.br</a>
+            </div>
+            <div class="item">
+              <h3>Projeto Escudo da Justiça ainda com fricção técnica real</h3>
+              <p>A <strong>PR #6</strong> seguiu com falha no workflow <strong>Security &amp; Build</strong> por <strong>Secret Scan</strong>. Além disso, a revisão do Codex apontou risco funcional: guardar <strong>pending_encrypt_cpf</strong> e <strong>pending_encrypt_phone</strong> em <strong>sessionStorage</strong> pode quebrar a criptografia esperada quando a confirmação ocorre em outra aba.</p>
+              <a class="link" href="https://github.com/petroniosouzaadv-spec/rojeto-escudo-da-justi-a/pull/6" target="_blank" rel="noreferrer">Abrir PR #6</a>
+            </div>
+            <div class="item">
+              <h3>Áudios de Priscila Vanderley sobre Flavio Dias chegaram sem síntese</h3>
+              <p>O e-mail das <strong>10:44 BRT</strong> trouxe <strong>três arquivos de áudio</strong> com o assunto <strong>Áudios Flavio dias</strong> e sem resumo no corpo. O risco aqui é de atraso interpretativo: pode haver orientação prática, relato de fato ou demanda jurídica escondida no anexo.</p>
+              <a class="link" href="https://mail.google.com/mail/#all/19df2971755567a3" target="_blank" rel="noreferrer">Abrir e-mail dos áudios</a>
+            </div>
+            <div class="item">
+              <h3>Itaú Uniclass e Search Console são sinais úteis, mas não a frente principal</h3>
+              <p>A fatura do cartão fechou em <strong>R$ 738,22</strong>, vencimento em <strong>11/05/2026</strong>, e o Google confirmou a verificação recente do domínio <strong>jusseguro.com.br</strong> no Search Console. São itens válidos para organização, mas abaixo do núcleo jurídico do dia.</p>
+              <a class="link" href="https://mail.google.com/mail/#all/19df20f18373b706" target="_blank" rel="noreferrer">Abrir fatura Itaú</a>
+            </div>
           </div>
         </article>
 
-        <article class="card">
+        <article class="panel">
           <div class="eyebrow">Next Actions</div>
           <h2>Follow-ups e donos</h2>
           <div class="list">
-            <div class="sub"><h3>Abrir primeiro 0000021, 0000982, 0000536 e 0051393.</h3><p>Owner: Petrônio. Prioridade crítica.</p></div>
-            <div class="sub"><h3>Abrir as publicações/intimações de 0011527, 0001891 e 0075599 ainda hoje.</h3><p>Owner: Petrônio. Prioridade alta.</p></div>
-            <div class="sub"><h3>Abrir a certidão expedida em 0005844-05.2023.8.17.4001 e qualificar o impacto do ato.</h3><p>Owner: Petrônio. Prioridade média.</p></div>
-            <div class="sub"><h3>Regularizar o recorte digital da OAB/PE e identificar as 3 publicações do dia.</h3><p>Owner: Petrônio. Prioridade alta.</p></div>
-            <div class="sub"><h3>Arquivar os PDFs finalizados do lote OAB Dias Auto Peças.</h3><p>Owner: Petrônio. Prioridade média.</p></div>
-            <div class="sub"><h3>Manter programado o pagamento da Aurora/Hapvida de 06/05/2026.</h3><p>Owner: Petrônio. Prioridade média.</p></div>
-            <div class="sub"><h3>Revisar a PR #6 do Escudo da Justiça, especialmente o ponto de sessionStorage e o Secret Scan.</h3><p>Owner: Petrônio. Prioridade média.</p></div>
-            <div class="sub"><h3>Ouvir os áudios recebidos de Priscila Vanderley sobre Flavio Dias.</h3><p>Owner: Petrônio. Prioridade média.</p></div>
+            <div class="item">
+              <h3>Abrir primeiro os urgentes 0000021 e 0000982 e, em seguida, 0000536, 0051393, 0011527, 0001891 e 0075599.</h3>
+              <p>Owner: Petrônio. Prioridade alta.</p>
+            </div>
+            <div class="item">
+              <h3>Fechar a dupla do fim da tarde: 0002413 e 0024248.</h3>
+              <p>Owner: Petrônio. Prioridade alta.</p>
+            </div>
+            <div class="item">
+              <h3>Abrir as publicações que entram em 05/05: 0000417, 0000223 e 0009193/AREsp 3169660-PE.</h3>
+              <p>Owner: Petrônio. Prioridade alta.</p>
+            </div>
+            <div class="item">
+              <h3>Regularizar o recorte digital OAB/PE e garantir outro canal de conferência até a normalização.</h3>
+              <p>Owner: Petrônio. Prioridade alta.</p>
+            </div>
+            <div class="item">
+              <h3>Ouvir os áudios recebidos sobre Flavio Dias e classificar a demanda.</h3>
+              <p>Owner: Petrônio. Prioridade média.</p>
+            </div>
+            <div class="item">
+              <h3>Manter programado o pagamento Aurora/Hapvida de 06/05 e revisar a PR #6 do Escudo da Justiça.</h3>
+              <p>Owner: Petrônio. Prioridade média.</p>
+            </div>
           </div>
         </article>
 
-        <article class="card">
+        <article class="panel">
           <div class="eyebrow">Cobertura</div>
           <h2>Fontes e lacunas verificadas</h2>
           <div class="list">
-            <div class="sub"><h3>Google Calendar</h3><p>Agenda primária auditada na janela exata de 03/05/2026 12:13 BRT a 04/05/2026 12:13 BRT. Não houve reunião formal concluída; para o restante do dia consultado até 23:59 BRT não apareceram outros compromissos além dos dois blocos da manhã.</p></div>
-            <div class="sub"><h3>Gmail consolidado</h3><p>Foram lidos os e-mails materialmente relevantes da janela: relatórios PJe, pushes TJPE, Portal OAB, recorte digital OAB/PE, Aurora/Hapvida, GitHub e áudios recebidos. Promoções, newsletters e ruído foram excluídos da análise.</p></div>
-            <div class="sub"><h3>Notion e lacunas</h3><p>Os itens novos desta janela foram registrados no Notion sem duplicidade, com atualização do caso 0005844 e criação de tarefas novas para recorte OAB/PE, triagem dos áudios de Flavio Dias e abertura da certidão expedida. Não há conector de chat corporativo ativo nesta execução.</p></div>
+            <div class="item">
+              <h3>Google Calendar</h3>
+              <p>Agenda primária auditada na janela exata de <strong>03/05/2026 18:13 BRT</strong> a <strong>04/05/2026 18:13 BRT</strong> e no restante de 04/05 até <strong>23:59 BRT</strong>. Não houve reunião formal além dos dois blocos da manhã.</p>
+            </div>
+            <div class="item">
+              <h3>Gmail consolidado</h3>
+              <p>Foram lidos os e-mails materialmente relevantes do período: relatório PJe, pushes TJPE, publicações Jusbrasil, recorte OAB/PE, Aurora/Hapvida, alertas CNJ/gov.br, Itaú, Search Console, GitHub e os áudios recebidos. Promoções e newsletters ficaram fora.</p>
+            </div>
+            <div class="item">
+              <h3>Notion e memória de deduplicação</h3>
+              <p>Os casos já existentes foram atualizados sem duplicidade, e os registros novos desta janela foram criados apenas quando ainda não existiam. As tarefas operacionais e jurídicas já abertas no Notion durante os briefings anteriores de hoje foram preservadas e não duplicadas.</p>
+            </div>
+            <div class="item">
+              <h3>Lacunas assumidas com transparência</h3>
+              <p>Não há conector de chat corporativo nesta execução. O recorte digital da OAB/PE não detalhou as 3 publicações que anunciou. Os quatro e-mails do TRT6 enviados com PDFs anexos continuam exigindo abertura do documento para qualificação completa do teor.</p>
+            </div>
           </div>
         </article>
       </div>
     </section>
 
-    <section class="footer"><strong>Leitura principal:</strong> esta janela não trouxe agenda pesada; trouxe manutenção de risco. O maior ganho do restante do dia está em reduzir incerteza: abrir o que o PJe e o novo 0005844 pedem, restabelecer a cobertura do recorte OAB/PE e esvaziar as pendências operacionais pequenas antes que virem acúmulo.</section>
+    <section class="footer"><strong>Leitura principal:</strong> o dia não terminou em modo de agenda, mas em modo de triagem. A decisão executiva mais valiosa agora é impedir que o fechamento de hoje transfira para amanhã um bloco cego de PJe, TJPE e diários. O briefing foi consolidado para reduzir exatamente esse ponto de atrito.</section>
   </main>
 </body>
 </html>
