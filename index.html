@@ -6,7 +6,10 @@
     <title>PS Briefing executivo - 06/05/2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <style>
       :root {
         --bg: #dae1e8;
@@ -16,7 +19,6 @@
         --wine: #561c26;
         --navy: #172b49;
         --gold: #bb9d6d;
-        --stone: #c8b6ac;
         --muted: rgba(17, 25, 31, 0.72);
         --line: rgba(17, 25, 31, 0.12);
         --shadow: 0 24px 70px rgba(17, 25, 31, 0.12);
@@ -24,6 +26,7 @@
       }
 
       * { box-sizing: border-box; }
+
       body {
         margin: 0;
         min-height: 100vh;
@@ -36,7 +39,12 @@
       }
 
       a { color: inherit; text-decoration: none; }
-      .page { width: min(1260px, calc(100vw - 28px)); margin: 0 auto; padding: 18px 0 34px; }
+
+      .page {
+        width: min(1260px, calc(100vw - 28px));
+        margin: 0 auto;
+        padding: 18px 0 34px;
+      }
 
       .hero {
         position: relative;
@@ -57,8 +65,19 @@
         border: 1px solid rgba(187, 157, 109, 0.3);
       }
 
-      .hero::before { width: 360px; height: 360px; right: -100px; top: -120px; }
-      .hero::after { width: 220px; height: 220px; right: 120px; bottom: -110px; }
+      .hero::before {
+        width: 360px;
+        height: 360px;
+        right: -100px;
+        top: -120px;
+      }
+
+      .hero::after {
+        width: 220px;
+        height: 220px;
+        right: 120px;
+        bottom: -110px;
+      }
 
       .hero-grid {
         position: relative;
@@ -66,10 +85,15 @@
         display: grid;
         grid-template-columns: 1.45fr 0.95fr;
         gap: 18px;
-        align-items: stretch;
       }
 
-      .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 24px;
+      }
+
       .brand-mark {
         width: 58px;
         height: 58px;
@@ -81,13 +105,14 @@
         font-weight: 700;
         position: relative;
       }
+
       .brand-mark::after {
         content: "";
         position: absolute;
         width: 78px;
         height: 78px;
         border-radius: 50%;
-        border: 1px solid rgba(200, 182, 172, 0.22);
+        border: 1px solid rgba(255, 255, 255, 0.16);
       }
 
       .brand-label,
@@ -107,7 +132,7 @@
       .hero h1 {
         margin: 0 0 14px;
         color: #fff;
-        font-size: clamp(32px, 4.4vw, 58px);
+        font-size: clamp(32px, 4.4vw, 56px);
         line-height: 0.98;
         max-width: 11ch;
       }
@@ -182,17 +207,20 @@
       .when { color: var(--navy); font-weight: 700; margin-bottom: 6px; }
 
       .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+
       .tag {
         border-radius: 999px;
         padding: 5px 10px;
         background: rgba(17, 25, 31, 0.06);
         color: var(--navy);
       }
+
       .tag.high { background: rgba(86, 28, 38, 0.1); color: var(--wine); }
       .tag.medium { background: rgba(187, 157, 109, 0.18); color: #7b5b22; }
       .tag.low { background: rgba(23, 43, 73, 0.1); color: var(--navy); }
 
       .compact { display: grid; gap: 10px; }
+
       .compact .row {
         display: grid;
         grid-template-columns: minmax(0, 1fr) auto;
@@ -201,6 +229,7 @@
         padding-bottom: 10px;
         border-bottom: 1px solid var(--line);
       }
+
       .compact .row:last-child { padding-bottom: 0; border-bottom: 0; }
       .compact strong { display: block; font-size: 14px; line-height: 1.45; }
       .compact span { color: var(--muted); font-size: 13px; line-height: 1.58; }
@@ -249,20 +278,33 @@
                 <div class="brand-name">Briefing executivo das últimas 24 horas</div>
               </div>
             </div>
-            <h1>Duas audiências hoje, passivo trabalhista ativo e operação pedindo reação.</h1>
-            <p class="hero-copy">A janela de <strong>05/05/2026 às 00:13 BRT</strong> até <strong>06/05/2026 às 00:13 BRT</strong> veio com uma trilha jurídica densa no Gmail consolidado: <strong>execução e intimações no processo 0000742-23.2024.5.06.0121</strong>, lote trabalhista novo da <strong>C J Antonio Dias</strong> em <strong>0000579, 0000580, 0000581, 0000584 e 0000585</strong>, além de sequência relevante no júri de Caruaru em <strong>0011527-56.2025.8.17.2480</strong>.</p>
-            <p class="hero-copy">Para hoje, a agenda traz <strong>audiência de conciliação às 09:00</strong>, <strong>dois lembretes de cobrança Aurora às 10:00</strong> e <strong>audiência de instrução às 13:30</strong>. Fora do contencioso, há cinco pontos que não devem escorregar: <strong>plano FOX SAÚDE suspenso</strong>, <strong>alerta de novo acesso ao PDPJ/TRT6</strong>, <strong>documentos mensais pendentes na Obvia</strong>, <strong>URLs 404 no blog</strong> e <strong>fatura Santander fechada em R$ 773,93</strong>.</p>
+            <h1>Audiências hoje, bloco trabalhista ativo e segurança pedindo validação.</h1>
+            <p class="hero-copy">
+              A janela de <strong>05/05/2026 às 06:13 BRT</strong> até <strong>06/05/2026 às 06:13 BRT</strong> trouxe
+              concentração jurídica no Gmail consolidado: <strong>execução com intimações em 0000742-23.2024.5.06.0121</strong>,
+              nova sequência de atos no júri de Caruaru em <strong>0011527-56.2025.8.17.2480</strong>,
+              bloco trabalhista da <strong>C J Antonio Dias</strong> com RPPs/publicações e mais quatro frentes materiais
+              em TJPE, TRT6, TJPI e Justiça Federal.
+            </p>
+            <p class="hero-copy">
+              Para hoje, a agenda traz <strong>audiência de conciliação às 09:00</strong>,
+              <strong>dois lembretes Aurora às 10:00</strong> e <strong>audiência de instrução às 13:30</strong>.
+              Fora do contencioso, o recorte mais sensível combina <strong>plano FOX SAÚDE suspenso</strong>,
+              <strong>alerta de novo acesso à PDPJ/CNJ às 23:37</strong>,
+              <strong>documentos mensais vencidos na Obvia</strong> e
+              <strong>404 novo no Search Console</strong>.
+            </p>
           </div>
           <div class="hero-side">
             <div class="glass">
               <div class="hero-label">Janela auditada</div>
-              <div class="hero-value">05/05/2026 00:13 BRT -> 06/05/2026 00:13 BRT</div>
-              <div class="glass-note">Gerado em 06/05/2026 às 00:13 BRT e publicado no mesmo link estável do briefing.</div>
+              <div class="hero-value">05/05/2026 06:13 BRT -> 06/05/2026 06:13 BRT</div>
+              <div class="glass-note">Recorte fechado com Google Calendar primário e Gmail consolidado do escritório.</div>
             </div>
             <div class="glass">
               <div class="hero-label">Leitura executiva</div>
-              <div class="hero-value">Manhã concentrada em audiência, execução trabalhista e regularização operacional.</div>
-              <div class="glass-note">A prioridade é chegar às 09:00 com a posição de Dias Auto Peça clara e, em paralelo, não deixar saúde, acesso e documentos administrativos acumularem mais um dia.</div>
+              <div class="hero-value">A manhã começa com preparo de audiência, leitura de intimações e saneamento de pendências operacionais.</div>
+              <div class="glass-note">Sem conector de chat corporativo nesta execução. A audiência "Edite RT" segue sem número de processo confirmado pelo Gmail.</div>
             </div>
           </div>
         </div>
@@ -275,29 +317,29 @@
           <div class="note">Conciliação às 09:00 e instrução às 13:30 no Google Calendar.</div>
         </article>
         <article class="metric">
-          <div class="label">Alertas De Agenda</div>
+          <div class="label">Lembretes Aurora</div>
           <div class="value">2</div>
-          <div class="note">Dois lembretes de cobrança Aurora às 10:00, ambos no valor de R$ 485,54.</div>
+          <div class="note">Dois eventos às 10:00 com o mesmo valor de R$ 485,54 e links Asaas diferentes.</div>
         </article>
         <article class="metric">
           <div class="label">Processos Materiais</div>
           <div class="value">12</div>
-          <div class="note">TJPE, TRT6 e TJPI com movimentos concretos dentro da janela auditada.</div>
+          <div class="note">Movimentos úteis confirmados em TRT6, TJPE, TJPI e Justiça Federal.</div>
         </article>
         <article class="metric">
-          <div class="label">Publicações Rastreada</div>
-          <div class="value">5</div>
-          <div class="note">Jusbrasil apontou cinco publicações para 06/05, com dois itens em 0000742 e um em cada RPP 0000579, 0000580 e 0000581.</div>
+          <div class="label">Publicações Jusbrasil</div>
+          <div class="value">8</div>
+          <div class="note">Cinco publicações novas do bloco Dias Auto Peças e três alertas adicionais para o processo 0090272-03.2023.8.17.2001.</div>
         </article>
         <article class="metric">
           <div class="label">Alertas Operacionais</div>
-          <div class="value">8</div>
-          <div class="note">FOX, CNJ, Obvia, OAB, Search Console, Selfit, Santander e cobrança Aurora exigem leitura útil.</div>
+          <div class="value">6</div>
+          <div class="note">FOX, CNJ/PDPJ, Eproc/TRF2, Obvia, Selfit e Search Console exigem resposta útil.</div>
         </article>
         <article class="metric">
-          <div class="label">Entrada Confirmada</div>
-          <div class="value">R$ 500</div>
-          <div class="note">Asaas confirmou Pix de Ana Francisca de Paula em 05/05/2026 às 11:56.</div>
+          <div class="label">Backlog PJe</div>
+          <div class="value">21</div>
+          <div class="note">Relatório das 07:46 de 05/05 manteve 21 vencidos e 2 urgentes como passivo de atenção.</div>
         </article>
       </section>
 
@@ -309,65 +351,107 @@
             <div class="list">
               <div class="item">
                 <div class="when">09:00 - Audiência de Conciliação Dias Auto Peça</div>
-                <h3>A audiência de hoje parece se alinhar ao mesmo núcleo <strong>C J Antonio Dias</strong> que movimentou execução e RPPs na janela.</h3>
-                <p><strong>Base verificada:</strong> o Calendar mostra o compromisso, e o Gmail concentrou no mesmo período o processo 0000742-23.2024.5.06.0121 e as RPPs 0000579, 0000580, 0000581, 0000584 e 0000585. <strong>Inferência:</strong> a reunião deve ser preparada com esse bloco em mente até prova em contrário.</p>
-                <div class="tag-row"><span class="tag high">Risco alto</span><span class="tag">Inferência sinalizada</span></div>
+                <h3>A audiência de hoje parece conversar diretamente com o bloco trabalhista da C J Antonio Dias que se moveu durante toda a janela.</h3>
+                <p>
+                  <strong>Base verificada:</strong> a agenda traz a audiência e o Gmail reuniu
+                  0000742-23.2024.5.06.0121, 0000579-69.2026.5.06.0122,
+                  0000580-54.2026.5.06.0122, 0000581-39.2026.5.06.0122,
+                  0000584-94.2026.5.06.0121 e 0000585-79.2026.5.06.0121 em torno do mesmo polo empresarial.
+                  <strong>Inferência:</strong> a preparação deve partir desse núcleo até confirmação manual da pauta.
+                </p>
+                <div class="tag-row">
+                  <span class="tag high">Risco alto</span>
+                  <span class="tag">Inferência sinalizada</span>
+                </div>
               </div>
+
               <div class="item">
                 <div class="when">Processo 0000742-23.2024.5.06.0121</div>
-                <h3>A execução já começou e o TRT6 expediu intimações para as duas partes após despacho de mero expediente.</h3>
-                <p><strong>Partes:</strong> Luana Caroline Alves da Silva x C J Antonio Dias Peças e Serviços para Autos Ltda. <strong>Advogado:</strong> Petrônio Souza, interno. <strong>Follow-up:</strong> abrir despacho e intimações antes da audiência e da publicação de 06/05 para saber se há margem de composição, impugnação ou providência imediata da reclamada.</p>
-                <div class="tag-row"><span class="tag high">Execução</span><span class="tag high">Abrir antes das 09:00</span></div>
+                <h3>A execução já veio com intimações publicadas para 06/05 e segue sendo o ponto mais sensível do bloco trabalhista.</h3>
+                <p>
+                  <strong>Partes:</strong> Luana Caroline Alves da Silva x C J Antonio Dias Peças e Serviços para Autos Ltda.
+                  <strong>Responsável aparente:</strong> Petrônio Souza, interno.
+                  <strong>Próximo passo:</strong> abrir o despacho e as intimações antes da audiência para entender margem de conciliação,
+                  necessidade de impugnação ou providência imediata da reclamada.
+                </p>
+                <div class="tag-row">
+                  <span class="tag high">Execução</span>
+                  <span class="tag high">Abrir antes das 09:00</span>
+                </div>
               </div>
-              <div class="item">
-                <div class="when">Lote C J Antonio Dias - RPPs</div>
-                <h3>Os processos <strong>0000579, 0000580 e 0000581</strong> já têm despacho de triagem e intimação; <strong>0000584 e 0000585</strong> ficaram em distribuição e juízo 100% digital.</h3>
-                <p><strong>Partes:</strong> C J Antonio Dias x Lucas Santiago Vicente da Silva, Itamar Gomes da Silva Junior, Flavio Regis da Costa Gadelha, Sabrina Suelyn Pereira Silva e Emanuely da Silva Souza. <strong>Follow-up:</strong> abrir primeiro as RPPs já intimadas e, na sequência, validar a documentação inicial das duas que ainda não foram triadas.</p>
-                <div class="tag-row"><span class="tag high">Trabalhista</span><span class="tag high">Publicação em 06/05</span></div>
-              </div>
+
               <div class="item">
                 <div class="when">Processo 0011527-56.2025.8.17.2480</div>
-                <h3>O júri de Caruaru acumulou petição, certidão, juntada de documentos, conclusão para decisão e retorno dos autos no mesmo dia.</h3>
-                <p><strong>Partes:</strong> Central de Inquéritos de Caruaru e outros x Jose Felipe Pedro da Silva e outros. <strong>Advogado:</strong> Petrônio Souza, interno. <strong>Follow-up:</strong> abrir a sequência documental ainda hoje para entender o que foi efetivamente levado à conclusão e se existe preparação prévia para a decisão.</p>
-                <div class="tag-row"><span class="tag high">Penal</span><span class="tag high">Concluso para decisão</span></div>
+                <h3>O júri de Caruaru acumulou certidão, juntada de outros documentos e depois decurso de prazo do escritório às 23:59.</h3>
+                <p>
+                  <strong>Partes:</strong> Central de Inquéritos de Caruaru e outros x Jose Felipe Pedro da Silva e outros.
+                  <strong>Responsável aparente:</strong> Petrônio Souza, interno.
+                  <strong>Risco:</strong> alto, porque a nova mensagem da madrugada confirma decurso de prazo do próprio patrono.
+                  <strong>Próximo passo:</strong> abrir a cadeia documental e verificar se há medida reparatória ou justificativa cabível ainda hoje.
+                </p>
+                <div class="tag-row">
+                  <span class="tag high">Penal</span>
+                  <span class="tag high">Prazo decorrido</span>
+                </div>
               </div>
+
+              <div class="item">
+                <div class="when">Segurança e acesso</div>
+                <h3>Houve três alertas de acesso na noite de 05/05 e madrugada de 06/05: um da PDPJ/CNJ e dois do Eproc/TRF2.</h3>
+                <p>
+                  O CNJ registrou novo acesso ao sistema <strong>pje-trt6-1g</strong> às 23:37 via iPhone/Safari e o Eproc/TRF2 avisou acessos às 00:52 e 04:38.
+                  Se os acessos forem legítimos, basta registrar; se não forem, a troca de senha deve sair da fila imediatamente.
+                </p>
+                <div class="tag-row">
+                  <span class="tag high">Segurança</span>
+                  <span class="tag high">Validar hoje</span>
+                </div>
+              </div>
+
               <div class="item">
                 <div class="when">Bloco operacional</div>
-                <h3>FOX SAÚDE, CNJ/PDPJ e Obvia Contabilidade não devem virar fila morta nesta manhã.</h3>
-                <p>O plano FOX está suspenso por inadimplência, o CNJ registrou novo acesso ao sistema <strong>pje-trt6-1g</strong> às 23:37 em iPhone/Safari e a Obvia cobrou os documentos mensais com vencimento em 05/05/2026. Esses três pontos têm impacto prático e não devem esperar o fim do dia.</p>
-                <div class="tag-row"><span class="tag high">Operacional</span><span class="tag high">Resolver hoje</span></div>
+                <h3>FOX SAÚDE suspenso, Obvia vencida e Selfit travada já configuram pendência operacional real, não simples lembrete.</h3>
+                <p>
+                  O plano FOX continua suspenso por inadimplência, a Obvia cobrou o envio dos documentos mensais com data limite em 05/05 e a Selfit só normaliza a cobrança após validar o novo cartão na unidade de origem.
+                </p>
+                <div class="tag-row">
+                  <span class="tag high">Operacional</span>
+                  <span class="tag high">Resolver em horário comercial</span>
+                </div>
               </div>
             </div>
           </article>
 
           <article class="panel">
-            <div class="eyebrow">Agenda e preparação</div>
-            <h2>O que merece preparo antes do expediente apertar</h2>
+            <div class="eyebrow">Agenda e preparo</div>
+            <h2>O que merece leitura antes do expediente apertar</h2>
             <div class="list">
               <div class="item">
                 <div class="when">09:00 - 10:00</div>
                 <h3><a href="https://www.google.com/calendar/event?eid=OWpjOGZsdnFubjM2YnJ2MnZjaXJrYnNranMgcGV0cm9uaW9zb3V6YS5hZHZAbQ&ctz=America/Sao_Paulo" target="_blank" rel="noreferrer">Audiência de Conciliação Dias Auto Peça</a></h3>
                 <ul>
-                  <li>Levar à frente o quadro de execução do processo 0000742-23.2024.5.06.0121 e o estágio das RPPs 0000579, 0000580 e 0000581.</li>
-                  <li>Checar antes da audiência se o despacho e as intimações do TRT6 já dão pista sobre postura esperada da empresa.</li>
-                  <li>Como a ligação entre o evento da agenda e os números processuais é inferida pelo nome da parte, validar o processo exato ao abrir a pauta.</li>
+                  <li>Levar para a mesa o estado do processo 0000742 e das RPPs 0000579, 0000580 e 0000581 já publicadas para 06/05.</li>
+                  <li>Conferir antes da audiência se o despacho/intimação do TRT6 alterou a posição de negociação da empresa.</li>
+                  <li>Como o evento do Calendar não traz número do processo, validar a pauta exata ao abrir o compromisso.</li>
                 </ul>
               </div>
+
               <div class="item">
                 <div class="when">10:00 - 10:15</div>
-                <h3><a href="https://www.google.com/calendar/event?eid=X2VscW1pcDJ2Y2xyNmFyamtidGduNm9iMWVkZm4wb2JwZGxpbXN0MnZjaHFtYXAzMWVoaWx1czMxZjVmamVwcjg2Z28zZXFiZjcxazZxdGo2ZGRnbmFnMzFlZGdtMnNwZWNkbm1xYmoyZTggcGV0cm9uaW9zb3V6YS5hZHZAbQ&ctz=America/Sao_Paulo" target="_blank" rel="noreferrer">Vencimento de cobrança Aurora</a></h3>
+                <h3><a href="https://www.google.com/calendar/event?eid=X2VscW1pcDJ2Y2xyNmFyamtidGduNm9iMWVkZm4wb2JwZGxpbXN0MnZjaHFtYXAzMWVoaWx1czMxZjVmamVwcjg2Z28zZXFiZjcxazZxdGo2ZGRnbmFnMzFlZGdtMnNwZWNkbm1xYmoyZTggcGV0cm9uaW9zb3V6YS5hZHZAbQ&ctz=America/Sao_Paulo" target="_blank" rel="noreferrer">Vencimento Aurora</a></h3>
                 <ul>
-                  <li>Há dois lembretes separados no Calendar, ambos de R$ 485,54, com links Asaas distintos.</li>
-                  <li>Antes do pagamento, confirmar se são duas cobranças válidas ou duplicidade de lembrete para o mesmo serviço.</li>
+                  <li>Há dois lembretes separados, ambos de R$ 485,54, com URLs Asaas distintas.</li>
+                  <li>Antes de pagar, vale confirmar se é duplicidade de lembrete ou duas cobranças válidas para o mesmo grupo.</li>
                 </ul>
               </div>
+
               <div class="item">
                 <div class="when">13:30 - 14:30</div>
                 <h3><a href="https://www.google.com/calendar/event?eid=OWlvdDh0ajhidDRvOWxuanRsMW8wNWJ0ZGMgcGV0cm9uaW9zb3V6YS5hZHZAbQ&ctz=America/Sao_Paulo" target="_blank" rel="noreferrer">Audiência de instrução Edite RT</a></h3>
                 <ul>
-                  <li>Não apareceu contexto adicional no Gmail consolidado para amarrar o número do processo automaticamente.</li>
-                  <li>A preparação mínima é abrir a pauta do evento, confirmar o processo certo, revisar testemunhas e conferir se há documento pendente de juntada.</li>
-                  <li>Sem outro suporte documental recuperado nesta rodada, tratar o preparo como lacuna de contexto a fechar manualmente antes das 13:30.</li>
+                  <li>O Gmail consolidado não trouxe contexto suficiente para identificar automaticamente o número do processo.</li>
+                  <li>A lacuna precisa ser fechada manualmente na pauta do evento antes das 13:30.</li>
+                  <li>Sem esse vínculo confirmado, não é seguro inferir testemunhas, fase ou risco processual a partir só do título.</li>
                 </ul>
               </div>
             </div>
@@ -375,63 +459,63 @@
 
           <article class="panel">
             <div class="eyebrow">Monitoramento jurídico</div>
-            <h2>Demais movimentos relevantes da janela</h2>
+            <h2>Outros movimentos materiais da janela</h2>
             <div class="compact">
               <div class="row">
                 <div>
                   <strong>0804758-69.2025.8.18.0152</strong>
-                  <span>Maria Audilene de Lima Barbosa x Ensino, Treinamento e Consultorias FGV Ltda. O TJPI confirmou decurso de prazo da ré em 04/05/2026 às 23:59. Follow-up: avaliar a providência útil seguinte para aproveitar a inércia.</span>
+                  <span>Maria Audilene de Lima Barbosa x Ensino, Treinamento e Consultorias FGV Ltda. O TJPI confirmou decurso de prazo da ré em 04/05/2026 às 23:59. Próximo passo: avaliar a providência seguinte para aproveitar a inércia.</span>
+                </div>
+                <span class="tag medium">Médio</span>
+              </div>
+              <div class="row">
+                <div>
+                  <strong>0006910-71.2019.8.17.0990</strong>
+                  <span>Ministério Público do Estado de Pernambuco e outros x Reinaldo Silva do Espírito Santo e outros. Houve juntada de manifestação do Ministério Público às 08:20 de 05/05. Próximo passo: abrir a peça e medir reflexo penal concreto.</span>
                 </div>
                 <span class="tag medium">Médio</span>
               </div>
               <div class="row">
                 <div>
                   <strong>0000982-27.2026.8.17.8223</strong>
-                  <span>Ricardo da Silva de Barros e outros x Concept Motors Ltda. O TJPE expediu certidão às 10:43 de 05/05/2026. Follow-up: abrir a certidão e os documentos expedidos ainda hoje.</span>
+                  <span>Ricardo da Silva de Barros e outros x Concept Motors Ltda. O TJPE expediu certidão às 10:43 de 05/05. Próximo passo: abrir a certidão e os documentos expedidos ainda hoje.</span>
                 </div>
                 <span class="tag high">Alto</span>
               </div>
               <div class="row">
                 <div>
-                  <strong>0000867-40.2024.8.17.5001</strong>
-                  <span>Recife (Campo Grande) - 7ª Equipe CEPLANC e outros x Miqueas Filipe Lima dos Santos. Expedição de certidão às 07:53 de 05/05/2026. Follow-up: abrir a certidão para saber o efeito concreto.</span>
+                  <strong>0067822-32.2024.8.17.2001</strong>
+                  <span>Estado de Pernambuco e outros x Fatima Maria Maia Gominho. Os autos em grau de recurso foram remetidos à instância superior às 14:23 de 05/05. Próximo passo: confirmar o conteúdo do recurso e a nova fase.</span>
                 </div>
                 <span class="tag medium">Médio</span>
               </div>
               <div class="row">
                 <div>
-                  <strong>0000223-05.2024.5.06.0103</strong>
-                  <span>Mayara Maria da Silva x Editora Trato Ltda. Intimação disponibilizada em 04/05 e publicada em 05/05/2026. Follow-up: ler o teor e medir prazo.</span>
+                  <strong>0026091-27.2022.8.17.2001</strong>
+                  <span>Nathanne de Almeida Magalhaes x Clinipam e outros. O TJPE registrou juntada de petição às 14:44 de 05/05. Próximo passo: abrir a peça para medir risco de tutela ou resposta.</span>
                 </div>
                 <span class="tag medium">Médio</span>
               </div>
               <div class="row">
                 <div>
-                  <strong>0000417-34.2026.5.06.0006</strong>
-                  <span>Maria Graziele Pereira Silva x Priscyla Nayara Gomes da Costa de Brito e outros. Intimação publicada em 05/05/2026. Follow-up: abrir o teor e identificar prazo ou providência recursal.</span>
+                  <strong>0000677-25.2024.5.06.0122</strong>
+                  <span>Gerson Batista de Oliveira x Malibu Consultoria em Gestão Empresarial Ltda e outros. O TRT6 recebeu petição de acordo às 15:39 de 05/05. Próximo passo: abrir a proposta e checar necessidade de homologação ou ajuste.</span>
+                </div>
+                <span class="tag high">Alto</span>
+              </div>
+              <div class="row">
+                <div>
+                  <strong>0000396-46.2023.5.06.0141</strong>
+                  <span>Manoel de Morais Ferreira x M &amp; R Serviços e Telecomunicações Ltda e outros. O TRT6 registrou agravo de instrumento em agravo de petição às 23:40 de 05/05, com documento sigiloso. Próximo passo: identificar a estratégia recursal.</span>
                 </div>
                 <span class="tag medium">Médio</span>
               </div>
               <div class="row">
                 <div>
-                  <strong>0000471-84.2018.5.06.0101</strong>
-                  <span>Ednaldo Silva de Oliveira x Comercial L M de Alimentação Ltda e outros. Push TRT6 registrou despacho de mero expediente. Follow-up: confirmar se foi só impulso ordinatório ou se houve orientação útil.</span>
+                  <strong>5004507-42.2026.4.02.5002</strong>
+                  <span>Marinalva Maria da Silva x INSS. O Eproc/JF2 confirmou peticionamento finalizado e distribuição por sorteio à 3ª Vara Federal de Cachoeiro de Itapemirim às 02:24 de 06/05. Próximo passo: registrar o protocolo e acompanhar a conclusão inicial.</span>
                 </div>
                 <span class="tag medium">Médio</span>
-              </div>
-              <div class="row">
-                <div>
-                  <strong>0063228-33.2023.8.17.8201</strong>
-                  <span>Condomínio do Edifício Residencial Pontes Home Stay x Roberta de Fátima dos Santos Nogueira e outros. A rodada atual só mantém a necessidade residual de confirmar o alvará e o arquivamento definitivo na prática.</span>
-                </div>
-                <span class="tag low">Baixo</span>
-              </div>
-              <div class="row">
-                <div>
-                  <strong>Jusbrasil - 5 publicações</strong>
-                  <span>O lote novo de 06/05/2026 saiu com dois itens para o processo 0000742-23.2024.5.06.0121 e um item em cada RPP 0000579-69.2026.5.06.0122, 0000580-54.2026.5.06.0122 e 0000581-39.2026.5.06.0122.</span>
-                </div>
-                <span class="tag medium">Monitorado</span>
               </div>
             </div>
           </article>
@@ -439,74 +523,79 @@
 
         <div class="stack">
           <article class="panel">
-            <div class="eyebrow">Operacional e financeiro</div>
-            <h2>O que mexe no dia fora do processo</h2>
+            <div class="eyebrow">Operacional</div>
+            <h2>Pendências não processuais com efeito prático no dia</h2>
             <div class="list">
               <div class="item">
                 <div class="when">FOX SAÚDE</div>
-                <h3>O plano segue com serviços suspensos por inadimplência desde a mensalidade vencida em 05/04/2026.</h3>
-                <p>O e-mail recebido às 16:35 de 05/05/2026 informa suspensão ativa e prazo de até cinco dias úteis para liberação após regularização. É o maior risco operacional não jurídico desta janela.</p>
-                <div class="tag-row"><span class="tag high">Risco alto</span><span class="tag">Saúde suspensa</span></div>
+                <h3>O plano permanece suspenso por inadimplência da mensalidade vencida em 05/04/2026.</h3>
+                <p>A operadora informou que a reativação ocorre em até cinco dias úteis após regularização. Isso afeta cobertura real e merece fila curta.</p>
+                <div class="tag-row"><span class="tag high">Risco alto</span><span class="tag high">Saúde suspensa</span></div>
               </div>
-              <div class="item">
-                <div class="when">CNJ / PDPJ</div>
-                <h3>Novo acesso foi detectado às 23:37 de 05/05/2026 via iPhone, Safari e provedor GOV.BR.</h3>
-                <p>O sistema que solicitou o acesso foi <strong>pje-trt6-1g</strong>. Se o acesso não for reconhecido, a orientação do CNJ é alterar a senha imediatamente.</p>
-                <div class="tag-row"><span class="tag high">Segurança</span><span class="tag high">Validar ainda hoje</span></div>
-              </div>
+
               <div class="item">
                 <div class="when">Obvia Contabilidade</div>
-                <h3>A cobrança de documentos mensais venceu em 05/05/2026 e continua pendente.</h3>
-                <p>O pedido veio com link específico para upload. Ao entrar em 06/05 sem envio confirmado, isso passa de lembrete para pendência administrativa real.</p>
-                <div class="tag-row"><span class="tag high">Atrasado</span><span class="tag high">Administrativo</span></div>
+                <h3>Os documentos mensais foram cobrados com data limite em 05/05/2026 e seguem sem confirmação de envio nesta leitura.</h3>
+                <p>Ao virar o dia 06/05 sem baixa do pedido, o tema deixa de ser lembrete e passa a ser atraso administrativo do escritório.</p>
+                <div class="tag-row"><span class="tag high">Atrasado</span><span class="tag medium">Administrativo</span></div>
               </div>
+
               <div class="item">
-                <div class="when">OAB / Ação criminal Rafaela</div>
-                <h3>A procuração e a declaração de HIP de <strong>Rafaela e Romualdo</strong> foram concluídas às 22:26, e o ZIP do WhatsApp da ação foi reenviado às 21:46.</h3>
-                <p>Esse par de sinais indica fechamento documental e material de apoio já disponível para arquivamento ou uso imediato na frente criminal correspondente.</p>
-                <div class="tag-row"><span class="tag medium">Documento pronto</span><span class="tag medium">Arquivar</span></div>
+                <div class="when">Search Console</div>
+                <h3>O Google apontou motivo novo de não indexação por <strong>404</strong> no blog.petroniosouza.com.br.</h3>
+                <p>O relatório pede correção do erro caso o motivo não seja intencional. Vale abrir o painel ainda hoje para listar as URLs afetadas.</p>
+                <div class="tag-row"><span class="tag medium">Médio</span><span class="tag medium">Site</span></div>
               </div>
+
               <div class="item">
-                <div class="when">Search Console e Selfit</div>
-                <h3>O Google abriu um motivo novo de não indexação por 404 e a Selfit bloqueou o fluxo de cobrança até validar o novo cartão na unidade.</h3>
-                <p>Ambos são problemas resolvíveis, mas não devem ficar largados: o primeiro afeta presença digital; o segundo mantém cobrança e acesso fora do normal até saneamento presencial.</p>
-                <div class="tag-row"><span class="tag medium">Médio</span><span class="tag medium">Resolver em horário comercial</span></div>
+                <div class="when">Selfit</div>
+                <h3>A academia só normaliza a cobrança depois de validar presencialmente o novo cartão na unidade de origem.</h3>
+                <p>O e-mail informa que o valor em aberto será cobrado após a validação e só então o acesso é desbloqueado.</p>
+                <div class="tag-row"><span class="tag medium">Médio</span><span class="tag">Resolver em horário comercial</span></div>
               </div>
+
               <div class="item">
-                <div class="when">Caixa</div>
-                <h3>Houve confirmação de Pix de <strong>R$ 500,00</strong> de Ana Francisca de Paula às 11:56 e a fatura Santander SX final 7330 fechou em <strong>R$ 773,93</strong> com vencimento em 09/05/2026.</h3>
-                <p>O saldo líquido do dia melhora com a entrada, mas a fatura do cartão já merece programação de quitação nesta semana.</p>
-                <div class="tag-row"><span class="tag low">Entrada confirmada</span><span class="tag medium">Programar pagamento</span></div>
+                <div class="when">Entrada financeira</div>
+                <h3>A cobrança de <strong>Ana Francisca de Paula</strong> foi visualizada às 11:52 e o carnê da <strong>A3H NET</strong> teve a 8ª parcela confirmada.</h3>
+                <p>Os sinais são positivos para caixa e regularidade, mas a trilha Aurora das 10:00 ainda precisa ser esclarecida para evitar pagamento duplicado.</p>
+                <div class="tag-row"><span class="tag low">Financeiro</span><span class="tag low">Monitorado</span></div>
+              </div>
+
+              <div class="item">
+                <div class="when">OAB / criminal Rafaela</div>
+                <h3>A procuração e a declaração de HIP de Rafaela e Romualdo foram concluídas na OAB, e o ZIP do WhatsApp da ação criminal foi reenviado na noite de 05/05.</h3>
+                <p>Isso sinaliza material pronto para arquivamento interno ou uso imediato na frente penal correspondente.</p>
+                <div class="tag-row"><span class="tag medium">Documento pronto</span><span class="tag">Arquivar</span></div>
               </div>
             </div>
           </article>
 
           <article class="panel">
-            <div class="eyebrow">Fontes e lacunas</div>
-            <h2>O que foi verificado e o que ainda depende de abertura direta</h2>
+            <div class="eyebrow">Backlog e lacunas</div>
+            <h2>O que segue aberto depois da varredura</h2>
             <div class="list">
               <div class="item">
-                <h3>Google Calendar primário</h3>
-                <p>Foi auditado do início da janela até o fim do dia 06/05/2026, confirmando ausência de reuniões formais no dia 05/05 e a pauta de hoje com duas audiências e dois lembretes financeiros.</p>
-              </div>
-              <div class="item">
-                <h3>Gmail consolidado</h3>
-                <p>Foram lidos os e-mails materiais da janela, incluindo PJe, TRT6, TJPI, Jusbrasil, OAB, CNJ, Asaas, Santander, Search Console, Selfit e cobrança administrativa.</p>
-              </div>
-              <div class="item">
-                <h3>Lacuna conhecida</h3>
-                <p>Não existe conector de chat corporativo nesta sessão, e a audiência de instrução "Edite RT" não trouxe no e-mail consolidado contexto suficiente para identificar o processo automaticamente.</p>
+                <h3>Passivo PJe</h3>
+                <p>O relatório automático das 07:46 de 05/05 manteve <strong>21 vencidos</strong> e <strong>2 urgentes</strong>. Não é novidade desta manhã, mas continua sendo um risco de gestão do acervo.</p>
               </div>
               <div class="item">
                 <h3>Publicações Jusbrasil</h3>
-                <p>O lote de cinco publicações veio claro o suficiente para priorização. A leitura integral do teor de cada publicação ainda depende da abertura direta nos links do diário.</p>
+                <p>As cinco publicações de 06/05 ligadas ao bloco Dias Auto Peças foram verificadas. O teor integral ainda depende da abertura direta nos links do diário.</p>
+              </div>
+              <div class="item">
+                <h3>Novo processo via CPF</h3>
+                <p>O Jusbrasil alertou um processo novo associado ao CPF de Petrônio, com início em 28/04/2026 e assunto de habeas corpus/garantias eleitorais. O resumo automático é insuficiente para classificar sem abrir o link original.</p>
+              </div>
+              <div class="item">
+                <h3>Sem chat corporativo</h3>
+                <p>Não houve conector de chat nesta execução. Qualquer decisão interna trocada fora do Gmail não entrou nesta leitura.</p>
               </div>
             </div>
           </article>
         </div>
       </section>
 
-      <p class="footer-note">Gerado em 06/05/2026 às 00:13 BRT com base no Google Calendar primário e no Gmail consolidado do escritório.</p>
+      <p class="footer-note">Gerado em 06/05/2026 para a janela de 24 horas encerrada às 06:13 BRT.</p>
     </main>
   </body>
 </html>
