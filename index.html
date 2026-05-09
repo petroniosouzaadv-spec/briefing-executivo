@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PS Briefing executivo - 09/05/2026</title>
+    <title>Briefing Executivo | 9 de maio de 2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,20 +13,20 @@
     <style>
       :root {
         --bg: #dae1e8;
-        --panel: rgba(255, 255, 255, 0.9);
-        --panel-strong: rgba(255, 255, 255, 0.97);
+        --panel: rgba(255, 255, 255, 0.88);
+        --panel-strong: rgba(255, 255, 255, 0.96);
         --ink: #11191f;
         --wine: #561c26;
         --navy: #172b49;
         --gold: #bb9d6d;
-        --muted: rgba(17, 25, 31, 0.72);
+        --stone: #c8b6ac;
+        --muted: rgba(17, 25, 31, 0.7);
         --line: rgba(17, 25, 31, 0.12);
         --shadow: 0 24px 70px rgba(17, 25, 31, 0.12);
         --radius: 8px;
       }
 
       * { box-sizing: border-box; }
-
       body {
         margin: 0;
         min-height: 100vh;
@@ -39,9 +39,10 @@
       }
 
       a { color: inherit; text-decoration: none; }
+      #root { min-height: 100vh; }
 
       .page {
-        width: min(1260px, calc(100vw - 28px));
+        width: min(1280px, calc(100vw - 28px));
         margin: 0 auto;
         padding: 18px 0 34px;
       }
@@ -85,6 +86,7 @@
         display: grid;
         grid-template-columns: 1.45fr 0.95fr;
         gap: 18px;
+        align-items: stretch;
       }
 
       .brand {
@@ -112,41 +114,45 @@
         width: 78px;
         height: 78px;
         border-radius: 50%;
-        border: 1px solid rgba(255, 255, 255, 0.16);
+        border: 1px solid rgba(200, 182, 172, 0.22);
       }
 
-      .brand-label,
-      .hero-label,
-      .metric .label,
-      .eyebrow,
-      .when,
-      .tag {
+      .brand-label {
+        color: rgba(255, 255, 255, 0.72);
         font-size: 11px;
         text-transform: uppercase;
         letter-spacing: 0.08em;
+        margin-bottom: 6px;
       }
 
-      .brand-label { color: rgba(255, 255, 255, 0.72); margin-bottom: 6px; }
-      .brand-name { color: #fff; font-size: 23px; line-height: 1.08; font-weight: 600; max-width: 18ch; }
+      .brand-name {
+        color: #fff;
+        font-size: 23px;
+        line-height: 1.08;
+        font-weight: 600;
+        max-width: 18ch;
+      }
 
       .hero h1 {
         margin: 0 0 14px;
         color: #fff;
-        font-size: clamp(32px, 4.4vw, 56px);
+        font-size: clamp(32px, 4.4vw, 58px);
         line-height: 0.98;
-        max-width: 12ch;
+        max-width: 10ch;
       }
 
       .hero-copy {
-        color: rgba(255, 255, 255, 0.84);
+        color: rgba(255, 255, 255, 0.78);
         font-size: 15px;
-        line-height: 1.72;
-        max-width: 74ch;
+        line-height: 1.68;
+        max-width: 64ch;
         margin: 0;
       }
 
-      .hero-copy + .hero-copy { margin-top: 10px; }
-      .hero-side { display: grid; gap: 14px; }
+      .hero-side {
+        display: grid;
+        gap: 14px;
+      }
 
       .glass {
         border-radius: var(--radius);
@@ -156,13 +162,32 @@
         padding: 18px;
       }
 
-      .hero-label { color: rgba(255, 255, 255, 0.68); margin-bottom: 10px; }
-      .hero-value { color: #fff; font-size: 18px; font-weight: 700; line-height: 1.4; }
-      .glass-note { color: rgba(255, 255, 255, 0.8); font-size: 13px; line-height: 1.58; margin-top: 8px; }
+      .glass-label,
+      .mini-label {
+        color: rgba(255, 255, 255, 0.64);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 10px;
+      }
+
+      .glass-value {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.4;
+      }
+
+      .glass-note {
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 13px;
+        line-height: 1.58;
+        margin-top: 8px;
+      }
 
       .metrics {
         display: grid;
-        grid-template-columns: repeat(6, minmax(0, 1fr));
+        grid-template-columns: repeat(5, minmax(0, 1fr));
         gap: 14px;
         margin-top: 18px;
       }
@@ -176,459 +201,690 @@
       }
 
       .metric { padding: 18px; }
-      .metric .label { color: var(--muted); margin-bottom: 10px; }
-      .metric .value { color: var(--navy); font-size: 34px; font-weight: 800; line-height: 1; }
-      .metric .note { color: var(--muted); font-size: 13px; line-height: 1.55; margin-top: 8px; }
+      .metric .label {
+        color: var(--muted);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 10px;
+      }
+
+      .metric .value {
+        color: var(--navy);
+        font-size: 34px;
+        font-weight: 800;
+        line-height: 1;
+      }
+
+      .metric .note {
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.5;
+        margin-top: 8px;
+      }
 
       .layout {
         display: grid;
-        grid-template-columns: 1.08fr 0.92fr;
+        grid-template-columns: 1.16fr 0.84fr;
         gap: 18px;
         margin-top: 18px;
       }
 
       .stack { display: grid; gap: 18px; }
       .panel { padding: 20px; background: var(--panel-strong); }
-      .eyebrow { color: var(--wine); margin-bottom: 8px; }
-      .panel h2 { margin: 0 0 14px; font-size: 24px; line-height: 1.1; }
-      .list { display: grid; gap: 12px; }
 
-      .item {
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        padding: 14px;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.62));
+      .panel-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 14px;
+        align-items: flex-start;
+        margin-bottom: 16px;
       }
 
-      .item h3 { margin: 0; font-size: 15px; line-height: 1.42; }
-      .item p,
-      .item li { margin: 8px 0 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
-      .item ul { margin: 8px 0 0; padding-left: 18px; }
-      .when { color: var(--navy); font-weight: 700; margin-bottom: 6px; }
+      .eyebrow {
+        color: var(--wine);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 8px;
+      }
 
-      .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+      .panel h2 {
+        margin: 0;
+        font-size: 24px;
+        line-height: 1.1;
+      }
 
-      .tag {
+      .head-note {
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.55;
+        max-width: 32ch;
+      }
+
+      .list { display: grid; gap: 12px; }
+
+      .item,
+      .mail,
+      .todo,
+      .risk,
+      .coverage,
+      .event {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: linear-gradient(180deg, rgba(255,255,255,.82), rgba(255,255,255,.62));
+      }
+
+      .item,
+      .mail,
+      .risk,
+      .coverage { padding: 14px; }
+
+      .title {
+        margin: 0 0 6px;
+        font-size: 15px;
+        line-height: 1.36;
+        font-weight: 700;
+      }
+
+      .body {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.62;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .chip {
+        min-height: 28px;
         border-radius: 999px;
-        padding: 5px 10px;
-        background: rgba(17, 25, 31, 0.06);
+        padding: 0 10px;
+        display: inline-flex;
+        align-items: center;
+        font-size: 11px;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .critical { background: rgba(86, 28, 38, 0.12); color: var(--wine); }
+      .watch { background: rgba(187, 157, 109, 0.18); color: #7a6540; }
+      .ok { background: rgba(23, 43, 73, 0.1); color: var(--navy); }
+
+      .link {
+        display: inline-flex;
+        margin-top: 10px;
+        font-size: 12px;
+        font-weight: 700;
         color: var(--navy);
       }
 
-      .tag.high { background: rgba(86, 28, 38, 0.1); color: var(--wine); }
-      .tag.medium { background: rgba(187, 157, 109, 0.18); color: #7b5b22; }
-      .tag.low { background: rgba(23, 43, 73, 0.1); color: var(--navy); }
+      .timeline { display: grid; gap: 12px; }
 
-      .compact { display: grid; gap: 10px; }
-
-      .compact .row {
+      .event {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
-        gap: 12px;
-        align-items: start;
-        padding-bottom: 10px;
-        border-bottom: 1px solid var(--line);
+        grid-template-columns: 96px 1fr;
+        gap: 14px;
+        padding: 14px;
       }
 
-      .compact .row:last-child { padding-bottom: 0; border-bottom: 0; }
-      .compact strong { display: block; font-size: 14px; line-height: 1.45; }
-      .compact span { color: var(--muted); font-size: 13px; line-height: 1.58; }
+      .when {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--navy);
+      }
+
+      .prep {
+        margin: 10px 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 7px;
+      }
+
+      .prep li {
+        font-size: 13px;
+        line-height: 1.56;
+        padding-left: 15px;
+        position: relative;
+      }
+
+      .prep li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--gold);
+      }
+
+      .mail-meta {
+        color: var(--muted);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 8px;
+      }
+
+      .todo {
+        padding: 14px;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 12px;
+      }
+
+      .box {
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+        border: 1px solid rgba(17, 25, 31, 0.22);
+        margin-top: 1px;
+      }
+
+      .owner {
+        margin-top: 6px;
+        color: var(--wine);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .footer {
+        margin-top: 18px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
 
       .footer-note {
-        margin-top: 18px;
-        color: var(--muted);
+        padding: 18px 20px;
+        border-radius: var(--radius);
+        background: rgba(17, 25, 31, 0.95);
+        color: rgba(255, 255, 255, 0.78);
+        box-shadow: var(--shadow);
         font-size: 13px;
-        line-height: 1.6;
-        text-align: center;
+        line-height: 1.66;
       }
 
-      @media (max-width: 1100px) {
-        .metrics { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-        .layout { grid-template-columns: 1fr; }
+      .footer-note strong { color: #fff; }
+
+      @media (max-width: 1160px) {
+        .hero-grid, .metrics, .layout, .footer { grid-template-columns: 1fr; }
       }
 
-      @media (max-width: 860px) {
-        .hero-grid { grid-template-columns: 1fr; }
-      }
-
-      @media (max-width: 680px) {
-        .page { width: min(100vw - 18px, 100%); padding: 10px 0 22px; }
-        .hero, .panel, .metric { padding: 16px; }
-        .brand { margin-bottom: 18px; }
+      @media (max-width: 760px) {
+        .page { width: min(100vw - 16px, 1280px); }
+        .hero, .panel, .metric { padding: 18px; }
+        .event { grid-template-columns: 1fr; }
         .brand-name { font-size: 19px; }
-        .hero h1 { font-size: 34px; max-width: 12ch; }
-        .hero-copy { font-size: 14px; line-height: 1.68; }
-        .hero-value { font-size: 17px; }
-        .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-        .metric .value { font-size: 28px; }
-        .panel h2 { font-size: 20px; }
-        .compact .row { grid-template-columns: 1fr; }
+        .panel h2 { font-size: 21px; }
       }
     </style>
   </head>
   <body>
-    <main class="page">
-      <section class="hero">
-        <div class="hero-grid">
-          <div>
-            <div class="brand">
-              <div class="brand-mark">PS</div>
+    <div id="root"></div>
+    <script type="module">
+      import React from "https://esm.sh/react@18.3.1";
+      import { createRoot } from "https://esm.sh/react-dom@18.3.1/client";
+      import htm from "https://esm.sh/htm@3.1.1";
+
+      const html = htm.bind(React.createElement);
+
+      const briefing = {
+        generatedAt: "9 de maio de 2026, 06:13 (-03, America/Sao_Paulo)",
+        coverageWindow: "8 de maio de 2026, 06:13 -> 9 de maio de 2026, 06:13",
+        executiveLead:
+          "A janela fecha sem reunião formal concluída, mas com um novo acúmulo de risco jurídico-operacional: o relatório PJe segue em 21 vencidos e 2 urgentes, o 0018996 avançou para certidão e conclusão para despacho, o recorte OAB/PE continua parcialmente cego e o TRT6 abriu uma sequência de movimentos que exigem leitura material hoje.",
+        executiveBody:
+          "Fora do contencioso puro, a manhã também trouxe alerta de novo acesso à PDPJ, solicitação de PIN no SEEU, fatura TIM vencendo em 10/05 e ruído técnico no GitHub do projeto do escritório. Para o restante de 09/05, a agenda só mostra o bloco pessoal Aplicação mounjaro às 19h.",
+        topCards: [
+          {
+            label: "Ponto mais sensível",
+            value: "O PJe ainda expõe 21 vencidos e 2 urgentes sem redução verificada nesta janela.",
+            note: "A maior ameaça é continuar lendo notificações sem transformar o painel em decisão por processo."
+          },
+          {
+            label: "Mudança jurídica mais concreta",
+            value: "0018996-62.2025.8.17.8201 teve juntada confirmada por e-mail, certidão expedida e conclusão para despacho.",
+            note: "O próximo passo é rastrear o despacho e a transferência de R$ 15.000,00 sem perder o timing."
+          }
+        ],
+        metrics: [
+          { label: "Reuniões na janela", value: "0", note: "Nenhum compromisso formal ocorreu entre 08/05 06:13 e 09/05 06:13 BRT." },
+          { label: "Blocos restantes hoje", value: "1", note: "Aplicação mounjaro às 19:00 BRT." },
+          { label: "Vencidos no PJe", value: "21", note: "Relatório consolidado recebido em 08/05/2026 às 07:46 BRT." },
+          { label: "Urgentes no PJe", value: "2", note: "0000021-06.2024.8.17.2420 e 0000982-27.2026.8.17.8223." },
+          { label: "Publicações OAB sem teor", value: "9", note: "Serviço segue interrompido por pendência cadastral." }
+        ],
+        priorities: [
+          {
+            title: "Tratar o relatório PJe das 07:46 BRT como a fila executiva do dia.",
+            body:
+              "O relatório confirmou 21 vencidos e 2 urgentes. Isso recoloca o backlog no topo da operação antes mesmo de qualquer leitura fina dos pushes novos, com destaque imediato para 0000021-06.2024.8.17.2420 e 0000982-27.2026.8.17.8223.",
+            tags: [
+              ["Crítico", "critical"],
+              ["PJe", "ok"],
+              ["Prazo vencido", "critical"]
+            ],
+            href: "https://mail.google.com/mail/#all/19e07321f1e17dd0",
+            label: "Abrir relatório PJe"
+          },
+          {
+            title: "Fechar o 0018996 com leitura material e monitoramento de despacho ainda hoje.",
+            body:
+              "O servidor Eliezes confirmou por e-mail a juntada dos dados bancários e da certidão de óbito. Depois disso, o TJPE registrou expedição de certidão e conclusão para despacho no cumprimento de sentença.",
+            tags: [
+              ["Alto", "critical"],
+              ["TJPE", "ok"],
+              ["Transferência", "watch"]
+            ],
+            href: "https://mail.google.com/mail/#all/19e09025cad3d146",
+            label: "Abrir confirmação do cartório"
+          },
+          {
+            title: "Regularizar o recorte OAB/PE antes de depender de publicações sem teor.",
+            body:
+              "A caixa recebeu o aviso de 9 publicações no dia, mas o próprio serviço informou interrupção por situação cadastral. Isso mantém a cobertura de DJPE e DJU incompleta exatamente quando o volume processual segue alto.",
+            tags: [
+              ["Alto", "critical"],
+              ["OAB/PE", "ok"],
+              ["Visibilidade", "watch"]
+            ],
+            href: "https://mail.google.com/mail/#all/19e06fe9a87de3e5",
+            label: "Abrir alerta da OAB/PE"
+          },
+          {
+            title: "Validar segurança e ruído operacional fora do contencioso.",
+            body:
+              "Houve alerta de novo acesso à PDPJ em dispositivo móvel, pedido de PIN para assinatura no SEEU, fatura TIM vencendo em 10/05 e notificações de segurança/build nas PRs 11 e 12 do Projeto Escudo da Justiça.",
+            tags: [
+              ["Operação", "watch"],
+              ["Segurança", "critical"],
+              ["Tech", "ok"]
+            ],
+            href: "https://mail.google.com/mail/#all/19e07c66ea5b6e99",
+            label: "Abrir alerta CNJ"
+          }
+        ],
+        meetings: [
+          {
+            time: "19:00-20:00",
+            title: "Aplicação mounjaro",
+            body:
+              "É o único bloco remanescente do Google Calendar para o restante de 09/05/2026. Não encontrei reunião profissional nem deslocamento operacional formal fora desse compromisso.",
+            prep: [
+              "Usar o período anterior para fechar a triagem do PJe e a fila de leituras dos pushes do TRT6 e TJPE.",
+              "Se o 0018996 avançar para despacho útil ao longo do dia, registrar a mudança antes do bloco das 19h.",
+              "Não há material de preparo adicional associado ao evento na agenda."
+            ],
+            href: "https://www.google.com/calendar/event?eid=czVsaGdkamc0OHBxdDZkOXU4ZmFqODc4MGNfMjAyNjA1MDlUMjIwMDAwWiBwZXRyb25pb3NvdXphLmFkdkBt&ctz=America/Sao_Paulo"
+          }
+        ],
+        inbox: [
+          {
+            meta: "08/05 15:21-16:12 • TJPE • Cumprimento de sentença",
+            title: "0018996-62.2025.8.17.8201: pedido bancário foi juntado e os autos ficaram conclusos para despacho.",
+            body:
+              "Partes: Antonio Rafael de Arruda x Go Energia Solar Ltda e outros. Advogado responsável: Petrônio Souza, interno, confirmado pela troca direta com o cartório. Follow-up: abrir a certidão e monitorar despacho/ofício de transferência. Risco: Alto.",
+            href: "https://mail.google.com/mail/#all/19e0911df33abeb0"
+          },
+          {
+            meta: "08/05 10:22-10:28 • TJPE • Família / cumprimento de sentença",
+            title: "0070650-06.2021.8.17.2001: certidão, DJEN e mandado expedido, com recebimento para cumprimento.",
+            body:
+              "Partes: Fabiana Oliveira da Silva x Carlos Leandro Lima de Oliveira. Advogado responsável: não identificado no push; o caso já existe no controle interno do escritório. Follow-up: abrir mandado e certidão para mapear a obrigação executiva. Risco: Alto.",
+            href: "https://mail.google.com/mail/#all/19e07c8299798831"
+          },
+          {
+            meta: "08/05 12:55 • TRT6 2º grau • Recurso ordinário",
+            title: "0000145-51.2024.5.06.0122: a parte autora juntou recurso de revista.",
+            body:
+              "Partes: Sidney Francisco do Nascimento Junior x Bruno dos Santos Lira. Advogado do réu: Petrônio Souza, interno, identificado expressamente no push. Follow-up: abrir a peça recursal e calibrar prazo e resposta. Risco: Alto.",
+            href: "https://mail.google.com/mail/#all/19e0ad3ec9d510a7"
+          },
+          {
+            meta: "08/05 03:06 e 17:37 • TRT6 • Cumprimento de sentença",
+            title: "0000396-46.2023.5.06.0141: contrarrazões juntadas e intimações publicadas para 11/05.",
+            body:
+              "Partes: Manoel de Morais Ferreira x M & R Serviços e Telecomunicações Ltda e outros. Advogado responsável: não identificado na fonte; caso já está no controle do escritório. Follow-up: abrir contrarrazões e conferir a utilidade prática das intimações. Risco: Alto.",
+            href: "https://mail.google.com/mail/#all/19e0b6e367d86ee2"
+          },
+          {
+            meta: "08/05 03:14 e 10:09 • TRT6 • Rito sumaríssimo",
+            title: "0001288-12.2023.5.06.0122: manifestação juntada e duas intimações publicadas para 11/05.",
+            body:
+              "Partes: Alexsandro dos Santos Oliveira x Priscila da Silva Wanderley Dias e Cristiano Jose Antonio Dias. Advogado responsável: não identificado no push. Follow-up: abrir a manifestação e as intimações para qualificar prazo e impacto. Risco: Médio.",
+            href: "https://mail.google.com/mail/#all/19e0b4f130a300bb"
+          },
+          {
+            meta: "08/05 08:00 • TRT6 • Execução / cumprimento",
+            title: "0000223-05.2024.5.06.0103: sentença extinguiu a execução por cumprimento da obrigação de fazer.",
+            body:
+              "Partes: Mayara Maria da Silva x Editora Trato Ltda. Advogado responsável: o push não nomeia patrono; o caso já existe no controle interno. Follow-up: ler a sentença e verificar baixa, arquivamento e eventual prazo residual. Risco: Médio.",
+            href: "https://mail.google.com/mail/#all/19e0b7b5efc7698b"
+          },
+          {
+            meta: "08/05-09/05 • TRT6 • Movimento secundário",
+            title: "0000742, 0000786, 0000452 e 0040942 receberam manifestação, documentos sigilosos ou certidão nova.",
+            body:
+              "0000742 teve manifestação juntada; 0000786 recebeu dois sigilosos; 0000452 recebeu documento sigiloso; 0040942 teve certidão expedida. Follow-up: abrir primeiro o 0000742 e o 0040942, deixando os sigilosos puros na fila logo depois. Risco: Médio.",
+            href: "https://mail.google.com/mail/#all/19e0ba414ca9f15e"
+          }
+        ],
+        todos: [
+          {
+            title: "Triar o relatório PJe com foco imediato nos 2 urgentes e no bloco de 21 vencidos.",
+            body:
+              "A leitura precisa sair do diagnóstico e virar ordem de ação por processo, começando por 0000021-06.2024.8.17.2420 e 0000982-27.2026.8.17.8223.",
+            owner: "Petrônio",
+            href: "https://mail.google.com/mail/#all/19e07321f1e17dd0"
+          },
+          {
+            title: "Abrir certidão e monitorar o despacho no 0018996-62.2025.8.17.8201.",
+            body:
+              "O cartório já confirmou a juntada e o push mostrou os autos conclusos; o ponto agora é rastrear a ordem útil para a transferência.",
+            owner: "Petrônio",
+            href: "https://mail.google.com/mail/#all/19e09025cad3d146"
+          },
+          {
+            title: "Abrir mandado, certidão e DJEN do 0070650-06.2021.8.17.2001.",
+            body:
+              "Sem essa leitura, o escritório continua vendo só o envelope do ato e não a obrigação executiva concreta.",
+            owner: "Petrônio",
+            href: "https://mail.google.com/mail/#all/19e07c8299798831"
+          },
+          {
+            title: "Abrir o recurso de revista do 0000145 e a fila de intimações do 0000396 e do 0001288.",
+            body:
+              "Esses três movimentos já entram com potencial recursal ou de resposta útil na próxima virada de prazo.",
+            owner: "Petrônio",
+            href: "https://mail.google.com/mail/#all/19e0ad3ec9d510a7"
+          },
+          {
+            title: "Regularizar o recorte digital OAB/PE e confirmar as 9 publicações apontadas no dia.",
+            body:
+              "Enquanto o cadastro não for normalizado, a leitura do DJPE e do DJU continua incompleta justamente no pior momento para perder visibilidade.",
+            owner: "Petrônio",
+            href: "https://mail.google.com/mail/#all/19e06fe9a87de3e5"
+          },
+          {
+            title: "Validar o novo acesso à PDPJ e a solicitação de PIN do SEEU.",
+            body:
+              "Se ambos foram legítimos, basta registrar a validação. Se qualquer um não foi reconhecido, a reação precisa ser imediata.",
+            owner: "Petrônio",
+            href: "https://mail.google.com/mail/#all/19e0b308747cc282"
+          },
+          {
+            title: "Quitar a TIM até 10/05 e revisar o ruído técnico das PRs 11 e 12 do Projeto Escudo da Justiça.",
+            body:
+              "A fatura é pequena, mas tem vencimento iminente; no GitHub, o Secret Scan falhou e a PR 11 ainda carrega contexto de vulnerabilidade XSS alta.",
+            owner: "Petrônio",
+            href: "https://mail.google.com/mail/#all/19e0756f62e21aab"
+          }
+        ],
+        risks: [
+          {
+            title: "Risco de prazo acumulado",
+            body: "Os 21 vencidos e 2 urgentes do relatório PJe continuam sem evidência de redução nesta janela e seguem como o maior risco sistêmico do escritório."
+          },
+          {
+            title: "Risco de cegueira de publicações",
+            body: "O recorte OAB/PE voltou a acusar 9 publicações, mas sem teor acessível por interrupção cadastral. Isso compromete a confiança na triagem automática."
+          },
+          {
+            title: "Risco recursal e executivo",
+            body: "0018996, 0070650, 0000145, 0000396 e 0001288 combinam despacho, mandado, recurso de revista, contrarrazões e intimações em uma mesma janela curta."
+          },
+          {
+            title: "Risco de acesso e governança técnica",
+            body: "O alerta CNJ/PDPJ, o PIN do SEEU e o ruído de segurança/build nas PRs 11 e 12 pedem validação para separar atividade legítima de risco real."
+          }
+        ],
+        coverage: [
+          {
+            title: "Agenda",
+            body:
+              "Foi auditada a janela exata de 08/05/2026 06:13 a 09/05/2026 06:13 BRT e, separadamente, o restante do dia 09/05/2026. Não houve reunião formal concluída; resta apenas o bloco Aplicação mounjaro às 19h."
+          },
+          {
+            title: "Gmail consolidado",
+            body:
+              "Foram lidos os e-mails materialmente relevantes da janela inteira, incluindo TJPE, TRT6, OAB/PE, CNJ, TIM, Serasa e notificações técnicas do GitHub."
+          },
+          {
+            title: "Notion",
+            body:
+              "O briefing foi reconciliado com o histórico interno para evitar duplicidade em casos e tarefas já existentes antes de criar novos registros."
+          },
+          {
+            title: "Chat interno",
+            body:
+              "Não existe conector de chat corporativo nesta sessão. Decisões, pedidos e bloqueios fora da agenda e do e-mail podem não aparecer neste recorte."
+          }
+        ]
+      };
+
+      const chip = (text, variant) => html`<span className=${`chip ${variant}`}>${text}</span>`;
+
+      const App = () => html`
+        <main className="page">
+          <section className="hero">
+            <div className="hero-grid">
               <div>
-                <div class="brand-label">Petrônio Souza Advogados Associados</div>
-                <div class="brand-name">Briefing executivo das últimas 24 horas</div>
+                <div className="brand">
+                  <div className="brand-mark">PS</div>
+                  <div>
+                    <div className="brand-label">Briefing executivo visual</div>
+                    <div className="brand-name">Petrônio Souza Advogados Associados</div>
+                  </div>
+                </div>
+                <h1>24 horas que reabriram o risco processual e operacional.</h1>
+                <p className="hero-copy">${briefing.executiveLead}</p>
+                <p className="hero-copy" style=${{ marginTop: "10px" }}>${briefing.executiveBody}</p>
+              </div>
+              <div className="hero-side">
+                <div className="glass">
+                  <div className="glass-label">Janela auditada</div>
+                  <div className="glass-value">${briefing.coverageWindow}</div>
+                  <div className="glass-note">Gerado em ${briefing.generatedAt}.</div>
+                </div>
+                ${briefing.topCards.map(
+                  (card) => html`
+                    <div className="glass" key=${card.label}>
+                      <div className="glass-label">${card.label}</div>
+                      <div className="glass-value">${card.value}</div>
+                      <div className="glass-note">${card.note}</div>
+                    </div>
+                  `
+                )}
               </div>
             </div>
-            <h1>A janela virou um combo de fila PJe, andamentos processuais relevantes, segurança de acesso e um único compromisso formal para hoje.</h1>
-            <p class="hero-copy">
-              A janela de <strong>08/05/2026 às 00:13 BRT</strong> até <strong>09/05/2026 às 00:13 BRT</strong>
-              não teve reuniões no Google Calendar primário. O peso do período ficou no <strong>Gmail consolidado</strong>,
-              com destaque para o <strong>relatório PJe das 07:46 BRT</strong>, que confirmou
-              <strong>21 vencidos</strong> e <strong>2 urgentes</strong>, além de uma sequência de pushes TJPE/TRT6,
-              confirmação de juntada no <strong>0018996-62.2025.8.17.8201</strong> e alertas de acesso Google/CNJ.
-            </p>
-            <p class="hero-copy">
-              No jurídico, os pontos mais concretos foram: <strong>0018996</strong> com resposta do cartório,
-              certidão expedida e autos conclusos; <strong>0075599</strong> com embargos de declaração;
-              <strong>0070650</strong> com mandado recebido para cumprimento; <strong>0026091</strong> com petição nova; e
-              <strong>0002351</strong> com diligência e mandado devolvido entregue. Para <strong>09/05</strong>, o único
-              compromisso formal no Calendar é <strong>Aplicação mounjaro</strong>, às <strong>19:00 BRT</strong>.
-            </p>
-          </div>
-          <div class="hero-side">
-            <div class="glass">
-              <div class="hero-label">Janela auditada</div>
-              <div class="hero-value">08/05/2026 00:13 BRT -> 09/05/2026 00:13 BRT</div>
-              <div class="glass-note">Gerado em 09/05/2026 às 00:13 BRT com Google Calendar primário e Gmail consolidado.</div>
+          </section>
+
+          <section className="metrics">
+            ${briefing.metrics.map(
+              (metric) => html`
+                <article className="metric" key=${metric.label}>
+                  <div className="label">${metric.label}</div>
+                  <div className="value">${metric.value}</div>
+                  <div className="note">${metric.note}</div>
+                </article>
+              `
+            )}
+          </section>
+
+          <section className="layout">
+            <div className="stack">
+              <section className="panel">
+                <div className="panel-head">
+                  <div>
+                    <div className="eyebrow">Executive Summary</div>
+                    <h2>Prioridades críticas</h2>
+                  </div>
+                  <div className="head-note">
+                    O recorte abaixo prioriza o que pode alterar prazo, execução, visibilidade processual e segurança operacional.
+                  </div>
+                </div>
+                <div className="list">
+                  ${briefing.priorities.map(
+                    (item) => html`
+                      <article className="item" key=${item.title}>
+                        <h3 className="title">${item.title}</h3>
+                        <p className="body">${item.body}</p>
+                        <div className="chips">
+                          ${item.tags.map(([text, variant]) => chip(text, variant))}
+                        </div>
+                        <a className="link" href=${item.href} target="_blank" rel="noreferrer">${item.label}</a>
+                      </article>
+                    `
+                  )}
+                </div>
+              </section>
+
+              <section className="panel">
+                <div className="panel-head">
+                  <div>
+                    <div className="eyebrow">Hoje na agenda</div>
+                    <h2>Janelas do dia e preparo útil</h2>
+                  </div>
+                  <div className="head-note">
+                    Não houve reunião formal na janela auditada; o dia fica aberto para triagem até o bloco das 19h.
+                  </div>
+                </div>
+                <div className="timeline">
+                  ${briefing.meetings.map(
+                    (meeting) => html`
+                      <article className="event" key=${meeting.title}>
+                        <div className="when">${meeting.time}</div>
+                        <div>
+                          <h3 className="title">${meeting.title}</h3>
+                          <p className="body">${meeting.body}</p>
+                          <ul className="prep">
+                            ${meeting.prep.map((tip) => html`<li key=${tip}>${tip}</li>`)}
+                          </ul>
+                          <a className="link" href=${meeting.href} target="_blank" rel="noreferrer">Abrir evento</a>
+                        </div>
+                      </article>
+                    `
+                  )}
+                </div>
+              </section>
+
+              <section className="panel">
+                <div className="panel-head">
+                  <div>
+                    <div className="eyebrow">Jurídico</div>
+                    <h2>Mapa processual do período</h2>
+                  </div>
+                  <div className="head-note">
+                    Aqui entram só movimentos com consequência executiva direta para o escritório.
+                  </div>
+                </div>
+                <div className="list">
+                  ${briefing.inbox.map(
+                    (mail) => html`
+                      <article className="mail" key=${mail.title}>
+                        <div className="mail-meta">${mail.meta}</div>
+                        <h3 className="title">${mail.title}</h3>
+                        <p className="body">${mail.body}</p>
+                        <a className="link" href=${mail.href} target="_blank" rel="noreferrer">Abrir e-mail</a>
+                      </article>
+                    `
+                  )}
+                </div>
+              </section>
             </div>
-            <div class="glass">
-              <div class="hero-label">Leitura executiva</div>
-              <div class="hero-value">A ordem sugerida é: backlog PJe, abertura dos autos-chave do dia, validação dos acessos, assinatura OAB, revisão do lote Jusbrasil e só depois limpeza operacional.</div>
-              <div class="glass-note">Sem conector direto de chat corporativo. O recorte OAB/PE segue sem teor integral automático por interrupção cadastral, e parte do TRT6 ainda depende de abertura manual de documentos sigilosos.</div>
+
+            <div className="stack">
+              <section className="panel">
+                <div className="panel-head">
+                  <div>
+                    <div className="eyebrow">Next Actions</div>
+                    <h2>Follow-ups e donos</h2>
+                  </div>
+                </div>
+                <div className="list">
+                  ${briefing.todos.map(
+                    (todo) => html`
+                      <article className="todo" key=${todo.title}>
+                        <div className="box"></div>
+                        <div>
+                          <h3 className="title">${todo.title}</h3>
+                          <p className="body">${todo.body}</p>
+                          <div className="owner">Owner: ${todo.owner}</div>
+                          <a className="link" href=${todo.href} target="_blank" rel="noreferrer">Abrir fonte</a>
+                        </div>
+                      </article>
+                    `
+                  )}
+                </div>
+              </section>
+
+              <section className="panel">
+                <div className="panel-head">
+                  <div>
+                    <div className="eyebrow">Riscos e bloqueios</div>
+                    <h2>O que pede cuidado explícito</h2>
+                  </div>
+                </div>
+                <div className="list">
+                  ${briefing.risks.map(
+                    (risk) => html`
+                      <article className="risk" key=${risk.title}>
+                        <h3 className="title">${risk.title}</h3>
+                        <p className="body">${risk.body}</p>
+                      </article>
+                    `
+                  )}
+                </div>
+              </section>
+
+              <section className="panel">
+                <div className="panel-head">
+                  <div>
+                    <div className="eyebrow">Cobertura</div>
+                    <h2>Fontes e lacunas verificadas</h2>
+                  </div>
+                </div>
+                <div className="list">
+                  ${briefing.coverage.map(
+                    (item) => html`
+                      <article className="coverage" key=${item.title}>
+                        <h3 className="title">${item.title}</h3>
+                        <p className="body">${item.body}</p>
+                      </article>
+                    `
+                  )}
+                </div>
+              </section>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      <section class="metrics">
-        <article class="metric">
-          <div class="label">Compromissos na janela</div>
-          <div class="value">0</div>
-          <div class="note">Nenhum evento formal no Calendar entre 08/05 00:13 e 09/05 00:13 BRT.</div>
-        </article>
-        <article class="metric">
-          <div class="label">Agenda de hoje</div>
-          <div class="value">1</div>
-          <div class="note">Aplicação mounjaro, às 19:00 BRT de 09/05.</div>
-        </article>
-        <article class="metric">
-          <div class="label">Backlog PJe</div>
-          <div class="value">21/2</div>
-          <div class="note">21 vencidos e 2 urgentes no relatório automático das 07:46 BRT.</div>
-        </article>
-        <article class="metric">
-          <div class="label">Casos destacados</div>
-          <div class="value">14</div>
-          <div class="note">Quatorze registros jurídicos tiveram atualização material e foram registrados no controle do dia.</div>
-        </article>
-        <article class="metric">
-          <div class="label">Alertas de acesso</div>
-          <div class="value">3</div>
-          <div class="note">1 login novo no Google e 2 acessos CNJ/PDPJ por iPhone/iOS na mesma janela.</div>
-        </article>
-        <article class="metric">
-          <div class="label">Pendências operacionais</div>
-          <div class="value">5</div>
-          <div class="note">OAB assinatura, recorte OAB/PE, Hostinger, lote Jusbrasil e validação do aviso Serasa.</div>
-        </article>
-      </section>
-
-      <section class="layout">
-        <div class="stack">
-          <article class="panel">
-            <div class="eyebrow">Prioridades críticas</div>
-            <h2>O que pede ação primeiro em 09 de maio</h2>
-            <div class="list">
-              <div class="item">
-                <div class="when">07:46 BRT | Sistema PJe</div>
-                <h3>O backlog automático continua sendo o maior risco transversal do escritório.</h3>
-                <p>
-                  O relatório de expedientes confirmou <strong>21 vencidos</strong> e <strong>2 urgentes</strong>.
-                  Os urgentes listados foram <strong>0000021-06.2024.8.17.2420</strong> e
-                  <strong>0000982-27.2026.8.17.8223</strong>. O primeiro bloco do dia deve separar o que ainda
-                  admite providência útil do que já virou passivo histórico.
-                </p>
-                <div class="tag-row">
-                  <span class="tag high">Risco alto</span>
-                  <span class="tag high">Ação imediata</span>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="when">15:13-16:30 BRT | Processo 0018996-62.2025.8.17.8201</div>
-                <h3>Esse foi o caso com avanço mais concreto e mais próximo de resultado útil dentro da janela.</h3>
-                <p>
-                  <strong>Partes:</strong> Antonio Rafael de Arruda x Go Energia Solar Ltda e outros.
-                  <strong>Evento:</strong> envio dos dados bancários e da certidão de óbito, resposta do servidor confirmando a juntada,
-                  depois <strong>expedição de certidão</strong> e autos <strong>conclusos para despacho</strong>.
-                  <strong>Follow-up:</strong> abrir a certidão e acompanhar o despacho ligado à transferência de R$ 15.000,00.
-                </p>
-                <div class="tag-row">
-                  <span class="tag high">JEC</span>
-                  <span class="tag high">Resultado em curso</span>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="when">10:30-14:59 BRT | Casos 0075599, 0070650, 0026091 e 0002351</div>
-                <h3>O miolo do expediente concentrou a peça recursal, o mandado, a petição nova e a diligência mais relevantes do dia.</h3>
-                <p>
-                  <strong>0075599</strong> recebeu embargos de declaração; <strong>0070650</strong> teve mandado recebido para cumprimento;
-                  <strong>0026091</strong> registrou juntada de petição; e <strong>0002351</strong> trouxe diligência com mandado devolvido entregue.
-                  O escritório precisa abrir esses quatro autos antes de perder contexto no início da próxima manhã.
-                </p>
-                <div class="tag-row">
-                  <span class="tag high">Saúde</span>
-                  <span class="tag high">Família</span>
-                  <span class="tag medium">Criminal</span>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="when">00:01-06:30 BRT | TRT6 e TJPE</div>
-                <h3>A madrugada entregou um bloco relevante de pushes com decisões, intimações, remessa ao CEJUSC, decurso de prazo e recurso sem efeito suspensivo.</h3>
-                <p>
-                  Os alertas mais importantes recaíram sobre <strong>0000396</strong>, <strong>0000439</strong>, <strong>0000584</strong>,
-                  <strong>0000581</strong>, <strong>0000585</strong>, <strong>0000483</strong>, <strong>0000786</strong>,
-                  <strong>0000235</strong>, <strong>0033283</strong> e <strong>0002716</strong>. Nem todos inauguram prazo imediato,
-                  mas quase todos exigem abertura manual do teor ainda em 09/05.
-                </p>
-                <div class="tag-row">
-                  <span class="tag high">TRT6</span>
-                  <span class="tag medium">Leitura manual</span>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="when">02:10-10:28 BRT | Segurança e governança</div>
-                <h3>Os acessos novos e o pedido de permissão do Hostinger precisam ser validados como rotina crítica, não como rodapé.</h3>
-                <p>
-                  Houve <strong>novo login no Google em Windows</strong>, dois alertas <strong>CNJ/PDPJ</strong> em iPhone/iOS e
-                  um pedido do <strong>GitHub App Hostinger</strong> para permissões atualizadas. Se todos forem legítimos, o tema se encerra rápido;
-                  se algum não for, o impacto recai sobre identidade digital e acesso processual.
-                </p>
-                <div class="tag-row">
-                  <span class="tag high">Conta</span>
-                  <span class="tag high">CNJ/PDPJ</span>
-                  <span class="tag medium">GitHub</span>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="when">05:10-18:16 BRT | OAB, Jusbrasil e Serasa</div>
-                <h3>As pendências administrativas do dia são enxutas, mas podem travar execução se ficarem sem dono.</h3>
-                <p>
-                  O <strong>Portal OAB</strong> segue com o documento <strong>ACORDO CELEBRADO</strong> pendente de assinatura;
-                  o <strong>recorte digital OAB/PE</strong> confirmou 9 publicações mas continua interrompido;
-                  o <strong>Jusbrasil</strong> enviou dois lotes com 4 e 15 publicações; e entrou um <strong>aviso Serasa</strong>
-                  em nome de Severino Ramos Queiroz da Silva que precisa ser validado quanto ao vínculo com o escritório ou cliente.
-                </p>
-                <div class="tag-row">
-                  <span class="tag high">Assinatura</span>
-                  <span class="tag medium">Publicações</span>
-                  <span class="tag medium">Financeiro</span>
-                </div>
-              </div>
+          <section className="footer">
+            <div className="footer-note">
+              <strong>Leitura principal:</strong> o melhor uso do dia é converter o painel do PJe em
+              ordem de ação, fechar o 0018996 e remover a cegueira do recorte OAB/PE antes que a próxima
+              leva de publicações e pushes aumente o atraso.
             </div>
-          </article>
-
-          <article class="panel">
-            <div class="eyebrow">Monitoramento jurídico</div>
-            <h2>Casos e lotes que merecem visibilidade executiva</h2>
-            <div class="compact">
-              <div class="row">
-                <div>
-                  <strong>0018996-62.2025.8.17.8201 | Antonio Rafael de Arruda x Go Energia Solar Ltda e outros</strong>
-                  <span>8º JEC da Capital. O cartório confirmou a juntada do e-mail com dados bancários e certidão de óbito; depois vieram certidão expedida e autos conclusos para despacho. Follow-up: abrir a certidão e monitorar a transferência. Responsável aparente: Petrônio. Risco: alto.</span>
-                </div>
-                <span class="tag high">Alto</span>
-              </div>
-              <div class="row">
-                <div>
-                  <strong>0075599-05.2023.8.17.2001 | E. G. D. S. e outros x You Assistência Médica Ltda e outros</strong>
-                  <span>4ª Vara Cível da Capital. Embargos de declaração juntados às 11:45 de 08/05. Follow-up: abrir a peça e medir prazo/impacto recursal. Risco: alto.</span>
-                </div>
-                <span class="tag high">Alto</span>
-              </div>
-              <div class="row">
-                <div>
-                  <strong>0070650-06.2021.8.17.2001 | Fabiana Oliveira da Silva x Carlos Leandro Lima de Oliveira</strong>
-                  <span>14ª Vara de Família da Capital. Mandado recebido para cumprimento às 10:30 de 08/05. Follow-up: abrir o mandado e identificar a obrigação executiva. Risco: alto.</span>
-                </div>
-                <span class="tag high">Alto</span>
-              </div>
-              <div class="row">
-                <div>
-                  <strong>0026091-27.2022.8.17.2001 | Nathanne de Almeida Magalhães x Clinipam e outros</strong>
-                  <span>24ª Vara Cível da Capital. Petição nova juntada às 14:59 de 08/05. Follow-up: abrir a peça e verificar se inaugura resposta. Risco: médio.</span>
-                </div>
-                <span class="tag medium">Médio</span>
-              </div>
-              <div class="row">
-                <div>
-                  <strong>0002351-26.2024.8.17.4990 | Marinalva Maria da Silva e outros x Carlos Andre Arruda de Souza Oliveira</strong>
-                  <span>Violência Doméstica de Igarassu. Diligência juntada e mandado devolvido entregue ao destinatário às 12:37 de 08/05. Follow-up: abrir o mandado cumprido e aferir o próximo passo. Risco: alto.</span>
-                </div>
-                <span class="tag high">Alto</span>
-              </div>
-              <div class="row">
-                <div>
-                  <strong>0040942-81.2016.8.17.2001 | Jose Adolfo de Souza e outros x Joao de Souza e outros</strong>
-                  <span>5ª Vara de Sucessões da Capital. Expedição de certidão às 09:17 de 08/05. Follow-up: abrir a certidão e medir impacto no inventário. Risco: médio.</span>
-                </div>
-                <span class="tag medium">Médio</span>
-              </div>
-              <div class="row">
-                <div>
-                  <strong>0000396-46.2023.5.06.0141 e 0000439-72.2026.5.06.0142 | Manoel de Morais Ferreira x M &amp; R</strong>
-                  <span>Jaboatão. O primeiro trouxe decisão, agravo de instrumento sem efeito suspensivo e intimações; o segundo trouxe mandado expedido, documento sigiloso e novas intimações. Follow-up: abrir decisão, mandado e anexos. Risco: alto no 0000396 e médio no 0000439.</span>
-                </div>
-                <span class="tag high">Alto</span>
-              </div>
-              <div class="row">
-                <div>
-                  <strong>0000584-94.2026.5.06.0121, 0000581-39.2026.5.06.0122 e 0000585-79.2026.5.06.0121 | bloco CEJUSC/Paulista</strong>
-                  <span>Os alertas da madrugada revelaram remessa ao CEJUSC, despacho, intimação, conclusão para decisão genérica e conclusão para decisão de tutela. Follow-up: abrir os despachos e monitorar a tutela do 0000585. Risco: alto no 0000585, médio nos demais.</span>
-                </div>
-                <span class="tag high">Alto</span>
-              </div>
-              <div class="row">
-                <div>
-                  <strong>0000483-57.2026.5.06.0121, 0000786-05.2025.5.06.0122 e 0000235-66.2022.5.06.0013 | intimações e decurso TRT6</strong>
-                  <span>Houve publicação de intimação para 08/05, conclusos para despacho com intimações e decurso de prazo. Follow-up: abrir a intimação do 0000483, o despacho do 0000786 e medir o efeito do decurso no 0000235. Risco: médio.</span>
-                </div>
-                <span class="tag medium">Médio</span>
-              </div>
-              <div class="row">
-                <div>
-                  <strong>0033283-16.2019.8.17.2001 e 0002716-44.2025.8.17.9000 | TJPE</strong>
-                  <span>O primeiro recebeu publicação de despacho/intimação à 00:17; o segundo registrou decurso de prazo às 00:04. Follow-up: abrir DJEN e confirmar o efeito prático do decurso. Risco: médio.</span>
-                </div>
-                <span class="tag medium">Médio</span>
-              </div>
-              <div class="row">
-                <div>
-                  <strong>Lote Jusbrasil de 08/05 | watchlist com publicação em 11/05</strong>
-                  <span>Os dois alertas do Jusbrasil puxaram publicações ligadas a 0043310, 0061659, 0815844, 5004507 e 0000338, entre outros itens. A informação é útil, mas parte do teor ainda depende de abertura manual. Follow-up: revisar o lote antes da segunda-feira. Risco: médio.</span>
-                </div>
-                <span class="tag medium">Médio</span>
-              </div>
+            <div className="footer-note">
+              <strong>Metodologia:</strong> tudo aqui vem de fatos acessados em Google Calendar, Gmail e
+              controle interno do Notion. Onde a identificação do advogado não apareceu no próprio push,
+              a peça foi tratada como não identificada ou como inferência do histórico interno, nunca como
+              fato automático.
             </div>
-          </article>
-        </div>
+          </section>
+        </main>
+      `;
 
-        <div class="stack">
-          <article class="panel">
-            <div class="eyebrow">Agenda</div>
-            <h2>Janela sem reunião; hoje com um único compromisso</h2>
-            <div class="list">
-              <div class="item">
-                <div class="when">08/05 00:13 -> 09/05 00:13</div>
-                <h3>Nenhum compromisso formal foi encontrado no Google Calendar primário.</h3>
-                <p>Isso deixou a janela totalmente dominada por e-mails processuais, alertas automáticos e follow-ups administrativos.</p>
-              </div>
-              <div class="item">
-                <div class="when">09/05 | 19:00-20:00 BRT</div>
-                <h3>Aplicação mounjaro</h3>
-                <p>Compromisso único do dia no Calendar. Não há material preparatório associado no Gmail nem sinais de conflito de agenda até o momento.</p>
-                <div class="tag-row">
-                  <span class="tag low">Agenda de hoje</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="panel">
-            <div class="eyebrow">Follow-ups</div>
-            <h2>Próximos passos com dono sugerido</h2>
-            <div class="compact">
-              <div class="row">
-                <div>
-                  <strong>Petrônio | Triar backlog PJe de 08/05</strong>
-                  <span>Separar 21 vencidos e 2 urgentes em três grupos: ainda recuperáveis, monitoramento puro e passivo histórico sem ação útil imediata.</span>
-                </div>
-                <span class="tag high">Hoje cedo</span>
-              </div>
-              <div class="row">
-                <div>
-                  <strong>Petrônio | Abrir 0018996, 0075599 e 0070650</strong>
-                  <span>Esses três autos concentram a resposta do cartório, a peça recursal e o mandado executável mais importantes da janela.</span>
-                </div>
-                <span class="tag high">Hoje cedo</span>
-              </div>
-              <div class="row">
-                <div>
-                  <strong>Petrônio | Abrir 0026091 e 0002351</strong>
-                  <span>Checar a petição nova do caso de saúde e o teor do mandado entregue na medida protetiva antes de perder o timing de reação.</span>
-                </div>
-                <span class="tag high">Hoje</span>
-              </div>
-              <div class="row">
-                <div>
-                  <strong>Administrativo interno | Assinar ACORDO CELEBRADO e regularizar recorte OAB/PE</strong>
-                  <span>A assinatura está pendente no Portal OAB e o recorte OAB/PE continua interrompido mesmo com 9 publicações confirmadas no dia.</span>
-                </div>
-                <span class="tag high">Hoje</span>
-              </div>
-              <div class="row">
-                <div>
-                  <strong>Petrônio ou apoio técnico | Validar acessos Google/CNJ e pedido do Hostinger</strong>
-                  <span>Confirmar a legitimidade dos acessos em Windows e iPhone/iOS e decidir se o app Hostinger deve receber as permissões adicionais solicitadas.</span>
-                </div>
-                <span class="tag high">Hoje</span>
-              </div>
-              <div class="row">
-                <div>
-                  <strong>Administrativo/financeiro | Validar aviso Serasa de Severino Ramos Queiroz da Silva</strong>
-                  <span>O e-mail aponta débito em atraso com o Banco CSF S/A. Primeiro passo: confirmar se o aviso tem vínculo com o escritório, cliente ou apenas ruído do mailbox.</span>
-                </div>
-                <span class="tag medium">Hoje</span>
-              </div>
-              <div class="row">
-                <div>
-                  <strong>Petrônio | Revisar o lote Jusbrasil com publicação prevista para 11/05</strong>
-                  <span>Os alertas de 4 e 15 publicações ajudam a montar a fila da segunda-feira, mas o teor precisa ser aberto manualmente para virar ação.</span>
-                </div>
-                <span class="tag medium">Antes de 11/05</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="panel">
-            <div class="eyebrow">Lacunas</div>
-            <h2>Onde ainda existe dependência manual</h2>
-            <div class="list">
-              <div class="item">
-                <h3>OAB/PE segue confirmando volume, mas não o teor</h3>
-                <p>O recorte digital registrou 9 publicações no dia, porém a interrupção cadastral continua impedindo a leitura automática do conteúdo individual.</p>
-              </div>
-              <div class="item">
-                <h3>Parte do TRT6 ainda está atrás de links ou documentos sigilosos</h3>
-                <p>Os pushes entregaram a existência de decisão, mandado, tutela e intimações, mas alguns detalhes continuam dependentes de abertura manual do processo ou do anexo sigiloso.</p>
-              </div>
-              <div class="item">
-                <h3>Sem conector direto de chat corporativo nesta execução</h3>
-                <p>Pedidos, decisões ou combinações que tenham ficado apenas em WhatsApp, Slack ou Teams não entram automaticamente neste recorte.</p>
-              </div>
-              <div class="item">
-                <h3>Cobertura do Gmail foi fechada até antes do início da janela anterior</h3>
-                <p>Os resultados auditados já desciam para mensagens anteriores a 08/05 00:13 BRT, o que dá boa segurança de que o período inteiro foi percorrido sem truncar o trecho útil da janela.</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <p class="footer-note">Gerado em 09/05/2026 às 00:13 BRT para a janela de 24 horas encerrada em 09/05/2026 às 00:13 BRT.</p>
-    </main>
+      createRoot(document.getElementById("root")).render(html`<${App} />`);
+    </script>
   </body>
 </html>
