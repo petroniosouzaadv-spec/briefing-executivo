@@ -27,6 +27,7 @@
       }
 
       * { box-sizing: border-box; }
+
       body {
         margin: 0;
         min-height: 100vh;
@@ -39,7 +40,6 @@
       }
 
       a { color: inherit; text-decoration: none; }
-      #root { min-height: 100vh; }
 
       .page {
         width: min(1280px, calc(100vw - 28px));
@@ -162,8 +162,7 @@
         padding: 18px;
       }
 
-      .glass-label,
-      .mini-label {
+      .glass-label {
         color: rgba(255, 255, 255, 0.64);
         font-size: 11px;
         text-transform: uppercase;
@@ -201,6 +200,7 @@
       }
 
       .metric { padding: 18px; }
+
       .metric .label {
         color: var(--muted);
         font-size: 11px;
@@ -231,7 +231,11 @@
       }
 
       .stack { display: grid; gap: 18px; }
-      .panel { padding: 20px; background: var(--panel-strong); }
+
+      .panel {
+        padding: 20px;
+        background: var(--panel-strong);
+      }
 
       .panel-head {
         display: flex;
@@ -262,7 +266,11 @@
         max-width: 32ch;
       }
 
-      .list { display: grid; gap: 12px; }
+      .list,
+      .timeline {
+        display: grid;
+        gap: 12px;
+      }
 
       .item,
       .mail,
@@ -272,7 +280,7 @@
       .event {
         border: 1px solid var(--line);
         border-radius: var(--radius);
-        background: linear-gradient(180deg, rgba(255,255,255,.82), rgba(255,255,255,.62));
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.62));
       }
 
       .item,
@@ -324,8 +332,6 @@
         font-weight: 700;
         color: var(--navy);
       }
-
-      .timeline { display: grid; gap: 12px; }
 
       .event {
         display: grid;
@@ -417,504 +423,453 @@
       .footer-note strong { color: #fff; }
 
       @media (max-width: 1160px) {
-        .hero-grid, .metrics, .layout, .footer { grid-template-columns: 1fr; }
+        .hero-grid,
+        .metrics,
+        .layout,
+        .footer { grid-template-columns: 1fr; }
       }
 
       @media (max-width: 760px) {
         .page { width: min(100vw - 16px, 1280px); }
-        .hero, .panel, .metric { padding: 18px; }
+        .hero,
+        .panel,
+        .metric { padding: 18px; }
         .event { grid-template-columns: 1fr; }
         .brand-name { font-size: 19px; }
         .panel h2 { font-size: 21px; }
       }
-    </style>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module">
-      import React from "https://esm.sh/react@18.3.1";
-      import { createRoot } from "https://esm.sh/react-dom@18.3.1/client";
-      import htm from "https://esm.sh/htm@3.1.1";
-
-      const html = htm.bind(React.createElement);
-
-      const briefing = {
-        generatedAt: "9 de maio de 2026, 08:06 (-03, America/Sao_Paulo)",
-        coverageWindow: "8 de maio de 2026, 08:06 -> 9 de maio de 2026, 08:06",
-        executiveLead:
-          "A janela de 24 horas fecha sem reunião profissional concluída na agenda, mas com nova rodada relevante do TRT6 entre 06:39 e 07:14 BRT, backlog PJe ainda em 21 vencidos e 2 urgentes, e pendências operacionais que continuam abertas no CNJ/PDPJ, OAB/PE, TIM e GitHub.",
-        executiveBody:
-          "Depois do corte das 06:13 BRT da execução anterior, entraram como fatos realmente novos 0000338, 0000452, 0000483, 0000584 e 0000439, todos pedindo leitura material hoje. Como continuidade ainda material no mesmo recorte de 24 horas, seguem 0018996 concluso para despacho, 0070650 com mandado para cumprimento, 0000145 com recurso de revista e as intimações publicadas de 0000396 e 0001288.",
-        topCards: [
-          {
-            label: "Ponto mais sensível",
-            value: "O relatório PJe das 07:46 BRT mantém 21 vencidos e 2 urgentes sem redução visível no início do dia.",
-            note: "A maior ameaça continua sendo transformar atraso recorrente em perda de controle por processo."
-          },
-          {
-            label: "Mudança nova da manhã",
-            value: "Cinco pushes do TRT6 chegaram depois das 06:13 BRT, com redesignação de audiência, mandado em cumprimento, intimação publicada e três documentos sigilosos.",
-            note: "O dia abre pedindo leitura material desses eventos antes de qualquer nova leva de notificações."
-          }
-        ],
-        metrics: [
-          { label: "Reuniões na janela", value: "0", note: "Nenhum compromisso profissional formal ocorreu entre 08/05 08:06 e 09/05 08:06 BRT." },
-          { label: "Blocos restantes hoje", value: "1", note: "Aplicação mounjaro às 19:00 BRT." },
-          { label: "Vencidos no PJe", value: "21", note: "Relatório consolidado recebido em 09/05/2026 às 07:46 BRT." },
-          { label: "Urgentes no PJe", value: "2", note: "0000021-06.2024.8.17.2420 e 0000982-27.2026.8.17.8223." },
-          { label: "Fatos novos pós-06:13", value: "5", note: "0000338, 0000452, 0000483, 0000584 e 0000439." }
-        ],
-        priorities: [
-          {
-            title: "Tratar o relatório PJe das 07:46 BRT como a fila executiva do sábado.",
-            body:
-              "O painel segue em 21 vencidos e 2 urgentes. Sem atacar essa fila logo cedo, os pushes novos só aumentam o volume lido sem reduzir o risco efetivo, com atenção imediata para 0000021-06.2024.8.17.2420 e 0000982-27.2026.8.17.8223.",
-            tags: [
-              ["Crítico", "critical"],
-              ["PJe", "ok"],
-              ["Prazo vencido", "critical"]
-            ],
-            href: "https://mail.google.com/mail/#all/19e0c5877cf77d17",
-            label: "Abrir relatório PJe"
-          },
-          {
-            title: "A onda nova do TRT6 precisa virar leitura material antes do meio do dia.",
-            body:
-              "0000338 redesignou audiência para 19/06 e expediu intimações; 0000439 passou a mandado em cumprimento; 0000584 ganhou intimação publicada para 11/05; 0000452 e 0000483 receberam novos sigilosos. Tudo isso entrou depois do briefing das 06:13 BRT e ainda sem qualificação do conteúdo completo.",
-            tags: [
-              ["Alto", "critical"],
-              ["TRT6", "ok"],
-              ["Leitura hoje", "watch"]
-            ],
-            href: "https://mail.google.com/mail/#all/19e0c1b2f0ed0118",
-            label: "Abrir push do 0000338"
-          },
-          {
-            title: "O núcleo de continuidade continua pesado mesmo sem fato novo após 06:13 BRT.",
-            body:
-              "0018996 ficou concluso para despacho, 0070650 teve certidão, DJEN e mandado para cumprimento, 0000145 recebeu recurso de revista, e 0000396 com 0001288 entraram em faixa de contrarrazões, manifestação e intimações publicadas para 11/05.",
-            tags: [
-              ["Carry-over material", "watch"],
-              ["TJPE", "ok"],
-              ["Prazo útil", "critical"]
-            ],
-            href: "https://mail.google.com/mail/#all/19e0911df33abeb0",
-            label: "Abrir 0018996"
-          },
-          {
-            title: "A frente operacional continua pedindo saneamento, não só leitura.",
-            body:
-              "OAB/PE segue com 9 publicações sem teor por interrupção cadastral, houve dois alertas CNJ/PDPJ em dispositivo móvel, a TIM vence em 10/05, há comunicado Serasa em nome de terceiro e as PRs 11 e 12 do Projeto Escudo da Justiça mantêm falha no Secret Scan.",
-            tags: [
-              ["Operação", "watch"],
-              ["Segurança", "critical"],
-              ["Financeiro", "watch"]
-            ],
-            href: "https://mail.google.com/mail/#all/19e07c66ea5b6e99",
-            label: "Abrir alerta CNJ"
-          }
-        ],
-        meetings: [
-          {
-            time: "19:00-20:00",
-            title: "Aplicação mounjaro",
-            body:
-              "É o único bloco formal do Google Calendar para o restante de 09/05/2026. O restante do dia permanece aberto para triagem e leitura dos movimentos jurídicos e operacionais mapeados acima.",
-            prep: [
-              "Usar a manhã para reduzir a fila do PJe e qualificar os pushes do TRT6 que chegaram depois das 06:13 BRT.",
-              "Se 0018996 ou 0070650 avançarem com despacho útil, registrar a mudança antes do bloco das 19h.",
-              "Não encontrei materiais de preparo ou anexos associados ao evento na agenda."
-            ],
-            href: "https://www.google.com/calendar/event?eid=czVsaGdkamc0OHBxdDZkOXU4ZmFqODc4MGNfMjAyNjA1MDlUMjIwMDAwWiBwZXRyb25pb3NvdXphLmFkdkBt&ctz=America/Sao_Paulo"
-          }
-        ],
-        inbox: [
-          {
-            meta: "08/05 09:18-16:12 • TRT6 • Ação trabalhista rito ordinário",
-            title: "0000338-95.2026.5.06.0122: audiência cancelada em 29/05 e redesignada para 19/06, com despacho e intimações expedidas.",
-            body:
-              "Partes: Paulo Henrique Ferreira de Souza x C J Antonio Dias Peças e Serviços para Autos Ltda e outros. Advogado responsável: não identificado no push. Evento: redesignação de audiência de instrução para 19/06/2026 às 09:00 e documento sigiloso. Follow-up: abrir despacho, ata e sigiloso para calibrar impacto da redesignação. Risco: Médio.",
-            href: "https://mail.google.com/mail/#all/19e0c1b2f0ed0118"
-          },
-          {
-            meta: "08/05 07:05 • TRT6 • Carta de ordem cível",
-            title: "0000439-72.2026.5.06.0142: mandado foi recebido pelo oficial de justiça para cumprimento.",
-            body:
-              "Partes: Manoel de Morais Ferreira x M & R Serviços e Telecomunicações Ltda. Advogado responsável: não identificado no push. Evento: mandado em cumprimento e dois documentos sigilosos às 00:08. Follow-up: abrir os sigilosos e acompanhar a diligência do oficial. Risco: Médio.",
-            href: "https://mail.google.com/mail/#all/19e0c4063840270b"
-          },
-          {
-            meta: "08/05 03:12 • TRT6 • Reclamação pré-processual",
-            title: "0000584-94.2026.5.06.0121: intimação foi disponibilizada no DJE e publicada para 11/05.",
-            body:
-              "Partes: C J Antonio Dias Peças e Serviços para Autos Ltda x Sabrina Suelyn Pereira Silva. Advogado responsável: não identificado no push. Evento: intimação publicada para 11/05/2026 no CEJUSC Paulista. Follow-up: abrir a intimação e qualificar prazo, audiência ou providência material. Risco: Médio.",
-            href: "https://mail.google.com/mail/#all/19e0c3904dcaae7a"
-          },
-          {
-            meta: "08/05 10:55 • TRT6 • Ação trabalhista rito ordinário",
-            title: "0000452-25.2016.5.06.0012: novo documento sigiloso entrou no processo.",
-            body:
-              "Partes: Camila de Santana Siqueira x Vitabras Comércio de Vitaminas Eireli e outros. Advogado responsável: não identificado no push. Evento: documento sigiloso às 10:55. Follow-up: abrir a peça e verificar se ela inaugura prazo, prova ou decisão útil. Risco: Médio.",
-            href: "https://mail.google.com/mail/#all/19e0b89972a52581"
-          },
-          {
-            meta: "08/05 00:17 • TRT6 • Ação trabalhista rito sumaríssimo",
-            title: "0000483-57.2026.5.06.0121: processo recebeu novo documento sigiloso.",
-            body:
-              "Partes: Carlos Eduardo de Oliveira x R M Terceirização Ltda e outros. Advogado responsável: não identificado no push. Evento: documento sigiloso às 00:17. Follow-up: abrir o sigiloso para confirmar se há despacho, audiência una ou prazo associado. Risco: Médio.",
-            href: "https://mail.google.com/mail/#all/19e0c30fe1d5845f"
-          },
-          {
-            meta: "08/05 16:09-16:12 • TJPE • Cumprimento de sentença",
-            title: "0018996-62.2025.8.17.8201: certidão expedida e autos conclusos para despacho.",
-            body:
-              "Partes: Antonio Rafael de Arruda x Go Energia Solar Ltda e outros. Advogado responsável: o push não lista patrono. Evento: expedição de certidão e conclusão para despacho. Follow-up: abrir a certidão e monitorar despacho ou ordem útil ligada à transferência pendente. Risco: Alto.",
-            href: "https://mail.google.com/mail/#all/19e0911df33abeb0"
-          },
-          {
-            meta: "08/05 10:22-10:30 • TJPE • Família / cumprimento de sentença",
-            title: "0070650-06.2021.8.17.2001: certidão, publicação no DJEN e mandado expedido, já recebido para cumprimento.",
-            body:
-              "Partes: Fabiana Oliveira da Silva x Carlos Leandro Lima de Oliveira. Advogado responsável: não identificado no push. Evento: certidão, publicação e mandado em sequência. Follow-up: abrir mandado e certidão para entender a obrigação executiva concreta. Risco: Alto.",
-            href: "https://mail.google.com/mail/#all/19e07c8299798831"
-          },
-          {
-            meta: "08/05 12:55 • TRT6 2º grau • Recurso ordinário",
-            title: "0000145-51.2024.5.06.0122: a parte autora juntou recurso de revista.",
-            body:
-              "Partes: Sidney Francisco do Nascimento Junior x Bruno dos Santos Lira. Advogado responsável: Petrônio Souza, identificado expressamente como patrono do réu no push. Evento: juntada do recurso de revista com sigiloso. Follow-up: abrir a peça, confirmar prazo e desenhar resposta. Risco: Alto.",
-            href: "https://mail.google.com/mail/#all/19e0ad3ec9d510a7"
-          },
-          {
-            meta: "08/05 03:06-17:37 • TRT6 • Cumprimento de sentença",
-            title: "0000396-46.2023.5.06.0141: contrarrazões juntadas e intimações publicadas para 11/05.",
-            body:
-              "Partes: Manoel de Morais Ferreira x M & R Serviços e Telecomunicações Ltda e outros. Advogado responsável: não identificado no push. Evento: contrarrazões, documento sigiloso e duas intimações publicadas. Follow-up: abrir a peça e confirmar o efeito útil das publicações. Risco: Alto.",
-            href: "https://mail.google.com/mail/#all/19e0b6e367d86ee2"
-          },
-          {
-            meta: "08/05 03:14-10:09 • TRT6 • Rito sumaríssimo",
-            title: "0001288-12.2023.5.06.0122: manifestação juntada e duas intimações publicadas para 11/05.",
-            body:
-              "Partes: Alexsandro dos Santos Oliveira x Priscila da Silva Wanderley Dias e Cristiano Jose Antonio Dias. Advogado responsável: não identificado no push. Evento: manifestação, documento sigiloso e intimações no DJE. Follow-up: abrir a manifestação e qualificar prazo ou impacto material. Risco: Médio.",
-            href: "https://mail.google.com/mail/#all/19e0b4f130a300bb"
-          },
-          {
-            meta: "08/05 • Movimentos adicionais do período",
-            title: "0000223, 0002351, 0075599, 0026091 e 0040942 também tiveram fato relevante na janela.",
-            body:
-              "0000223 teve sentença extinguindo a execução por cumprimento da obrigação de fazer; 0002351 registrou diligência e mandado devolvido entregue; 0075599 recebeu embargos de declaração; 0026091 teve juntada de petição; e 0040942 teve certidão expedida. Esses itens ficaram abaixo do corte principal de urgência, mas seguem materialmente monitorados. Risco: Médio.",
-            href: "https://mail.google.com/mail/#all/19e0b7b5efc7698b"
-          }
-        ],
-        todos: [
-          {
-            title: "Triar o relatório PJe de 09/05 com foco imediato nos 2 urgentes e no bloco de 21 vencidos.",
-            body:
-              "Sem essa triagem executiva, o escritório continua só acumulando leitura. Começar pelos dois urgentes e pelos vencidos com consequência mais concreta.",
-            owner: "Petrônio",
-            href: "https://mail.google.com/mail/#all/19e0c5877cf77d17"
-          },
-          {
-            title: "Abrir despacho, ata e documento sigiloso do 0000338 e confirmar a redesignação para 19/06.",
-            body:
-              "A mudança de audiência é o fato novo mais estruturado da manhã e pode redistribuir agenda, prova e expectativa do caso.",
-            owner: "Petrônio",
-            href: "https://mail.google.com/mail/#all/19e0c1b2f0ed0118"
-          },
-          {
-            title: "Abrir os sigilos e a diligência de 0000439, 0000452 e 0000483.",
-            body:
-              "Esses três casos entraram com informação encapsulada e ainda sem leitura material do conteúdo, o que mantém risco oculto desnecessário.",
-            owner: "Petrônio",
-            href: "https://mail.google.com/mail/#all/19e0c4063840270b"
-          },
-          {
-            title: "Abrir a intimação publicada do 0000584 e confirmar prazo ou audiência vinculada.",
-            body:
-              "A publicação para 11/05 já foi registrada no controle interno e precisa virar leitura útil antes da próxima virada de prazo.",
-            owner: "Petrônio",
-            href: "https://mail.google.com/mail/#all/19e0c3904dcaae7a"
-          },
-          {
-            title: "Abrir certidão e mandado do 0018996 e do 0070650.",
-            body:
-              "Os dois casos já passaram do nível informativo para o nível executivo e precisam de compreensão material do ato, não só do cabeçalho do push.",
-            owner: "Petrônio",
-            href: "https://mail.google.com/mail/#all/19e0911df33abeb0"
-          },
-          {
-            title: "Abrir o recurso de revista do 0000145 e a fila de 0000396 com 0001288.",
-            body:
-              "O conjunto já mistura recurso, contrarrazões, manifestação e intimações publicadas para 11/05. É a faixa mais provável de trabalho jurídico útil após o PJe.",
-            owner: "Petrônio",
-            href: "https://mail.google.com/mail/#all/19e0ad3ec9d510a7"
-          },
-          {
-            title: "Regularizar recorte OAB/PE e validar os alertas CNJ/PDPJ.",
-            body:
-              "O escritório continua com um ponto cego em 9 publicações e dois acessos móveis à PDPJ que precisam ser reconhecidos ou tratados como incidente.",
-            owner: "Petrônio",
-            href: "https://mail.google.com/mail/#all/19e06fe9a87de3e5"
-          },
-          {
-            title: "Quitar a TIM até 10/05, revisar as PRs 11 e 12 no GitHub e checar o comunicado Serasa.",
-            body:
-              "São temas operacionais, mas todos já aparecem com sinal de vencimento, falha ou cobrança e não devem atravessar o fim de semana sem triagem.",
-            owner: "Petrônio",
-            href: "https://mail.google.com/mail/#all/19e0756f62e21aab"
-          }
-        ],
-        risks: [
-          {
-            title: "Risco de prazo acumulado",
-            body: "Os 21 vencidos e 2 urgentes do PJe seguem sem redução confirmada. Esse continua sendo o maior risco sistêmico do escritório na manhã de 09/05/2026."
-          },
-          {
-            title: "Risco de conteúdo oculto em sigilos e mandados",
-            body: "0000439, 0000452 e 0000483 ainda estão em fase de leitura material do que entrou em sigilo, enquanto 0070650 já passou para mandado em cumprimento."
-          },
-          {
-            title: "Risco de cegueira de publicações",
-            body: "A OAB/PE apontou 9 publicações no dia, mas o serviço continua interrompido por situação cadastral e sem fornecer teor integral automático."
-          },
-          {
-            title: "Risco operacional e reputacional",
-            body: "Os alertas CNJ/PDPJ, a fatura TIM vencendo em 10/05, o comunicado Serasa e a falha de Secret Scan no GitHub mantêm uma camada paralela de atenção fora do contencioso puro."
-          }
-        ],
-        coverage: [
-          {
-            title: "Agenda",
-            body:
-              "Foi auditada a janela exata de 08/05/2026 08:06 a 09/05/2026 08:06 BRT e, separadamente, o restante do dia 09/05/2026. Não houve reunião profissional concluída; resta apenas o bloco Aplicação mounjaro às 19h."
-          },
-          {
-            title: "Gmail consolidado",
-            body:
-              "Foram lidos os e-mails materialmente relevantes do recorte inteiro, incluindo TRT6, TJPE, CNJ, OAB/PE, TIM, Serasa e notificações técnicas do GitHub. Ruído promocional e social foi descartado."
-          },
-          {
-            title: "Notion",
-            body:
-              "Para evitar duplicidade, foram atualizados apenas os casos com fato realmente novo depois do briefing das 06:13 BRT: 0000338, 0000439, 0000452, 0000483 e 0000584. Também foi criada a tarefa de leitura da intimação publicada do 0000584."
-          },
-          {
-            title: "Lacunas verificadas",
-            body:
-              "Não existe conector de chat corporativo nesta sessão. Além disso, o recorte OAB/PE continua sem teor integral automático enquanto durar a interrupção cadastral."
-          }
-        ]
-      };
-
-      const chip = (text, variant) => html`<span className=${`chip ${variant}`}>${text}</span>`;
-
-      const App = () => html`
-        <main className="page">
-          <section className="hero">
-            <div className="hero-grid">
-              <div>
-                <div className="brand">
-                  <div className="brand-mark">PS</div>
-                  <div>
-                    <div className="brand-label">Briefing executivo visual</div>
-                    <div className="brand-name">Petrônio Souza Advogados Associados</div>
-                  </div>
-                </div>
-                <h1>O dia abriu sem agenda, mas com nova rodada sensível no contencioso.</h1>
-                <p className="hero-copy">${briefing.executiveLead}</p>
-                <p className="hero-copy" style=${{ marginTop: "10px" }}>${briefing.executiveBody}</p>
-              </div>
-              <div className="hero-side">
-                <div className="glass">
-                  <div className="glass-label">Janela auditada</div>
-                  <div className="glass-value">${briefing.coverageWindow}</div>
-                  <div className="glass-note">Gerado em ${briefing.generatedAt}.</div>
-                </div>
-                ${briefing.topCards.map(
-                  (card) => html`
-                    <div className="glass" key=${card.label}>
-                      <div className="glass-label">${card.label}</div>
-                      <div className="glass-value">${card.value}</div>
-                      <div className="glass-note">${card.note}</div>
-                    </div>
-                  `
-                )}
-              </div>
-            </div>
-          </section>
-
-          <section className="metrics">
-            ${briefing.metrics.map(
-              (metric) => html`
-                <article className="metric" key=${metric.label}>
-                  <div className="label">${metric.label}</div>
-                  <div className="value">${metric.value}</div>
-                  <div className="note">${metric.note}</div>
-                </article>
-              `
-            )}
-          </section>
-
-          <section className="layout">
-            <div className="stack">
-              <section className="panel">
-                <div className="panel-head">
-                  <div>
-                    <div className="eyebrow">Executive Summary</div>
-                    <h2>Prioridades críticas</h2>
-                  </div>
-                  <div className="head-note">
-                    O recorte abaixo prioriza o que muda prazo, diligência, leitura útil e risco operacional logo na abertura do dia.
-                  </div>
-                </div>
-                <div className="list">
-                  ${briefing.priorities.map(
-                    (item) => html`
-                      <article className="item" key=${item.title}>
-                        <h3 className="title">${item.title}</h3>
-                        <p className="body">${item.body}</p>
-                        <div className="chips">
-                          ${item.tags.map(([text, variant]) => chip(text, variant))}
-                        </div>
-                        <a className="link" href=${item.href} target="_blank" rel="noreferrer">${item.label}</a>
-                      </article>
-                    `
-                  )}
-                </div>
-              </section>
-
-              <section className="panel">
-                <div className="panel-head">
-                  <div>
-                    <div className="eyebrow">Hoje na agenda</div>
-                    <h2>Janelas do dia e preparo útil</h2>
-                  </div>
-                  <div className="head-note">
-                    Sem reunião profissional formal na agenda, o sábado fica disponível para converter leitura em ação até o bloco das 19h.
-                  </div>
-                </div>
-                <div className="timeline">
-                  ${briefing.meetings.map(
-                    (meeting) => html`
-                      <article className="event" key=${meeting.title}>
-                        <div className="when">${meeting.time}</div>
-                        <div>
-                          <h3 className="title">${meeting.title}</h3>
-                          <p className="body">${meeting.body}</p>
-                          <ul className="prep">
-                            ${meeting.prep.map((tip) => html`<li key=${tip}>${tip}</li>`)}
-                          </ul>
-                          <a className="link" href=${meeting.href} target="_blank" rel="noreferrer">Abrir evento</a>
-                        </div>
-                      </article>
-                    `
-                  )}
-                </div>
-              </section>
-
-              <section className="panel">
-                <div className="panel-head">
-                  <div>
-                    <div className="eyebrow">Jurídico</div>
-                    <h2>Mapa processual do período</h2>
-                  </div>
-                  <div className="head-note">
-                    Os itens abaixo reúnem o que ficou materialmente relevante dentro da janela, mesmo quando parte deles já estava em continuidade antes das 06:13 BRT.
-                  </div>
-                </div>
-                <div className="list">
-                  ${briefing.inbox.map(
-                    (mail) => html`
-                      <article className="mail" key=${mail.title}>
-                        <div className="mail-meta">${mail.meta}</div>
-                        <h3 className="title">${mail.title}</h3>
-                        <p className="body">${mail.body}</p>
-                        <a className="link" href=${mail.href} target="_blank" rel="noreferrer">Abrir e-mail</a>
-                      </article>
-                    `
-                  )}
-                </div>
-              </section>
-            </div>
-
-            <div className="stack">
-              <section className="panel">
-                <div className="panel-head">
-                  <div>
-                    <div className="eyebrow">Next Actions</div>
-                    <h2>Follow-ups e donos</h2>
-                  </div>
-                </div>
-                <div className="list">
-                  ${briefing.todos.map(
-                    (todo) => html`
-                      <article className="todo" key=${todo.title}>
-                        <div className="box"></div>
-                        <div>
-                          <h3 className="title">${todo.title}</h3>
-                          <p className="body">${todo.body}</p>
-                          <div className="owner">Owner: ${todo.owner}</div>
-                          <a className="link" href=${todo.href} target="_blank" rel="noreferrer">Abrir fonte</a>
-                        </div>
-                      </article>
-                    `
-                  )}
-                </div>
-              </section>
-
-              <section className="panel">
-                <div className="panel-head">
-                  <div>
-                    <div className="eyebrow">Riscos e bloqueios</div>
-                    <h2>O que pede cuidado explícito</h2>
-                  </div>
-                </div>
-                <div className="list">
-                  ${briefing.risks.map(
-                    (risk) => html`
-                      <article className="risk" key=${risk.title}>
-                        <h3 className="title">${risk.title}</h3>
-                        <p className="body">${risk.body}</p>
-                      </article>
-                    `
-                  )}
-                </div>
-              </section>
-
-              <section className="panel">
-                <div className="panel-head">
-                  <div>
-                    <div className="eyebrow">Cobertura</div>
-                    <h2>Fontes e lacunas verificadas</h2>
-                  </div>
-                </div>
-                <div className="list">
-                  ${briefing.coverage.map(
-                    (item) => html`
-                      <article className="coverage" key=${item.title}>
-                        <h3 className="title">${item.title}</h3>
-                        <p className="body">${item.body}</p>
-                      </article>
-                    `
-                  )}
-                </div>
-              </section>
-            </div>
-          </section>
-
-          <section className="footer">
-            <div className="footer-note">
-              <strong>Leitura principal:</strong> o melhor uso do sábado é atacar o PJe, abrir os cinco fatos novos do TRT6 que chegaram depois das 06:13 BRT e só então descer para o bloco operacional de OAB/PE, CNJ, TIM, Serasa e GitHub.
-            </div>
-            <div className="footer-note">
-              <strong>Metodologia:</strong> tudo aqui foi verificado em Google Calendar, Gmail consolidado e controle interno do Notion. Quando o push não identificou patrono, isso foi mantido como não identificado; quando um item já existia no controle, ele foi tratado como continuidade e não como registro duplicado.
-            </div>
-          </section>
-        </main>
-      `;
-
-      createRoot(document.getElementById("root")).render(html`<${App} />`);
-    </script>
-  </body>
-</html>
++    </style>
++  </head>
++  <body>
++    <main class="page">
++      <section class="hero">
++        <div class="hero-grid">
++          <div>
++            <div class="brand">
++              <div class="brand-mark">PS</div>
++              <div>
++                <div class="brand-label">Briefing executivo visual</div>
++                <div class="brand-name">Petrônio Souza Advogados Associados</div>
++              </div>
++            </div>
++            <h1>O sábado abriu sem agenda profissional, mas com risco processual ainda alto.</h1>
++            <p class="hero-copy">
++              A janela exata de 08/05/2026 às 12:13 BRT até 09/05/2026 às 12:13 BRT não trouxe reuniões formais do escritório no Google Calendar, mas concentrou novos movimentos do TRT6, um relatório PJe ainda travado em 21 vencidos e 2 urgentes e uma falha operacional nova no GitHub do Projeto Escudo da Justiça.
++            </p>
++            <p class="hero-copy" style="margin-top: 10px;">
++              Desde a publicação das 08:06 BRT, os fatos realmente novos foram: redesignação de audiência no 0000338, mandado em cumprimento no 0000439, intimação publicada para 11/05 no 0000584 e novos documentos sigilosos em 0000452 e 0000483. O restante do bloco jurídico continua material, mas já estava lançado no controle anterior.
++            </p>
++          </div>
++
++          <div class="hero-side">
++            <div class="glass">
++              <div class="glass-label">Janela auditada</div>
++              <div class="glass-value">8 de maio de 2026, 12:13 -> 9 de maio de 2026, 12:13</div>
++              <div class="glass-note">Gerado em 9 de maio de 2026, 12:13 (-03, America/Sao_Paulo).</div>
++            </div>
++
++            <div class="glass">
++              <div class="glass-label">Ponto mais sensível</div>
++              <div class="glass-value">O relatório PJe das 07:46 BRT ainda mantém 21 vencidos e 2 urgentes.</div>
++              <div class="glass-note">A fila segue como risco crítico porque o volume não caiu entre as execuções da manhã.</div>
++            </div>
++
++            <div class="glass">
++              <div class="glass-label">Mudança nova do período</div>
++              <div class="glass-value">0000338 mudou a audiência para 19/06/2026 às 09:00 e já saiu com despacho e intimações.</div>
++              <div class="glass-note">É o fato novo mais estruturado do contencioso trabalhista dentro da janela.</div>
++            </div>
++          </div>
++        </div>
++      </section>
++
++      <section class="metrics">
++        <article class="metric">
++          <div class="label">Reuniões profissionais</div>
++          <div class="value">0</div>
++          <div class="note">Nenhum compromisso profissional foi encontrado no calendário primário dentro da janela auditada.</div>
++        </article>
++
++        <article class="metric">
++          <div class="label">Blocos restantes hoje</div>
++          <div class="value">1</div>
++          <div class="note">Resta apenas “Aplicação mounjaro”, das 19:00 às 20:00 BRT.</div>
++        </article>
++
++        <article class="metric">
++          <div class="label">Vencidos no PJe</div>
++          <div class="value">21</div>
++          <div class="note">Relatório consolidado recebido às 07:46 BRT de 09/05/2026.</div>
++        </article>
++
++        <article class="metric">
++          <div class="label">Urgentes no PJe</div>
++          <div class="value">2</div>
++          <div class="note">0000021-06.2024.8.17.2420 e 0000982-27.2026.8.17.8223.</div>
++        </article>
++
++        <article class="metric">
++          <div class="label">Fatos novos pós-08:06</div>
++          <div class="value">6</div>
++          <div class="note">Cinco fatos jurídicos novos e uma falha operacional nova no GitHub.</div>
++        </article>
++      </section>
++
++      <section class="layout">
++        <div class="stack">
++          <section class="panel">
++            <div class="panel-head">
++              <div>
++                <div class="eyebrow">Executive Summary</div>
++                <h2>Prioridades críticas</h2>
++              </div>
++              <div class="head-note">
++                A ordem abaixo prioriza o que muda prazo, diligência, leitura útil e risco operacional ainda hoje.
++              </div>
++            </div>
++
++            <div class="list">
++              <article class="item">
++                <h3 class="title">Tratar o relatório PJe das 07:46 BRT como a fila executiva do dia.</h3>
++                <p class="body">
++                  O painel continua em 21 vencidos e 2 urgentes. Sem atacar esse lote primeiro, a leitura de pushes e publicações segue aumentando contexto sem reduzir risco efetivo do escritório.
++                </p>
++                <div class="chips">
++                  <span class="chip critical">Crítico</span>
++                  <span class="chip ok">PJe</span>
++                  <span class="chip critical">Prazo vencido</span>
++                </div>
++                <a class="link" href="https://mail.google.com/mail/#all/19e0c5877cf77d17" target="_blank" rel="noreferrer">Abrir relatório PJe</a>
++              </article>
++
++              <article class="item">
++                <h3 class="title">Abrir o 0000338-95.2026.5.06.0122 antes do meio do dia.</h3>
++                <p class="body">
++                  Partes: Paulo Henrique Ferreira de Souza x C J Antonio Dias Peças e Serviços para Autos Ltda e outros. O processo teve audiência cancelada em 29/05, redesignação para 19/06 às 09:00, despacho de mero expediente, documento sigiloso e intimações expedidas. Advogado responsável: não identificado no push. Follow-up: abrir despacho, ata e sigiloso. Risco: alto pela mudança de calendário e preparação.
++                </p>
++                <div class="chips">
++                  <span class="chip critical">Alta</span>
++                  <span class="chip ok">TRT6</span>
++                  <span class="chip watch">Audiência redesignada</span>
++                </div>
++                <a class="link" href="https://mail.google.com/mail/#all/19e0c1b2f0ed0118" target="_blank" rel="noreferrer">Abrir push do 0000338</a>
++              </article>
++
++              <article class="item">
++                <h3 class="title">Converter o 0000439 e o 0000584 em leitura material hoje.</h3>
++                <p class="body">
++                  0000439-72.2026.5.06.0142, Manoel de Morais Ferreira x M &amp; R Serviços e Telecomunicações Ltda, passou a mandado em cumprimento com dois sigilosos. 0000584-94.2026.5.06.0121, C J Antonio Dias Peças e Serviços para Autos Ltda x Sabrina Suelyn Pereira Silva, ganhou intimação publicada para 11/05. Advogado responsável: não identificado nos pushes. Follow-up: abrir diligência e intimação. Risco: médio.
++                </p>
++                <div class="chips">
++                  <span class="chip watch">Mandado</span>
++                  <span class="chip watch">Intimação</span>
++                  <span class="chip ok">Prazo útil</span>
++                </div>
++                <a class="link" href="https://mail.google.com/mail/#all/19e0c4063840270b" target="_blank" rel="noreferrer">Abrir 0000439</a>
++              </article>
++
++              <article class="item">
++                <h3 class="title">Os novos sigilosos de 0000452 e 0000483 seguem com risco oculto.</h3>
++                <p class="body">
++                  0000452-25.2016.5.06.0012, Camila de Santana Siqueira x Vitabras Comércio de Vitaminas Eireli e outros, e 0000483-57.2026.5.06.0121, Carlos Eduardo de Oliveira x R M Terceirização Ltda e outros, receberam novos documentos sigilosos sem leitura material concluída. Follow-up: abrir as peças e classificar se geram prazo, prova ou decisão. Risco: médio.
++                </p>
++                <div class="chips">
++                  <span class="chip watch">Sigiloso</span>
++                  <span class="chip ok">TRT6</span>
++                  <span class="chip watch">Leitura pendente</span>
++                </div>
++                <a class="link" href="https://mail.google.com/mail/#all/19e0b89972a52581" target="_blank" rel="noreferrer">Abrir 0000452</a>
++              </article>
++
++              <article class="item">
++                <h3 class="title">O carry-over jurídico continua pesado, embora não seja novo desde 08:06.</h3>
++                <p class="body">
++                  0018996 ficou concluso para despacho; 0000145 recebeu recurso de revista; 0000396 trouxe contrarrazões e publicação para 11/05; 0001288 juntou manifestação e intimações; 0026091 teve juntada de petição; 0043310, 0061659 e 0815844 vieram por lote Jusbrasil com publicação em 11/05. O controle já foi atualizado antes, mas esse bloco segue material para leitura útil ao longo do dia.
++                </p>
++                <div class="chips">
++                  <span class="chip critical">Continuidade material</span>
++                  <span class="chip ok">TJPE e TRT6</span>
++                  <span class="chip watch">Sem duplicidade</span>
++                </div>
++                <a class="link" href="https://mail.google.com/mail/#all/19e0911df33abeb0" target="_blank" rel="noreferrer">Abrir 0018996</a>
++              </article>
++
++              <article class="item">
++                <h3 class="title">Há uma frente operacional nova no GitHub e uma frente contínua de segurança e acesso.</h3>
++                <p class="body">
++                  O repositório do Projeto Escudo da Justiça registrou nova falha no job Secret Scan da PR #13, enquanto o CRM de pastas no Drive veio zerado e os alertas CNJ/PDPJ de novo dispositivo seguem sem indício novo após o registro anterior. Follow-up: revisar o run 25603342808 e manter a checagem de acessos. Risco: médio.
++                </p>
++                <div class="chips">
++                  <span class="chip watch">Operação</span>
++                  <span class="chip critical">Segurança</span>
++                  <span class="chip ok">Drive em dia</span>
++                </div>
++                <a class="link" href="https://mail.google.com/mail/#all/19e0d1d6f7b2b796" target="_blank" rel="noreferrer">Abrir falha do GitHub</a>
++              </article>
++            </div>
++          </section>
++
++          <section class="panel">
++            <div class="panel-head">
++              <div>
++                <div class="eyebrow">Hoje na agenda</div>
++                <h2>Janelas do dia e preparo útil</h2>
++              </div>
++              <div class="head-note">
++                O sábado ficou praticamente livre para reduzir backlog e abrir peças antes do bloco das 19h.
++              </div>
++            </div>
++
++            <div class="timeline">
++              <article class="event">
++                <div class="when">19:00-20:00</div>
++                <div>
++                  <h3 class="title">Aplicação mounjaro</h3>
++                  <p class="body">
++                    É o único compromisso formal restante no Google Calendar para 09/05/2026. Não há reuniões profissionais ou anexos de preparo associados ao evento.
++                  </p>
++                  <ul class="prep">
++                    <li>Usar a manhã e o início da tarde para reduzir o backlog do PJe e qualificar os pushes novos do TRT6.</li>
++                    <li>Se 0018996 ou 0000439 avançarem com despacho ou cumprimento relevante, registrar a mudança antes das 19h.</li>
++                    <li>Não encontrei conflitos de agenda no período auditado.</li>
++                  </ul>
++                  <a class="link" href="https://www.google.com/calendar/event?eid=czVsaGdkamc0OHBxdDZkOXU4ZmFqODc4MGNfMjAyNjA1MDlUMjIwMDAwWiBwZXRyb25pb3NvdXphLmFkdkBt&ctz=America/Sao_Paulo" target="_blank" rel="noreferrer">Abrir evento</a>
++                </div>
++              </article>
++            </div>
++          </section>
++
++          <section class="panel">
++            <div class="panel-head">
++              <div>
++                <div class="eyebrow">Jurídico</div>
++                <h2>Mapa processual do período</h2>
++              </div>
++              <div class="head-note">
++                A lista abaixo mistura fatos novos do recorte com itens de continuidade ainda material, mas sem repetir registros já reconciliados no Notion.
++              </div>
++            </div>
++
++            <div class="list">
++              <article class="mail">
++                <div class="mail-meta">08/05 16:12 • TRT6 • Ação trabalhista rito ordinário</div>
++                <h3 class="title">0000338-95.2026.5.06.0122: redesignação da audiência de instrução.</h3>
++                <p class="body">
++                  Partes: Paulo Henrique Ferreira de Souza x C J Antonio Dias Peças e Serviços para Autos Ltda e outros. Advogado responsável: não identificado no push. Movimento: audiência cancelada em 29/05 e redesignada para 19/06/2026 às 09:00, com despacho de mero expediente, documento sigiloso e intimações expedidas. Follow-up: abrir despacho, ata e sigiloso. Risco: médio.
++                </p>
++                <a class="link" href="https://mail.google.com/mail/#all/19e0c1b2f0ed0118" target="_blank" rel="noreferrer">Abrir e-mail</a>
++              </article>
++
++              <article class="mail">
++                <div class="mail-meta">08/05 07:05 • TRT6 • Carta de ordem cível</div>
++                <h3 class="title">0000439-72.2026.5.06.0142: mandado em cumprimento.</h3>
++                <p class="body">
++                  Partes: Manoel de Morais Ferreira x M &amp; R Serviços e Telecomunicações Ltda. Advogado responsável: não identificado no push. Movimento: mandado recebido pelo oficial de justiça para cumprimento, com dois documentos sigilosos anteriores. Follow-up: abrir os sigilosos e acompanhar a diligência. Risco: médio.
++                </p>
++                <a class="link" href="https://mail.google.com/mail/#all/19e0c4063840270b" target="_blank" rel="noreferrer">Abrir e-mail</a>
++              </article>
++
++              <article class="mail">
++                <div class="mail-meta">08/05 03:12 • TRT6 • Reclamação pré-processual</div>
++                <h3 class="title">0000584-94.2026.5.06.0121: intimação publicada para 11/05/2026.</h3>
++                <p class="body">
++                  Partes: C J Antonio Dias Peças e Serviços para Autos Ltda x Sabrina Suelyn Pereira Silva. Advogado responsável: não identificado no push. Movimento: disponibilização no DJE em 08/05 e publicação marcada para 11/05. Follow-up: abrir a intimação e qualificar prazo. Risco: médio.
++                </p>
++                <a class="link" href="https://mail.google.com/mail/#all/19e0c3904dcaae7a" target="_blank" rel="noreferrer">Abrir e-mail</a>
++              </article>
++
++              <article class="mail">
++                <div class="mail-meta">08/05 10:55 • TRT6 • Ação trabalhista rito ordinário</div>
++                <h3 class="title">0000452-25.2016.5.06.0012: novo documento sigiloso.</h3>
++                <p class="body">
++                  Partes: Camila de Santana Siqueira x Vitabras Comércio de Vitaminas Eireli e outros. Advogado responsável: não identificado no push. Movimento: documento sigiloso. Follow-up: abrir a peça e verificar se há decisão ou prazo útil. Risco: médio.
++                </p>
++                <a class="link" href="https://mail.google.com/mail/#all/19e0b89972a52581" target="_blank" rel="noreferrer">Abrir e-mail</a>
++              </article>
++
++              <article class="mail">
++                <div class="mail-meta">08/05 00:17 • TRT6 • Ação trabalhista rito sumaríssimo</div>
++                <h3 class="title">0000483-57.2026.5.06.0121: novo documento sigiloso.</h3>
++                <p class="body">
++                  Partes: Carlos Eduardo de Oliveira x R M Terceirização Ltda e outros. Advogado responsável: não identificado no push. Movimento: documento sigiloso. Follow-up: abrir o conteúdo e classificar eventual reflexo sobre audiência, despacho ou prazo. Risco: médio.
++                </p>
++                <a class="link" href="https://mail.google.com/mail/#all/19e0c30fe1d5845f" target="_blank" rel="noreferrer">Abrir e-mail</a>
++              </article>
++
++              <article class="mail">
++                <div class="mail-meta">08/05 16:09-16:12 • TJPE • Cumprimento de sentença</div>
++                <h3 class="title">0018996-62.2025.8.17.8201: certidão expedida e autos conclusos para despacho.</h3>
++                <p class="body">
++                  Partes: Antonio Rafael de Arruda x GO Energia Solar Ltda e outros. Advogado responsável: não informado no push. Follow-up: abrir a certidão e monitorar despacho útil. Risco: alto, mas já registrado no controle anterior do dia.
++                </p>
++                <a class="link" href="https://mail.google.com/mail/#all/19e0911df33abeb0" target="_blank" rel="noreferrer">Abrir e-mail</a>
++              </article>
++
++              <article class="mail">
++                <div class="mail-meta">08/05 12:55 • TRT6 2º grau • Recurso ordinário</div>
++                <h3 class="title">0000145-51.2024.5.06.0122: juntada de recurso de revista.</h3>
++                <p class="body">
++                  Partes: Sidney Francisco do Nascimento Junior x Bruno dos Santos Lira. Advogado responsável: Petrônio Souza, expressamente listado como patrono do réu no push. Follow-up: abrir a peça e desenhar resposta. Risco: alto, já lançado antes desta execução.
++                </p>
++                <a class="link" href="https://mail.google.com/mail/#all/19e0ad3ec9d510a7" target="_blank" rel="noreferrer">Abrir e-mail</a>
++              </article>
++
++              <article class="mail">
++                <div class="mail-meta">08/05 • Lote Jusbrasil • Publicação em 11/05</div>
++                <h3 class="title">0043310-48.2025.8.17.2001, 0061659-02.2025.8.17.2001 e 0815844-52.2026.8.15.0001 apareceram no lote de publicações.</h3>
++                <p class="body">
++                  Advogado responsável indicado nas publicações: Petrônio Leonardo Ramos de Souza. O lote é material por antecipar leitura para 11/05, mas esses registros já haviam sido reconciliados nas execuções anteriores do dia e não foram duplicados no Notion.
++                </p>
++                <a class="link" href="https://mail.google.com/mail/#all/19e0837ede0bde37" target="_blank" rel="noreferrer">Abrir lote de publicações</a>
++              </article>
++            </div>
++          </section>
++        </div>
++
++        <div class="stack">
++          <section class="panel">
++            <div class="panel-head">
++              <div>
++                <div class="eyebrow">Next Actions</div>
++                <h2>Follow-ups e donos</h2>
++              </div>
++            </div>
++
++            <div class="list">
++              <article class="todo">
++                <div class="box"></div>
++                <div>
++                  <h3 class="title">Triar o backlog PJe de 09/05/2026 com foco imediato nos 2 urgentes.</h3>
++                  <p class="body">Tratar o relatório das 07:46 BRT como fila principal do dia e separar os vencidos com maior consequência processual.</p>
++                  <div class="owner">Owner: Petrônio</div>
++                  <a class="link" href="https://mail.google.com/mail/#all/19e0c5877cf77d17" target="_blank" rel="noreferrer">Abrir fonte</a>
++                </div>
++              </article>
++
++              <article class="todo">
++                <div class="box"></div>
++                <div>
++                  <h3 class="title">Abrir despacho, ata e sigiloso do 0000338.</h3>
++                  <p class="body">A redesignação da audiência muda a leitura estratégica do caso e precisa ser confirmada com o texto do despacho.</p>
++                  <div class="owner">Owner: Petrônio</div>
++                  <a class="link" href="https://mail.google.com/mail/#all/19e0c1b2f0ed0118" target="_blank" rel="noreferrer">Abrir fonte</a>
++                </div>
++              </article>
++
++              <article class="todo">
++                <div class="box"></div>
++                <div>
++                  <h3 class="title">Abrir diligência e sigilos de 0000439, 0000452 e 0000483.</h3>
++                  <p class="body">São os três pontos do período em que o risco está mais escondido atrás de mandado ou documento sigiloso.</p>
++                  <div class="owner">Owner: Petrônio</div>
++                  <a class="link" href="https://mail.google.com/mail/#all/19e0c4063840270b" target="_blank" rel="noreferrer">Abrir fonte</a>
++                </div>
++              </article>
++
++              <article class="todo">
++                <div class="box"></div>
++                <div>
++                  <h3 class="title">Abrir a intimação publicada do 0000584 antes de 11/05.</h3>
++                  <p class="body">O push já antecipa a publicação. O próximo passo é qualificar o conteúdo enquanto a fila ainda está curta.</p>
++                  <div class="owner">Owner: Petrônio</div>
++                  <a class="link" href="https://mail.google.com/mail/#all/19e0c3904dcaae7a" target="_blank" rel="noreferrer">Abrir fonte</a>
++                </div>
++              </article>
++
++              <article class="todo">
++                <div class="box"></div>
++                <div>
++                  <h3 class="title">Revisar o run de Secret Scan da PR #13 no Projeto Escudo da Justiça.</h3>
++                  <p class="body">Dependency Audit e build passaram; o ponto pendente ficou concentrado no job de segurança.</p>
++                  <div class="owner">Owner: Petrônio</div>
++                  <a class="link" href="https://mail.google.com/mail/#all/19e0d1d6f7b2b796" target="_blank" rel="noreferrer">Abrir fonte</a>
++                </div>
++              </article>
++
++              <article class="todo">
++                <div class="box"></div>
++                <div>
++                  <h3 class="title">Usar o bloco livre do dia para descer o carry-over já registrado.</h3>
++                  <p class="body">Priorizar 0018996, 0000145, 0000396, 0001288, 0026091 e o lote Jusbrasil já reconciliado sem duplicidade.</p>
++                  <div class="owner">Owner: Petrônio</div>
++                  <a class="link" href="https://mail.google.com/mail/#all/19e0911df33abeb0" target="_blank" rel="noreferrer">Abrir fonte</a>
++                </div>
++              </article>
++            </div>
++          </section>
++
++          <section class="panel">
++            <div class="panel-head">
++              <div>
++                <div class="eyebrow">Riscos e bloqueios</div>
++                <h2>O que pede cuidado explícito</h2>
++              </div>
++            </div>
++
++            <div class="list">
++              <article class="risk">
++                <h3 class="title">Risco crítico de prazo acumulado</h3>
++                <p class="body">Os 21 vencidos e 2 urgentes do PJe continuam sem redução confirmada dentro da manhã. Esse é o maior risco sistêmico do escritório no momento.</p>
++              </article>
++
++              <article class="risk">
++                <h3 class="title">Risco de leitura incompleta em atos sigilosos</h3>
++                <p class="body">0000439, 0000452 e 0000483 ainda dependem de abertura manual de sigilosos para revelar o efeito prático do movimento.</p>
++              </article>
++
++              <article class="risk">
++                <h3 class="title">Risco operacional de segurança e continuidade</h3>
++                <p class="body">O GitHub sinalizou falha nova em Secret Scan, enquanto os alertas CNJ/PDPJ já conhecidos continuam exigindo validação humana do histórico de acesso.</p>
++              </article>
++
++              <article class="risk">
++                <h3 class="title">Risco baixo no fluxo de pastas</h3>
++                <p class="body">O relatório do CRM/Drive veio com zero clientes aguardando criação de pasta. É um sinal positivo e sem bloqueio novo.</p>
++              </article>
++            </div>
++          </section>
++
++          <section class="panel">
++            <div class="panel-head">
++              <div>
++                <div class="eyebrow">Cobertura</div>
++                <h2>Fontes e lacunas verificadas</h2>
++              </div>
++            </div>
++
++            <div class="list">
++              <article class="coverage">
++                <h3 class="title">Google Calendar</h3>
++                <p class="body">A janela exata de 08/05/2026 12:13 BRT até 09/05/2026 12:13 BRT foi auditada, com checagem adicional do restante do dia 09/05/2026. Não houve reunião profissional formal; restou apenas o evento pessoal das 19h.</p>
++              </article>
++
++              <article class="coverage">
++                <h3 class="title">Gmail consolidado</h3>
++                <p class="body">Foram lidos os e-mails materialmente relevantes do recorte inteiro, incluindo TRT6, TJPE, CNJ, GitHub e o relatório PJe. Itens promocionais e sociais foram descartados do briefing.</p>
++              </article>
++
++              <article class="coverage">
++                <h3 class="title">Notion</h3>
++                <p class="body">Os registros desta execução ficaram restritos ao que era realmente novo desde 08:06 BRT: comentários nas páginas de 0000338, 0000439, 0000452, 0000483 e 0000584, além de atualização das tarefas de backlog PJe e Secret Scan. Os demais itens relevantes já estavam reconciliados no controle do mesmo dia.</p>
++              </article>
++
++              <article class="coverage">
++                <h3 class="title">Lacunas verificadas</h3>
++                <p class="body">Não há conector de chat corporativo nesta sessão. Além disso, os atos marcados como sigilosos pelos pushes só puderam ser classificados até o nível descrito no e-mail, não no teor interno da peça.</p>
++              </article>
++            </div>
++          </section>
++        </div>
++      </section>
++
++      <section class="footer">
++        <div class="footer-note">
++          <strong>Leitura principal:</strong> o melhor uso do sábado é atacar o relatório PJe, abrir os cinco fatos jurídicos novos desde 08:06 BRT e só então descer para o carry-over já mapeado.
++        </div>
++        <div class="footer-note">
++          <strong>Metodologia:</strong> o briefing foi fechado a partir do Google Calendar, do Gmail consolidado e do controle do Notion. Quando o push não identificou patrono, isso foi mantido como não identificado; quando o item já estava lançado no controle do dia, ele foi tratado como continuidade e não como novo registro.
++        </div>
++      </section>
++    </main>
++  </body>
++</html>
