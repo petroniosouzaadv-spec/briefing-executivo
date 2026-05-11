@@ -6,10 +6,7 @@
     <title>Briefing Executivo | 11 de maio de 2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <style>
       :root {
         --bg: #dae1e8;
@@ -19,13 +16,11 @@
         --wine: #561c26;
         --navy: #172b49;
         --gold: #bb9d6d;
-        --stone: #c8b6ac;
         --muted: rgba(17, 25, 31, 0.72);
         --line: rgba(17, 25, 31, 0.12);
         --shadow: 0 24px 70px rgba(17, 25, 31, 0.12);
         --radius: 8px;
       }
-
       * { box-sizing: border-box; }
       body {
         margin: 0;
@@ -37,14 +32,12 @@
           radial-gradient(circle at 100% 0%, rgba(23, 43, 73, 0.18), transparent 30%),
           linear-gradient(180deg, #eef2f6 0%, #dae1e8 58%, #ced6de 100%);
       }
-
       a { color: inherit; text-decoration: none; }
       .page {
         width: min(1280px, calc(100vw - 28px));
         margin: 0 auto;
         padding: 18px 0 34px;
       }
-
       .hero {
         position: relative;
         overflow: hidden;
@@ -55,7 +48,6 @@
         box-shadow: var(--shadow);
         padding: 26px;
       }
-
       .hero::before,
       .hero::after {
         content: "";
@@ -63,21 +55,18 @@
         border-radius: 999px;
         border: 1px solid rgba(187, 157, 109, 0.3);
       }
-
       .hero::before {
         width: 360px;
         height: 360px;
         right: -100px;
         top: -120px;
       }
-
       .hero::after {
         width: 220px;
         height: 220px;
         right: 120px;
         bottom: -110px;
       }
-
       .hero-grid {
         position: relative;
         z-index: 1;
@@ -86,14 +75,12 @@
         gap: 18px;
         align-items: stretch;
       }
-
       .brand {
         display: flex;
         align-items: center;
         gap: 14px;
         margin-bottom: 24px;
       }
-
       .brand-mark {
         width: 58px;
         height: 58px;
@@ -105,7 +92,6 @@
         font-weight: 700;
         position: relative;
       }
-
       .brand-mark::after {
         content: "";
         position: absolute;
@@ -114,7 +100,6 @@
         border-radius: 50%;
         border: 1px solid rgba(200, 182, 172, 0.22);
       }
-
       .brand-label {
         color: rgba(255, 255, 255, 0.72);
         font-size: 11px;
@@ -122,7 +107,6 @@
         letter-spacing: 0.08em;
         margin-bottom: 6px;
       }
-
       .brand-name {
         color: #fff;
         font-size: 23px;
@@ -130,7 +114,6 @@
         font-weight: 600;
         max-width: 18ch;
       }
-
       .hero h1 {
         margin: 0 0 14px;
         color: #fff;
@@ -138,15 +121,13 @@
         line-height: 0.98;
         max-width: 11ch;
       }
-
       .hero-copy {
         color: rgba(255, 255, 255, 0.82);
         font-size: 15px;
         line-height: 1.72;
-        max-width: 68ch;
+        max-width: 70ch;
         margin: 0;
       }
-
       .hero-meta {
         margin-top: 14px;
         color: #fff;
@@ -154,12 +135,10 @@
         line-height: 1.2;
         font-weight: 700;
       }
-
       .hero-side {
         display: grid;
         gap: 14px;
       }
-
       .glass {
         border-radius: var(--radius);
         background: rgba(255, 255, 255, 0.09);
@@ -167,7 +146,6 @@
         backdrop-filter: blur(12px);
         padding: 18px;
       }
-
       .glass-label {
         color: rgba(255, 255, 255, 0.64);
         font-size: 11px;
@@ -175,28 +153,24 @@
         letter-spacing: 0.08em;
         margin-bottom: 10px;
       }
-
       .glass-value {
         color: #fff;
         font-size: 18px;
         font-weight: 700;
         line-height: 1.42;
       }
-
       .glass-note {
         color: rgba(255, 255, 255, 0.74);
         font-size: 13px;
         line-height: 1.58;
         margin-top: 8px;
       }
-
       .metrics {
         display: grid;
         grid-template-columns: repeat(5, minmax(0, 1fr));
         gap: 14px;
         margin-top: 18px;
       }
-
       .metric,
       .panel {
         border-radius: var(--radius);
@@ -204,7 +178,6 @@
         border: 1px solid rgba(255, 255, 255, 0.55);
         box-shadow: var(--shadow);
       }
-
       .metric { padding: 18px; }
       .metric .label {
         color: var(--muted);
@@ -213,34 +186,29 @@
         letter-spacing: 0.08em;
         margin-bottom: 10px;
       }
-
       .metric .value {
         color: var(--navy);
         font-size: 34px;
         font-weight: 800;
         line-height: 1;
       }
-
       .metric .note {
         color: var(--muted);
         font-size: 13px;
         line-height: 1.52;
         margin-top: 8px;
       }
-
       .layout {
         display: grid;
         grid-template-columns: 1.16fr 0.84fr;
         gap: 18px;
         margin-top: 18px;
       }
-
       .stack { display: grid; gap: 18px; }
       .panel {
         padding: 20px;
         background: var(--panel-strong);
       }
-
       .panel-head {
         display: flex;
         justify-content: space-between;
@@ -248,7 +216,6 @@
         align-items: flex-start;
         margin-bottom: 16px;
       }
-
       .eyebrow {
         color: var(--wine);
         font-size: 11px;
@@ -256,23 +223,19 @@
         letter-spacing: 0.08em;
         margin-bottom: 8px;
       }
-
       .panel h2 {
         margin: 0;
         font-size: 24px;
         line-height: 1.1;
       }
-
       .head-note {
         color: var(--muted);
         font-size: 13px;
         line-height: 1.55;
         max-width: 34ch;
       }
-
       .list,
       .timeline { display: grid; gap: 12px; }
-
       .item,
       .mail,
       .todo,
@@ -283,33 +246,28 @@
         border-radius: var(--radius);
         background: linear-gradient(180deg, rgba(255,255,255,.82), rgba(255,255,255,.62));
       }
-
       .item,
       .mail,
       .risk,
       .coverage { padding: 14px; }
-
       .title {
         margin: 0 0 6px;
         font-size: 15px;
         line-height: 1.36;
         font-weight: 700;
       }
-
       .body {
         margin: 0;
         color: var(--muted);
         font-size: 13px;
         line-height: 1.62;
       }
-
       .chips {
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
         margin-top: 10px;
       }
-
       .chip {
         min-height: 28px;
         border-radius: 999px;
@@ -321,11 +279,9 @@
         font-weight: 700;
         letter-spacing: 0.04em;
       }
-
       .critical { background: rgba(86, 28, 38, 0.12); color: var(--wine); }
       .watch { background: rgba(187, 157, 109, 0.18); color: #7a6540; }
       .ok { background: rgba(23, 43, 73, 0.1); color: var(--navy); }
-
       .link {
         display: inline-flex;
         margin-top: 10px;
@@ -333,20 +289,17 @@
         font-weight: 700;
         color: var(--navy);
       }
-
       .event {
         display: grid;
         grid-template-columns: 110px 1fr;
         gap: 14px;
         padding: 14px;
       }
-
       .when {
         font-size: 13px;
         font-weight: 700;
         color: var(--navy);
       }
-
       .prep {
         margin: 10px 0 0;
         padding: 0;
@@ -354,14 +307,12 @@
         display: grid;
         gap: 7px;
       }
-
       .prep li {
         font-size: 13px;
         line-height: 1.56;
         padding-left: 15px;
         position: relative;
       }
-
       .prep li::before {
         content: "";
         position: absolute;
@@ -372,7 +323,6 @@
         border-radius: 50%;
         background: var(--gold);
       }
-
       .mail-meta {
         color: var(--muted);
         font-size: 11px;
@@ -380,14 +330,12 @@
         letter-spacing: 0.05em;
         margin-bottom: 8px;
       }
-
       .todo {
         padding: 14px;
         display: grid;
         grid-template-columns: auto 1fr;
         gap: 12px;
       }
-
       .box {
         width: 18px;
         height: 18px;
@@ -395,7 +343,6 @@
         border: 1px solid rgba(17, 25, 31, 0.22);
         margin-top: 1px;
       }
-
       .owner {
         margin-top: 6px;
         color: var(--wine);
@@ -403,14 +350,12 @@
         text-transform: uppercase;
         letter-spacing: 0.08em;
       }
-
       .footer {
         margin-top: 18px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 18px;
       }
-
       .footer-note {
         padding: 18px 20px;
         border-radius: var(--radius);
@@ -420,13 +365,10 @@
         font-size: 13px;
         line-height: 1.66;
       }
-
       .footer-note strong { color: #fff; }
-
       @media (max-width: 1160px) {
         .hero-grid, .metrics, .layout, .footer { grid-template-columns: 1fr; }
       }
-
       @media (max-width: 760px) {
         .page { width: min(100vw - 16px, 1280px); }
         .hero, .panel, .metric { padding: 18px; }
@@ -451,33 +393,26 @@
                 <div class="brand-name">Petrônio Souza Advogados Associados</div>
               </div>
             </div>
-            <h1>As últimas 24 horas empilham audiência, segurança de conta, novos pushes e caixa aberto já na largada de 11/05.</h1>
-            <p class="hero-copy">
-              A janela auditada de <strong>10/05/2026 às 06:13 BRT</strong> até <strong>11/05/2026 às 06:13 BRT</strong> não trouxe compromissos concluídos no Google Calendar, mas abriu o próprio dia <strong>11/05</strong> com dois blocos sobrepostos: <strong>revisão semanal às 08:00</strong> e <strong>audiência de conciliação às 08:30</strong> no processo <strong>0803348-73.2025.8.18.0152</strong>.
-            </p>
-            <p class="hero-copy" style="margin-top: 10px;">
-              No Gmail consolidado, o recorte material ficou dividido entre <strong>segurança da Conta Google</strong>, <strong>nove movimentações processuais com efeito executivo</strong>, <strong>alerta de pausa do projeto Supabase</strong> e <strong>novas frentes financeiras</strong>, com destaque para a fatura Itaú de <strong>R$ 739,33</strong> com vencimento em <strong>17/05</strong> e a manutenção do bloco Toyota/PJBank/Santander já pendurado na operação.
-            </p>
-            <div class="hero-meta">Gerado em 11/05/2026 às 06:13 BRT | Cobertura: 10/05 06:13 -> 11/05 06:13 BRT</div>
+            <h1>A manhã de 11/05 abre com audiência sobreposta, segurança da Conta Google, novo lote de pushes e backlog PJe ainda intacto.</h1>
+            <p class="hero-copy">A janela auditada de <strong>10/05/2026 às 08:06 BRT</strong> até <strong>11/05/2026 às 08:06 BRT</strong> não trouxe reuniões concluídas no Google Calendar, mas concentrou o que importa na largada do próprio dia 11/05: <strong>revisão semanal às 08:00</strong>, <strong>audiência de conciliação às 08:30</strong> no processo <strong>0803348-73.2025.8.18.0152</strong>, um pacote de <strong>8 movimentos processuais confirmados</strong>, alertas de <strong>acesso à Conta Google</strong>, <strong>3 publicações OAB/PE sem teor acessível</strong>, alerta de pausa da <strong>Supabase</strong> e a nova fatura <strong>Itaú Uniclass</strong>.</p>
+            <p class="hero-copy" style="margin-top: 10px;">O quadro executivo do dia fica assim: primeiro proteger a manhã da audiência, depois validar segurança e financeiro, e então atacar as peças e despachos novos sem deixar o relatório de <strong>21 vencidos e 2 urgentes</strong> perder prioridade.</p>
+            <div class="hero-meta">Gerado em 11/05/2026 às 08:06 BRT | Cobertura: 10/05 08:06 -> 11/05 08:06 BRT</div>
           </div>
-
           <div class="hero-side">
             <div class="glass">
               <div class="glass-label">Risco imediato</div>
-              <div class="glass-value">08:00 revisão semanal e 08:30 audiência de conciliação estão em conflito direto.</div>
-              <div class="glass-note">A audiência precisa ganhar precedência prática antes do início da manhã para não entrar sem preparo e com agenda dividida.</div>
+              <div class="glass-value">A revisão semanal de 08:00-09:00 colide com a audiência de 08:30-09:30.</div>
+              <div class="glass-note">A audiência precisa ganhar precedência prática antes da abertura do expediente para evitar entrada sem preparo e com agenda dividida.</div>
             </div>
-
             <div class="glass">
-              <div class="glass-label">Ponto operacional mais sensível</div>
-              <div class="glass-value">A Conta Google autorizou PJE GESTÃO e Projeto sem título na mesma tarde.</div>
+              <div class="glass-label">Risco não jurídico dominante</div>
+              <div class="glass-value">A Conta Google autorizou PJE GESTÃO e Projeto sem título em 10/05.</div>
               <div class="glass-note">Sem validação explícita, o risco é de exposição indevida de dados e integrações do escritório.</div>
             </div>
-
             <div class="glass">
-              <div class="glass-label">Ponto jurídico dominante</div>
-              <div class="glass-value">0061659, 0043310, 0007126 e o trio TRT6 0000579/580/584 vieram com despacho ou conclusão na virada do dia.</div>
-              <div class="glass-note">A janela também manteve vivos 0007127, 0016921 e 0031116, todos exigindo leitura do teor para qualificar prazo e providência.</div>
+              <div class="glass-label">Ponto jurídico mais denso</div>
+              <div class="glass-value">TJPE e TRT6 empilharam despacho publicado, conclusos para despacho e juntada documental na virada do dia.</div>
+              <div class="glass-note">O gargalo não é o volume; é diferenciar rápido o que é meramente cartorário do que já gera providência do escritório.</div>
             </div>
           </div>
         </div>
@@ -486,28 +421,24 @@
       <section class="metrics">
         <article class="metric">
           <div class="label">Movimentos jurídicos</div>
-          <div class="value">9</div>
-          <div class="note">Nove pushes processuais materiais foram lidos na janela, entre TJPE e TRT6.</div>
+          <div class="value">8</div>
+          <div class="note">Oito pushes processuais materiais foram confirmados na janela exata.</div>
         </article>
-
         <article class="metric">
           <div class="label">Compromissos de hoje</div>
           <div class="value">2</div>
           <div class="note">Revisão semanal às 08:00 e audiência às 08:30.</div>
         </article>
-
         <article class="metric">
           <div class="label">Conflitos de agenda</div>
           <div class="value">1</div>
-          <div class="note">Os dois eventos da manhã se sobrepõem entre 08:30 e 09:00.</div>
+          <div class="note">Há sobreposição direta entre 08:30 e 09:00.</div>
         </article>
-
         <article class="metric">
-          <div class="label">Alertas operacionais</div>
-          <div class="value">4</div>
-          <div class="note">Google OAuth, Supabase, Secret Scan recorrente e backlog PJe ainda alto.</div>
+          <div class="label">Backlog PJe</div>
+          <div class="value">21/2</div>
+          <div class="note">Relatório das 07:46 BRT: 21 vencidos e 2 urgentes seguem sem alívio.</div>
         </article>
-
         <article class="metric">
           <div class="label">Financeiro aberto</div>
           <div class="value">4</div>
@@ -523,14 +454,12 @@
                 <div class="eyebrow">Executive Summary</div>
                 <h2>Prioridades críticas</h2>
               </div>
-              <div class="head-note">
-                O centro de gravidade desta execução está na manhã de 11/05: audiência, conflito de agenda, segurança de conta e escolha do que não pode envelhecer mais um turno sem leitura.</div>
+              <div class="head-note">A decisão útil desta execução é ordenar a manhã de 11/05 sem perder o jurídico nem os riscos operacionais que já estão dentro do mesmo turno.</div>
             </div>
-
             <div class="list">
               <article class="item">
-                <h3 class="title">A audiência 0803348-73.2025.8.18.0152 precisa ser tratada como o primeiro compromisso real do dia.</h3>
-                <p class="body">O evento no Google Calendar indica audiência de conciliação não presencial, via Microsoft Teams, entre <strong>Maria Audilene de Lima Barbosa</strong> e <strong>Coca Cola Indústrias LTDA</strong>, às <strong>08:30 BRT</strong>. Como a revisão semanal interna ocupa 08:00-09:00, a agenda precisa ser reacomodada antes de a manhã começar.</p>
+                <h3 class="title">A audiência 0803348-73.2025.8.18.0152 é o primeiro compromisso real do dia.</h3>
+                <p class="body">O Google Calendar indica audiência de conciliação não presencial, via Microsoft Teams, entre <strong>Maria Audilene de Lima Barbosa</strong> e <strong>Coca Cola Indústrias LTDA</strong>, às <strong>08:30 BRT</strong>. Como a revisão semanal interna ocupa 08:00-09:00, a agenda precisa ser reacomodada antes do início do bloco.</p>
                 <div class="chips">
                   <span class="chip critical">Alto</span>
                   <span class="chip ok">Hoje 08:30</span>
@@ -538,21 +467,29 @@
                 </div>
                 <a class="link" href="https://www.google.com/calendar/event?eid=YjI5bmtiam1pbjg0dG51aWxjMHNmZXZ0MWMgcGV0cm9uaW9zb3V6YS5hZHZAbQ&ctz=America/Sao_Paulo" target="_blank" rel="noreferrer">Abrir evento da audiência</a>
               </article>
-
               <article class="item">
-                <h3 class="title">Os acessos OAuth do Google são o principal risco não jurídico desta janela.</h3>
-                <p class="body">À tarde de <strong>10/05</strong>, a Conta Google autorizou primeiro o app <strong>PJE GESTÃO</strong> e depois o app <strong>Projeto sem título</strong>. O texto do próprio Google fala em revisar a atividade e proteger a conta se o acesso não foi intencional. Isso precisa de validação explícita, não só de convivência com o alerta.</p>
+                <h3 class="title">Os alertas de segurança da Conta Google continuam sendo o principal risco não jurídico desta janela.</h3>
+                <p class="body">Em <strong>10/05</strong>, a Conta Google autorizou primeiro o app <strong>PJE GESTÃO</strong> e depois o app <strong>Projeto sem título</strong>. O próprio Google orienta revisar atividade e conexões. Sem essa validação, o escritório opera com um risco de acesso indevido ainda em aberto.</p>
                 <div class="chips">
                   <span class="chip critical">Segurança</span>
-                  <span class="chip watch">Conta Google</span>
-                  <span class="chip ok">Ação imediata</span>
+                  <span class="chip ok">Conta Google</span>
+                  <span class="chip watch">Validar acesso</span>
                 </div>
-                <a class="link" href="https://mail.google.com/mail/#all/19e13b8562191b0d" target="_blank" rel="noreferrer">Abrir alerta do Google</a>
+                <a class="link" href="https://mail.google.com/mail/#all/19e139f2f2405976" target="_blank" rel="noreferrer">Abrir alerta PJE GESTÃO</a>
               </article>
-
               <article class="item">
-                <h3 class="title">O bloco de pushes da madrugada exige triagem por teor, não só por volume.</h3>
-                <p class="body">Vieram <strong>publicações de despacho/intimação</strong> em <strong>0061659-02.2025.8.17.2001</strong>, <strong>0043310-48.2025.8.17.2001</strong> e <strong>0007126-64.2023.8.17.2001</strong>, além de três processos do TRT6 (<strong>0000579</strong>, <strong>0000580</strong> e <strong>0000584</strong>) marcados como <strong>conclusos para despacho</strong>. O risco não é de omissão cega, mas de leitura tardia do que já virou despacho publicado.</p>
+                <h3 class="title">O recorte OAB/PE agravou o risco de prazo cego.</h3>
+                <p class="body">Às <strong>06:59 BRT</strong>, o Recorte Digital informou <strong>3 publicações</strong>, mas manteve o serviço interrompido e mandou contato com a OAB/PE para atualização cadastral. O problema aqui não é só cadastral; é ficar com publicação do dia sem teor acessível no mesmo turno.</p>
+                <div class="chips">
+                  <span class="chip critical">OAB/PE</span>
+                  <span class="chip watch">3 publicações</span>
+                  <span class="chip watch">Serviço interrompido</span>
+                </div>
+                <a class="link" href="https://mail.google.com/mail/#all/19e167bf3cc2a88b" target="_blank" rel="noreferrer">Abrir recorte OAB/PE</a>
+              </article>
+              <article class="item">
+                <h3 class="title">O jurídico novo da madrugada precisa ser lido por teor, não só por metadata.</h3>
+                <p class="body">Vieram <strong>despachos publicados</strong> em <strong>0043310-48.2025.8.17.2001</strong>, <strong>0061659-02.2025.8.17.2001</strong> e <strong>0007126-64.2023.8.17.2001</strong>; <strong>conclusos para despacho</strong> em <strong>0026091-27.2022.8.17.2001</strong> e no trio TRT6 <strong>0000579/0000580/0000584</strong>; e <strong>juntada de documentos diversos</strong> em <strong>0016921-24.1979.8.17.0001</strong>. O risco é leitura tardia do teor útil.</p>
                 <div class="chips">
                   <span class="chip critical">Jurídico</span>
                   <span class="chip ok">TJPE e TRT6</span>
@@ -560,27 +497,15 @@
                 </div>
                 <a class="link" href="https://mail.google.com/mail/#all/19e15d61f2eac0fc" target="_blank" rel="noreferrer">Abrir 0061659</a>
               </article>
-
               <article class="item">
-                <h3 class="title">O financeiro ganhou uma camada nova com a fatura Itaú e o boleto detectado pela Nubank.</h3>
-                <p class="body">Às <strong>04:28 BRT</strong> chegou a fatura <strong>Itaú Uniclass final 0643</strong> no valor de <strong>R$ 739,33</strong>, com vencimento em <strong>17/05</strong>. Minutos antes, a Nubank avisou que o Buscador de Boletos detectou um novo boleto emitido por <strong>Itaú Unibanco Holding S.A.</strong> no CPF. O contexto sugere relação entre os dois avisos, mas isso ainda é inferência e não confirmação.</p>
+                <h3 class="title">O PJe segue pressionando a operação com 21 vencidos e 2 urgentes às 07:46 BRT.</h3>
+                <p class="body">O relatório mais completo do sistema manteve o mesmo patamar crítico do dia anterior. Entre os urgentes aparecem <strong>0000021-06.2024.8.17.2420</strong> e <strong>0000982-27.2026.8.17.8223</strong>, enquanto o restante dos vencidos continua exigindo triagem de mérito, não apenas conferência superficial.</p>
                 <div class="chips">
-                  <span class="chip watch">Financeiro</span>
-                  <span class="chip ok">Itaú</span>
-                  <span class="chip watch">Validar origem</span>
+                  <span class="chip critical">Backlog</span>
+                  <span class="chip watch">21 vencidos</span>
+                  <span class="chip watch">2 urgentes</span>
                 </div>
-                <a class="link" href="https://mail.google.com/mail/#all/19e15efb1ec04045" target="_blank" rel="noreferrer">Abrir fatura Itaú</a>
-              </article>
-
-              <article class="item">
-                <h3 class="title">A Supabase entrou no mesmo pacote de manutenção que o Secret Scan.</h3>
-                <p class="body">O projeto <strong>efpuianqutzwggodvtgj</strong> recebeu aviso de pausa automática por inatividade em alguns dias, enquanto o histórico recente de GitHub segue sinalizando ruído recorrente de <strong>Secret Scan</strong> e build no Projeto Escudo da Justiça. É um ponto operacional que compete por tempo com a pauta jurídica, mas não deve ser varrido para outro ciclo sem decisão.</p>
-                <div class="chips">
-                  <span class="chip watch">Infraestrutura</span>
-                  <span class="chip ok">Supabase</span>
-                  <span class="chip watch">Projeto Escudo</span>
-                </div>
-                <a class="link" href="https://mail.google.com/mail/#all/19e13d844faa1cb6" target="_blank" rel="noreferrer">Abrir alerta Supabase</a>
+                <a class="link" href="https://mail.google.com/mail/#all/19e16a52e860b761" target="_blank" rel="noreferrer">Abrir relatório PJe 07:46</a>
               </article>
             </div>
           </section>
@@ -591,9 +516,8 @@
                 <div class="eyebrow">Meetings</div>
                 <h2>Agenda e preparação essencial</h2>
               </div>
-              <div class="head-note">A janela passada não teve reuniões concluídas. A agenda relevante agora é a manhã de 11/05.</div>
+              <div class="head-note">A agenda relevante desta execução é o próprio 11/05, mesmo sem reuniões concluídas na janela anterior.</div>
             </div>
-
             <div class="timeline">
               <article class="event">
                 <div class="when">08:00-09:00</div>
@@ -602,12 +526,11 @@
                   <p class="body">Bloco interno de manutenção preventiva do sistema de prazos, conferência de intimações, andamentos e tarefas.</p>
                   <ul class="prep">
                     <li>Encurtar ou deslocar este bloco para liberar a audiência das 08:30.</li>
-                    <li>Usar este briefing como pauta-base: audiência, OAuth do Google, pushes da madrugada e financeiro aberto.</li>
-                    <li>Fechar a revisão com decisão explícita sobre o que será lido ainda pela manhã e o que vai para fila formal.</li>
+                    <li>Usar este briefing como pauta-base: audiência, segurança Google, pushes da madrugada e financeiro aberto.</li>
+                    <li>Sair da revisão com ordem clara de leitura: audiência, segurança, financeiro, lote jurídico novo, backlog PJe.</li>
                   </ul>
                 </div>
               </article>
-
               <article class="event">
                 <div class="when">08:30-09:30</div>
                 <div>
@@ -615,8 +538,8 @@
                   <p class="body"><strong>Partes:</strong> Maria Audilene de Lima Barbosa x Coca Cola Indústrias LTDA. <strong>Órgão:</strong> Juizado Especial Cível, Criminal e da Fazenda Pública da Comarca de Picos/PI. <strong>Modalidade:</strong> não presencial via Microsoft Teams.</p>
                   <ul class="prep">
                     <li>Validar o link do Teams e a carta de citação antes das 08:20.</li>
-                    <li>Entrar com posição do cliente, margem de acordo e histórico do caso já resumidos.</li>
-                    <li>Registrar imediatamente o desfecho e os próximos passos ao sair da sala.</li>
+                    <li>Entrar com posição do cliente, margem de acordo e pontos de negociação já organizados.</li>
+                    <li>Registrar o desfecho e os próximos passos imediatamente após a audiência.</li>
                   </ul>
                 </div>
               </article>
@@ -631,42 +554,41 @@
               </div>
               <div class="head-note">Quando o push não trouxe patrono do escritório, isso foi mantido como informação não identificada.</div>
             </div>
-
             <div class="list">
+              <article class="mail">
+                <div class="mail-meta">TJPE • 11/05 08:00 BRT • Conclusos para despacho</div>
+                <h3 class="title">0026091-27.2022.8.17.2001 — CLINIPAM e outros x NATHANNE DE ALMEIDA MAGALHAES</h3>
+                <p class="body"><strong>Advogado do escritório:</strong> não identificado no push. <strong>Evento:</strong> conclusos para despacho. <strong>Follow-up:</strong> abrir a petição juntada mais recente e vigiar o despacho subsequente. <strong>Risco:</strong> médio.</p>
+              </article>
               <article class="mail">
                 <div class="mail-meta">TJPE • 11/05 04:00 BRT • Publicado despacho/intimação</div>
                 <h3 class="title">0061659-02.2025.8.17.2001 — KEYLLA ANDREA ALEXSANDRA SILVA DOS SANTOS x HAPVIDA ASSISTENCIA MEDICA LTDA</h3>
-                <p class="body"><strong>Advogado do escritório:</strong> não identificado no push. <strong>Evento:</strong> publicação de despacho/intimação. <strong>Follow-up:</strong> abrir o despacho e verificar prazo ou ordem efetiva. <strong>Risco:</strong> médio, com peso extra porque o assunto do feito é urgência.</p>
+                <p class="body"><strong>Advogado do escritório:</strong> não identificado no push. <strong>Evento:</strong> publicação de despacho/intimação. <strong>Follow-up:</strong> abrir o teor e verificar prazo, ordem judicial ou providência útil. <strong>Risco:</strong> médio, com atenção reforçada porque o assunto do feito é urgência.</p>
               </article>
-
               <article class="mail">
                 <div class="mail-meta">TJPE • 11/05 03:30 BRT • Publicado despacho/intimação</div>
                 <h3 class="title">0043310-48.2025.8.17.2001 — MARCELA MAYNE DE ALMEIDA SIAL e outros x ANGELA MARIA TORREAO SIAL e outros</h3>
                 <p class="body"><strong>Advogado do escritório:</strong> não identificado no push. <strong>Evento:</strong> publicação de despacho/intimação no inventário. <strong>Follow-up:</strong> abrir a publicação e medir se houve comando, prazo ou ajuste procedimental. <strong>Risco:</strong> médio.</p>
               </article>
-
               <article class="mail">
                 <div class="mail-meta">TJPE • 11/05 01:30 BRT • Publicado despacho/intimação</div>
                 <h3 class="title">0007126-64.2023.8.17.2001 — CARLA RIBEIRO DE ARAUJO e outros x RICARDO ZIRPOLI</h3>
                 <p class="body"><strong>Advogado do escritório:</strong> não identificado no push. <strong>Evento:</strong> publicação de despacho/intimação em arrolamento sumário. <strong>Follow-up:</strong> abrir a publicação e checar providência ou prazo. <strong>Risco:</strong> médio.</p>
               </article>
-
               <article class="mail">
-                <div class="mail-meta">TRT6 • 10/05 entre 20:31 e 20:49 BRT • Conclusos para despacho</div>
+                <div class="mail-meta">TRT6 • 11/05 03:26 BRT • Conclusos para despacho</div>
                 <h3 class="title">0000579-69.2026.5.06.0122 • 0000580-54.2026.5.06.0122 • 0000584-94.2026.5.06.0121</h3>
-                <p class="body"><strong>Partes:</strong> todas ligadas a <strong>C J Antonio Dias Pecas e Servicos para Autos Ltda</strong>, contra Lucas Santiago Vicente da Silva, Itamar Gomes da Silva Junior e Sabrina Suelyn Pereira Silva, respectivamente. <strong>Evento:</strong> autos conclusos para despacho no CEJUSC Paulista. <strong>Follow-up:</strong> monitorar o despacho subsequente e medir se haverá audiência, proposta ou determinação útil. <strong>Risco:</strong> médio.</p>
+                <p class="body"><strong>Partes:</strong> todas ligadas a <strong>C J Antonio Dias Pecas e Servicos para Autos Ltda</strong>, contra Lucas Santiago Vicente da Silva, Itamar Gomes da Silva Junior e Sabrina Suelyn Pereira Silva, respectivamente. <strong>Evento:</strong> autos conclusos para despacho no CEJUSC Paulista. <strong>Follow-up:</strong> monitorar o despacho subsequente e medir se haverá audiência, proposta ou determinação na reclamação pré-processual. <strong>Risco:</strong> médio.</p>
               </article>
-
               <article class="mail">
-                <div class="mail-meta">TJPE • 10/05 13:53 e 10:54 BRT • Inventário e família</div>
-                <h3 class="title">0016921-24.1979.8.17.0001 • 0007127-84.2026.8.17.2990</h3>
-                <p class="body"><strong>0016921:</strong> juntada de petição de documentos diversos em inventário. <strong>0007127:</strong> despacho de mero expediente em processo de família. <strong>Follow-up:</strong> abrir o inteiro teor dos dois movimentos e distinguir se são atos meramente cartorários ou se pedem resposta do escritório. <strong>Risco:</strong> médio.</p>
+                <div class="mail-meta">TJPE • 10/05 14:00 BRT • Juntada de petição de documentos diversos</div>
+                <h3 class="title">0016921-24.1979.8.17.0001 — CARMEM DOLORES LOPES SALGADO e outros x EDVALDO AFONSO LOPES SALGADO</h3>
+                <p class="body"><strong>Advogado do escritório:</strong> não identificado no push. <strong>Evento:</strong> juntada de documentos diversos em inventário. <strong>Follow-up:</strong> abrir a petição e avaliar se inaugura resposta, exigência documental ou reorganização da estratégia. <strong>Risco:</strong> médio.</p>
               </article>
-
               <article class="mail">
-                <div class="mail-meta">TJPE • 10/05 10:00 BRT • Expedição de certidão</div>
-                <h3 class="title">0031116-82.2023.8.17.2810 — VITORIA EMYLI ABREU DE ALMEIDA x YOU ASSISTENCIA MEDICA LTDA</h3>
-                <p class="body"><strong>Advogado do escritório:</strong> não identificado no push. <strong>Evento:</strong> expedição de certidão em cumprimento de sentença. <strong>Follow-up:</strong> abrir a certidão e medir impacto no curso da execução. <strong>Risco:</strong> médio.</p>
+                <div class="mail-meta">TJPE • 10/05 11:00 BRT • Despacho de mero expediente</div>
+                <h3 class="title">0007127-84.2026.8.17.2990 — DANIEL JOSE FERREIRA DA SILVA x JENNIFER VICTORIA DOS SANTOS LEAL</h3>
+                <p class="body"><strong>Advogado do escritório:</strong> não identificado no push. <strong>Evento:</strong> despacho de mero expediente em processo de família. <strong>Follow-up:</strong> ler o despacho e confirmar se surgiu providência prática. <strong>Risco:</strong> médio.</p>
               </article>
             </div>
           </section>
@@ -680,33 +602,35 @@
                 <h2>Financeiro, segurança e sistemas</h2>
               </div>
             </div>
-
             <div class="list">
               <article class="mail">
                 <div class="mail-meta">Financeiro • 11/05 04:18 e 04:28 BRT</div>
-                <h3 class="title">Itaú final 0643 fechou em R$ 739,33 e a Nubank detectou boleto do mesmo emissor</h3>
-                <p class="body">A fatura do cartão <strong>Itaú Uniclass final 0643</strong> veio no valor de <strong>R$ 739,33</strong>, com vencimento em <strong>17/05/2026</strong>. Na mesma faixa, a Nubank informou que encontrou um novo boleto emitido por <strong>ITAU UNIBANCO HOLDING S.A.</strong> no CPF. <strong>Follow-up:</strong> confirmar se o boleto detectado é a própria fatura ou obrigação distinta. <strong>Risco:</strong> médio.</p>
+                <h3 class="title">A fatura Itaú final 0643 fechou em R$ 739,33 e a Nubank detectou boleto do mesmo emissor</h3>
+                <p class="body">A fatura do cartão <strong>Itaú Uniclass final 0643</strong> veio no valor de <strong>R$ 739,33</strong>, com vencimento em <strong>17/05/2026</strong>. Minutos antes, a Nubank informou que encontrou um novo boleto emitido por <strong>Itaú Unibanco Holding S.A.</strong> no CPF. <strong>Follow-up:</strong> confirmar se o boleto detectado é a própria fatura ou obrigação distinta. <strong>Risco:</strong> médio.</p>
                 <a class="link" href="https://mail.google.com/mail/#all/19e15efb1ec04045" target="_blank" rel="noreferrer">Abrir fatura Itaú</a>
               </article>
-
               <article class="mail">
-                <div class="mail-meta">Financeiro e rotina • janela corrente</div>
-                <h3 class="title">Toyota, PJBank e Santander continuam no bloco de execução do escritório</h3>
-                <p class="body"><strong>Toyota:</strong> R$ 2.620,43 com vencimento em 11/05. <strong>PJBank:</strong> R$ 250,80 com vencimento em 15/05. <strong>Santander final 6901:</strong> lembrete de vencimento em 10/05. O risco aqui é espalhar pequenos passivos em plena manhã jurídica. Tudo já está registrado no Notion e precisa sair do estado de alerta para decisão.</p>
+                <div class="mail-meta">Financeiro em aberto</div>
+                <h3 class="title">Toyota, PJBank e Santander seguem competindo por atenção no mesmo turno</h3>
+                <p class="body"><strong>Toyota:</strong> R$ 2.620,43 com vencimento em 11/05. <strong>PJBank:</strong> R$ 250,80 com vencimento em 15/05. <strong>Santander final 6901:</strong> lembrete de vencimento em 10/05. O risco aqui é espalhar pequenos passivos em plena manhã jurídica; tudo já está rastreado no Notion e precisa sair do estado de alerta para decisão.</p>
                 <a class="link" href="https://mail.google.com/mail/#all/19e12c8221257681" target="_blank" rel="noreferrer">Abrir lembrete Santander</a>
               </article>
-
               <article class="mail">
                 <div class="mail-meta">Segurança • 10/05 17:40 a 18:08 BRT</div>
                 <h3 class="title">Dois apps receberam acesso à Conta Google do escritório</h3>
                 <p class="body">Os alertas do Google mostram autorização concedida a <strong>PJE GESTÃO</strong> e a <strong>Projeto sem título</strong>. <strong>Follow-up:</strong> revisar a atividade da conta e revogar o que não tiver lastro operacional claro. <strong>Risco:</strong> alto.</p>
-                <a class="link" href="https://mail.google.com/mail/#all/19e139f2f2405976" target="_blank" rel="noreferrer">Abrir alerta PJE GESTÃO</a>
+                <a class="link" href="https://mail.google.com/mail/#all/19e13b8562191b0d" target="_blank" rel="noreferrer">Abrir alerta Projeto sem título</a>
               </article>
-
               <article class="mail">
-                <div class="mail-meta">Tecnologia • 10/05 fim da tarde</div>
-                <h3 class="title">Supabase pode pausar o projeto efpuianqutzwggodvtgj e o Secret Scan segue recorrente</h3>
-                <p class="body">A Supabase avisou que o projeto <strong>efpuianqutzwggodvtgj</strong> será pausado em alguns dias se continuar sem atividade. Em paralelo, o Gmail da janela mostra mais ruído operacional ligado ao <strong>Projeto Escudo da Justiça</strong>, incluindo recorrência de Secret Scan e build. <strong>Follow-up:</strong> decidir se o projeto precisa ser reativado por uso real, upgrade, ou se pode ser deixado pausar de forma consciente. <strong>Risco:</strong> médio-alto.</p>
+                <div class="mail-meta">OAB/PE • 11/05 06:59 BRT</div>
+                <h3 class="title">O Recorte Digital segue interrompido, mas informa 3 publicações do dia</h3>
+                <p class="body">O e-mail da OAB/PE informou <strong>serviço interrompido</strong> e pediu contato com a OAB-PE para atualização cadastral. Ao mesmo tempo, confirmou <strong>3 publicações</strong> em 11/05 sem disponibilizar o teor. <strong>Follow-up:</strong> regularizar o cadastro e abrir as publicações ainda hoje. <strong>Risco:</strong> alto.</p>
+                <a class="link" href="https://mail.google.com/mail/#all/19e167bf3cc2a88b" target="_blank" rel="noreferrer">Abrir recorte OAB/PE</a>
+              </article>
+              <article class="mail">
+                <div class="mail-meta">Tecnologia • 10/05 18:43 BRT</div>
+                <h3 class="title">A Supabase pode pausar o projeto efpuianqutzwggodvtgj em alguns dias</h3>
+                <p class="body">A Supabase avisou que o projeto será pausado automaticamente se continuar sem atividade suficiente. Em paralelo, o histórico recente do Gmail segue registrando ruído de build e Secret Scan no Projeto Escudo da Justiça. <strong>Follow-up:</strong> decidir se o projeto deve ser mantido por uso real, migrado de plano ou deixado pausar conscientemente. <strong>Risco:</strong> médio-alto.</p>
                 <a class="link" href="https://mail.google.com/mail/#all/19e13d844faa1cb6" target="_blank" rel="noreferrer">Abrir alerta Supabase</a>
               </article>
             </div>
@@ -719,7 +643,6 @@
                 <h2>Follow-ups e donos</h2>
               </div>
             </div>
-
             <div class="list">
               <article class="todo">
                 <div class="box"></div>
@@ -729,34 +652,30 @@
                   <div class="owner">Owner: Petrônio</div>
                 </div>
               </article>
-
               <article class="todo">
                 <div class="box"></div>
                 <div>
                   <h3 class="title">Entrar na audiência 0803348 com link, carta, posição do cliente e margem de acordo já validados.</h3>
-                  <p class="body">O objetivo é não gastar o primeiro terço da audiência com checagens que poderiam ter sido encerradas antes.</p>
+                  <p class="body">O objetivo é não gastar o primeiro terço da audiência com checagens que poderiam ter sido fechadas antes.</p>
                   <div class="owner">Owner: Petrônio</div>
                 </div>
               </article>
-
               <article class="todo">
                 <div class="box"></div>
                 <div>
                   <h3 class="title">Revisar imediatamente a atividade da Conta Google e os apps PJE GESTÃO e Projeto sem título.</h3>
-                  <p class="body">Se algum acesso não foi deliberado, a revogação precisa ser feita no mesmo ciclo de trabalho.</p>
+                  <p class="body">Se algum acesso não foi deliberado, a revogação precisa acontecer no mesmo ciclo de trabalho.</p>
                   <div class="owner">Owner: Petrônio</div>
                 </div>
               </article>
-
               <article class="todo">
                 <div class="box"></div>
                 <div>
-                  <h3 class="title">Abrir 0061659, 0043310, 0007126 e o trio 0000579/580/584 no primeiro bloco jurídico livre após a audiência.</h3>
-                  <p class="body">Esses seis movimentos concentram a maior incerteza processual nova desta madrugada.</p>
+                  <h3 class="title">Abrir 0026091, 0061659, 0043310, 0007126, 0016921, 0007127 e o trio 0000579/0000580/0000584.</h3>
+                  <p class="body">Esse lote concentra a maior incerteza processual nova da janela e deve ser atacado logo após a audiência.</p>
                   <div class="owner">Owner: Petrônio</div>
                 </div>
               </article>
-
               <article class="todo">
                 <div class="box"></div>
                 <div>
@@ -765,12 +684,11 @@
                   <div class="owner">Owner: Petrônio</div>
                 </div>
               </article>
-
               <article class="todo">
                 <div class="box"></div>
                 <div>
-                  <h3 class="title">Definir o destino do projeto Supabase antes da pausa automática.</h3>
-                  <p class="body">Pode ser manter por uso real, ajustar plano ou aceitar a pausa conscientemente, mas não deixar o alerta expirar no escuro.</p>
+                  <h3 class="title">Regularizar o recorte OAB/PE e decidir o destino do projeto Supabase antes de outro ciclo de silêncio.</h3>
+                  <p class="body">Aqui o custo de esperar é esconder publicação do dia e transformar um alerta de infraestrutura em interrupção evitável.</p>
                   <div class="owner">Owner: Petrônio</div>
                 </div>
               </article>
@@ -784,26 +702,22 @@
                 <h2>Leitura executiva do risco</h2>
               </div>
             </div>
-
             <div class="list">
               <article class="risk">
-                <h3 class="title">Alto: a audiência de 08:30 já nasce pressionada por um conflito interno de agenda.</h3>
-                <p class="body">Se a revisão semanal não for reacomodada, o risco é entrar na audiência com agenda dividida e preparação incompleta.</p>
+                <h3 class="title">Alto: a audiência das 08:30 já nasce comprimida por um conflito de agenda interno.</h3>
+                <p class="body">Se a revisão semanal não for deslocada, o risco é entrar na audiência com agenda dividida e preparo incompleto.</p>
               </article>
-
               <article class="risk">
-                <h3 class="title">Alto: os acessos OAuth da Conta Google seguem sem validação explícita.</h3>
-                <p class="body">Isso pode significar tanto integração legítima quanto exposição indevida. O problema não é o alerta em si, mas deixá-lo sem resposta.</p>
+                <h3 class="title">Alto: os acessos OAuth e o recorte OAB/PE seguem sem encerramento operacional.</h3>
+                <p class="body">Um problema expõe a Conta Google; o outro mantém 3 publicações do dia sem teor acessível. Ambos pedem reação no mesmo turno.</p>
               </article>
-
               <article class="risk">
-                <h3 class="title">Médio-alto: a madrugada trouxe despacho publicado e conclusão para despacho em lote.</h3>
-                <p class="body">O risco aqui é leitura tardia do teor e atraso na diferenciação entre ato meramente cartorário e ato que gera providência real.</p>
+                <h3 class="title">Médio-alto: o jurídico novo da madrugada pode virar atraso de leitura do teor.</h3>
+                <p class="body">O risco não está no metadata do push; está em deixar despacho publicado, conclusão para despacho e juntada documental sem triagem material.</p>
               </article>
-
               <article class="risk">
-                <h3 class="title">Médio-alto: o financeiro voltou a crescer em paralelo ao contencioso.</h3>
-                <p class="body">Com Toyota, PJBank, Santander e Itaú no mesmo quadro, a tendência é o tema invadir a manhã jurídica se não houver decisão objetiva cedo.</p>
+                <h3 class="title">Médio-alto: o financeiro e a infraestrutura continuam invadindo a manhã jurídica.</h3>
+                <p class="body">Toyota, PJBank, Santander, Itaú e Supabase formam uma camada operacional que compete diretamente com o contencioso se não houver decisão objetiva cedo.</p>
               </article>
             </div>
           </section>
@@ -815,23 +729,19 @@
                 <h2>Fontes e lacunas</h2>
               </div>
             </div>
-
             <div class="list">
               <article class="coverage">
                 <h3 class="title">Google Calendar</h3>
-                <p class="body">A agenda primária foi auditada na janela exata de 10/05/2026 06:13 BRT a 11/05/2026 06:13 BRT, além do restante do próprio 11/05 por relevância operacional imediata.</p>
+                <p class="body">A agenda primária foi auditada na janela exata de 10/05/2026 08:06 BRT a 11/05/2026 08:06 BRT, além do restante do próprio 11/05 por relevância imediata.</p>
               </article>
-
               <article class="coverage">
                 <h3 class="title">Gmail consolidado</h3>
-                <p class="body">Foram lidos os e-mails materialmente relevantes de TJPE, TRT6, Google, Itaú, Nubank, Santander e Supabase dentro da janela das últimas 24 horas.</p>
+                <p class="body">Foram lidos os e-mails materialmente relevantes de TJPE, TRT6, Google, Itaú, Nubank, Santander, OAB/PE e Supabase dentro da janela das últimas 24 horas.</p>
               </article>
-
               <article class="coverage">
                 <h3 class="title">Notion</h3>
-                <p class="body">Os registros já existentes foram reconciliados sem duplicidade. Casos e tarefas novos só foram criados quando ainda não havia item estruturado equivalente.</p>
+                <p class="body">Os registros já existentes foram reconciliados sem duplicidade. O caso 0026091 e sua tarefa associada foram atualizados; backlog, acessos Google, recorte OAB/PE e Supabase receberam observações novas nas páginas já abertas.</p>
               </article>
-
               <article class="coverage">
                 <h3 class="title">Lacunas verificadas</h3>
                 <p class="body">Não há conector de chat corporativo nesta sessão. Em atos sigilosos ou movimentos sem teor interno, a leitura permaneceu limitada ao metadata do push.</p>
@@ -842,8 +752,8 @@
       </section>
 
       <section class="footer">
-        <div class="footer-note"><strong>Leitura principal:</strong> esta execução vale mais como ordenação da manhã de 11/05 do que como simples retrospecto. A sequência recomendada é: ajustar agenda, entrar na audiência, validar a Conta Google, e só então abrir o lote de pushes com despacho publicado e conclusão para despacho.</div>
-        <div class="footer-note"><strong>Disciplina de escopo:</strong> esta página cobre o período de 10/05/2026 às 06:13 BRT até 11/05/2026 às 06:13 BRT, com inclusão da agenda do próprio 11/05 por relevância imediata para a tomada de decisão.</div>
+        <div class="footer-note"><strong>Leitura principal:</strong> esta execução vale mais como ordenação da manhã de 11/05 do que como simples retrospecto. A sequência recomendada é: ajustar agenda, entrar na audiência, validar a Conta Google, decidir o financeiro aberto e só então abrir o lote de pushes e o backlog PJe com o turno ainda sob controle.</div>
+        <div class="footer-note"><strong>Disciplina de escopo:</strong> esta página cobre o período de 10/05/2026 às 08:06 BRT até 11/05/2026 às 08:06 BRT, com inclusão da agenda do próprio 11/05 por relevância imediata para a tomada de decisão.</div>
       </section>
     </main>
   </body>
