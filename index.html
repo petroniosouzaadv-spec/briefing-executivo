@@ -16,6 +16,7 @@
         --wine: #561c26;
         --navy: #172b49;
         --gold: #bb9d6d;
+        --stone: #c8b6ac;
         --muted: rgba(17, 25, 31, 0.72);
         --line: rgba(17, 25, 31, 0.12);
         --shadow: 0 24px 70px rgba(17, 25, 31, 0.12);
@@ -132,16 +133,16 @@
       .hero h1 {
         margin: 0 0 14px;
         color: #fff;
-        font-size: clamp(31px, 4.2vw, 56px);
+        font-size: clamp(31px, 4.3vw, 58px);
         line-height: 0.98;
-        max-width: 13ch;
+        max-width: 12ch;
       }
 
       .hero-copy {
         color: rgba(255, 255, 255, 0.82);
         font-size: 15px;
         line-height: 1.72;
-        max-width: 79ch;
+        max-width: 76ch;
         margin: 0;
       }
 
@@ -150,7 +151,7 @@
       .hero-meta {
         margin-top: 14px;
         color: #fff;
-        font-size: clamp(18px, 2.6vw, 28px);
+        font-size: clamp(18px, 2.5vw, 28px);
         line-height: 1.2;
         font-weight: 700;
       }
@@ -168,19 +169,24 @@
         padding: 18px;
       }
 
-      .glass-label {
-        color: rgba(255, 255, 255, 0.64);
+      .glass-label,
+      .metric .label,
+      .eyebrow {
         font-size: 11px;
         text-transform: uppercase;
         letter-spacing: 0.08em;
+      }
+
+      .glass-label {
+        color: rgba(255, 255, 255, 0.64);
         margin-bottom: 10px;
       }
 
       .glass-value {
         color: #fff;
-        font-size: 18px;
+        font-size: 17px;
         font-weight: 700;
-        line-height: 1.42;
+        line-height: 1.45;
       }
 
       .glass-note {
@@ -209,9 +215,6 @@
 
       .metric .label {
         color: var(--muted);
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
         margin-bottom: 10px;
       }
 
@@ -225,7 +228,7 @@
       .metric .note {
         color: var(--muted);
         font-size: 13px;
-        line-height: 1.52;
+        line-height: 1.5;
         margin-top: 8px;
       }
 
@@ -253,9 +256,6 @@
 
       .eyebrow {
         color: var(--wine);
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
         margin-bottom: 8px;
       }
 
@@ -276,25 +276,25 @@
       .timeline { display: grid; gap: 12px; }
 
       .item,
-      .mail,
-      .todo,
       .risk,
       .coverage,
-      .event {
+      .event,
+      .mail,
+      .todo {
         border: 1px solid var(--line);
         border-radius: var(--radius);
-        background: linear-gradient(180deg, rgba(255,255,255,.82), rgba(255,255,255,.62));
+        background: linear-gradient(180deg, rgba(255,255,255,.84), rgba(255,255,255,.64));
       }
 
       .item,
-      .mail,
       .risk,
-      .coverage { padding: 14px; }
+      .coverage,
+      .mail { padding: 14px; }
 
       .title {
         margin: 0 0 6px;
         font-size: 15px;
-        line-height: 1.36;
+        line-height: 1.38;
         font-weight: 700;
       }
 
@@ -327,6 +327,14 @@
       .critical { background: rgba(86, 28, 38, 0.12); color: var(--wine); }
       .watch { background: rgba(187, 157, 109, 0.18); color: #7a6540; }
       .ok { background: rgba(23, 43, 73, 0.1); color: var(--navy); }
+
+      .mail-meta {
+        color: var(--muted);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 8px;
+      }
 
       .event {
         display: grid;
@@ -367,14 +375,6 @@
         background: var(--gold);
       }
 
-      .mail-meta {
-        color: var(--muted);
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        margin-bottom: 8px;
-      }
-
       .todo {
         padding: 14px;
         display: grid;
@@ -409,7 +409,7 @@
         padding: 18px 20px;
         border-radius: var(--radius);
         background: rgba(17, 25, 31, 0.95);
-        color: rgba(255, 255, 255, 0.78);
+        color: rgba(255, 255, 255, 0.8);
         box-shadow: var(--shadow);
         font-size: 13px;
         line-height: 1.66;
@@ -418,16 +418,21 @@
       .footer-note strong { color: #fff; }
 
       @media (max-width: 1160px) {
-        .hero-grid, .metrics, .layout, .footer { grid-template-columns: 1fr; }
+        .hero-grid,
+        .metrics,
+        .layout,
+        .footer { grid-template-columns: 1fr; }
       }
 
       @media (max-width: 760px) {
         .page { width: min(100vw - 16px, 1280px); }
-        .hero, .panel, .metric { padding: 18px; }
+        .hero,
+        .panel,
+        .metric { padding: 18px; }
         .event { grid-template-columns: 1fr; }
         .brand-name { font-size: 19px; }
         .panel h2 { font-size: 21px; }
-        .glass-value { font-size: 17px; }
+        .glass-value { font-size: 16px; }
         .hero-copy { font-size: 14px; }
         .hero-meta { font-size: 20px; }
       }
@@ -445,26 +450,26 @@
                 <div class="brand-name">Petrônio Souza Advogados Associados</div>
               </div>
             </div>
-            <h1>A virada para 15/05 abre com um fatal interno sem baixa visível, novos pushes do TRT6 de madrugada e um bloco jurídico às 09:45 já confirmado na agenda.</h1>
-            <p class="hero-copy"><strong>Janela auditada:</strong> 14/05/2026 às 06:13 BRT até 15/05/2026 às 06:13 BRT. No Gmail consolidado entraram três relatórios internos de controle que mantiveram <strong>0007599-45.2026.8.17.2001</strong> como principal risco, uma <strong>notificação extrajudicial</strong> com proposta de ajuste e recusa formal do escritório, <strong>oito notificações processuais do TRT6</strong> dentro da janela, duas publicações do Jusbrasil com data de publicação em 15/05, duas exclusões de documentos no Portal OAB, um alerta de novo acesso à PDPJ, um novo boleto Toyota, um alerta de Search Console e o arquivamento por e-mail do chat de WhatsApp da ação criminal Rafaela.</p>
-            <p class="hero-copy"><strong>Leitura executiva:</strong> o foco da manhã de 15/05 é <strong>confirmar imediatamente a situação de 0007599</strong>, porque os relatórios internos de 14/05 ainda o tratavam como fatal até <strong>23:59</strong> e esta execução não encontrou prova aberta de protocolo ou baixa posterior. Em seguida, a prioridade objetiva passa para <strong>0000338-95.2026.5.06.0122 às 09:45</strong>, já que o próprio evento de agenda sinaliza preparação antecipada para fatal em 18/05 e outro ato do mesmo processo em 19/05.</p>
+            <h1>15/05 começa com 0007599 sem baixa visível, 0000338 às 09:45 e o lote TRT6 ainda pedindo abertura de teor.</h1>
+            <p class="hero-copy"><strong>Janela auditada:</strong> 14/05/2026 às 06:13 BRT até 15/05/2026 às 06:13 BRT. O Gmail consolidado trouxe três relatórios internos de controle, oito pushes relevantes do TRT6, duas publicações do Jusbrasil com data de publicação em 15/05, uma notificação extrajudicial com resposta formal do escritório, alerta de novo acesso à PDPJ, pedido de novas permissões do app Hostinger no GitHub, boleto Toyota com vencimento em 15/05, aviso do Search Console e o autoenvio do chat de WhatsApp da ação criminal Rafaela.</p>
+            <p class="hero-copy"><strong>Leitura executiva:</strong> a primeira checagem útil da manhã é <strong>0007599-45.2026.8.17.2001</strong>, porque os relatórios internos de 14/05 ainda o tratavam como fatal até 23:59 e esta execução não encontrou prova aberta de protocolo ou baixa posterior. A segunda frente do dia é <strong>0000338-95.2026.5.06.0122</strong>, já posicionado na agenda para 09:45 com preparação antecipada para fatal em 18/05 e referência a outro ato distinto em 19/05.</p>
             <div class="hero-meta">Gerado em 15/05/2026 às 06:13 BRT | Cobertura futura auditada até 17/05/2026 às 06:13 BRT</div>
           </div>
           <div class="hero-side">
             <div class="glass">
               <div class="glass-label">Ponto crítico</div>
               <div class="glass-value">0007599-45.2026.8.17.2001 permaneceu nos relatórios internos do dia 14 como fatal em 14/05/2026 às 23:59, mas o fluxo atual não trouxe prova aberta de protocolo, despacho útil ou medida de contenção depois desse horário.</div>
-              <div class="glass-note">A primeira checagem útil do dia 15 precisa ser no sistema oficial ou no controle de protocolo do escritório.</div>
+              <div class="glass-note">A primeira checagem do dia 15 precisa ser no sistema oficial ou no controle de protocolo do escritório.</div>
             </div>
             <div class="glass">
-              <div class="glass-label">Maior pacote jurídico novo</div>
-              <div class="glass-value">0000212, 0000417, 0000439, 0000579, 0000580, 0000581, 0000584 e 0000145 tiveram fatos novos na janela, com documento sigiloso, decurso de prazo, remessa recursal, remessa à Vara e intimações publicadas.</div>
-              <div class="glass-note">A maior parte ainda exige abertura direta do teor para virar decisão segura, não só acompanhamento por push.</div>
+              <div class="glass-label">Lote jurídico novo</div>
+              <div class="glass-value">0000145, 0000212, 0000439, 0000579, 0000580, 0000581 e 0000584 tiveram fatos novos na janela, com documento sigiloso, decurso de prazo, remessa recursal, remessa à Vara, intimações publicadas e autos conclusos.</div>
+              <div class="glass-note">A maior parte ainda exige abertura direta no sistema para virar decisão segura, não apenas acompanhamento por push.</div>
             </div>
             <div class="glass">
               <div class="glass-label">Cauda operacional</div>
-              <div class="glass-value">Portal OAB excluiu dois documentos do lote WELLTHON, o CNJ registrou novo acesso móvel à PDPJ às 18:39 de 14/05, a Toyota apareceu com boleto de R$ 2.906,19 para 15/05 e o jusseguro.com.br ganhou novo alerta de erro 5xx.</div>
-              <div class="glass-note">São riscos menores que o contencioso, mas todos com follow-up curto e objetivo ainda nesta sexta.</div>
+              <div class="glass-value">OAB/PE confirmou duas publicações com recorte interrompido, o CNJ registrou novo acesso móvel à PDPJ, o GitHub avisou novo pedido de permissão do Hostinger, a Toyota apareceu com boleto para 15/05 e o jusseguro.com.br voltou a receber alerta de erro 5xx.</div>
+              <div class="glass-note">Tudo isso é menor que o contencioso, mas não convém deixar entrar no fim de semana sem dono e fechamento curto.</div>
             </div>
           </div>
         </div>
@@ -472,29 +477,29 @@
 
       <section class="metrics">
         <article class="metric">
-          <div class="label">Frentes jurídicas</div>
-          <div class="value">14</div>
-          <div class="note">Foco executivo entre fatal interno, 0000338, extrajudicial 0002321, lote TRT6 e duas publicações com data de 15/05.</div>
+          <div class="label">Relatórios internos</div>
+          <div class="value">3</div>
+          <div class="note">Gestor de prazos e dois relatórios PJe mantiveram 0007599 como maior risco e 0000338 como preparação da manhã de 15/05.</div>
         </article>
         <article class="metric">
-          <div class="label">Pushes TRT6 na janela</div>
+          <div class="label">Pushes TRT6</div>
           <div class="value">8</div>
-          <div class="note">0000212, 0000417, 0000439, 0000579, 0000580, 0000581, 0000584 e 0000145 chegaram entre a manhã de 14/05 e a madrugada de 15/05.</div>
+          <div class="note">Janela concentrada em Paulista, CEJUSC e um retorno recursal no 2º grau para 0000145.</div>
         </article>
         <article class="metric">
           <div class="label">Agenda viva 48h</div>
           <div class="value">2</div>
-          <div class="note">A busca atual no Google Calendar confirmou 0000338 às 09:45 de 15/05 e Aplicação mounjaro às 19:00 de 16/05.</div>
+          <div class="note">O Google Calendar confirmou apenas 0000338 às 09:45 de 15/05 e Aplicação mounjaro às 19:00 de 16/05.</div>
         </article>
         <article class="metric">
-          <div class="label">Teor a abrir</div>
-          <div class="value">9</div>
-          <div class="note">0007599, 0000145, 0000579, 0000580, 0000581, 0000584, 0000212, 0000807 e 0066605 continuam sem fechamento seguro só pelo corpo dos e-mails.</div>
+          <div class="label">Publicações a abrir</div>
+          <div class="value">2</div>
+          <div class="note">0000807-79.2020.8.17.2100 no TJPE e 0066605-04.2025.4.05.8300 no TRF5 chegaram com data de publicação em 15/05.</div>
         </article>
         <article class="metric">
           <div class="label">Alertas operacionais</div>
-          <div class="value">6</div>
-          <div class="note">Portal OAB, recorte OAB/PE, CNJ, Toyota, Search Console e CI/GitHub formam a segunda fila do dia.</div>
+          <div class="value">5</div>
+          <div class="note">OAB/PE, CNJ/PDPJ, Hostinger, Toyota e Search Console formam a segunda fila da sexta-feira.</div>
         </article>
       </section>
 
@@ -506,12 +511,12 @@
                 <div class="eyebrow">Executive Summary</div>
                 <h2>Prioridades críticas</h2>
               </div>
-              <div class="head-note">A ordem abaixo considera que o briefing foi gerado às 06:13 de 15/05 e que o risco principal já atravessou o corte da meia-noite sem prova aberta de encerramento.</div>
+              <div class="head-note">A ordem abaixo considera que o briefing foi gerado às 06:13 de 15/05 e que o principal risco já atravessou o corte da meia-noite sem baixa aberta.</div>
             </div>
             <div class="list">
               <article class="item">
                 <h3 class="title">Confirmar o desfecho de 0007599-45.2026.8.17.2001 antes de qualquer frente longa da manhã.</h3>
-                <p class="body"><strong>Partes:</strong> Ivson Cezar Henriques de Araujo Pernambuco x Departamento Estadual de Trânsito PE e outros. <strong>Base da urgência:</strong> relatórios internos recebidos em 14/05 às 07:08, 07:14 e 07:46 BRT trataram o caso como fatal até 23:59 do mesmo dia. <strong>Follow-up:</strong> localizar protocolo, nova peça, despacho útil ou medida corretiva. <strong>Risco:</strong> crítico, porque o prazo já ficou no passado dentro da janela do briefing.</p>
+                <p class="body"><strong>Base da urgência:</strong> relatórios internos recebidos em 14/05 às 07:08, 07:14 e 07:46 BRT trataram o caso como fatal até 23:59 do mesmo dia. <strong>Follow-up:</strong> localizar protocolo, nova peça, despacho útil ou medida corretiva. <strong>Risco:</strong> crítico, porque o prazo já ficou no passado dentro da janela do briefing.</p>
                 <div class="chips">
                   <span class="chip critical">Crítico</span>
                   <span class="chip watch">Pós-corte</span>
@@ -520,7 +525,7 @@
               </article>
               <article class="item">
                 <h3 class="title">Abrir 0000338-95.2026.5.06.0122 com estratégia pronta antes do compromisso das 09:45.</h3>
-                <p class="body">O evento já confirmado em agenda informa fatal em 18/05/2026, preparação antecipada em 15/05/2026 e um segundo ato do mesmo processo com vencimento em 19/05/2026. A manhã precisa sair do bloco com providência definida, não só com leitura inicial.</p>
+                <p class="body">O evento do Google Calendar já informa fatal em 18/05/2026, preparação antecipada em 15/05/2026 porque a véspera útil cai em domingo e existência de outro ato distinto do mesmo processo com vencimento em 19/05/2026. A manhã precisa sair do bloco com providência definida, não só com leitura inicial.</p>
                 <div class="chips">
                   <span class="chip critical">09:45</span>
                   <span class="chip watch">18/05 e 19/05</span>
@@ -528,8 +533,8 @@
                 </div>
               </article>
               <article class="item">
-                <h3 class="title">O lote TRT6 da madrugada virou prioridade real, com destaque para 0000579, 0000580, 0000581, 0000584 e 0000145.</h3>
-                <p class="body">Há despacho de mero expediente com intimação expedida, remessas à Vara por fim do CEJUSC, autos conclusos para despacho e remessa ao Setor de Recursos para cumprir determinação judicial. Sem leitura do teor, ainda não existe classificação segura entre ciência simples e peça necessária.</p>
+                <h3 class="title">O lote TRT6 da janela virou prioridade real, com destaque para 0000579, 0000580, 0000581, 0000584 e 0000145.</h3>
+                <p class="body">Há despacho de mero expediente com intimação expedida, remessas à Vara por fim do CEJUSC, autos conclusos para despacho e remessa ao Setor de Recursos para cumprir determinação judicial. Sem leitura do teor, ainda não existe classificação segura entre ciência simples, providência de peça ou despacho interno.</p>
                 <div class="chips">
                   <span class="chip critical">TRT6</span>
                   <span class="chip watch">Abertura direta</span>
@@ -537,8 +542,8 @@
                 </div>
               </article>
               <article class="item">
-                <h3 class="title">A notificação extrajudicial de Cícero Marcos Lucas Sobrinho foi respondida no mesmo dia, mas merece trilha documental organizada.</h3>
-                <p class="body">O notificante pediu manifestação urgente e propôs ajuste por êxito para a ação de despejo 0002321-91.2025.8.17.2100, conexa aos feitos 0003440-92.2022.8.17.2100 e 0004372-46.2023.8.17.2100. Às 13:43 e 13:44 BRT o escritório recusou formalmente a extensão automática do mandato e a proposta de êxito.</p>
+                <h3 class="title">A notificação extrajudicial de Cícero Marcos Lucas Sobrinho foi respondida no mesmo dia, mas merece trilha documental fechada.</h3>
+                <p class="body">O notificante pediu manifestação urgente e propôs ajuste por êxito para a ação de despejo 0002321-91.2025.8.17.2100, conexa aos feitos 0003440-92.2022.8.17.2100 e 0004372-46.2023.8.17.2100. Às 16:44 BRT o escritório recusou formalmente a extensão automática do mandato e a proposta de êxito.</p>
                 <div class="chips">
                   <span class="chip critical">Resposta enviada</span>
                   <span class="chip watch">Governança</span>
@@ -547,7 +552,7 @@
               </article>
               <article class="item">
                 <h3 class="title">A fila operacional ficou menor, mas suficiente para consumir a manhã se não for fechada em bloco curto.</h3>
-                <p class="body">Portal OAB excluiu dois documentos do lote WELLTHON, o recorte digital da OAB/PE continua interrompido, a Toyota abriu boleto para 15/05, o CNJ acusou novo acesso móvel à PDPJ, o Search Console apontou erro 5xx no jusseguro.com.br e o GitHub voltou a avisar falhas de segurança/build no Projeto Escudo da Justiça.</p>
+                <p class="body">O recorte digital da OAB/PE segue interrompido, o CNJ acusou novo acesso móvel à PDPJ, o Hostinger pediu permissões adicionais no GitHub, a Toyota abriu boleto com vencimento em 15/05 e o Search Console apontou novo erro 5xx no jusseguro.com.br.</p>
                 <div class="chips">
                   <span class="chip watch">Operação</span>
                   <span class="chip watch">15/05</span>
@@ -568,8 +573,8 @@
             <div class="list">
               <article class="mail">
                 <div class="mail-meta">Controle interno • 14/05 07:08-07:46 BRT</div>
-                <h3 class="title">Os relatórios internos do escritório mantiveram 0007599 como fatal do dia, 0037446 como audiência às 08:00 e 0000338 + 0061659 já posicionados para 15/05.</h3>
-                <p class="body">O Gestor de Prazos e os dois relatórios PJe chegaram na abertura da manhã de 14/05. O ponto central foi 0007599 com fatal em 14/05 às 23:59; também apareceram 0037446 como audiência no CEJUSC, 0000223 como reação a prazo já decorrido e uma fila operacional densa até 12:00. A agenda viva desta execução não revalidou esse bloco matinal, então ele fica tratado como evidência de e-mail interno, não como compromisso reconsultado no Calendar.</p>
+                <h3 class="title">Os relatórios internos mantiveram 0007599 como fatal do dia e 0000338 já posicionado para a manhã de 15/05.</h3>
+                <p class="body">O Gestor de Prazos e os dois relatórios PJe chegaram na abertura da manhã de 14/05. O ponto central foi 0007599 com fatal em 14/05 às 23:59. O mesmo pacote empurrou 0000338 e 0061659 para preparação antecipada de 15/05 e classificou o passivo de vencidos em trilha própria.</p>
               </article>
               <article class="mail">
                 <div class="mail-meta">OAB/PE • 14/05 10:30 BRT</div>
@@ -579,22 +584,22 @@
               <article class="mail">
                 <div class="mail-meta">TRT6 • 14/05 12:02-12:49 BRT</div>
                 <h3 class="title">O lote diurno do TRT6 trouxe documento sigiloso, decurso de prazo, remessa à Vara e intimações publicadas.</h3>
-                <p class="body">0000212 recebeu dois documentos sigilosos; 0000417 teve decurso do prazo da autora; 0000439 teve decurso do prazo de ambas as partes; 0000580 e 0000584 passaram por remessa à Vara com intimações publicadas; e 0000584 ainda ficou concluso para despacho. Tudo isso aconteceu por push, sem teor integral aberto nesta execução.</p>
+                <p class="body">0000212 recebeu dois documentos sigilosos; 0000439 teve decurso do prazo de ambas as partes; 0000580 e 0000584 passaram por remessa à Vara com intimações publicadas; e 0000584 ainda ficou concluso para despacho. O teor integral continua dependente de abertura direta no PJe/TRT6.</p>
               </article>
               <article class="mail">
-                <div class="mail-meta">Extrajudicial • 14/05 12:52-13:44 BRT</div>
+                <div class="mail-meta">Extrajudicial • 14/05 12:52-16:44 BRT</div>
                 <h3 class="title">Cícero Marcos Lucas Sobrinho notificou o escritório sobre 0002321 e recebeu recusa formal da atuação sem contrato específico.</h3>
                 <p class="body">A thread alegou conexão entre 0002321-91.2025.8.17.2100, 0003440-92.2022.8.17.2100 e 0004372-46.2023.8.17.2100, pediu resposta em 48 horas e sugeriu honorários exclusivamente por êxito. O escritório respondeu que a demanda de despejo não está automaticamente abrangida pelo mandato vigente, recusou a proposta e orientou busca imediata de assistência jurídica própria.</p>
               </article>
               <article class="mail">
-                <div class="mail-meta">Jusbrasil + Portal OAB • 14/05 15:20-18:23 BRT</div>
-                <h3 class="title">Entraram duas publicações com data de 15/05 e dois documentos do lote WELLTHON foram excluídos no Portal OAB.</h3>
-                <p class="body">O Jusbrasil sinalizou publicação para 15/05 em 0000807-79.2020.8.17.2100 no TJPE e em 0066605-04.2025.4.05.8300 no TRF5. Em paralelo, o Portal OAB informou exclusão do “CONTRATO DE HONORARIOS 2026 - ATACAREJO DE ALIMENTOS LTDA e WELLTHON ROBSON” e da “PROCURACAO E DECLARACAO DE HIP - ASSINATURA DIGITAL - WELLTHON”.</p>
+                <div class="mail-meta">Jusbrasil • 14/05 15:20-15:23 BRT</div>
+                <h3 class="title">Entraram duas publicações com data de 15/05: 0000807 no TJPE e 0066605 no TRF5.</h3>
+                <p class="body">O Jusbrasil sinalizou nova publicação para 0000807-79.2020.8.17.2100 na 1ª Vara Cível de Abreu e Lima e para 0066605-04.2025.4.05.8300 no TRF5, ambas com disponibilização em 14/05 e publicação em 15/05. Em ambos os casos, o teor ainda precisa ser aberto no tribunal ou no recorte expandido.</p>
               </article>
               <article class="mail">
                 <div class="mail-meta">Operação • 14/05 18:39-23:30 BRT</div>
-                <h3 class="title">CNJ, Toyota, Search Console, GitHub e uma captura manual de WhatsApp fecharam a janela com cauda curta, porém concreta.</h3>
-                <p class="body">O CNJ registrou novo acesso móvel à PDPJ às 18:39 via iOS/Chrome. Ton e Nubank localizaram boleto do Banco Toyota no valor de R$ 2.906,19, vencendo em 15/05. O Search Console abriu novo motivo de não indexação por erro 5xx no jusseguro.com.br. O GitHub repetiu alertas de falha em PRs do Projeto Escudo da Justiça. Às 23:30, houve autoenvio do arquivo “WhatsApp Chat - Ação criminal Rafaela.zip” por link do Drive, o que sugere consolidação manual de prova ou contexto para uma frente criminal.</p>
+                <h3 class="title">CNJ, Toyota, Hostinger, Search Console e a captura do chat Rafaela fecharam a janela com uma cauda curta, porém concreta.</h3>
+                <p class="body">O CNJ registrou novo acesso móvel à PDPJ às 18:39 via iOS/Chrome. O Ton localizou boleto do Banco Toyota no valor de R$ 2.906,19 com vencimento em 15/05. O GitHub avisou que o app Hostinger pediu permissões adicionais. O Search Console abriu novo motivo de não indexação por erro 5xx no jusseguro.com.br. Às 23:30, houve autoenvio do arquivo “WhatsApp Chat - Ação criminal Rafaela.zip”, o que sugere consolidação manual de prova ou contexto para uma frente criminal.</p>
               </article>
               <article class="mail">
                 <div class="mail-meta">Madrugada • 15/05 00:47-05:22 BRT</div>
@@ -617,7 +622,7 @@
                 <div class="when">15/05 09:45</div>
                 <div>
                   <h3 class="title">Prazo processual - 0000338-95.2026.5.06.0122</h3>
-                  <p class="body">O evento do Google Calendar informa fatal em 18/05/2026, preparação antecipada em 15/05/2026 porque a véspera útil cai em domingo e existência de outro prazo distinto do mesmo processo em 19/05/2026.</p>
+                  <p class="body">O evento do Google Calendar informa fatal em 18/05/2026, preparação antecipada em 15/05/2026 porque a véspera útil cai em domingo e existência de outro prazo distinto do mesmo processo com vencimento em 19/05/2026.</p>
                   <ul class="prep">
                     <li>Abrir o andamento correspondente no PJe/TRT antes do início do bloco.</li>
                     <li>Separar o ato de 18/05 do ato de 19/05 para evitar mistura de providências.</li>
@@ -635,8 +640,8 @@
               <article class="event">
                 <div class="when">Lacuna</div>
                 <div>
-                  <h3 class="title">O Google Calendar não revalidou os blocos internos de 14/05 ligados a 0037446, 0007599 e demais tarefas jurídicas da manhã</h3>
-                  <p class="body">Esses compromissos apareceram apenas nos e-mails internos de gestão e no histórico recente, então seguem tratados como evidência de Gmail e controle interno, não como eventos confirmados pela busca viva da agenda nesta execução.</p>
+                  <h3 class="title">O Google Calendar não revalidou os blocos jurídicos matinais descritos pelos relatórios internos de 14/05.</h3>
+                  <p class="body">Os compromissos do dia 14 ligados a 0007599, 0037446 e outras frentes aparecem apenas nos e-mails internos de controle e na memória recente. Nesta execução, a agenda viva confirmou apenas Terapia como compromisso concluído na janela retroativa.</p>
                 </div>
               </article>
             </div>
@@ -654,31 +659,31 @@
             <div class="list">
               <article class="risk">
                 <h3 class="title">0007599-45.2026.8.17.2001</h3>
-                <p class="body"><strong>Partes:</strong> Ivson Cezar Henriques de Araujo Pernambuco x Departamento Estadual de Trânsito PE e outros. <strong>Responsável aparente:</strong> equipe interna do escritório, por inferência dos relatórios automáticos do próprio Dr. Petrônio. <strong>Evento:</strong> os relatórios de 14/05 trataram o feito como fatal até 23:59, com orientação para reabrir o teor e decidir protocolo ainda naquele dia. <strong>Follow-up:</strong> comprovar o que foi protocolado ou qual contingência foi adotada. <strong>Risco:</strong> crítico, porque o corte do briefing já passou do horário fatal.</p>
+                <p class="body"><strong>Responsável aparente:</strong> equipe interna do escritório, por inferência dos relatórios automáticos. <strong>Evento:</strong> relatórios de 14/05 trataram o feito como fatal até 23:59. <strong>Follow-up:</strong> comprovar o que foi protocolado ou qual contingência foi adotada. <strong>Risco:</strong> crítico, porque o corte do briefing já passou do horário fatal.</p>
               </article>
               <article class="risk">
                 <h3 class="title">0000338-95.2026.5.06.0122</h3>
-                <p class="body"><strong>Partes:</strong> Paulo Henrique Ferreira de Souza x C J Antonio Dias Peças e Serviços para Autos Ltda e outros. <strong>Advogado responsável:</strong> não visível na agenda atual. <strong>Evento:</strong> compromisso formal em 15/05 às 09:45 com preparação antecipada para fatal em 18/05 e outro prazo em 19/05. <strong>Follow-up:</strong> abrir o andamento antes do bloco e separar os dois atos. <strong>Risco:</strong> alto.</p>
+                <p class="body"><strong>Partes:</strong> Paulo Henrique Ferreira de Souza x C J Antonio Dias Peças e Serviços para Autos Ltda e outros. <strong>Evento:</strong> compromisso formal em 15/05 às 09:45 com preparação antecipada para fatal em 18/05 e outro prazo em 19/05. <strong>Follow-up:</strong> abrir o andamento antes do bloco e separar os dois atos. <strong>Risco:</strong> alto.</p>
               </article>
               <article class="risk">
                 <h3 class="title">0002321-91.2025.8.17.2100</h3>
-                <p class="body"><strong>Partes:</strong> Severino Felix de Araujo Santos x Cícero Marcos Lucas Sobrinho, segundo a notificação recebida. <strong>Advogado:</strong> Petrônio Souza foi notificado a assumir a defesa, mas recusou formalmente sem contrato próprio. <strong>Evento:</strong> notificação extrajudicial com pedido de manifestação urgente e proposta por êxito, respondida no mesmo dia. <strong>Follow-up:</strong> preservar thread, proposta e resposta junto aos processos conexos 0003440 e 0004372. <strong>Risco:</strong> alto para governança e prova, mas com urgência imediata mitigada pela resposta já enviada.</p>
+                <p class="body"><strong>Partes:</strong> Severino Felix de Araujo Santos x Cícero Marcos Lucas Sobrinho, segundo a notificação recebida. <strong>Evento:</strong> notificação extrajudicial com pedido de manifestação urgente e proposta por êxito, respondida no mesmo dia. <strong>Follow-up:</strong> preservar thread, proposta e recusa formal junto aos processos conexos 0003440 e 0004372. <strong>Risco:</strong> alto para governança e prova, mas com urgência imediata mitigada pela resposta já enviada.</p>
               </article>
               <article class="risk">
                 <h3 class="title">0000145-51.2024.5.06.0122</h3>
-                <p class="body"><strong>Partes:</strong> Sidney Francisco do Nascimento Junior 09265966408 x Bruno dos Santos Lira. <strong>Advogado identificado:</strong> Petrônio Leonardo Ramos de Souza, OAB/PE 53391, pelo polo réu. <strong>Evento:</strong> em 14/05/2026 às 11:51 houve remessa ao Setor de Recursos para cumprir determinação judicial e juntada de documento sigiloso. <strong>Follow-up:</strong> abrir a peça recursal e confirmar impacto sobre recurso de revista ou providência correlata. <strong>Risco:</strong> médio-alto.</p>
+                <p class="body"><strong>Partes:</strong> Sidney Francisco do Nascimento Junior x Bruno dos Santos Lira. <strong>Advogado identificado:</strong> Petrônio Leonardo Ramos de Souza, OAB/PE 53391, pelo polo réu. <strong>Evento:</strong> em 14/05/2026 às 11:51 houve remessa ao Setor de Recursos para cumprir determinação judicial e juntada de documento sigiloso. <strong>Follow-up:</strong> abrir a peça recursal e confirmar impacto processual. <strong>Risco:</strong> médio-alto.</p>
               </article>
               <article class="risk">
                 <h3 class="title">0000579, 0000580, 0000581 e 0000584</h3>
                 <p class="body"><strong>Partes:</strong> C J Antonio Dias Peças e Serviços para Autos Ltda x Lucas Santiago Vicente da Silva, Itamar Gomes da Silva Junior, Flavio Regis da Costa Gadelha e Sabrina Suelyn Pereira Silva. <strong>Evento:</strong> o lote recebeu despacho de mero expediente com intimação expedida em 0000579; remessa à Vara e intimação publicada em 0000580; autos conclusos para despacho em 0000581; e remessa à Vara, intimação publicada e conclusos para despacho em 0000584. <strong>Follow-up:</strong> abrir o teor de cada ato e classificar o lote entre ciência simples, peça ou despacho interno. <strong>Risco:</strong> médio-alto.</p>
               </article>
               <article class="risk">
-                <h3 class="title">0000212-48.2026.5.06.0121, 0000417-34.2026.5.06.0006 e 0000439-72.2026.5.06.0142</h3>
-                <p class="body"><strong>Partes:</strong> Flavio dos Santos Dias x C J Antonio Dias Peças e Serviços para Autos Ltda; Maria Graziele Pereira Silva x Priscyla Nayara Gomes da Costa de Brito e outros; Manoel de Morais Ferreira x M &amp; R Serviços e Telecomunicações Ltda. <strong>Evento:</strong> 0000212 recebeu dois documentos sigilosos; 0000417 registrou decurso do prazo da autora; 0000439 registrou decurso do prazo de ambas as partes. <strong>Follow-up:</strong> confirmar repercussão prática e se ainda há medida residual útil. <strong>Risco:</strong> médio.</p>
+                <h3 class="title">0000212-48.2026.5.06.0121 e 0000439-72.2026.5.06.0142</h3>
+                <p class="body"><strong>Evento:</strong> 0000212 recebeu dois documentos sigilosos; 0000439 registrou decurso do prazo de ambas as partes. <strong>Follow-up:</strong> confirmar repercussão prática e se ainda há medida residual útil. <strong>Risco:</strong> médio.</p>
               </article>
               <article class="risk">
                 <h3 class="title">0000807-79.2020.8.17.2100 e 0066605-04.2025.4.05.8300</h3>
-                <p class="body"><strong>Partes:</strong> Maria Lucia da Silva Lima x Severina Ferreira de Sa Silva e outros; Deise de Lima Gouveia x INSS. <strong>Advogado identificado:</strong> Petrônio Leonardo Ramos de Souza, OAB/PE 53391, segundo os recortes do Jusbrasil. <strong>Evento:</strong> publicações com disponibilização em 14/05 e publicação em 15/05, no TJPE e no TRF5. <strong>Follow-up:</strong> abrir o teor completo no tribunal ou no recorte expandido e extrair prazo, ciência ou ato ordinatório. <strong>Risco:</strong> médio.</p>
+                <p class="body"><strong>Evento:</strong> publicações com disponibilização em 14/05 e publicação em 15/05, no TJPE e no TRF5. <strong>Follow-up:</strong> abrir o teor completo no tribunal ou no recorte expandido e extrair prazo, ciência ou ato ordinatório. <strong>Risco:</strong> médio.</p>
               </article>
             </div>
           </section>
@@ -697,19 +702,19 @@
               </article>
               <article class="risk">
                 <h3 class="title">Alto: a agenda viva não reproduziu o bloco jurídico matinal que os relatórios internos trataram como central em 14/05.</h3>
-                <p class="body">Isso não invalida os e-mails internos, mas exige cautela para não afirmar como agenda confirmada algo que hoje só está sustentado pelo Gmail e pela memória de execução.</p>
+                <p class="body">Isso não invalida os e-mails internos, mas exige cautela para não apresentar como agenda confirmada algo que hoje está sustentado apenas por Gmail e controle interno.</p>
               </article>
               <article class="risk">
-                <h3 class="title">Médio-alto: Portal OAB e recorte OAB/PE somaram exclusão documental com interrupção de captura.</h3>
-                <p class="body">O lote WELLTHON perdeu dois documentos no portal e o recorte digital confirmou duas publicações sem liberar teor, porque o cadastro segue pendente de regularização.</p>
+                <h3 class="title">Médio-alto: o recorte da OAB/PE continua útil como alerta, mas ruim como prova operacional fechada.</h3>
+                <p class="body">A mensagem confirmou duas publicações e, ao mesmo tempo, informou interrupção do serviço por necessidade de atualização cadastral.</p>
               </article>
               <article class="risk">
-                <h3 class="title">Médio: Toyota, CNJ/PDPJ e o arquivo de WhatsApp pedem fechamento rápido ainda hoje.</h3>
-                <p class="body">O boleto de R$ 2.906,19 vence em 15/05, o CNJ acusou acesso móvel por usuário/senha no pje-tjpe-1g-cloud e o ZIP da ação criminal Rafaela já foi arquivado em Drive, mas ainda precisa de vínculo claro ao caso correto.</p>
+                <h3 class="title">Médio: Toyota, CNJ/PDPJ, Hostinger e Search Console pedem fechamento curto ainda hoje.</h3>
+                <p class="body">O boleto Toyota vence em 15/05, o CNJ acusou acesso móvel por usuário e senha no pje-tjpe-1g-cloud, o Hostinger pediu mais permissões no GitHub e o Search Console abriu novo motivo de não indexação por erro 5xx.</p>
               </article>
               <article class="risk">
-                <h3 class="title">Médio: jusseguro.com.br e Projeto Escudo da Justiça continuam acumulando ruído técnico.</h3>
-                <p class="body">O Search Console abriu novo motivo de não indexação por erro 5xx e o GitHub voltou a avisar falhas de segurança/build em PRs do Projeto Escudo da Justiça. Não é prioridade jurídica, mas também não convém empurrar para depois do fim de semana sem dono explícito.</p>
+                <h3 class="title">Médio: o arquivo de WhatsApp da ação criminal Rafaela já foi arquivado, mas ainda precisa de vínculo explícito ao caso certo.</h3>
+                <p class="body">O autoenvio do ZIP sugere organização de prova ou contexto, porém a janela atual não mostrou leitura interna do conteúdo nem destino processual claro.</p>
               </article>
             </div>
           </section>
@@ -742,7 +747,7 @@
                 <div class="box"></div>
                 <div>
                   <h3 class="title">Fazer uma rodada única de abertura do lote TRT6 da janela.</h3>
-                  <p class="body">Objetivo: sair com classificação objetiva para 0000145, 0000579, 0000580, 0000581, 0000584, 0000212, 0000417 e 0000439.</p>
+                  <p class="body">Objetivo: sair com classificação objetiva para 0000145, 0000579, 0000580, 0000581, 0000584, 0000212 e 0000439.</p>
                   <div class="owner">Owner: Petrônio</div>
                 </div>
               </article>
@@ -750,23 +755,23 @@
                 <div class="box"></div>
                 <div>
                   <h3 class="title">Fechar a trilha documental de 0002321 e dos processos conexos.</h3>
-                  <p class="body">Objetivo: manter notificação, proposta e recusa formal reunidas em contexto e sem risco de dispersão só no Gmail.</p>
+                  <p class="body">Objetivo: manter notificação, proposta e recusa formal reunidas em contexto e sem dispersão apenas no Gmail.</p>
                   <div class="owner">Owner: Petrônio</div>
                 </div>
               </article>
               <article class="todo">
                 <div class="box"></div>
                 <div>
-                  <h3 class="title">Fazer um bloco administrativo curto para OAB, Toyota e CNJ.</h3>
-                  <p class="body">Objetivo: checar exclusões do lote WELLTHON, regularizar o recorte OAB/PE, decidir o boleto Toyota e confirmar se o acesso móvel à PDPJ foi legítimo.</p>
+                  <h3 class="title">Fazer um bloco administrativo curto para OAB, Toyota, CNJ e Hostinger.</h3>
+                  <p class="body">Objetivo: regularizar o recorte OAB/PE, decidir o boleto Toyota, confirmar se o acesso móvel à PDPJ foi legítimo e escolher se o pedido de permissão do Hostinger será aceito ou ignorado.</p>
                   <div class="owner">Owner: Petrônio</div>
                 </div>
               </article>
               <article class="todo">
                 <div class="box"></div>
                 <div>
-                  <h3 class="title">Encaminhar os alertas técnicos e o arquivo Rafaela para donos claros ainda hoje.</h3>
-                  <p class="body">Objetivo: não abrir a segunda-feira com Search Console, CI do Escudo da Justiça e ZIP da ação criminal sem destino definido.</p>
+                  <h3 class="title">Dar destino explícito aos alertas técnicos e ao ZIP da ação criminal Rafaela.</h3>
+                  <p class="body">Objetivo: não abrir a segunda-feira com Search Console, GitHub e prova criminal ainda sem dono, pasta ou próxima providência definidos.</p>
                   <div class="owner">Owner: Petrônio</div>
                 </div>
               </article>
@@ -783,7 +788,7 @@
             <div class="list">
               <article class="coverage">
                 <h3 class="title">Gmail consolidado</h3>
-                <p class="body">Foram lidos diretamente os relatórios internos do escritório, a thread extrajudicial, os pushes do TRT6, as publicações do Jusbrasil, os avisos de OAB/Portal OAB, CNJ, Toyota, Search Console, GitHub e o autoenvio do arquivo de WhatsApp da ação criminal Rafaela.</p>
+                <p class="body">Foram lidos diretamente os relatórios internos do escritório, a thread extrajudicial, os pushes do TRT6, as publicações do Jusbrasil, o aviso da OAB/PE, os alertas do CNJ, GitHub, Toyota e Search Console, além do autoenvio do arquivo do WhatsApp Rafaela.</p>
               </article>
               <article class="coverage">
                 <h3 class="title">Google Calendar</h3>
@@ -791,7 +796,7 @@
               </article>
               <article class="coverage">
                 <h3 class="title">Lacunas</h3>
-                <p class="body">Não há conector de chat corporativo. Documentos sigilosos do TRT6 e o teor integral das publicações OAB/Jusbrasil continuam dependentes de abertura direta no sistema. O arquivo ZIP da ação criminal Rafaela foi encontrado por link do Drive no corpo do e-mail, mas o conteúdo interno do chat não foi inspecionado nesta rodada.</p>
+                <p class="body">Não há conector de chat corporativo. Documentos sigilosos do TRT6 e o teor integral das publicações OAB/Jusbrasil continuam dependentes de abertura direta no sistema. O conteúdo interno do ZIP da ação criminal Rafaela não foi inspecionado nesta rodada.</p>
               </article>
             </div>
           </section>
@@ -800,7 +805,7 @@
 
       <section class="footer">
         <div class="footer-note"><strong>Leitura principal:</strong> o briefing de 15/05 começa pela reconciliação do que já deveria estar fechado desde 23:59 de 14/05. Primeiro 0007599, depois 0000338, depois o pacote TRT6 que entrou entre a manhã de ontem e a madrugada de hoje.</div>
-        <div class="footer-note"><strong>Resumo de risco:</strong> o maior risco jurídico está na combinação entre fatal interno sem baixa visível e atos do TRT6 sem teor aberto; o maior risco operacional está em OAB/Portal OAB, Toyota, CNJ, Search Console, GitHub e no arquivo criminal ainda sem vínculo explícito.</div>
+        <div class="footer-note"><strong>Resumo de risco:</strong> o maior risco jurídico está na combinação entre fatal interno sem baixa visível e atos do TRT6 sem teor aberto; o maior risco operacional está em OAB/PE, Toyota, CNJ/PDPJ, Hostinger, Search Console e no arquivo criminal ainda sem vínculo explícito.</div>
       </section>
     </main>
   </body>
