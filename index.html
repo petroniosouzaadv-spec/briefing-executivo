@@ -3,438 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Briefing Executivo | 18 de maio de 2026</title>
+    <title>Briefing Executivo | 19 de maio de 2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <style>
       :root {
         --bg: #dae1e8;
-        --panel: rgba(255, 255, 255, 0.88);
-        --panel-strong: rgba(255, 255, 255, 0.96);
+        --panel: rgba(255,255,255,0.88);
+        --panel-strong: rgba(255,255,255,0.96);
         --ink: #11191f;
         --wine: #561c26;
         --navy: #172b49;
         --gold: #bb9d6d;
-        --muted: rgba(17, 25, 31, 0.72);
-        --line: rgba(17, 25, 31, 0.12);
-        --shadow: 0 24px 70px rgba(17, 25, 31, 0.12);
+        --muted: rgba(17,25,31,.72);
+        --line: rgba(17,25,31,.12);
+        --shadow: 0 24px 70px rgba(17,25,31,.12);
         --radius: 8px;
       }
-
       * { box-sizing: border-box; }
-
       body {
         margin: 0;
         min-height: 100vh;
         font-family: "Montserrat", sans-serif;
         color: var(--ink);
         background:
-          radial-gradient(circle at 0% 0%, rgba(187, 157, 109, 0.22), transparent 28%),
-          radial-gradient(circle at 100% 0%, rgba(23, 43, 73, 0.18), transparent 30%),
+          radial-gradient(circle at 0% 0%, rgba(187,157,109,.22), transparent 28%),
+          radial-gradient(circle at 100% 0%, rgba(23,43,73,.18), transparent 30%),
           linear-gradient(180deg, #eef2f6 0%, #dae1e8 58%, #ced6de 100%);
       }
-
-      a { color: inherit; text-decoration: none; }
-
-      .page {
-        width: min(1280px, calc(100vw - 28px));
-        margin: 0 auto;
-        padding: 18px 0 34px;
-      }
-
+      .page { width: min(1280px, calc(100vw - 28px)); margin: 0 auto; padding: 18px 0 34px; }
       .hero {
-        position: relative;
-        overflow: hidden;
-        border-radius: var(--radius);
+        position: relative; overflow: hidden; border-radius: var(--radius);
         background:
-          linear-gradient(135deg, rgba(17, 25, 31, 0.98), rgba(23, 43, 73, 0.95)),
-          linear-gradient(180deg, rgba(86, 28, 38, 0.18), rgba(187, 157, 109, 0.08));
-        box-shadow: var(--shadow);
-        padding: 26px;
+          linear-gradient(135deg, rgba(17,25,31,.98), rgba(23,43,73,.95)),
+          linear-gradient(180deg, rgba(86,28,38,.18), rgba(187,157,109,.08));
+        box-shadow: var(--shadow); padding: 26px;
       }
-
-      .hero::before,
-      .hero::after {
-        content: "";
-        position: absolute;
-        border-radius: 999px;
-        border: 1px solid rgba(187, 157, 109, 0.3);
-      }
-
-      .hero::before {
-        width: 360px;
-        height: 360px;
-        right: -100px;
-        top: -120px;
-      }
-
-      .hero::after {
-        width: 220px;
-        height: 220px;
-        right: 120px;
-        bottom: -110px;
-      }
-
-      .hero-grid {
-        position: relative;
-        z-index: 1;
-        display: grid;
-        grid-template-columns: 1.45fr 0.95fr;
-        gap: 18px;
-        align-items: stretch;
-      }
-
-      .brand {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-        margin-bottom: 24px;
-      }
-
-      .brand-mark {
-        width: 58px;
-        height: 58px;
-        border-radius: 50%;
-        border: 1px solid rgba(187, 157, 109, 0.72);
-        display: grid;
-        place-items: center;
-        color: var(--gold);
-        font-weight: 700;
-        position: relative;
-      }
-
-      .brand-mark::after {
-        content: "";
-        position: absolute;
-        width: 78px;
-        height: 78px;
-        border-radius: 50%;
-        border: 1px solid rgba(200, 182, 172, 0.22);
-      }
-
-      .brand-label {
-        color: rgba(255, 255, 255, 0.72);
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        margin-bottom: 6px;
-      }
-
-      .brand-name {
-        color: #fff;
-        font-size: 23px;
-        line-height: 1.08;
-        font-weight: 600;
-        max-width: 18ch;
-      }
-
-      .hero h1 {
-        margin: 0 0 14px;
-        color: #fff;
-        font-size: clamp(31px, 4.3vw, 58px);
-        line-height: 0.98;
-        max-width: 12ch;
-      }
-
-      .hero-copy {
-        color: rgba(255, 255, 255, 0.82);
-        font-size: 15px;
-        line-height: 1.72;
-        max-width: 80ch;
-        margin: 0;
-      }
-
-      .hero-copy + .hero-copy { margin-top: 10px; }
-
-      .hero-meta {
-        margin-top: 14px;
-        color: #fff;
-        font-size: clamp(18px, 2.5vw, 28px);
-        line-height: 1.2;
-        font-weight: 700;
-      }
-
-      .hero-side { display: grid; gap: 14px; }
-
-      .glass {
-        border-radius: var(--radius);
-        background: rgba(255, 255, 255, 0.09);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        backdrop-filter: blur(12px);
-        padding: 18px;
-      }
-
-      .glass-label,
-      .metric .label,
-      .eyebrow {
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-      }
-
-      .glass-label {
-        color: rgba(255, 255, 255, 0.64);
-        margin-bottom: 10px;
-      }
-
-      .glass-value {
-        color: #fff;
-        font-size: 17px;
-        font-weight: 700;
-        line-height: 1.45;
-      }
-
-      .glass-note {
-        color: rgba(255, 255, 255, 0.74);
-        font-size: 13px;
-        line-height: 1.58;
-        margin-top: 8px;
-      }
-
-      .metrics {
-        display: grid;
-        grid-template-columns: repeat(5, minmax(0, 1fr));
-        gap: 14px;
-        margin-top: 18px;
-      }
-
-      .metric,
-      .panel {
-        border-radius: var(--radius);
-        background: var(--panel);
-        border: 1px solid rgba(255, 255, 255, 0.55);
-        box-shadow: var(--shadow);
-      }
-
-      .metric { padding: 18px; }
-
-      .metric .label {
-        color: var(--muted);
-        margin-bottom: 10px;
-      }
-
-      .metric .value {
-        color: var(--navy);
-        font-size: 34px;
-        font-weight: 800;
-        line-height: 1;
-      }
-
-      .metric .note {
-        color: var(--muted);
-        font-size: 13px;
-        line-height: 1.5;
-        margin-top: 8px;
-      }
-
-      .layout {
-        display: grid;
-        grid-template-columns: 1.16fr 0.84fr;
-        gap: 18px;
-        margin-top: 18px;
-      }
-
-      .stack { display: grid; gap: 18px; }
-
-      .panel {
-        padding: 20px;
-        background: var(--panel-strong);
-      }
-
-      .panel-head {
-        display: flex;
-        justify-content: space-between;
-        gap: 14px;
-        align-items: flex-start;
-        margin-bottom: 16px;
-      }
-
-      .eyebrow {
-        color: var(--wine);
-        margin-bottom: 8px;
-      }
-
-      .panel h2 {
-        margin: 0;
-        font-size: 24px;
-        line-height: 1.1;
-      }
-
-      .head-note {
-        color: var(--muted);
-        font-size: 13px;
-        line-height: 1.55;
-        max-width: 36ch;
-      }
-
-      .list,
-      .timeline { display: grid; gap: 12px; }
-
-      .item,
-      .risk,
-      .coverage,
-      .event,
-      .mail,
-      .todo {
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        background: linear-gradient(180deg, rgba(255,255,255,.84), rgba(255,255,255,.64));
-      }
-
-      .item,
-      .risk,
-      .coverage,
-      .mail { padding: 14px; }
-
-      .title {
-        margin: 0 0 6px;
-        font-size: 15px;
-        line-height: 1.38;
-        font-weight: 700;
-      }
-
-      .body {
-        margin: 0;
-        color: var(--muted);
-        font-size: 13px;
-        line-height: 1.62;
-      }
-
-      .chips {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 10px;
-      }
-
-      .chip {
-        min-height: 28px;
-        border-radius: 999px;
-        padding: 0 10px;
-        display: inline-flex;
-        align-items: center;
-        font-size: 11px;
-        text-transform: uppercase;
-        font-weight: 700;
-        letter-spacing: 0.04em;
-      }
-
-      .critical { background: rgba(86, 28, 38, 0.12); color: var(--wine); }
-      .watch { background: rgba(187, 157, 109, 0.18); color: #7a6540; }
-      .ok { background: rgba(23, 43, 73, 0.1); color: var(--navy); }
-
-      .mail-meta {
-        color: var(--muted);
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        margin-bottom: 8px;
-      }
-
-      .event {
-        display: grid;
-        grid-template-columns: 120px 1fr;
-        gap: 14px;
-        padding: 14px;
-      }
-
-      .when {
-        font-size: 13px;
-        font-weight: 700;
-        color: var(--navy);
-      }
-
-      .prep {
-        margin: 10px 0 0;
-        padding: 0;
-        list-style: none;
-        display: grid;
-        gap: 7px;
-      }
-
-      .prep li {
-        font-size: 13px;
-        line-height: 1.56;
-        padding-left: 15px;
-        position: relative;
-      }
-
-      .prep li::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 8px;
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: var(--gold);
-      }
-
-      .todo {
-        padding: 14px;
-        display: grid;
-        grid-template-columns: auto 1fr;
-        gap: 12px;
-      }
-
-      .box {
-        width: 18px;
-        height: 18px;
-        border-radius: 4px;
-        border: 1px solid rgba(17, 25, 31, 0.22);
-        margin-top: 1px;
-      }
-
-      .owner {
-        margin-top: 6px;
-        color: var(--wine);
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-      }
-
-      .footer {
-        margin-top: 18px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 18px;
-      }
-
-      .footer-note {
-        padding: 18px 20px;
-        border-radius: var(--radius);
-        background: rgba(17, 25, 31, 0.95);
-        color: rgba(255, 255, 255, 0.8);
-        box-shadow: var(--shadow);
-        font-size: 13px;
-        line-height: 1.66;
-      }
-
-      .footer-note strong { color: #fff; }
-
-      @media (max-width: 1160px) {
-        .hero-grid,
-        .metrics,
-        .layout,
-        .footer { grid-template-columns: 1fr; }
-      }
-
-      @media (max-width: 760px) {
-        .page { width: min(100vw - 16px, 1280px); }
-        .hero,
-        .panel,
-        .metric { padding: 18px; }
-        .event { grid-template-columns: 1fr; }
-        .brand-name { font-size: 19px; }
-        .panel h2 { font-size: 21px; }
-        .glass-value { font-size: 16px; }
-        .hero-copy { font-size: 14px; }
-        .hero-meta { font-size: 20px; }
-      }
+      .hero::before,.hero::after{content:"";position:absolute;border-radius:999px;border:1px solid rgba(187,157,109,.3)}
+      .hero::before{width:360px;height:360px;right:-100px;top:-120px}
+      .hero::after{width:220px;height:220px;right:120px;bottom:-110px}
+      .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.45fr .95fr;gap:18px;align-items:stretch}
+      .brand{display:flex;align-items:center;gap:14px;margin-bottom:24px}
+      .brand-mark{width:58px;height:58px;border-radius:50%;border:1px solid rgba(187,157,109,.72);display:grid;place-items:center;color:var(--gold);font-weight:700;position:relative}
+      .brand-mark::after{content:"";position:absolute;width:78px;height:78px;border-radius:50%;border:1px solid rgba(200,182,172,.22)}
+      .brand-label{color:rgba(255,255,255,.72);font-size:11px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+      .brand-name{color:#fff;font-size:23px;line-height:1.08;font-weight:600;max-width:18ch}
+      .hero h1{margin:0 0 14px;color:#fff;font-size:clamp(31px,4.3vw,58px);line-height:.98;max-width:11ch}
+      .hero-copy{color:rgba(255,255,255,.82);font-size:15px;line-height:1.72;max-width:78ch;margin:0}
+      .hero-copy + .hero-copy{margin-top:10px}
+      .hero-meta{margin-top:14px;color:#fff;font-size:clamp(18px,2.5vw,28px);line-height:1.2;font-weight:700}
+      .hero-side{display:grid;gap:14px}
+      .glass{border-radius:var(--radius);background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(12px);padding:18px}
+      .glass-label,.metric .label,.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+      .glass-label{color:rgba(255,255,255,.64);margin-bottom:10px}
+      .glass-value{color:#fff;font-size:17px;font-weight:700;line-height:1.45}
+      .glass-note{color:rgba(255,255,255,.74);font-size:13px;line-height:1.58;margin-top:8px}
+      .metrics{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:18px}
+      .metric,.panel{border-radius:var(--radius);background:var(--panel);border:1px solid rgba(255,255,255,.55);box-shadow:var(--shadow)}
+      .metric{padding:18px}.metric .label{color:var(--muted);margin-bottom:10px}.metric .value{color:var(--navy);font-size:34px;font-weight:800;line-height:1}.metric .note{color:var(--muted);font-size:13px;line-height:1.5;margin-top:8px}
+      .layout{display:grid;grid-template-columns:1.16fr .84fr;gap:18px;margin-top:18px}.stack{display:grid;gap:18px}.panel{padding:20px;background:var(--panel-strong)}
+      .panel-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;margin-bottom:16px}.eyebrow{color:var(--wine);margin-bottom:8px}.panel h2{margin:0;font-size:24px;line-height:1.1}.head-note{color:var(--muted);font-size:13px;line-height:1.55;max-width:38ch}
+      .list,.timeline{display:grid;gap:12px}
+      .item,.risk,.coverage,.event,.mail,.todo{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(180deg, rgba(255,255,255,.84), rgba(255,255,255,.64))}
+      .item,.risk,.coverage,.mail{padding:14px}.title{margin:0 0 6px;font-size:15px;line-height:1.38;font-weight:700}.body{margin:0;color:var(--muted);font-size:13px;line-height:1.62}
+      .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.chip{min-height:28px;border-radius:999px;padding:0 10px;display:inline-flex;align-items:center;font-size:11px;text-transform:uppercase;font-weight:700;letter-spacing:.04em}
+      .critical{background:rgba(86,28,38,.12);color:var(--wine)} .watch{background:rgba(187,157,109,.18);color:#7a6540} .ok{background:rgba(23,43,73,.1);color:var(--navy)}
+      .mail-meta{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+      .event{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:14px}.when{font-size:13px;font-weight:700;color:var(--navy)}
+      .prep{margin:10px 0 0;padding:0;list-style:none;display:grid;gap:7px}.prep li{font-size:13px;line-height:1.56;padding-left:15px;position:relative}.prep li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+      .todo{padding:14px;display:grid;grid-template-columns:auto 1fr;gap:12px}.box{width:18px;height:18px;border-radius:4px;border:1px solid rgba(17,25,31,.22);margin-top:1px}.owner{margin-top:6px;color:var(--wine);font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+      .footer{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:18px}.footer-note{padding:18px 20px;border-radius:var(--radius);background:rgba(17,25,31,.95);color:rgba(255,255,255,.8);box-shadow:var(--shadow);font-size:13px;line-height:1.66}.footer-note strong{color:#fff}
+      @media (max-width:1160px){.hero-grid,.metrics,.layout,.footer{grid-template-columns:1fr}}
+      @media (max-width:760px){.page{width:min(100vw - 16px,1280px)}.hero,.panel,.metric{padding:18px}.event{grid-template-columns:1fr}.brand-name{font-size:19px}.panel h2{font-size:21px}.glass-value{font-size:16px}.hero-copy{font-size:14px}.hero-meta{font-size:20px}}
     </style>
   </head>
   <body>
@@ -449,398 +90,148 @@
                 <div class="brand-name">Petrônio Souza Advogados Associados</div>
               </div>
             </div>
-            <h1>Os 5 vencidos seguem sem baixa verificada, 4 publicações novas pedem abertura em 19/05 e 0837703 entrou no fim do dia com petição de cota.</h1>
-            <p class="hero-copy"><strong>Janela auditada:</strong> 17/05/2026 às 18:13 BRT até 18/05/2026 às 18:13 BRT. A agenda confirmou <strong>7 blocos concluídos</strong> dentro desse recorte, todos consumidos por execução jurídica e triagem operacional entre 08:00 e 15:30 BRT.</p>
-            <p class="hero-copy"><strong>Leitura executiva:</strong> o Gmail consolidado trouxe o <strong>relatório PJe de 18/05</strong> repetindo o lote de 5 vencidos, <strong>1 push TRT6</strong> com documentos sigilosos em <strong>0001662-98.2017.5.06.0102</strong>, <strong>1 push TJPB</strong> e <strong>4 publicações novas</strong> para 19/05, além de alertas de <strong>Slack Pro</strong>, <strong>Supabase</strong>, falhas recorrentes de <strong>Secret Scan</strong> no GitHub e <strong>certificado digital pronto para emissão</strong>.</p>
-            <div class="hero-meta">Gerado em 18/05/2026 às 18:13 BRT | Cobertura futura auditada até 20/05/2026 às 18:13 BRT</div>
+            <h1>Os 5 vencidos continuam abertos, a manhã de 19/05 nasce comprimida e o fim do dia acrescentou 10 pushes TJPE, boleto Toyota e alerta Meta/Google.</h1>
+            <p class="hero-copy"><strong>Janela auditada:</strong> 18/05/2026 às 00:13 BRT até 19/05/2026 às 00:13 BRT. A agenda confirmou <strong>7 blocos concluídos</strong> dentro do recorte e <strong>5 compromissos</strong> já posicionados para as próximas 48 horas, todos jurídicos.</p>
+            <p class="hero-copy"><strong>Leitura executiva:</strong> a maior parte do risco jurídico já estava aberta no disparo anterior das <strong>18:13 BRT de 18/05</strong> e segue sem baixa. O que realmente entrou depois daquele envio foi o lote noturno de pushes TJPE, o <strong>boleto Toyota de R$ 2.929,95 com vencimento em 19/05</strong> e o <strong>alerta de segurança da Conta Google após acesso do app Meta</strong>.</p>
+            <div class="hero-meta">Gerado em 19/05/2026 às 00:13 BRT | Cobertura futura auditada até 21/05/2026 às 00:13 BRT</div>
           </div>
           <div class="hero-side">
             <div class="glass">
               <div class="glass-label">Ponto mais sensível</div>
-              <div class="glass-value">O lote dos 5 vencidos continuou aberto mesmo depois do bloco reservado de 11:10, e 0000982 já encosta em 20/05 com janela crítica na manhã de 19/05.</div>
-              <div class="glass-note">As fontes desta rodada provam a permanência do risco, mas ainda não provam a baixa material de nenhum dos cinco casos.</div>
+              <div class="glass-value">0000982-27.2026.8.17.8223 entra na primeira agenda do dia 19/05 sem confirmação de baixa do lote de 5 vencidos e com fatal operacional tratado como 20/05 às 23:59.</div>
+              <div class="glass-note">O risco aqui é de colisão entre passivo antigo, prazo ativo e novas publicações ainda sem abertura integral.</div>
             </div>
             <div class="glass">
-              <div class="glass-label">Intake jurídico</div>
-              <div class="glass-value">Chegaram 4 publicações novas com data de publicação em 19/05: 0066605, 0837703, 0002413 e 0000581.</div>
-              <div class="glass-note">O recorte lido pelos e-mails confirmou a existência das publicações, mas não substitui a abertura do teor integral em fonte oficial.</div>
+              <div class="glass-label">Novidade após o último envio</div>
+              <div class="glass-value">O pacote novo da noite trouxe 10 pushes TJPE, com destaque para 0042361, 0000843, 0005979, 0112247 e 0070650.</div>
+              <div class="glass-note">São casos que precisam de leitura qualificada para separar tutela, mandado, réplica útil e mera ciência.</div>
             </div>
             <div class="glass">
               <div class="glass-label">Operação</div>
-              <div class="glass-value">Slack Pro vence em 25/05, Supabase segue em risco de pausa, o Secret Scan falhou de novo nas PRs 36 a 38 e o certificado digital já pode ser emitido.</div>
-              <div class="glass-note">Nenhum desses itens trava o foro hoje, mas todos viram ruído evitável se atravessarem a semana sem decisão curta.</div>
+              <div class="glass-value">Toyota venceu o dia com cobrança concreta para 19/05 e a Conta Google recebeu alerta de acesso do app Meta às 22:32 BRT.</div>
+              <div class="glass-note">Slack, Supabase, Secret Scan e certificado digital seguem abertos como pendências de continuidade, não como fatos novos da madrugada.</div>
             </div>
           </div>
         </div>
       </section>
 
       <section class="metrics">
-        <article class="metric">
-          <div class="label">Agenda 24h</div>
-          <div class="value">7</div>
-          <div class="note">Foram 7 blocos concluídos no recorte, todos focados em revisão de prazos, publicações, pushes e passivo PJe.</div>
-        </article>
-        <article class="metric">
-          <div class="label">Próximos 48h</div>
-          <div class="value">5</div>
-          <div class="note">A agenda futura concentra 5 compromissos, todos entre 19/05 cedo e a manhã de 20/05.</div>
-        </article>
-        <article class="metric">
-          <div class="label">Publicações novas</div>
-          <div class="value">4</div>
-          <div class="note">Jusbrasil sinalizou 0066605, 0837703, 0002413 e 0000581 com publicação em 19/05.</div>
-        </article>
-        <article class="metric">
-          <div class="label">Movimentos novos</div>
-          <div class="value">2</div>
-          <div class="note">Houve push TRT6 em 0001662 com sigilosos e push TJPB em 0837703 com petição de cota.</div>
-        </article>
-        <article class="metric">
-          <div class="label">Alertas ops</div>
-          <div class="value">4</div>
-          <div class="note">Slack, Supabase, GitHub Secret Scan e emissão do certificado digital entraram no radar do dia.</div>
-        </article>
+        <article class="metric"><div class="label">Agenda 24h</div><div class="value">7</div><div class="note">Todos os 7 blocos concluídos foram consumidos por triagem jurídica, revisão de prazo, publicações e passivo PJe.</div></article>
+        <article class="metric"><div class="label">Próximos 48h</div><div class="value">5</div><div class="note">Os próximos 5 compromissos continuam concentrados na manhã de 19/05 e 20/05.</div></article>
+        <article class="metric"><div class="label">Carry-over crítico</div><div class="value">5</div><div class="note">O lote dos 5 vencidos continua sem baixa verificada e segue pressionando a agenda da manhã.</div></article>
+        <article class="metric"><div class="label">Novos pushes</div><div class="value">10</div><div class="note">Os fatos processuais realmente novos desde o último envio vieram no bloco noturno de pushes TJPE.</div></article>
+        <article class="metric"><div class="label">Alertas ops</div><div class="value">3</div><div class="note">Boleto Toyota, duplicação por Ton/Nubank e alerta Meta/Google formaram o pacote novo operacional da noite.</div></article>
       </section>
 
       <section class="layout">
         <div class="stack">
           <section class="panel">
-            <div class="panel-head">
-              <div>
-                <div class="eyebrow">Executive Summary</div>
-                <h2>Prioridades críticas</h2>
-              </div>
-              <div class="head-note">A ordem abaixo combina urgência processual, proximidade de prazo e aquilo que já impacta a agenda de 19 e 20 de maio.</div>
-            </div>
+            <div class="panel-head"><div><div class="eyebrow">Executive Summary</div><h2>Prioridades críticas</h2></div><div class="head-note">A hierarquia abaixo separa o que segue aberto desde o envio anterior e o que entrou depois dele, para evitar tratar continuidade como novidade.</div></div>
             <div class="list">
               <article class="item">
-                <h3 class="title">Fechar a classificação útil do lote de 5 vencidos segue sendo a prioridade número 1.</h3>
-                <p class="body">O relatório PJe das 07:09 BRT repetiu 0000536-68.2025.8.17.9901, 0051393-53.2025.8.17.2001, 0017706-81.2019.8.17.0001, 0000021-06.2024.8.17.2420 e 0000982-27.2026.8.17.8223. Nesta rodada, nenhuma das fontes lidas confirmou baixa material do risco.</p>
-                <div class="chips">
-                  <span class="chip critical">PJe</span>
-                  <span class="chip critical">5 vencidos</span>
-                  <span class="chip ok">19/05</span>
-                </div>
+                <h3 class="title">Fechar a classificação útil do lote de 5 vencidos continua sendo a prioridade número 1 da manhã de 19/05.</h3>
+                <p class="body">O relatório PJe das 07:09 BRT já tinha sido capturado no disparo anterior, mas nada lido depois disso provou baixa material de 0000536, 0051393, 0017706, 0000021 e 0000982. O tema volta agora como continuidade crítica.</p>
+                <div class="chips"><span class="chip critical">Carry-over</span><span class="chip critical">5 vencidos</span><span class="chip ok">19/05</span></div>
               </article>
               <article class="item">
-                <h3 class="title">As 4 publicações novas de 19/05 precisam ser abertas logo cedo para não empilharem com os prazos da agenda.</h3>
-                <p class="body">Os e-mails confirmaram publicações para 0066605-04.2025.4.05.8300, 0837703-80.2022.8.15.2001, 0002413-78.2022.8.17.2810 e 0000581-39.2026.5.06.0122. O risco aqui é de prazo oculto ou despacho relevante ainda não lido.</p>
-                <div class="chips">
-                  <span class="chip critical">Publicações</span>
-                  <span class="chip watch">19/05</span>
-                  <span class="chip ok">4 casos</span>
-                </div>
+                <h3 class="title">0000982-27.2026.8.17.8223 é o ponto de contato entre passivo e prazo ativo.</h3>
+                <p class="body">O caso já estava em aberto no envio das 18:13 BRT e entra na agenda de 19/05 às 08:00. A peça cabível precisa ser definida antes da janela útil se manter limpa o bastante para execução real.</p>
+                <div class="chips"><span class="chip critical">0000982</span><span class="chip watch">20/05</span><span class="chip ok">Bloco 08:00</span></div>
               </article>
               <article class="item">
-                <h3 class="title">0001662 entrou com dupla juntada de manifestação e documentos sigilosos e não deve virar passivo de leitura.</h3>
-                <p class="body">O push TRT6 prova o movimento em 17/05 às 13:47 e 13:50, mas o teor não veio pelo conector. O próximo passo continua sendo abrir o processo e qualificar se há prazo, ciência simples ou prova nova.</p>
-                <div class="chips">
-                  <span class="chip watch">TRT6</span>
-                  <span class="chip watch">0001662</span>
-                  <span class="chip ok">Médio</span>
-                </div>
+                <h3 class="title">O lote novo do fim do dia pede triagem qualificada imediata, com destaque para 0042361 e 0000843.</h3>
+                <p class="body">0042361 chegou distribuído, concluso para decisão e com juntada de documentos em ação cível de urgência contra Hapvida. 0000843 trouxe mandado não entregue em medida protetiva, o que eleva o risco prático.</p>
+                <div class="chips"><span class="chip critical">Novidade</span><span class="chip critical">0042361</span><span class="chip critical">0000843</span></div>
               </article>
               <article class="item">
-                <h3 class="title">0837703 já chegou em dupla via no mesmo dia: push TJPB e publicação para 19/05.</h3>
-                <p class="body">O push registrou juntada de petição de cota às 17:54, e o Jusbrasil também apontou publicação para o dia seguinte. Ainda falta leitura integral para separar mero andamento de despacho útil.</p>
-                <div class="chips">
-                  <span class="chip watch">TJPB</span>
-                  <span class="chip watch">0837703</span>
-                  <span class="chip ok">19/05</span>
-                </div>
+                <h3 class="title">O Toyota virou cobrança concreta para 19/05 e já apareceu por e-mail, Ton e Nubank na mesma noite.</h3>
+                <p class="body">O corpo mais objetivo veio pelo Ton: <strong>R$ 2.929,95</strong>, emitido por Banco Toyota do Brasil S.A., com vencimento em <strong>19/05/2026</strong>. O boleto também chegou anexo no Gmail.</p>
+                <div class="chips"><span class="chip watch">Financeiro</span><span class="chip watch">Toyota</span><span class="chip ok">19/05</span></div>
               </article>
               <article class="item">
-                <h3 class="title">Slack, Supabase, Secret Scan e certificado digital pedem decisão curta, mas não podem desorganizar a segunda-feira jurídica.</h3>
-                <p class="body">O padrão aqui é simples: registrar, decidir e encerrar. O erro seria deixar quatro alertas pequenos virarem ruído estrutural na semana.</p>
-                <div class="chips">
-                  <span class="chip watch">Slack</span>
-                  <span class="chip watch">Supabase</span>
-                  <span class="chip watch">GitHub</span>
-                </div>
+                <h3 class="title">A Conta Google pede checagem curta de segurança após acesso do app Meta às 22:32 BRT.</h3>
+                <p class="body">Os dois alertas do Google não provam incidente, mas exigem validação rápida para confirmar se o acesso foi autorizado e se a conexão deve permanecer ativa.</p>
+                <div class="chips"><span class="chip watch">Google</span><span class="chip watch">Meta</span><span class="chip ok">Segurança</span></div>
               </article>
             </div>
           </section>
 
           <section class="panel">
-            <div class="panel-head">
-              <div>
-                <div class="eyebrow">Últimas 24 horas</div>
-                <h2>Desenvolvimentos materialmente relevantes</h2>
-              </div>
-              <div class="head-note">Entram aqui apenas fatos verificados entre 17/05/2026 às 18:13 BRT e 18/05/2026 às 18:13 BRT.</div>
-            </div>
+            <div class="panel-head"><div><div class="eyebrow">Últimas 24 horas</div><h2>Desenvolvimentos materialmente relevantes</h2></div><div class="head-note">Os itens abaixo distinguem continuidade do bloco já enviado às 18:13 BRT e fatos novos que entraram depois daquele corte.</div></div>
             <div class="list">
-              <article class="mail">
-                <div class="mail-meta">07:09 BRT • Relatório central do dia</div>
-                <h3 class="title">O relatório PJe de 18/05 voltou a empurrar o mesmo lote de 5 vencidos para o topo da operação.</h3>
-                <p class="body">O e-mail reforçou 0000536, 0051393, 0017706, 0000021 e 0000982 como foco imediato, com orientação de verificar justa causa, nova via processual, conteúdo de mandados e documentos ou simples classificação de passivo.</p>
-              </article>
-              <article class="mail">
-                <div class="mail-meta">00:09 BRT • TRT6</div>
-                <h3 class="title">0001662 recebeu duas juntadas de manifestação e dois documentos sigilosos na tarde de 17/05.</h3>
-                <p class="body">O push TRT6 indicou eventos às 13:47 e 13:50 de 17/05/2026 no processo 0001662-98.2017.5.06.0102. O teor não ficou acessível nesta execução.</p>
-              </article>
-              <article class="mail">
-                <div class="mail-meta">12:22 e 15:21 BRT • Jusbrasil</div>
-                <h3 class="title">Chegaram 4 publicações novas com data de publicação em 19/05.</h3>
-                <p class="body">Os e-mails apontaram publicações para 0066605, 0837703, 0002413 e 0000581. A evidência disponível confirma a existência das publicações, mas ainda não substitui a abertura do teor integral em fonte oficial.</p>
-              </article>
-              <article class="mail">
-                <div class="mail-meta">18:02 BRT • TJPB</div>
-                <h3 class="title">0837703 entrou no radar do fim do dia com juntada de petição de cota.</h3>
-                <p class="body">O push TJPB marcou a movimentação às 17:54 no processo 0837703-80.2022.8.15.2001, somando-se à publicação já apontada para 19/05.</p>
-              </article>
-              <article class="mail">
-                <div class="mail-meta">08:00-15:30 BRT • Agenda viva</div>
-                <h3 class="title">Toda a jornada útil do dia foi absorvida por triagem, revisão de prazo, pushes e passivo PJe.</h3>
-                <p class="body">A agenda confirmou 7 blocos concluídos: revisão semanal, 0000338, publicações TRT6/Jusbrasil, triagem de pushes, revisão dos 5 vencidos, 0001662 e análise reservada para a frente Cícero/0003440.</p>
-              </article>
-              <article class="mail">
-                <div class="mail-meta">04:34-17:39 BRT • Operação</div>
-                <h3 class="title">Slack, Supabase, GitHub e certificado digital concentraram os alertas administrativos do dia.</h3>
-                <p class="body">O Slack volta ao plano gratuito em 26/05 sem upgrade, o Supabase segue em risco de pausa, o Secret Scan falhou de novo nas PRs 36, 37 e 38 e a Syngular confirmou certificado pronto para emissão às 17:39.</p>
-              </article>
+              <article class="mail"><div class="mail-meta">Carry-over • já reportado às 18:13 BRT</div><h3 class="title">O risco central segue sendo o mesmo: 5 vencidos sem baixa, 0001662 sem leitura do sigiloso, 0837703 sem abertura final e 0003440 sensível com reflexo em autos.</h3><p class="body">Nada lido entre 18:13 e 00:13 desfez esse pacote; ele apenas atravessou o dia e entrou intacto na madrugada.</p></article>
+              <article class="mail"><div class="mail-meta">19:38-20:03 BRT • novidade jurídica</div><h3 class="title">Entrou um lote de 10 pushes TJPE depois do último envio, com 5 casos de maior sinal para triagem logo cedo.</h3><p class="body">Foram registrados novos movimentos em 0005979, 0042361, 0112247, 0000843 e 0070650, além de movimentos secundários em 0013984, 0000867, 0002307, 0012026 e 0026091.</p></article>
+              <article class="mail"><div class="mail-meta">20:20-21:55 BRT • novidade financeira</div><h3 class="title">O Banco Toyota escalou de aviso genérico para cobrança executável com valor, vencimento e PDF em anexo.</h3><p class="body">Ton e Nubank confirmaram o mesmo boleto de <strong>R$ 2.929,95</strong> com vencimento em <strong>19/05/2026</strong>, e o Gmail recebeu o arquivo PDF da cobrança.</p></article>
+              <article class="mail"><div class="mail-meta">22:32 BRT • novidade de segurança</div><h3 class="title">O Google disparou alerta de que o app Meta recebeu acesso a dados da Conta Google.</h3><p class="body">A mensagem orienta checagem imediata da atividade da conta e revisão das conexões autorizadas.</p></article>
+              <article class="mail"><div class="mail-meta">Agenda viva • 08:00-15:30 BRT</div><h3 class="title">Toda a jornada útil confirmada pela agenda foi absorvida por revisão semanal, publicações, pushes, 5 vencidos, 0001662 e frente Cícero/0003440.</h3><p class="body">Isso explica por que o pacote da noite entrou sem baixa equivalente nos principais pontos de risco do dia.</p></article>
             </div>
           </section>
 
           <section class="panel">
-            <div class="panel-head">
-              <div>
-                <div class="eyebrow">Agenda</div>
-                <h2>Compromissos e preparo dos próximos 2 dias</h2>
-              </div>
-              <div class="head-note">A agenda futura ficou inteiramente concentrada em prazos e triagens. O ganho real virá de entrar nesses blocos com o teor já aberto.</div>
-            </div>
+            <div class="panel-head"><div><div class="eyebrow">Agenda</div><h2>Compromissos e preparo dos próximos 2 dias</h2></div><div class="head-note">A agenda futura segue quase toda pré-preenchida por prazos. O ganho real depende de abrir o teor antes de cada bloco, não durante.</div></div>
             <div class="timeline">
-              <article class="event">
-                <div class="when">19/05 08:00</div>
-                <div>
-                  <h3 class="title">Prazo processual - 0000982-27.2026.8.17.8223</h3>
-                  <p class="body">A descrição operacional trata o caso como manifestação em 15 dias, com fatal considerado em 20/05/2026 às 23:59.</p>
-                  <ul class="prep">
-                    <li>Abrir a intimação antes do bloco para usar a janela como execução, não descoberta.</li>
-                    <li>Validar se o caso ainda pertence ao lote de vencidos ou se já migrou para prazo ativo controlado.</li>
-                  </ul>
-                </div>
-              </article>
-              <article class="event">
-                <div class="when">19/05 08:25</div>
-                <div>
-                  <h3 class="title">Triagem qualificada - pushes TRT6/PJe de 17/05</h3>
-                  <p class="body">Janela dedicada a 0001434, 0000483 e 0000786, já posicionada logo após 0000982.</p>
-                  <ul class="prep">
-                    <li>Chegar com decisão simples para cada processo: resposta, ciência ou monitoramento.</li>
-                  </ul>
-                </div>
-              </article>
-              <article class="event">
-                <div class="when">20/05 07:00</div>
-                <div>
-                  <h3 class="title">Prazo processual - 0000396-46.2023.5.06.0141</h3>
-                  <p class="body">A agenda trata o caso como prazo com fatal em 21/05 e necessidade de abrir o teor antes da execução.</p>
-                  <ul class="prep">
-                    <li>Se possível, antecipar a leitura na segunda-feira para evitar manhã de quarta em modo de triagem.</li>
-                  </ul>
-                </div>
-              </article>
-              <article class="event">
-                <div class="when">20/05 07:30</div>
-                <div>
-                  <h3 class="title">Prazo processual - 0000252-11.2022.5.06.0011</h3>
-                  <p class="body">Mais um prazo com fatal em 21/05 dependente de leitura do ato correspondente.</p>
-                  <ul class="prep">
-                    <li>Evitar entrar no bloco sem saber se a providência é manifestação, ciência ou ajuste de controle.</li>
-                  </ul>
-                </div>
-              </article>
-              <article class="event">
-                <div class="when">20/05 08:00</div>
-                <div>
-                  <h3 class="title">Prazo processual - 0008658-70.2024.8.17.3090</h3>
-                  <p class="body">A agenda já posiciona manifestação em 15 dias e fatal em 21/05/2026 às 23:59.</p>
-                  <ul class="prep">
-                    <li>Abrir o teor da intimação antes do dia 20 para que o bloco seja puramente operacional.</li>
-                  </ul>
-                </div>
-              </article>
+              <article class="event"><div class="when">19/05 08:00</div><div><h3 class="title">Prazo processual - 0000982-27.2026.8.17.8223</h3><p class="body">Continua sendo a primeira execução crítica da manhã, com fatal tratado como 20/05/2026 às 23:59.</p><ul class="prep"><li>Abrir a intimação antes do bloco e sair da dúvida sobre a peça cabível.</li><li>Encerrar no mesmo movimento a distinção entre vencido histórico e prazo ativo controlado.</li></ul></div></article>
+              <article class="event"><div class="when">19/05 08:25</div><div><h3 class="title">Triagem qualificada - pushes TRT6/PJe de 17/05</h3><p class="body">Janela já reservada para 0001434, 0000483 e 0000786, mas agora a madrugada também deixou um passivo TJPE do fim do dia.</p><ul class="prep"><li>Se possível, encaixar leitura rápida de 0042361 e 0000843 antes da segunda metade da manhã.</li></ul></div></article>
+              <article class="event"><div class="when">20/05 07:00</div><div><h3 class="title">Prazo processual - 0000396-46.2023.5.06.0141</h3><p class="body">A agenda trata o caso como prazo com fatal em 21/05.</p><ul class="prep"><li>Antecipar a leitura do ato ainda em 19/05, se a manhã abrir espaço.</li></ul></div></article>
+              <article class="event"><div class="when">20/05 07:30</div><div><h3 class="title">Prazo processual - 0000252-11.2022.5.06.0011</h3><p class="body">Mais um prazo com fatal em 21/05 dependente de leitura fina do ato originário.</p><ul class="prep"><li>Entrar no bloco já sabendo se a providência é manifestação, ciência ou ajuste de controle.</li></ul></div></article>
+              <article class="event"><div class="when">20/05 08:00</div><div><h3 class="title">Prazo processual - 0008658-70.2024.8.17.3090</h3><p class="body">A agenda mantém esse caso como manifestação em 15 dias, com fatal em 21/05/2026 às 23:59.</p><ul class="prep"><li>Abrir o teor antes do dia 20 para preservar a manhã como execução, não descoberta.</li></ul></div></article>
             </div>
           </section>
         </div>
 
         <div class="stack">
           <section class="panel">
-            <div class="panel-head">
-              <div>
-                <div class="eyebrow">Jurídico</div>
-                <h2>Extração estruturada</h2>
-              </div>
-            </div>
+            <div class="panel-head"><div><div class="eyebrow">Jurídico</div><h2>Extração estruturada</h2></div></div>
             <div class="list">
-              <article class="risk">
-                <h3 class="title">0000536-68.2025.8.17.9901</h3>
-                <p class="body"><strong>Partes:</strong> Petrônio Leonardo Ramos de Souza e outros x Juízo da 4ª Vara do Tribunal do Júri Capital. <strong>Advogado:</strong> não identificado na fonte lida. <strong>Evento:</strong> permanece no lote dos 5 vencidos como HC criminal com prazo decorrido. <strong>Follow-up:</strong> definir se ainda cabe medida útil ou baixa para passivo histórico. <strong>Risco:</strong> alto.</p>
-              </article>
-              <article class="risk">
-                <h3 class="title">0051393-53.2025.8.17.2001</h3>
-                <p class="body"><strong>Partes:</strong> Paula Mayne de Almeida Sial Ferraz e outros x Angela Maria Torreão Sial e outros. <strong>Advogado:</strong> não identificado na fonte lida. <strong>Evento:</strong> segue entre os vencidos com referência a publicação em DJe. <strong>Follow-up:</strong> verificar imediatamente se ainda há reação útil ou se o item já virou passivo. <strong>Risco:</strong> alto.</p>
-              </article>
-              <article class="risk">
-                <h3 class="title">0017706-81.2019.8.17.0001</h3>
-                <p class="body"><strong>Partes:</strong> Ministério Público do Estado de Pernambuco e outros x Matheus Silva Alves Pereira. <strong>Advogado:</strong> não identificado na fonte lida. <strong>Evento:</strong> reapareceu como prazo do MP decorrido. <strong>Follow-up:</strong> validar se há reflexo defensivo concreto ou se o caso fica apenas em monitoramento. <strong>Risco:</strong> médio.</p>
-              </article>
-              <article class="risk">
-                <h3 class="title">0000021-06.2024.8.17.2420</h3>
-                <p class="body"><strong>Partes:</strong> 37ª Delegacia de Polícia de Camaragibe/PE e outros x Rodrigo Vaz Borba e outros. <strong>Advogado:</strong> não identificado na fonte lida. <strong>Evento:</strong> continuou no lote de 5 vencidos com menção a mandado, publicação e certidão. <strong>Follow-up:</strong> abrir os documentos e separar nulidade potencial, providência útil ou simples consolidação de risco. <strong>Risco:</strong> alto.</p>
-              </article>
-              <article class="risk">
-                <h3 class="title">0000982-27.2026.8.17.8223</h3>
-                <p class="body"><strong>Partes:</strong> Ricardo da Silva de Barros e outros x Concept Motors Ltda. <strong>Advogado:</strong> não identificado na fonte lida. <strong>Evento:</strong> segue entre os 5 vencidos e já tem bloco em 19/05, com fatal tratado como 20/05 às 23:59. <strong>Follow-up:</strong> abrir o teor da intimação e definir a manifestação antes do bloco da manhã. <strong>Risco:</strong> alto.</p>
-              </article>
-              <article class="risk">
-                <h3 class="title">0001662-98.2017.5.06.0102</h3>
-                <p class="body"><strong>Partes:</strong> Genilson Ribeiro da Silva x Comercial L M de Alimentação Ltda e outros. <strong>Advogado:</strong> não identificado no push TRT6. <strong>Evento:</strong> duas juntadas de manifestação e dois documentos sigilosos em 17/05/2026 às 13:47 e 13:50. <strong>Follow-up:</strong> abrir o teor no TRT6 e qualificar se há prazo, ciência ou prova nova. <strong>Risco:</strong> médio.</p>
-              </article>
-              <article class="risk">
-                <h3 class="title">0837703-80.2022.8.15.2001</h3>
-                <p class="body"><strong>Partes:</strong> Marcel Luciano da Silva x CEBRASPE e outros. <strong>Advogado:</strong> Petrônio Leonardo Ramos de Souza aparece no recorte do Jusbrasil. <strong>Evento:</strong> push TJPB com juntada de petição de cota às 17:54 de 18/05 e publicação apontada para 19/05. <strong>Follow-up:</strong> abrir a petição de cota e a publicação para separar despacho útil, prazo ou mera ciência. <strong>Risco:</strong> médio.</p>
-              </article>
-              <article class="risk">
-                <h3 class="title">0066605-04.2025.4.05.8300</h3>
-                <p class="body"><strong>Partes:</strong> Deise de Lima Gouveia x INSS. <strong>Advogado:</strong> Petrônio Leonardo Ramos de Souza aparece no recorte do Jusbrasil. <strong>Evento:</strong> publicação na 1ª Vara Federal/PE com referência a ato ordinatório e publicação em 19/05. <strong>Follow-up:</strong> abrir o teor da publicação e confirmar se nasce prazo da parte. <strong>Risco:</strong> médio.</p>
-              </article>
-              <article class="risk">
-                <h3 class="title">0002413-78.2022.8.17.2810</h3>
-                <p class="body"><strong>Partes:</strong> Rayssa Porto de Araujo Lima e outros x Uelinton Cesar de Araujo Lima. <strong>Advogado:</strong> Petrônio Leonardo Ramos de Souza aparece na base do escritório. <strong>Evento:</strong> nova publicação identificada para 19/05/2026. <strong>Follow-up:</strong> abrir o inteiro teor para confirmar se o movimento continua apenas em conclusos/despacho ou se há impacto novo. <strong>Risco:</strong> médio.</p>
-              </article>
-              <article class="risk">
-                <h3 class="title">0000581-39.2026.5.06.0122</h3>
-                <p class="body"><strong>Partes:</strong> C J Antonio Dias Peças e Serviços para Autos Ltda x Flavio Regis da Costa Gadelha. <strong>Advogado:</strong> Petrônio Leonardo Ramos de Souza. <strong>Evento:</strong> nova publicação TRT6 com data de publicação em 19/05/2026. <strong>Follow-up:</strong> abrir o teor integral para saber se há prazo útil ou mera ciência. <strong>Risco:</strong> médio.</p>
-              </article>
+              <article class="risk"><h3 class="title">0000982-27.2026.8.17.8223</h3><p class="body"><strong>Partes:</strong> Ricardo da Silva de Barros e outros x Concept Motors Ltda. <strong>Advogado:</strong> não identificado nas fontes desta rodada. <strong>Evento:</strong> segue no lote dos 5 vencidos e já ocupa bloco às 08:00 de 19/05, com fatal operacional tratado como 20/05/2026 às 23:59. <strong>Follow-up:</strong> abrir o teor da intimação e definir a manifestação antes do bloco. <strong>Risco:</strong> alto, porque une carry-over crítico com prazo ativo iminente.</p></article>
+              <article class="risk"><h3 class="title">0001662-98.2017.5.06.0102</h3><p class="body"><strong>Partes:</strong> Genilson Ribeiro da Silva x Comercial L M de Alimentação Ltda e outros. <strong>Advogado:</strong> não identificado no push TRT6. <strong>Evento:</strong> duas juntadas de manifestação e dois documentos sigilosos em 17/05/2026 às 13:47 e 13:50. <strong>Follow-up:</strong> abrir o teor no TRT6 e qualificar se houve prazo, ciência simples ou prova nova. <strong>Risco:</strong> médio, com alto potencial de surpresa por falta de teor.</p></article>
+              <article class="risk"><h3 class="title">0837703-80.2022.8.15.2001</h3><p class="body"><strong>Partes:</strong> Marcel Luciano da Silva x CEBRASPE e outros. <strong>Advogado:</strong> Petrônio Leonardo Ramos de Souza aparece no histórico do escritório. <strong>Evento:</strong> push TJPB com juntada de petição de cota às 17:54 de 18/05 e publicação apontada para 19/05. <strong>Follow-up:</strong> abrir petição e publicação em conjunto. <strong>Risco:</strong> médio.</p></article>
+              <article class="risk"><h3 class="title">0042361-87.2026.8.17.2001</h3><p class="body"><strong>Partes:</strong> Ana Paula Sales x Hapvida Assistência Médica Ltda. <strong>Advogado:</strong> não identificado no push. <strong>Evento:</strong> distribuído por sorteio, conclusos para decisão e juntada de outros documentos em 18/05/2026. <strong>Follow-up:</strong> abrir inicial e documentos para verificar tutela de urgência e providência imediata. <strong>Risco:</strong> alto, por ser caso novo de urgência já concluso.</p></article>
+              <article class="risk"><h3 class="title">0000843-61.2025.8.17.2710</h3><p class="body"><strong>Partes:</strong> Marinalva Maria da Silva x Jose Carlos Arruda de Oliveira. <strong>Advogado:</strong> não identificado no push. <strong>Evento:</strong> juntada de diligência e mandado devolvido não entregue em 18/05/2026 às 17:26. <strong>Follow-up:</strong> verificar necessidade de renovação de diligência, novo endereço ou providência protetiva adicional. <strong>Risco:</strong> alto, pelo contexto de violência doméstica e falha de cumprimento.</p></article>
+              <article class="risk"><h3 class="title">0005979-29.2026.8.17.3090</h3><p class="body"><strong>Partes:</strong> Renata Patricia Paes de Andrade Melo e outros x polo passivo não indicado no push. <strong>Advogado:</strong> não identificado na fonte lida. <strong>Evento:</strong> processo autuado e concluso para decisão em 18/05/2026 às 18:33. <strong>Follow-up:</strong> abrir os autos para confirmar pedido, despacho inicial e urgência prática. <strong>Risco:</strong> médio.</p></article>
+              <article class="risk"><h3 class="title">0112247-13.2025.8.17.2001</h3><p class="body"><strong>Partes:</strong> Mayne Maria de Almeida x Banco Bradesco S.A. e outros. <strong>Advogado:</strong> não identificado no push. <strong>Evento:</strong> juntada de petição de manifestação (outras) às 18/05/2026 08:50. <strong>Follow-up:</strong> abrir a petição para definir se há réplica, resposta ou simples monitoramento. <strong>Risco:</strong> médio.</p></article>
+              <article class="risk"><h3 class="title">0070650-06.2021.8.17.2001</h3><p class="body"><strong>Partes:</strong> Fabiana Oliveira da Silva x Carlos Leandro Lima de Oliveira. <strong>Advogado:</strong> não identificado no push. <strong>Evento:</strong> juntada de diligência e mandado devolvido entregue ao destinatário às 17:20 de 18/05/2026. <strong>Follow-up:</strong> abrir o mandado para verificar qual ato foi comunicado e se nasce prazo útil. <strong>Risco:</strong> médio.</p></article>
             </div>
           </section>
 
           <section class="panel">
-            <div class="panel-head">
-              <div>
-                <div class="eyebrow">Operação</div>
-                <h2>Riscos, bloqueios e follow-ups</h2>
-              </div>
-            </div>
+            <div class="panel-head"><div><div class="eyebrow">Operação</div><h2>Riscos, bloqueios e follow-ups</h2></div></div>
             <div class="list">
-              <article class="risk">
-                <h3 class="title">Alto: o lote dos 5 vencidos continua atravessando a agenda sem baixa verificada.</h3>
-                <p class="body">O risco não é só processual; ele também toma a capacidade de absorver 0000982 e as publicações de 19/05.</p>
-              </article>
-              <article class="risk">
-                <h3 class="title">Alto: 4 publicações novas chegaram já no dia anterior à leitura operacional delas.</h3>
-                <p class="body">O cenário mais perigoso aqui é prazo escondido em ato ainda não aberto, principalmente porque a agenda da manhã seguinte já nasce comprimida.</p>
-              </article>
-              <article class="risk">
-                <h3 class="title">Médio: 0001662 tem movimento sensível, mas a rodada ainda não abriu o teor dos sigilosos.</h3>
-                <p class="body">Sem essa leitura, ainda não dá para dizer se existe prazo fatal ou só ciência técnica.</p>
-              </article>
-              <article class="risk">
-                <h3 class="title">Médio: 0837703 entrou em dupla via no mesmo dia e pode esconder providência útil de curto prazo.</h3>
-                <p class="body">Push de petição de cota e publicação para 19/05 pedem leitura conjunta, não isolada.</p>
-              </article>
-              <article class="risk">
-                <h3 class="title">Médio: o Secret Scan falhou outra vez em 3 PRs diferentes do Projeto Escudo da Justiça.</h3>
-                <p class="body">Dependency Audit e Production Build passaram, então o ruído continua concentrado no mesmo ponto recorrente do pipeline.</p>
-              </article>
-              <article class="risk">
-                <h3 class="title">Médio: Slack, Supabase e certificado digital pedem decisão simples ainda nesta semana.</h3>
-                <p class="body">São itens menores que foro, mas custam mais caro quando ficam pendurados sem dono nem data.</p>
-              </article>
-              <article class="risk">
-                <h3 class="title">Cobertura parcial: o teor integral das publicações e os documentos sigilosos TRT6 não ficaram acessíveis pelo conector nesta execução.</h3>
-                <p class="body">Os fatos acima são verificados, mas parte da qualificação final ainda depende da abertura direta nas fontes oficiais.</p>
-              </article>
+              <article class="risk"><h3 class="title">Alto: o lote dos 5 vencidos segue consumindo capacidade e impede que a manhã de 19/05 nasça limpa.</h3><p class="body">O dano aqui é duplo: risco processual remanescente e roubo de foco em cima de 0000982 e das novas leituras do dia.</p></article>
+              <article class="risk"><h3 class="title">Alto: 0042361 e 0000843 são os dois pushes noturnos com maior potencial de providência imediata.</h3><p class="body">Um é urgência cível já conclusa; o outro é medida protetiva com mandado não cumprido.</p></article>
+              <article class="risk"><h3 class="title">Médio: o boleto Toyota virou obrigação concreta de caixa em 19/05.</h3><p class="body">O risco aqui é simples e objetivo: vencimento no dia seguinte com valor confirmado em múltiplas notificações.</p></article>
+              <article class="risk"><h3 class="title">Médio: a Conta Google requer confirmação de segurança após acesso do app Meta.</h3><p class="body">Se o acesso foi legítimo, basta validar e manter. Se não foi, a revogação precisa acontecer no mesmo dia.</p></article>
+              <article class="risk"><h3 class="title">Médio: Slack, Supabase, Secret Scan e certificado digital seguem pendências de continuidade.</h3><p class="body">Não são fatos novos da madrugada, mas continuam sem fechamento e merecem dono e data curta dentro da semana.</p></article>
+              <article class="risk"><h3 class="title">Cobertura parcial: sem chat corporativo e sem teor integral das publicações ou dos documentos sigilosos TRT6.</h3><p class="body">As movimentações estão verificadas, mas parte da qualificação final ainda depende de abertura direta nas fontes oficiais.</p></article>
             </div>
           </section>
 
           <section class="panel">
-            <div class="panel-head">
-              <div>
-                <div class="eyebrow">Next Actions</div>
-                <h2>Ações recomendadas</h2>
-              </div>
-            </div>
+            <div class="panel-head"><div><div class="eyebrow">Next Actions</div><h2>Ações recomendadas</h2></div></div>
             <div class="list">
-              <article class="todo">
-                <div class="box"></div>
-                <div>
-                  <h3 class="title">Fechar em 19/05 a classificação dos 5 vencidos entre medida útil, passivo histórico e monitoramento.</h3>
-                  <p class="body">Objetivo: impedir que o passivo antigo continue tomando as manhãs críticas da semana.</p>
-                  <div class="owner">Owner: Petrônio</div>
-                </div>
-              </article>
-              <article class="todo">
-                <div class="box"></div>
-                <div>
-                  <h3 class="title">Abrir logo cedo as 4 publicações novas: 0066605, 0837703, 0002413 e 0000581.</h3>
-                  <p class="body">Objetivo: separar prazo útil, despacho relevante e mera ciência antes da segunda metade da manhã.</p>
-                  <div class="owner">Owner: Petrônio</div>
-                </div>
-              </article>
-              <article class="todo">
-                <div class="box"></div>
-                <div>
-                  <h3 class="title">Usar a primeira janela possível para abrir 0001662 e registrar o efeito processual dos sigilosos.</h3>
-                  <p class="body">Objetivo: evitar que o caso atravesse o dia seguinte como push não qualificado.</p>
-                  <div class="owner">Owner: Petrônio</div>
-                </div>
-              </article>
-              <article class="todo">
-                <div class="box"></div>
-                <div>
-                  <h3 class="title">Decidir o pacote operacional curto: Slack, Supabase e emissão do certificado digital.</h3>
-                  <p class="body">Objetivo: encerrar ruído administrativo sem deslocar foco jurídico.</p>
-                  <div class="owner">Owner: Petrônio</div>
-                </div>
-              </article>
-              <article class="todo">
-                <div class="box"></div>
-                <div>
-                  <h3 class="title">Revisar o histórico recente do Secret Scan no Projeto Escudo da Justiça antes de aceitar mais PRs com o mesmo padrão.</h3>
-                  <p class="body">Objetivo: impedir que falha recorrente de pipeline continue sendo reaberta em série.</p>
-                  <div class="owner">Owner: Petrônio</div>
-                </div>
-              </article>
+              <article class="todo"><div class="box"></div><div><h3 class="title">Usar a primeira hora útil de 19/05 para fechar 0000982 e reclassificar o lote dos 5 vencidos.</h3><p class="body">Objetivo: parar de levar o passivo antigo para dentro das manhãs críticas da semana.</p><div class="owner">Owner: Petrônio</div></div></article>
+              <article class="todo"><div class="box"></div><div><h3 class="title">Abrir em sequência 0042361, 0000843, 0005979, 0112247 e 0070650.</h3><p class="body">Objetivo: separar tutela, mandado, réplica útil e mera ciência do pacote novo da noite.</p><div class="owner">Owner: Petrônio</div></div></article>
+              <article class="todo"><div class="box"></div><div><h3 class="title">Validar e pagar ou agendar o boleto Toyota de R$ 2.929,95 com vencimento em 19/05.</h3><p class="body">Objetivo: evitar ruído financeiro de curto prazo num dia já sobrecarregado por foro.</p><div class="owner">Owner: Petrônio</div></div></article>
+              <article class="todo"><div class="box"></div><div><h3 class="title">Revisar a atividade da Conta Google e a conexão do app Meta ainda em 19/05.</h3><p class="body">Objetivo: confirmar que o acesso foi autorizado e revogar a conexão se houver divergência.</p><div class="owner">Owner: Petrônio</div></div></article>
+              <article class="todo"><div class="box"></div><div><h3 class="title">Fechar o bloco de continuidade operacional da semana: Slack, Supabase, Secret Scan e certificado digital.</h3><p class="body">Objetivo: tirar pequenos riscos administrativos da frente sem sacrificar a cadência jurídica.</p><div class="owner">Owner: Petrônio</div></div></article>
             </div>
           </section>
 
           <section class="panel">
-            <div class="panel-head">
-              <div>
-                <div class="eyebrow">Cobertura</div>
-                <h2>Fontes e lacunas verificadas</h2>
-              </div>
-            </div>
+            <div class="panel-head"><div><div class="eyebrow">Cobertura</div><h2>Fontes e lacunas verificadas</h2></div></div>
             <div class="list">
-              <article class="coverage">
-                <h3 class="title">Gmail consolidado</h3>
-                <p class="body">Foram lidos diretamente o relatório PJe de 18/05, o push TRT6 de 0001662, o push TJPB de 0837703, os 2 e-mails Jusbrasil com 4 publicações novas, o alerta do Slack Pro, o aviso do Supabase, os e-mails de falha do GitHub e a confirmação de certificado pronto para emissão.</p>
-              </article>
-              <article class="coverage">
-                <h3 class="title">Google Calendar</h3>
-                <p class="body">A consulta entre 17/05/2026 18:13 BRT e 20/05/2026 18:13 BRT confirmou 7 compromissos já consumidos dentro da janela auditada e 5 compromissos futuros relevantes.</p>
-              </article>
-              <article class="coverage">
-                <h3 class="title">Notion</h3>
-                <p class="body">A base foi atualizada sem duplicidade por comentários de continuidade nos casos e tarefas já existentes, além da criação do novo caso 0837703 e das tarefas novas para esse caso e para a emissão do certificado digital.</p>
-              </article>
-              <article class="coverage">
-                <h3 class="title">Lacunas</h3>
-                <p class="body">Não há conector de chat corporativo nesta execução. O teor integral das 4 publicações e os documentos sigilosos de 0001662 ainda dependem de abertura direta nas fontes oficiais.</p>
-              </article>
+              <article class="coverage"><h3 class="title">Gmail consolidado</h3><p class="body">Foram lidos os e-mails jurídicos de continuidade já disparados às 18:13 BRT, o lote novo de 10 pushes TJPE do fim do dia, as 3 notificações do boleto Toyota e os 2 alertas do Google sobre acesso do app Meta.</p></article>
+              <article class="coverage"><h3 class="title">Google Calendar</h3><p class="body">A agenda foi auditada da meia-noite de 18/05 até a meia-noite de 19/05, mais a janela futura até 21/05/2026 00:13 BRT, confirmando 7 compromissos concluídos e 5 futuros.</p></article>
+              <article class="coverage"><h3 class="title">Notion</h3><p class="body">Foram criados registros novos para 0005979, 0042361, 0112247, 0000843, 0070650 e para o boleto Toyota, além de comentários de continuidade nos itens já existentes sem duplicidade.</p></article>
+              <article class="coverage"><h3 class="title">Lacunas</h3><p class="body">Sem conector de chat corporativo nesta execução. O teor integral das publicações de 19/05 e dos documentos sigilosos de 0001662 continua dependente de abertura direta nas fontes oficiais.</p></article>
             </div>
           </section>
         </div>
       </section>
 
       <section class="footer">
-        <div class="footer-note"><strong>Leitura principal:</strong> esta rodada pede mais disciplina de corte do que abertura de frente nova. O que mais pesa não é a quantidade de itens, e sim o fato de que 5 vencidos, 4 publicações e 1 push sigiloso ainda estão vivos ao mesmo tempo.</div>
-        <div class="footer-note"><strong>Resumo de risco:</strong> o maior risco jurídico segue no lote dos 5 vencidos, o maior risco de intake está nas publicações de 19/05 ainda não abertas, e o maior risco operacional está na soma de Secret Scan recorrente com pequenas decisões administrativas ainda sem fechamento.</div>
+        <div class="footer-note"><strong>Leitura principal:</strong> esta rodada não mudou o centro do risco, mas apertou o tabuleiro. O passivo antigo permaneceu vivo e a noite ainda acrescentou um pacote TJPE que agora compete pela mesma manhã.</div>
+        <div class="footer-note"><strong>Resumo de risco:</strong> o maior risco jurídico segue em 0000982 dentro do lote dos 5 vencidos; o maior risco novo está em 0042361 e 0000843; e o maior risco operacional imediato é a soma de Toyota com a checagem de segurança Google/Meta.</div>
       </section>
     </main>
   </body>
