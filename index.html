@@ -3,13 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Briefing Executivo | 20 de maio de 2026</title>
+    <title>Briefing Executivo | 21 de maio de 2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <style>
       :root {
         --bg: #dae1e8;
@@ -26,7 +23,6 @@
       }
 
       * { box-sizing: border-box; }
-
       body {
         margin: 0;
         min-height: 100vh;
@@ -39,7 +35,6 @@
       }
 
       .page { width: min(1280px, calc(100vw - 28px)); margin: 0 auto; padding: 18px 0 34px; }
-
       .hero {
         position: relative;
         overflow: hidden;
@@ -50,7 +45,6 @@
         box-shadow: var(--shadow);
         padding: 26px;
       }
-
       .hero::before,
       .hero::after {
         content: "";
@@ -58,18 +52,16 @@
         border-radius: 999px;
         border: 1px solid rgba(187, 157, 109, 0.3);
       }
-
       .hero::before { width: 360px; height: 360px; right: -100px; top: -120px; }
       .hero::after { width: 220px; height: 220px; right: 120px; bottom: -110px; }
-
       .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.45fr 0.95fr; gap: 18px; align-items: stretch; }
       .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
       .brand-mark { width: 58px; height: 58px; border-radius: 50%; border: 1px solid rgba(187, 157, 109, 0.72); display: grid; place-items: center; color: var(--gold); font-weight: 700; position: relative; }
       .brand-mark::after { content: ""; position: absolute; width: 78px; height: 78px; border-radius: 50%; border: 1px solid rgba(200, 182, 172, 0.22); }
       .brand-label { color: rgba(255, 255, 255, 0.72); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
       .brand-name { color: #fff; font-size: 23px; line-height: 1.08; font-weight: 600; max-width: 18ch; }
-      .hero h1 { margin: 0 0 14px; color: #fff; font-size: clamp(31px, 4.3vw, 58px); line-height: 0.98; max-width: 12ch; }
-      .hero-copy { color: rgba(255, 255, 255, 0.82); font-size: 15px; line-height: 1.72; max-width: 80ch; margin: 0; }
+      .hero h1 { margin: 0 0 14px; color: #fff; font-size: clamp(31px, 4.3vw, 58px); line-height: 0.98; max-width: 11ch; }
+      .hero-copy { color: rgba(255, 255, 255, 0.82); font-size: 15px; line-height: 1.72; max-width: 78ch; margin: 0; }
       .hero-copy + .hero-copy { margin-top: 10px; }
       .hero-meta { margin-top: 14px; color: #fff; font-size: clamp(18px, 2.5vw, 28px); line-height: 1.2; font-weight: 700; }
       .hero-side { display: grid; gap: 14px; }
@@ -78,14 +70,12 @@
       .glass-label { color: rgba(255, 255, 255, 0.64); margin-bottom: 10px; }
       .glass-value { color: #fff; font-size: 17px; font-weight: 700; line-height: 1.45; }
       .glass-note { color: rgba(255, 255, 255, 0.74); font-size: 13px; line-height: 1.58; margin-top: 8px; }
-
       .metrics { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
       .metric, .panel { border-radius: var(--radius); background: var(--panel); border: 1px solid rgba(255, 255, 255, 0.55); box-shadow: var(--shadow); }
       .metric { padding: 18px; }
       .metric .label { color: var(--muted); margin-bottom: 10px; }
       .metric .value { color: var(--navy); font-size: 34px; font-weight: 800; line-height: 1; }
       .metric .note { color: var(--muted); font-size: 13px; line-height: 1.5; margin-top: 8px; }
-
       .layout { display: grid; grid-template-columns: 1.16fr 0.84fr; gap: 18px; margin-top: 18px; }
       .stack { display: grid; gap: 18px; }
       .panel { padding: 20px; background: var(--panel-strong); }
@@ -93,7 +83,6 @@
       .eyebrow { color: var(--wine); margin-bottom: 8px; }
       .panel h2 { margin: 0; font-size: 24px; line-height: 1.1; }
       .head-note { color: var(--muted); font-size: 13px; line-height: 1.55; max-width: 38ch; }
-
       .list, .timeline { display: grid; gap: 12px; }
       .item, .risk, .coverage, .event, .mail, .todo { border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.64)); }
       .item, .risk, .coverage, .mail { padding: 14px; }
@@ -120,7 +109,6 @@
       @media (max-width: 1160px) {
         .hero-grid, .metrics, .layout, .footer { grid-template-columns: 1fr; }
       }
-
       @media (max-width: 760px) {
         .page { width: min(100vw - 16px, 1280px); }
         .hero, .panel, .metric { padding: 18px; }
@@ -145,37 +133,37 @@
                 <div class="brand-name">Petrônio Souza Advogados Associados</div>
               </div>
             </div>
-            <h1>Os prazos de 21 e 22 de maio seguem no centro da mesa, e o principal fato novo da janela foi o HC 0001891 ainda sem retorno ao gabinete.</h1>
-            <p class="hero-copy"><strong>Janela auditada:</strong> 19/05/2026 às 18:13 BRT até 20/05/2026 às 18:13 BRT. Nesse intervalo, a agenda concentrou <strong>7 blocos executados hoje entre 07:00 e 11:40 BRT</strong> e não trouxe novos compromissos profissionais para o restante desta quarta-feira.</p>
-            <p class="hero-copy"><strong>Leitura executiva:</strong> o jurídico ficou dominado por <strong>quatro frentes com prazo fatal já visível</strong> (<strong>0000396-46.2023.5.06.0141</strong>, <strong>0000252-11.2022.5.06.0011</strong>, <strong>0008658-70.2024.8.17.3090</strong> e <strong>0020001-64.2023.8.17.2810</strong>), por um retorno institucional relevante no <strong>HC 0001891-81.2026.8.17.9480</strong>, e por três camadas operacionais que podem drenar atenção se não forem tratadas em lote: <strong>Supabase crítico</strong>, <strong>alertas de acesso ao PDPJ</strong> e <strong>cobranças financeiras vencidas ou iminentes</strong>.</p>
-            <div class="hero-meta">Gerado em 20/05/2026 às 18:13 BRT | Cobertura futura auditada até 22/05/2026 às 18:13 BRT</div>
+            <h1>A manhã de 21 de maio abre comprimida entre o prazo de 0020001, a audiência de Mayne e uma fila nova de pushes noturnos.</h1>
+            <p class="hero-copy"><strong>Janela auditada:</strong> 20/05/2026 às 00:13 BRT até 21/05/2026 às 00:13 BRT. A agenda confirmou <strong>7 blocos executados</strong> na manhã de 20/05/2026 e, no inbox consolidado, a rodada fechou com <strong>mudanças jurídicas reais no fim do dia</strong>, além de novos gatilhos em Toyota, PDPJ e Loom.</p>
+            <p class="hero-copy"><strong>Leitura executiva:</strong> os grandes riscos de prazo continuam concentrados em <strong>0020001-64.2023.8.17.2810</strong> e na organização da audiência <strong>Mayne Maria de Almeida x Bancos</strong>, mas o fato novo da noite foi a soma de <strong>extinção em 0018996</strong>, <strong>nova petição em 0003440</strong>, <strong>arquivamento definitivo em 0024248</strong> e novas movimentações em <strong>0066605</strong>, <strong>0005844</strong>, <strong>0040942</strong> e <strong>0112247</strong>.</p>
+            <div class="hero-meta">Gerado em 21/05/2026 às 00:13 BRT | Cobertura futura auditada até 23/05/2026 às 00:13 BRT</div>
           </div>
           <div class="hero-side">
             <div class="glass">
               <div class="glass-label">Ponto mais sensível</div>
-              <div class="glass-value">Os atos de 0000396, 0000252 e 0008658 precisam ser abertos hoje para que o escritório não amanheça em 21/05/2026 ainda descobrindo o teor do prazo.</div>
-              <div class="glass-note">São os itens com vencimento já visível em 21/05/2026 e ainda dependentes de leitura qualificada do andamento.</div>
+              <div class="glass-value">0020001 precisa entrar na manhã de 21/05 já lido, porque o mesmo turno ainda carrega preparação e deslocamento para a audiência presencial de Mayne.</div>
+              <div class="glass-note">O problema agora não é descobrir um prazo novo, e sim evitar que contexto e logística concorram pelo mesmo espaço mental.</div>
             </div>
             <div class="glass">
-              <div class="glass-label">Mudança jurídica confirmada</div>
-              <div class="glass-value">Às 14:58 BRT de 20/05/2026, o gabinete informou que o HC 0001891-81.2026.8.17.9480 ainda não retornou ao Desembargador, apesar da cobrança de agilização do mérito.</div>
-              <div class="glass-note">Isso mantém a pressão sobre a audiência de continuação da ação penal marcada para 12/06/2026.</div>
+              <div class="glass-label">Mudança jurídica da noite</div>
+              <div class="glass-value">Às 21:07 BRT de 20/05/2026, o cumprimento de sentença 0018996-62.2025.8.17.8201 foi extinto no TJPE, enquanto 0003440 e 0112247 receberam novas petições poucas horas depois.</div>
+              <div class="glass-note">É um lote pequeno, mas com mudança real de estado e potencial de reordenar prioridades da quinta-feira.</div>
             </div>
             <div class="glass">
               <div class="glass-label">Risco operacional</div>
-              <div class="glass-value">Supabase trouxe dois alertas críticos de exposição pública; o CNJ registrou três acessos novos ao PDPJ; e o caixa recebeu Toyota para 21/05/2026 mais duas cobranças Hapvida em atraso.</div>
-              <div class="glass-note">A recomendação é resolver esses pontos em um bloco administrativo único depois dos prazos jurídicos.</div>
+              <div class="glass-value">Toyota passou de tentativa de contato para envio formal de formulário com firma reconhecida; o CNJ registrou novo acesso ao PDPJ às 23:26 BRT; e o Loom avisou que a assinatura pode cair sem endereço e forma de pagamento.</div>
+              <div class="glass-note">Todos são acionáveis, mas devem entrar depois da frente jurídica da manhã.</div>
             </div>
           </div>
         </div>
       </section>
 
       <section class="metrics">
-        <article class="metric"><div class="label">Agenda 24h</div><div class="value">7</div><div class="note">Todos os 7 blocos auditados ocorreram hoje, 20/05/2026, entre 07:00 e 11:40 BRT.</div></article>
-        <article class="metric"><div class="label">Prazos visíveis</div><div class="value">4</div><div class="note">Três vencem em 21/05/2026 e um em 22/05/2026, todos já na agenda com orientação operacional.</div></article>
-        <article class="metric"><div class="label">Pushes úteis</div><div class="value">4</div><div class="note">0018996 teve dois movimentos, 0037446 recebeu certidão e 0006910 foi arquivado definitivamente.</div></article>
-        <article class="metric"><div class="label">Frentes operacionais</div><div class="value">5</div><div class="note">Supabase, PDPJ, Obvia, Hapvida/Aurora e Toyota concentram o lado não jurídico da rodada.</div></article>
-        <article class="metric"><div class="label">Próximos 48h</div><div class="value">5</div><div class="note">Há 3 compromissos profissionais e 2 pessoais, com destaque para audiência presencial em 21/05/2026.</div></article>
+        <article class="metric"><div class="label">Agenda 24h</div><div class="value">7</div><div class="note">Todos os 7 blocos auditados ocorreram em 20/05/2026 entre 07:00 e 11:40 BRT.</div></article>
+        <article class="metric"><div class="label">Mudanças jurídicas novas</div><div class="value">7</div><div class="note">0018996, 0003440, 0024248, 0066605, 0005844, 0040942 e 0112247 mudaram de estado dentro da noite.</div></article>
+        <article class="metric"><div class="label">Operacionais úteis</div><div class="value">6</div><div class="note">Toyota, PDPJ, Loom, Lovable, Obvia e Hapvida/Aurora formaram o bloco não processual relevante.</div></article>
+        <article class="metric"><div class="label">Próximos 48h</div><div class="value">5</div><div class="note">Há 3 compromissos profissionais e 2 pessoais confirmados até 23/05/2026 às 00:13 BRT.</div></article>
+        <article class="metric"><div class="label">Centro da quinta</div><div class="value">2</div><div class="note">O eixo do dia é 0020001 às 08:00 e a audiência de Mayne às 10:40, com bloco de preparação no meio.</div></article>
       </section>
 
       <section class="layout">
@@ -186,33 +174,33 @@
                 <div class="eyebrow">Executive Summary</div>
                 <h2>Prioridades críticas</h2>
               </div>
-              <div class="head-note">A tarde de 20/05/2026 ficou livre na agenda, então o valor agora está em sair do campo da triagem e converter leitura em providência.</div>
+              <div class="head-note">A janela já não está mais dominada por descoberta de passivo. O valor agora está em abrir quinta-feira com hierarquia limpa.</div>
             </div>
             <div class="list">
               <article class="item">
-                <h3 class="title">Os três prazos com fatal em 21/05/2026 não podem entrar na manhã seguinte ainda sem teor aberto.</h3>
-                <p class="body">0000396-46.2023.5.06.0141, 0000252-11.2022.5.06.0011 e 0008658-70.2024.8.17.3090 já aparecem com vencimento fatal em 21/05/2026. O risco não está só no prazo: está em empurrar a qualificação do ato para uma manhã que já começa carregada.</p>
-                <div class="chips"><span class="chip critical">21/05</span><span class="chip critical">TRT6</span><span class="chip critical">TJPE</span></div>
+                <h3 class="title">0020001-64.2023.8.17.2810 precisa ser tratado como a primeira peça operacional da manhã de 21/05/2026.</h3>
+                <p class="body">O calendário já o descreve como manifestação em 15 dias, com fatal em 22/05/2026 às 23:59. O risco não é só o vencimento; é deixar a leitura do ato para uma manhã já comprimida por preparo e deslocamento.</p>
+                <div class="chips"><span class="chip critical">22/05</span><span class="chip critical">Prazo</span><span class="chip watch">Abrir cedo</span></div>
               </article>
               <article class="item">
-                <h3 class="title">0020001-64.2023.8.17.2810 é o prazo que já pressiona 22/05/2026 e precisa de pré-leitura hoje.</h3>
-                <p class="body">A agenda já trata o caso como manifestação em 15 dias com fatal em 22/05/2026 às 23:59. O melhor ganho de hoje é entrar em 21/05/2026 com linha de resposta e não com descoberta de contexto.</p>
-                <div class="chips"><span class="chip watch">22/05</span><span class="chip watch">Despacho/intimação</span><span class="chip ok">Preparar hoje</span></div>
+                <h3 class="title">A audiência de Mayne Maria de Almeida x Bancos virou o outro polo duro da quinta-feira.</h3>
+                <p class="body">Há bloco de preparo às 09:20 e audiência presencial às 10:40 no Fórum Thomaz de Aquino. O melhor ganho de hoje é fazer 0020001 e Toyota não invadirem essa faixa.</p>
+                <div class="chips"><span class="chip critical">21/05 10:40</span><span class="chip watch">Superendividamento</span><span class="chip ok">Presencial</span></div>
               </article>
               <article class="item">
-                <h3 class="title">O HC 0001891 continua sensível porque o mérito ainda não voltou ao gabinete.</h3>
-                <p class="body">O retorno institucional do gabinete não trouxe decisão nem previsão; trouxe apenas a confirmação de que o processo ainda não retornou. Como a audiência da ação penal 0011527-56.2025.8.17.2480 segue em 12/06/2026, o risco estratégico permanece alto.</p>
-                <div class="chips"><span class="chip critical">HC 0001891</span><span class="chip critical">12/06</span><span class="chip watch">Sem retorno</span></div>
+                <h3 class="title">0018996-62.2025.8.17.8201 saiu de monitoramento para decisão de fechamento.</h3>
+                <p class="body">O TJPE marcou conclusão em cadeia e extinguiu o cumprimento de sentença às 16:02 de 20/05/2026. Isso reduz risco do caso, mas cria uma decisão objetiva: confirmar se basta baixa operacional ou se há acerto final a fazer.</p>
+                <div class="chips"><span class="chip ok">Extinção</span><span class="chip watch">Conferir publicação</span></div>
               </article>
               <article class="item">
-                <h3 class="title">0018996, 0037446 e 0006910 formam o lote de movimentos confirmados do TJPE dentro da janela.</h3>
-                <p class="body">0018996 recebeu despacho/intimação e depois juntada de petição na mesma noite; 0037446 recebeu certidão; e 0006910 foi arquivado definitivamente. É um lote pequeno, mas com mudança real de estado e sem margem para ser tratado como ruído.</p>
-                <div class="chips"><span class="chip watch">0018996</span><span class="chip ok">0037446</span><span class="chip ok">0006910</span></div>
+                <h3 class="title">0003440-92.2022.8.17.2100 continua sendo a frente jurídica mais delicada do lote noturno.</h3>
+                <p class="body">Às 21:03 BRT de 20/05/2026 entrou nova juntada de petição. Como o caso já estava sensível por mandado recebido para cumprimento e por pressão relacional, a leitura dessa peça merece prioridade acima dos pushes meramente cartorários.</p>
+                <div class="chips"><span class="chip critical">Alta sensibilidade</span><span class="chip watch">Nova petição</span></div>
               </article>
               <article class="item">
-                <h3 class="title">O bloco administrativo precisa ser agrupado para não canibalizar a execução jurídica.</h3>
-                <p class="body">Supabase abriu dois alertas críticos de segurança; o CNJ registrou três acessos novos ao PDPJ; a Obvia cobrou documentos vencidos desde 05/05/2026; a Aurora/Hapvida cobrou março e abril; e o Ton registrou boleto Toyota de R$ 2.941,83 para 21/05/2026.</p>
-                <div class="chips"><span class="chip critical">Supabase</span><span class="chip watch">PDPJ</span><span class="chip watch">Caixa</span></div>
+                <h3 class="title">Toyota, PDPJ e Loom puxaram a camada operacional para a mesma manhã do contencioso.</h3>
+                <p class="body">Toyota enviou formulário de gravação com firma reconhecida e via física original; o CNJ registrou novo acesso ao PDPJ às 23:26 BRT; e o Loom avisou que a assinatura Business + AI pode cair sem endereço e pagamento. É um bloco para resolver logo depois da frente jurídica essencial.</p>
+                <div class="chips"><span class="chip critical">Toyota</span><span class="chip watch">PDPJ</span><span class="chip watch">Loom</span></div>
               </article>
             </div>
           </section>
@@ -223,19 +211,17 @@
                 <div class="eyebrow">Últimas 24 horas</div>
                 <h2>Desenvolvimentos materialmente relevantes</h2>
               </div>
-              <div class="head-note">Nesta seção entram apenas fatos confirmados entre 19/05/2026 às 18:13 BRT e 20/05/2026 às 18:13 BRT.</div>
+              <div class="head-note">A cronologia abaixo cobre apenas fatos confirmados entre 20/05/2026 às 00:13 BRT e 21/05/2026 às 00:13 BRT.</div>
             </div>
             <div class="list">
-              <article class="mail"><div class="mail-meta">19/05 19:32 e 22:30 BRT • TJPE</div><h3 class="title">O processo 0018996-62.2025.8.17.8201 teve dois movimentos na mesma noite.</h3><p class="body">Às 19:32 BRT entrou push de expedição de despacho/intimação. Às 22:30 BRT o mesmo processo recebeu push de juntada de petição. O conjunto pede leitura casada do despacho e da petição antes de definir resposta.</p></article>
-              <article class="mail"><div class="mail-meta">19/05 20:30 BRT • TJPE</div><h3 class="title">0037446-79.2019.8.17.2990 recebeu juntada de petição de certidão.</h3><p class="body">O processo de alimentos em Olinda ganhou certidão às 20:29. Não parece evento de risco máximo, mas muda o estado do caso e merece qualificação no fluxo do escritório.</p></article>
-              <article class="mail"><div class="mail-meta">19/05 21:00 BRT • TJPE</div><h3 class="title">0006910-71.2019.8.17.0990 foi arquivado definitivamente.</h3><p class="body">A movimentação é objetiva e útil: o caso saiu do campo de acompanhamento ativo e pede baixa estratégica, conferindo apenas se não há pendência residual antes do encerramento operacional.</p></article>
-              <article class="mail"><div class="mail-meta">20/05 07:00-11:40 BRT • Google Calendar</div><h3 class="title">A agenda do dia foi quase inteiramente consumida por prazos, triagem PJe e monitoramento jurídico.</h3><p class="body">Os blocos passaram por 0000396, 0000252, 0008658, triagem crítica PJe, 0000439, lote TRT6 e 0003440. Depois de 11:40 BRT, não houve novos compromissos profissionais na agenda até o fim da janela.</p></article>
-              <article class="mail"><div class="mail-meta">20/05 08:24-09:28 BRT • Aurora e Obvia</div><h3 class="title">O administrativo apertou com dois tipos de cobrança que já ultrapassaram o campo do simples lembrete.</h3><p class="body">A Aurora/Hapvida cobrou duas mensalidades de R$ 485,54 com vencimento em 06/05/2026, uma referente a março e outra a abril. A Obvia cobrou documentos mensais cujo prazo de envio venceu em 05/05/2026 e alertou para risco de multas e juros em fechamentos.</p></article>
-              <article class="mail"><div class="mail-meta">20/05 10:09 BRT • Relatório PJe</div><h3 class="title">O relatório automático do PJe confirmou 5 vencidos e 134 movimentos diversos no passivo do dia.</h3><p class="body">A agenda já tinha reservado um bloco específico de triagem para reduzir esse passivo. O sinal mais importante aqui é o tamanho do estoque, não uma sobreposição de reuniões.</p></article>
-              <article class="mail"><div class="mail-meta">20/05 11:16, 16:16 e 17:39 BRT • CNJ / PDPJ</div><h3 class="title">Três alertas de novo acesso ao PDPJ apareceram no mesmo dia.</h3><p class="body">Houve um acesso por certificado digital em desktop Mac/Chrome às 11:16 BRT e dois acessos mobile iOS/Chrome por usuário e senha às 16:16 e 17:39 BRT. Se todos foram legítimos, basta registrar; se algum não foi reconhecido, a ação vira segurança de credencial.</p></article>
-              <article class="mail"><div class="mail-meta">20/05 14:58 BRT • Gabinete TJPE</div><h3 class="title">O gabinete respondeu que o HC 0001891-81.2026.8.17.9480 ainda não retornou ao Desembargador.</h3><p class="body">É o principal desdobramento institucional novo da rodada. A resposta não resolve a urgência, mas confirma que o gargalo permanece e que a audiência de 12/06/2026 continua como horizonte de risco.</p></article>
-              <article class="mail"><div class="mail-meta">20/05 17:19 BRT • Ton / Banco Toyota</div><h3 class="title">Entrou novo boleto de R$ 2.941,83 emitido pelo Banco Toyota com vencimento em 21/05/2026.</h3><p class="body">É um item financeiro material porque vence amanhã e compete por atenção com a abertura dos prazos jurídicos e a preparação da audiência presencial.</p></article>
-              <article class="mail"><div class="mail-meta">20/05 22:46 UTC • Supabase</div><h3 class="title">Supabase escalou o risco técnico com dois alertas críticos de exposição pública.</h3><p class="body">A plataforma apontou tabela publicamente acessível sem RLS e colunas sensíveis expostas por API. O conteúdo do e-mail descreve risco de leitura, edição e exclusão de dados por terceiros não autorizados.</p></article>
+              <article class="mail"><div class="mail-meta">20/05 00:25 a 08:31 BRT • TRT6 e TJPB</div><h3 class="title">A rodada abriu com atualização trabalhista e sentença publicada antes mesmo do primeiro bloco da agenda.</h3><p class="body">0000145 foi concluso para decisão no TRT6; 0000338 teve decurso de prazo para todas as partes; 0001662 recebeu despacho de mero expediente; 0000474 ganhou audiência de conciliação em execução; e 0837703 teve sentença publicada no TJPB.</p></article>
+              <article class="mail"><div class="mail-meta">20/05 06:54 a 09:28 BRT • Recorte OAB, Aurora e Obvia</div><h3 class="title">A manhã confirmou quatro publicações em diários e manteve cobrança administrativa em aberto.</h3><p class="body">O Jusbrasil apontou novas publicações para 21/05/2026, com pelo menos 0002394-71.2023.8.17.3090 e 0005000-07.2024.8.17.2001 visíveis no corpo da mensagem. Em paralelo, Aurora cobrou março e abril da Hapvida, e a Obvia cobrou documentos vencidos desde 05/05/2026.</p></article>
+              <article class="mail"><div class="mail-meta">20/05 07:09 BRT • Relatório PJe</div><h3 class="title">O relatório automático do PJe manteve 5 vencidos e 134 movimentos diversos na esteira do dia.</h3><p class="body">A agenda reservou blocos para absorver esse passivo, então o sinal executivo aqui foi sobre carga e priorização, não sobre novo prazo isolado.</p></article>
+              <article class="mail"><div class="mail-meta">20/05 14:58 BRT • Gabinete TJPE</div><h3 class="title">O gabinete do HC 0001891-81.2026.8.17.9480 respondeu que o processo ainda não retornou ao Desembargador.</h3><p class="body">É a confirmação institucional mais importante da janela diurna. O risco estratégico segue alto por causa da audiência de continuação da ação penal em 12/06/2026.</p></article>
+              <article class="mail"><div class="mail-meta">20/05 19:20 a 20:03 BRT • Banco Toyota</div><h3 class="title">Toyota saiu da tentativa de contato para trilha formal de providência.</h3><p class="body">Às 19:20 BRT o banco informou que não conseguiu contato por telefone. Às 19:22 BRT houve resposta pedindo identificação da origem das chamadas. Às 20:03 BRT entrou o formulário de solicitação de gravação, com exigência de assinatura do titular, reconhecimento de firma e envio da via original para São Paulo.</p></article>
+              <article class="mail"><div class="mail-meta">20/05 19:45 a 21:07 BRT • TRF5 e TJPE</div><h3 class="title">O lote noturno de pushes começou com 0066605 e fechou com extinção em 0018996.</h3><p class="body">0066605-04.2025.4.05.8300 recebeu juntada de petição às 19:45 BRT. Às 21:00 BRT, 0040942-81.2016.8.17.2001 recebeu certidão e conclusão para despacho; às 21:03 BRT, 0003440-92.2022.8.17.2100 ganhou nova petição; às 21:04 BRT, 0024248-24.2023.8.17.3090 foi arquivado definitivamente; às 21:05 BRT, 0005844-05.2023.8.17.4001 recebeu expedição de despacho/intimação; e às 21:07 BRT, 0018996-62.2025.8.17.8201 foi extinto no cumprimento de sentença.</p></article>
+              <article class="mail"><div class="mail-meta">20/05 23:15 a 23:40 BRT • Lovable, PDPJ e Loom</div><h3 class="title">A noite ainda trouxe financeiro liquidado, alerta de segurança e risco de assinatura.</h3><p class="body">Às 23:15 BRT entrou recibo pago da Lovable Labs no valor de US$ 50, com cobrança de R$ 269,21. Às 23:26 BRT o CNJ registrou novo acesso ao PDPJ em iPhone/iOS Safari via GOV.BR para o sistema pje-trt6-1g. Às 23:40 BRT o Loom avisou que a assinatura Business + AI pode ser interrompida sem endereço e forma de pagamento.</p></article>
+              <article class="mail"><div class="mail-meta">21/05 00:00 BRT • TJPE</div><h3 class="title">0112247-13.2025.8.17.2001 mudou novamente horas antes da audiência de Mayne.</h3><p class="body">O push de 00:00 BRT registrou juntada de petição de requerimento (outros) no caso de superendividamento de Mayne Maria de Almeida x Bancos. Isso aumenta a importância de abrir a petição antes da audiência presencial.</p></article>
             </div>
           </section>
 
@@ -245,14 +231,14 @@
                 <div class="eyebrow">Agenda</div>
                 <h2>Próximos 2 dias e preparo</h2>
               </div>
-              <div class="head-note">O objetivo é chegar em 21/05/2026 com o contencioso lido e com a audiência presencial já mentalmente organizada.</div>
+              <div class="head-note">A quinta-feira concentra o que mais importa; a sexta ainda tem consulta pessoal dentro da janela.</div>
             </div>
             <div class="timeline">
-              <article class="event"><div class="when">21/05 08:00</div><div><h3 class="title">Prazo processual - 0020001-64.2023.8.17.2810</h3><p class="body">A agenda já trata o caso como manifestação em 15 dias, com fatal em 22/05/2026 às 23:59.</p><ul class="prep"><li>Entrar na quinta-feira com o teor da intimação já lido.</li><li>Separar desde hoje a linha de manifestação ou a necessidade de peça individual.</li></ul></div></article>
-              <article class="event"><div class="when">21/05 09:20</div><div><h3 class="title">Preparar audiência - Mayne Maria de Almeida x Bancos</h3><p class="body">Bloco criado para não deixar estratégia e logística comprimidas entre prazo e deslocamento.</p><ul class="prep"><li>Consolidar proposta objetiva de repactuação e documentos de apoio.</li><li>Deixar rota e horário de saída decididos antes da manhã correr.</li></ul></div></article>
-              <article class="event"><div class="when">21/05 10:40</div><div><h3 class="title">Audiência - Mayne Maria de Almeida x Bancos</h3><p class="body">Sessão presencial de mediação e conciliação no Fórum Thomaz de Aquino, sala Proendividados A, em Recife.</p><ul class="prep"><li>Chegar com quadro financeiro simples, credores mapeados e margem de negociação clara.</li><li>Evitar levar pendências administrativas leves para a mesma manhã.</li></ul></div></article>
-              <article class="event"><div class="when">21/05 21:00</div><div><h3 class="title">Terapia</h3><p class="body">Compromisso pessoal já protegido na agenda dentro do horizonte de 48 horas.</p><ul class="prep"><li>Fechar as frentes jurídicas mais pesadas ainda durante o expediente.</li></ul></div></article>
-              <article class="event"><div class="when">22/05 10:00</div><div><h3 class="title">Consulta psiquiatra Hap</h3><p class="body">Compromisso pessoal que ocupa a manhã de sexta dentro da janela auditada.</p><ul class="prep"><li>Resolver Toyota, Hapvida e 0020001 antes de entrar em mais uma manhã fragmentada.</li></ul></div></article>
+              <article class="event"><div class="when">21/05 08:00</div><div><h3 class="title">Prazo processual - 0020001-64.2023.8.17.2810</h3><p class="body">Manifestação em 15 dias, com fatal indicado para 22/05/2026 às 23:59.</p><ul class="prep"><li>Entrar no sistema já com objetivo de peça definido.</li><li>Não deixar a leitura da intimação competir com Toyota ou Loom.</li></ul></div></article>
+              <article class="event"><div class="when">21/05 09:20</div><div><h3 class="title">Preparar audiência - Mayne Maria de Almeida x Bancos</h3><p class="body">Bloco criado para evitar que estratégia e logística fiquem espremidas entre prazo e deslocamento.</p><ul class="prep"><li>Abrir a petição nova de 0112247 antes do preparo.</li><li>Levar proposta simples de repactuação e quadro financeiro limpo.</li></ul></div></article>
+              <article class="event"><div class="when">21/05 10:40</div><div><h3 class="title">Audiência - Mayne Maria de Almeida x Bancos</h3><p class="body">Sessão presencial no Fórum Thomaz de Aquino, sala Proendividados A, em Recife.</p><ul class="prep"><li>Sair com rota, documentos e posição de negociação já definidos.</li><li>Evitar carregar tarefas administrativas para a mesma faixa horária.</li></ul></div></article>
+              <article class="event"><div class="when">21/05 21:00</div><div><h3 class="title">Terapia</h3><p class="body">Compromisso pessoal já protegido na noite de quinta.</p><ul class="prep"><li>Fechar o lote jurídico pesado ainda durante o expediente.</li></ul></div></article>
+              <article class="event"><div class="when">22/05 10:00</div><div><h3 class="title">Consulta psiquiatra Hap</h3><p class="body">Compromisso pessoal na manhã de sexta ainda dentro da janela auditada.</p><ul class="prep"><li>Resolver 0020001, Toyota e Loom até o fim de quinta para não arrastar pendência para sexta.</li></ul></div></article>
             </div>
           </section>
         </div>
@@ -266,15 +252,15 @@
               </div>
             </div>
             <div class="list">
-              <article class="risk"><h3 class="title">0000396-46.2023.5.06.0141</h3><p class="body"><strong>Partes:</strong> não visíveis na evidência aberta desta rodada. <strong>Advogado:</strong> não identificável diretamente no material aberto, embora o compromisso esteja no calendário do escritório. <strong>Evento:</strong> prazo final indicado para 21/05/2026. <strong>Follow-up:</strong> abrir o andamento correspondente no PJe/TRT e cumprir a providência correlata antes do fatal. <strong>Risco:</strong> alto, porque o vencimento está a um dia e o teor do ato ainda não foi conferido nesta execução.</p></article>
-              <article class="risk"><h3 class="title">0000252-11.2022.5.06.0011</h3><p class="body"><strong>Partes:</strong> não visíveis na evidência aberta desta rodada. <strong>Advogado:</strong> não identificável diretamente no material aberto. <strong>Evento:</strong> prazo final indicado para 21/05/2026. <strong>Follow-up:</strong> abrir o ato no PJe/TRT e definir a peça ou providência exata. <strong>Risco:</strong> alto, pelo mesmo motivo de 0000396: prazo próximo ainda sem teor qualificado.</p></article>
-              <article class="risk"><h3 class="title">0008658-70.2024.8.17.3090</h3><p class="body"><strong>Partes:</strong> não visíveis no material aberto. <strong>Advogado:</strong> não identificado diretamente. <strong>Evento:</strong> intimação com manifestação em 15 dias, fatal em 21/05/2026 às 23:59. <strong>Follow-up:</strong> abrir a intimação e protocolar a manifestação cabível. <strong>Risco:</strong> alto, porque já há data fatal confiável e o teor completo do ato continua fora da amostra aberta.</p></article>
-              <article class="risk"><h3 class="title">0020001-64.2023.8.17.2810</h3><p class="body"><strong>Partes:</strong> não visíveis no material aberto. <strong>Advogado:</strong> não identificado diretamente. <strong>Evento:</strong> despacho/intimação com manifestação em 15 dias, fatal em 22/05/2026 às 23:59. <strong>Follow-up:</strong> concluir a leitura do ato antes da manhã de 21/05/2026. <strong>Risco:</strong> alto, menos pelo fatal em si e mais pelo risco de entrar em quinta-feira ainda mapeando contexto.</p></article>
-              <article class="risk"><h3 class="title">HC 0001891-81.2026.8.17.9480</h3><p class="body"><strong>Partes:</strong> paciente Tonis Ricardo dos Santos Júnior; processo ligado à ação penal 0011527-56.2025.8.17.2480. <strong>Advogado:</strong> Petrônio Souza, interno ao escritório. <strong>Evento:</strong> às 14:58 BRT de 20/05/2026 o gabinete respondeu que o HC ainda não retornou ao Desembargador. <strong>Follow-up:</strong> manter monitoramento institucional e recalibrar eventual nova cobrança caso não haja movimento útil. <strong>Risco:</strong> alto, em razão da audiência de continuação marcada para 12/06/2026 e da função estratégica do HC para preservar prova oral defensiva.</p></article>
-              <article class="risk"><h3 class="title">0018996-62.2025.8.17.8201</h3><p class="body"><strong>Partes:</strong> Antonio Rafael de Arruda x Go Energia Solar Ltda e outros. <strong>Advogado:</strong> não identificado no push aberto. <strong>Evento:</strong> expedição de despacho/intimação às 15:45 de 19/05/2026 e juntada de petição às 19:13 do mesmo dia. <strong>Follow-up:</strong> abrir o despacho e comparar com a petição juntada antes de decidir reação. <strong>Risco:</strong> médio, porque houve mudança de estado em sequência curta.</p></article>
-              <article class="risk"><h3 class="title">0037446-79.2019.8.17.2990</h3><p class="body"><strong>Partes:</strong> Rogerio Menezes da Silva x Williane Nascimento da Silva. <strong>Advogado:</strong> não identificado no push aberto. <strong>Evento:</strong> juntada de petição de certidão às 20:29 de 19/05/2026. <strong>Follow-up:</strong> qualificar a certidão para medir se é só regularidade formal ou se muda a estratégia. <strong>Risco:</strong> baixo a médio.</p></article>
-              <article class="risk"><h3 class="title">0006910-71.2019.8.17.0990</h3><p class="body"><strong>Partes:</strong> Ministério Público do Estado de Pernambuco e outros x Reinaldo Silva do Espírito Santo e outros. <strong>Advogado:</strong> não identificado no push aberto. <strong>Evento:</strong> arquivado definitivamente às 20:57 de 19/05/2026. <strong>Follow-up:</strong> registrar baixa estratégica e conferir se não resta pendência administrativa. <strong>Risco:</strong> baixo.</p></article>
-              <article class="risk"><h3 class="title">0003440-92.2022.8.17.2100</h3><p class="body"><strong>Partes:</strong> Cícero Marcos Lucas Sobrinho x Severino Felix de Araujo Santos e outros. <strong>Advogado:</strong> não identificado no material desta rodada. <strong>Evento:</strong> a agenda de 20/05/2026 manteve o caso em frente sensível por causa de mandado recebido para cumprimento e da thread extrajudicial ativa. <strong>Follow-up:</strong> revisar o novo movimento e alinhar devolutiva sem presumir prazo fatal. <strong>Risco:</strong> alto, por sensibilidade relacional e cobrança potencial de providência.</p></article>
+              <article class="risk"><h3 class="title">0020001-64.2023.8.17.2810</h3><p class="body"><strong>Partes:</strong> não visíveis na evidência aberta desta rodada. <strong>Advogado:</strong> não identificável diretamente no material aberto. <strong>Evento:</strong> despacho/intimação com manifestação em 15 dias, fatal em 22/05/2026 às 23:59. <strong>Follow-up:</strong> concluir a leitura do ato na manhã de 21/05/2026. <strong>Risco:</strong> alto, porque o prazo fatal já está definido e a quinta-feira abre congestionada.</p></article>
+              <article class="risk"><h3 class="title">HC 0001891-81.2026.8.17.9480</h3><p class="body"><strong>Partes:</strong> paciente Tonis Ricardo dos Santos Júnior; contexto conectado à ação penal 0011527-56.2025.8.17.2480. <strong>Advogado:</strong> Petrônio Souza, interno ao escritório. <strong>Evento:</strong> às 14:58 BRT de 20/05/2026 o gabinete informou que o feito ainda não retornou ao Desembargador. <strong>Follow-up:</strong> manter monitoramento institucional e recalibrar eventual nova cobrança. <strong>Risco:</strong> alto, pela audiência de continuação em 12/06/2026 e pelo impacto sobre a produção de prova oral defensiva.</p></article>
+              <article class="risk"><h3 class="title">0018996-62.2025.8.17.8201</h3><p class="body"><strong>Partes:</strong> Antonio Rafael de Arruda x Go Energia Solar Ltda e outros. <strong>Advogado:</strong> não identificado no push aberto. <strong>Evento:</strong> conclusões sucessivas e extinção do cumprimento de sentença às 16:02 de 20/05/2026. <strong>Follow-up:</strong> abrir a publicação e decidir se cabe só baixa operacional. <strong>Risco:</strong> médio, porque o caso mudou de estado e pede confirmação do alcance da extinção.</p></article>
+              <article class="risk"><h3 class="title">0003440-92.2022.8.17.2100</h3><p class="body"><strong>Partes:</strong> Cícero Marcos Lucas Sobrinho x Severino Felix de Araujo Santos e outros. <strong>Advogado:</strong> não identificado no material desta rodada. <strong>Evento:</strong> nova juntada de petição às 16:22 de 20/05/2026, refletida no push das 21:03 BRT. <strong>Follow-up:</strong> abrir a petição e recalibrar a devolutiva para o cliente. <strong>Risco:</strong> alto, por sensibilidade relacional e histórico já tensionado do caso.</p></article>
+              <article class="risk"><h3 class="title">0024248-24.2023.8.17.3090</h3><p class="body"><strong>Partes:</strong> Rosangela Maria Ferreira de Amorim x Everson Ricardo Souza Ribeiro. <strong>Advogado:</strong> não identificado no push aberto. <strong>Evento:</strong> arquivamento definitivo com expedição de publicação em 20/05/2026 às 10:42. <strong>Follow-up:</strong> confirmar se resta apenas baixa definitiva. <strong>Risco:</strong> baixo.</p></article>
+              <article class="risk"><h3 class="title">0066605-04.2025.4.05.8300</h3><p class="body"><strong>Partes:</strong> Deise de Lima Gouveia x Instituto Nacional do Seguro Social - INSS. <strong>Advogado:</strong> não identificado no push aberto. <strong>Evento:</strong> juntada de petição às 08:40 de 20/05/2026. <strong>Follow-up:</strong> abrir a petição para qualificar se há réplica, ciência ou providência futura. <strong>Risco:</strong> médio.</p></article>
+              <article class="risk"><h3 class="title">0005844-05.2023.8.17.4001</h3><p class="body"><strong>Partes:</strong> 51º Promotor de Justiça Criminal da Capital x Jevesson de Souza. <strong>Advogado:</strong> não identificado no push aberto. <strong>Evento:</strong> expedição de despacho/intimação (outros) às 12:05 de 20/05/2026. <strong>Follow-up:</strong> abrir a intimação e verificar se nasce prazo defensivo ou providência urgente. <strong>Risco:</strong> alto, pela natureza penal do feito e pelo teor ainda não aberto.</p></article>
+              <article class="risk"><h3 class="title">0040942-81.2016.8.17.2001</h3><p class="body"><strong>Partes:</strong> Jose Adolfo de Souza e outros x Joao de Souza e outros. <strong>Advogado:</strong> não identificado no push aberto. <strong>Evento:</strong> expedição de certidão e conclusão para despacho às 09:55 de 20/05/2026. <strong>Follow-up:</strong> abrir a certidão para medir se há providência prática no inventário. <strong>Risco:</strong> médio.</p></article>
+              <article class="risk"><h3 class="title">0112247-13.2025.8.17.2001</h3><p class="body"><strong>Partes:</strong> Mayne Maria de Almeida x Banco Bradesco S/A e outros. <strong>Advogado:</strong> não identificado no push aberto. <strong>Evento:</strong> juntada de petição de requerimento (outros) às 23:00 de 20/05/2026. <strong>Follow-up:</strong> abrir a petição antes da audiência de 21/05/2026. <strong>Risco:</strong> médio, porque o caso está prestes a ser discutido presencialmente.</p></article>
             </div>
           </section>
 
@@ -286,11 +272,11 @@
               </div>
             </div>
             <div class="list">
-              <article class="risk"><h3 class="title">Crítico: Supabase apontou tabela pública sem RLS e colunas sensíveis expostas.</h3><p class="body">O e-mail descreve risco de leitura, edição e exclusão de dados por terceiros com a URL do projeto. É um alerta de segurança concreto, não cosmético.</p></article>
-              <article class="risk"><h3 class="title">Médio-alto: três acessos novos ao PDPJ no mesmo dia precisam ser validados.</h3><p class="body">Houve um acesso desktop por certificado digital e dois mobile por usuário e senha. Se algum não for reconhecido, a reação deixa de ser administrativa e vira contenção de credencial.</p></article>
-              <article class="risk"><h3 class="title">Médio-alto: a Obvia cobrou documentos mensais vencidos em 05/05/2026.</h3><p class="body">O texto da cobrança vincula o atraso a risco de multa, juros e ruído em fechamento contábil e distribuição de lucros.</p></article>
-              <article class="risk"><h3 class="title">Médio: março e abril da Hapvida seguem em aberto, ambos de R$ 485,54 e ambos vencidos em 06/05/2026.</h3><p class="body">Como são duas cobranças separadas do mesmo fornecedor, vale resolver de uma vez para não replicar urgência amanhã.</p></article>
-              <article class="risk"><h3 class="title">Médio: entrou boleto Toyota de R$ 2.941,83 com vencimento em 21/05/2026.</h3><p class="body">O vencimento cai no mesmo dia em que o escritório já terá prazo pela manhã e audiência presencial na sequência.</p></article>
+              <article class="risk"><h3 class="title">Médio-alto: Toyota agora exige assinatura, firma reconhecida e envio físico para São Paulo.</h3><p class="body">A noite transformou o tema em providência concreta. O custo aqui é menos financeiro e mais de atrito operacional, tempo e deslocamento documental.</p></article>
+              <article class="risk"><h3 class="title">Médio: o CNJ registrou novo acesso ao PDPJ às 23:26 BRT em iPhone/iOS Safari.</h3><p class="body">Se o acesso foi legítimo, o tema se encerra com validação. Se não foi, vira contenção de credencial antes da abertura do expediente.</p></article>
+              <article class="risk"><h3 class="title">Médio: o Loom pode interromper a assinatura Business + AI sem endereço e forma de pagamento.</h3><p class="body">É um risco simples de resolver, mas ruim de descobrir no meio de uso ativo da ferramenta.</p></article>
+              <article class="risk"><h3 class="title">Baixo a médio: o recibo da Lovable já foi pago, mas merece classificação financeira.</h3><p class="body">A cobrança de US$ 50 virou R$ 269,21. Não exige urgência operacional, mas vale ser classificada como custo recorrente ou pontual.</p></article>
+              <article class="risk"><h3 class="title">Médio-alto: Obvia e Hapvida seguem em atraso e competem por atenção com a agenda da quinta.</h3><p class="body">As cobranças entraram ainda na manhã de 20/05/2026 e continuam válidas nesta virada, então devem ser absorvidas em lote administrativo único.</p></article>
             </div>
           </section>
 
@@ -302,11 +288,11 @@
               </div>
             </div>
             <div class="list">
-              <article class="todo"><div class="box"></div><div><h3 class="title">Abrir ainda hoje os atos de 0000396, 0000252 e 0008658.</h3><p class="body">São os três pontos que mais reduzem risco real antes da manhã de 21/05/2026.</p><div class="owner">Owner: Petrônio</div></div></article>
-              <article class="todo"><div class="box"></div><div><h3 class="title">Deixar 0020001 lido e mentalmente estruturado antes de dormir.</h3><p class="body">O prazo fatal é 22/05/2026, mas o benefício está em tirar a peça do improviso de quinta-feira cedo.</p><div class="owner">Owner: Petrônio</div></div></article>
-              <article class="todo"><div class="box"></div><div><h3 class="title">Registrar se os três acessos ao PDPJ foram legítimos e, se houver dúvida, trocar a credencial ligada ao sistema.</h3><p class="body">Esse é o item mais simples de segurança imediata fora do Supabase.</p><div class="owner">Owner: Petrônio</div></div></article>
-              <article class="todo"><div class="box"></div><div><h3 class="title">Fechar um lote administrativo único com Supabase, Obvia, Hapvida e Toyota.</h3><p class="body">Agrupar esses quatro temas evita que cada um reapareça como interrupção ao longo de 21/05/2026.</p><div class="owner">Owner: Petrônio</div></div></article>
-              <article class="todo"><div class="box"></div><div><h3 class="title">Manter o HC 0001891 em monitoramento institucional até haver retorno objetivo do gabinete.</h3><p class="body">A resposta desta tarde confirmou status parado, não resolução.</p><div class="owner">Owner: Petrônio</div></div></article>
+              <article class="todo"><div class="box"></div><div><h3 class="title">Abrir 0020001 logo no primeiro bloco útil da manhã de 21/05/2026.</h3><p class="body">O objetivo é neutralizar o prazo antes de o dia migrar para a audiência presencial.</p><div class="owner">Owner: Petrônio</div></div></article>
+              <article class="todo"><div class="box"></div><div><h3 class="title">Ler a nova petição de 0112247 antes do bloco de preparação da audiência de Mayne.</h3><p class="body">O caso mudou às 23:00 BRT, então entrar na audiência sem essa leitura aumenta risco de surpresa.</p><div class="owner">Owner: Petrônio</div></div></article>
+              <article class="todo"><div class="box"></div><div><h3 class="title">Classificar o lote noturno: 0018996, 0003440, 0066605, 0005844 e 0040942.</h3><p class="body">0018996 e 0024248 podem gerar baixa; 0003440, 0005844 e 0066605 ainda pedem abertura de peça ou intimação.</p><div class="owner">Owner: Petrônio</div></div></article>
+              <article class="todo"><div class="box"></div><div><h3 class="title">Fechar um bloco administrativo único para Toyota, PDPJ, Loom, Obvia e Hapvida.</h3><p class="body">Agrupar esses temas evita que eles invadam a faixa da audiência e o começo da sexta-feira.</p><div class="owner">Owner: Petrônio</div></div></article>
+              <article class="todo"><div class="box"></div><div><h3 class="title">Manter HC 0001891 em monitoramento institucional até surgir retorno objetivo do gabinete.</h3><p class="body">A resposta mais recente confirmou parada, não solução.</p><div class="owner">Owner: Petrônio</div></div></article>
             </div>
           </section>
 
@@ -318,18 +304,18 @@
               </div>
             </div>
             <div class="list">
-              <article class="coverage"><h3 class="title">Gmail consolidado</h3><p class="body">Foram lidos os e-mails materialmente relevantes entre 19/05/2026 às 18:13 BRT e 20/05/2026 às 18:13 BRT, incluindo TJPE, CNJ, Supabase, Obvia, Aurora/Hapvida, Ton/Toyota e a troca institucional do HC.</p></article>
-              <article class="coverage"><h3 class="title">Google Calendar</h3><p class="body">A agenda foi auditada da janela retroativa até 22/05/2026 às 18:13 BRT. O restante de 20/05/2026 ficou sem novos compromissos profissionais; 21 e 22/05 já estão mapeados com foco em prazo e audiência.</p></article>
-              <article class="coverage"><h3 class="title">Notion</h3><p class="body">Os casos e tarefas relevantes desta rodada foram atualizados ou criados sem duplicidade, reaproveitando registros existentes e abrindo novas páginas apenas para 0008658, 0020001 e tarefas novas desta janela.</p></article>
-              <article class="coverage"><h3 class="title">Lacunas</h3><p class="body">Não há conector de chat corporativo nesta execução. O teor integral dos atos sigilosos, das intimações e das publicações depende de abertura direta nos portais oficiais, então o briefing distingue claramente o que foi confirmado do que ainda precisa de leitura do processo.</p></article>
+              <article class="coverage"><h3 class="title">Gmail consolidado</h3><p class="body">Foram lidos os e-mails materialmente relevantes entre 20/05/2026 às 00:13 BRT e 21/05/2026 às 00:13 BRT, incluindo tribunais, Toyota, CNJ, Loom, Lovable, Obvia, Aurora/Hapvida, Jusbrasil e a troca institucional do HC.</p></article>
+              <article class="coverage"><h3 class="title">Google Calendar</h3><p class="body">A agenda foi auditada para as últimas 24 horas e para os próximos 48 horas completos, até 23/05/2026 às 00:13 BRT.</p></article>
+              <article class="coverage"><h3 class="title">Notion</h3><p class="body">Os casos 0112247, 0018996, 0024248 e 0003440 foram atualizados; 0066605, 0005844 e 0040942 foram criados; e as tarefas operacionais de PDPJ, Toyota, Obvia, Hapvida e Loom foram registradas ou atualizadas sem duplicidade.</p></article>
+              <article class="coverage"><h3 class="title">Lacunas</h3><p class="body">Não há conector de chat corporativo nesta execução. O teor integral das intimações, petições e publicações ainda depende de abertura direta nos portais oficiais, então o briefing separa o que foi confirmado do que ainda precisa de leitura do processo.</p></article>
             </div>
           </section>
         </div>
       </section>
 
       <section class="footer">
-        <div class="footer-note"><strong>Leitura principal:</strong> a rodada das 18:13 BRT é menos sobre descobrir frentes novas e mais sobre impedir que quatro prazos conhecidos e um HC parado entrem em 21/05/2026 ainda sem tratamento maduro.</div>
-        <div class="footer-note"><strong>Resumo de risco:</strong> jurídico alto em 0000396, 0000252, 0008658, 0020001, HC 0001891 e 0003440; jurídico médio em 0018996 e 0037446; jurídico baixo em 0006910; operacional crítico no Supabase; operacional médio-alto no PDPJ, Obvia, Hapvida e Toyota.</div>
+        <div class="footer-note"><strong>Leitura principal:</strong> o eixo da quinta-feira é simples: abrir 0020001 cedo, absorver a petição nova de 0112247 antes da audiência e não deixar Toyota, PDPJ e Loom roubarem a primeira metade do dia.</div>
+        <div class="footer-note"><strong>Resumo de risco:</strong> jurídico alto em 0020001, HC 0001891, 0003440 e 0005844; jurídico médio em 0018996, 0066605, 0040942 e 0112247; jurídico baixo em 0024248; operacional médio-alto em Toyota, PDPJ, Obvia, Hapvida e Loom.</div>
       </section>
     </main>
   </body>
