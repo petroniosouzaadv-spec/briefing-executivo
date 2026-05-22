@@ -16,6 +16,7 @@
         --wine: #561c26;
         --navy: #172b49;
         --gold: #bb9d6d;
+        --stone: #c8b6ac;
         --muted: rgba(17, 25, 31, 0.72);
         --line: rgba(17, 25, 31, 0.12);
         --shadow: 0 24px 70px rgba(17, 25, 31, 0.12);
@@ -45,6 +46,7 @@
         box-shadow: var(--shadow);
         padding: 26px;
       }
+
       .hero::before,
       .hero::after {
         content: "";
@@ -52,16 +54,36 @@
         border-radius: 999px;
         border: 1px solid rgba(187, 157, 109, 0.3);
       }
+
       .hero::before { width: 360px; height: 360px; right: -100px; top: -120px; }
       .hero::after { width: 220px; height: 220px; right: 120px; bottom: -110px; }
       .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.45fr 0.95fr; gap: 18px; align-items: stretch; }
       .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
-      .brand-mark { width: 58px; height: 58px; border-radius: 50%; border: 1px solid rgba(187, 157, 109, 0.72); display: grid; place-items: center; color: var(--gold); font-weight: 700; position: relative; }
-      .brand-mark::after { content: ""; position: absolute; width: 78px; height: 78px; border-radius: 50%; border: 1px solid rgba(200, 182, 172, 0.22); }
+      .brand-mark {
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        border: 1px solid rgba(187, 157, 109, 0.72);
+        display: grid;
+        place-items: center;
+        color: var(--gold);
+        font-weight: 700;
+        position: relative;
+      }
+
+      .brand-mark::after {
+        content: "";
+        position: absolute;
+        width: 78px;
+        height: 78px;
+        border-radius: 50%;
+        border: 1px solid rgba(200, 182, 172, 0.22);
+      }
+
       .brand-label { color: rgba(255, 255, 255, 0.72); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
       .brand-name { color: #fff; font-size: 23px; line-height: 1.08; font-weight: 600; max-width: 18ch; }
       .hero h1 { margin: 0 0 14px; color: #fff; font-size: clamp(31px, 4.3vw, 58px); line-height: 0.98; max-width: 11ch; }
-      .hero-copy { color: rgba(255, 255, 255, 0.82); font-size: 15px; line-height: 1.72; max-width: 82ch; margin: 0; }
+      .hero-copy { color: rgba(255, 255, 255, 0.82); font-size: 15px; line-height: 1.72; max-width: 84ch; margin: 0; }
       .hero-copy + .hero-copy { margin-top: 10px; }
       .hero-meta { margin-top: 14px; color: #fff; font-size: clamp(18px, 2.5vw, 28px); line-height: 1.2; font-weight: 700; }
       .hero-side { display: grid; gap: 14px; }
@@ -70,12 +92,14 @@
       .glass-label { color: rgba(255, 255, 255, 0.64); margin-bottom: 10px; }
       .glass-value { color: #fff; font-size: 17px; font-weight: 700; line-height: 1.45; }
       .glass-note { color: rgba(255, 255, 255, 0.74); font-size: 13px; line-height: 1.58; margin-top: 8px; }
+
       .metrics { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
       .metric, .panel { border-radius: var(--radius); background: var(--panel); border: 1px solid rgba(255, 255, 255, 0.55); box-shadow: var(--shadow); }
       .metric { padding: 18px; }
       .metric .label { color: var(--muted); margin-bottom: 10px; }
       .metric .value { color: var(--navy); font-size: 34px; font-weight: 800; line-height: 1; }
       .metric .note { color: var(--muted); font-size: 13px; line-height: 1.5; margin-top: 8px; }
+
       .layout { display: grid; grid-template-columns: 1.16fr 0.84fr; gap: 18px; margin-top: 18px; }
       .stack { display: grid; gap: 18px; }
       .panel { padding: 20px; background: var(--panel-strong); }
@@ -109,6 +133,7 @@
       @media (max-width: 1160px) {
         .hero-grid, .metrics, .layout, .footer { grid-template-columns: 1fr; }
       }
+
       @media (max-width: 760px) {
         .page { width: min(100vw - 16px, 1280px); }
         .hero, .panel, .metric { padding: 18px; }
@@ -133,37 +158,37 @@
                 <div class="brand-name">Petrônio Souza Advogados Associados</div>
               </div>
             </div>
-            <h1>0020001 segue fatal hoje, o PJe amanheceu com 5 vencidos e IASSEPE virou frente material fora do contencioso clássico.</h1>
-            <p class="hero-copy"><strong>Janela auditada:</strong> 21/05/2026 às 12:13 BRT até 22/05/2026 às 12:13 BRT. A agenda confirmou <strong>10 blocos</strong> na janela e já reserva <strong>7 compromissos</strong> até 24/05/2026 às 12:13 BRT.</p>
-            <p class="hero-copy"><strong>Leitura executiva:</strong> o centro do dia continua sendo <strong>0020001-64.2023.8.17.2810</strong>, mas a manhã trouxe um segundo eixo de urgência: <strong>relatório PJe com 5 vencidos</strong>, <strong>IASSEPE e SAS</strong> com documentos robustos em Gmail, e uma esteira operacional que inclui <strong>AURORA</strong>, consultorias gravadas e triagem trabalhista contínua.</p>
-            <div class="hero-meta">Gerado em 22/05/2026 às 12:13 BRT | Cobertura futura auditada até 24/05/2026 às 12:13 BRT</div>
+            <h1>0020001 continua fatal hoje, mas a faixa da tarde abriu um segundo foco crítico: IASSEPE, SAS e PROCON já exigem tratamento executivo, não triagem passiva.</h1>
+            <p class="hero-copy"><strong>Janela auditada:</strong> 21/05/2026 às 18:13 BRT até 22/05/2026 às 18:13 BRT. A agenda confirmou <strong>10 blocos</strong> no intervalo e deixou a noite de 22/05 sem novos compromissos formais, o que amplia a obrigação de usar o restante do dia para execução jurídica real.</p>
+            <p class="hero-copy"><strong>Leitura executiva:</strong> o prazo fatal de <strong>0020001-64.2023.8.17.2810</strong> segue como prioridade absoluta, mas a camada nova desta rodada mudou o quadro: <strong>0018996</strong> ganhou publicação formal para 25/05, o dossiê <strong>IASSEPE</strong> materializou representação por improbidade e cautelar inadmitida no TCE-PE, a frente <strong>SAS</strong> confirmou risco alto com base documental robusta e a defesa <strong>PROCON / Dias Auto Peças</strong> sofreu falha de entrega por excesso de tamanho.</p>
+            <div class="hero-meta">Gerado em 22/05/2026 às 18:13 BRT | Cobertura futura auditada até 24/05/2026 às 18:13 BRT</div>
           </div>
           <div class="hero-side">
             <div class="glass">
               <div class="glass-label">Ponto mais sensível</div>
-              <div class="glass-value">0020001 continua como prazo fatal do dia e não deve atravessar a tarde sem manifestação fechada ou protocolo encaminhado.</div>
-              <div class="glass-note">As duas consultorias, a consulta às 10:00 e a triagem posterior reduziram a janela de manobra. A partir de agora, o risco é de compressão real, não só de desconforto.</div>
+              <div class="glass-value">0020001 não deve atravessar a noite sem protocolo fechado. A agenda já consumiu a manhã e a tarde; agora o risco é material, não teórico.</div>
+              <div class="glass-note">O prazo fatal informado continua em 22/05/2026 às 23:59. Qualquer desvio precisa ser justificado pelo próprio custo jurídico de adiar esse fechamento.</div>
             </div>
             <div class="glass">
               <div class="glass-label">Mudança qualitativa</div>
-              <div class="glass-value">A frente IASSEPE saiu do ruído documental: o TCE-PE inadmitiu a cautelar do processo 26100767-1 e houve representação por improbidade ligada à SAS e ao Contrato 006/2025.</div>
-              <div class="glass-note">O material aponta conflito administrativo com potencial reputacional e probatório, pedindo leitura jurídica coordenada e não só arquivamento de anexo.</div>
+              <div class="glass-value">IASSEPE e SAS deixaram de ser apenas anexos sensíveis. Há processo TCE-PE, duas frentes no MPPE, nomes de agentes públicos, PAAP e tese explícita de improbidade.</div>
+              <div class="glass-note">Isso pede centralização de dono, linha do tempo e classificação de risco separada do contencioso rotineiro.</div>
             </div>
             <div class="glass">
-              <div class="glass-label">Faixa de triagem</div>
-              <div class="glass-value">O Gmail confirmou 5 vencidos no relatório PJe, nova visualização de cobrança de cliente, publicações trabalhistas e documentação de consultoria pronta para revisão.</div>
-              <div class="glass-note">Esta rodada exclui e-mails e movimentos recebidos após 22/05/2026 às 12:13 BRT para preservar o corte auditado.</div>
+              <div class="glass-label">Ruído que virou ação</div>
+              <div class="glass-value">A petição complementar do PROCON foi assinada, mas a entrega de mídias para procon@jaboatao.pe.gov.br falhou por tamanho de mensagem acima do limite.</div>
+              <div class="glass-note">Sem reenvio por outro meio, o escritório fica sem garantir que os áudios e vídeos integrem a defesa administrativa.</div>
             </div>
           </div>
         </div>
       </section>
 
       <section class="metrics">
-        <article class="metric"><div class="label">Agenda 24h</div><div class="value">10</div><div class="note">Quatro blocos jurídicos, duas consultorias, um bloco clínico, uma triagem noturna e dois compromissos materiais já no dia 22.</div></article>
-        <article class="metric"><div class="label">Casos materiais</div><div class="value">14</div><div class="note">Entre pushes, PJe vencidos, trabalhistas, cível, penal e a nova frente administrativa de IASSEPE.</div></article>
-        <article class="metric"><div class="label">PJe vencidos</div><div class="value">5</div><div class="note">Quatro pedem verificação de reação útil do escritório; um é prazo do MP e entra como monitoramento.</div></article>
-        <article class="metric"><div class="label">Próximos 48h</div><div class="value">7</div><div class="note">A tarde de 22/05 ainda tem três blocos jurídicos antes dos compromissos financeiros de sexta.</div></article>
-        <article class="metric"><div class="label">Sinais operacionais</div><div class="value">5</div><div class="note">AURORA, cobrança visualizada, recorte OAB interrompido, Tactiq/Fireflies e intake IASSEPE/SAS.</div></article>
+        <article class="metric"><div class="label">Agenda 24h</div><div class="value">10</div><div class="note">Triagem crítica, prazo fatal, duas consultorias, consulta médica, pós-audiência, leitura de decisão, frente penal, intimações e bloco prudente.</div></article>
+        <article class="metric"><div class="label">Casos vivos</div><div class="value">9</div><div class="note">0020001, 0112247, 0007333, 0011527, 0018996, 0003440, 0000212, 0000396 e a frente trabalhista de publicações TRT6.</div></article>
+        <article class="metric"><div class="label">Frentes extras</div><div class="value">3</div><div class="note">IASSEPE, SAS e PROCON saíram do campo acessório e exigem registro e follow-up próprio.</div></article>
+        <article class="metric"><div class="label">Próximas 48h</div><div class="value">4</div><div class="note">23/05 tem AURORA, pagamento Paula Baia e aplicação mounjaro; 24/05 pela manhã há o Exame de Suficiência do CFC.</div></article>
+        <article class="metric"><div class="label">Financeiro</div><div class="value">3</div><div class="note">AURORA vence amanhã, ANA FRANCISCA visualizou cobrança de R$ 500,00 e Banco Toyota registrou novo boleto de R$ 2.505,48 com vencimento hoje.</div></article>
       </section>
 
       <section class="layout">
@@ -174,33 +199,33 @@
                 <div class="eyebrow">Executive Summary</div>
                 <h2>Prioridades críticas</h2>
               </div>
-              <div class="head-note">A janela do meio-dia fechou com mais informação acionável do que a do amanhecer. O ponto agora é evitar que a triagem paralise o fechamento jurídico principal.</div>
+              <div class="head-note">A rodada de 18:13 BRT não substitui o briefing do meio-dia. Ela mostra o que subiu de temperatura depois dele e o que ainda precisa sair do modo reativo nesta noite.</div>
             </div>
             <div class="list">
               <article class="item">
-                <h3 class="title">0020001-64.2023.8.17.2810 continua no topo e precisa sair do estado de observação.</h3>
-                <p class="body">O fatal informado segue em 22/05/2026 às 23:59. A manhã foi parcialmente consumida por consultorias e consulta médica, então a tarde precisa funcionar como janela de execução e não de nova análise.</p>
-                <div class="chips"><span class="chip critical">22/05</span><span class="chip critical">Prazo fatal</span><span class="chip watch">Manifestação</span></div>
+                <h3 class="title">0020001-64.2023.8.17.2810 continua absoluto e agora disputa a noite com menos desculpas do que antes.</h3>
+                <p class="body">O prazo fatal informado permanece em 22/05/2026 às 23:59. Com a agenda formal encerrada após 16:30, a noite precisa ser absorvida como bloco de redação, revisão final e protocolo.</p>
+                <div class="chips"><span class="chip critical">22/05</span><span class="chip critical">23:59</span><span class="chip critical">Prazo fatal</span></div>
               </article>
               <article class="item">
-                <h3 class="title">O relatório PJe das 07:14 BRT trouxe 5 vencidos e abriu uma fila paralela de resposta.</h3>
-                <p class="body">Quatro itens merecem confirmação de medida do escritório: 0000536-68.2025.8.17.9901, 0051393-53.2025.8.17.2001, 0000021-06.2024.8.17.2420 e 0000982-27.2026.8.17.8223. O caso 0017706-81.2019.8.17.0001 aparece como prazo do MP e fica mais para monitoramento defensivo.</p>
-                <div class="chips"><span class="chip critical">5 vencidos</span><span class="chip watch">Triagem PJe</span><span class="chip ok">0 urgentes</span></div>
+                <h3 class="title">A frente IASSEPE ganhou densidade jurídica suficiente para tratamento executivo autônomo.</h3>
+                <p class="body">A cautelar do TCE-PE no processo 26100767-1 foi inadmitida com remessa à DEX. Em paralelo, a representação ao MPPE aponta Talita Sodré da Mota de Almeida, Cícero Braga e Rogério Feitosa, liga o caso ao Contrato 254/2025 e sustenta desvio de finalidade no PAAP 0030319747.000024/2025-42.</p>
+                <div class="chips"><span class="chip critical">IASSEPE</span><span class="chip watch">TCE-PE</span><span class="chip critical">MPPE</span></div>
               </article>
               <article class="item">
-                <h3 class="title">IASSEPE e SAS viraram frente jurídica autônoma com documentação consistente em e-mail.</h3>
-                <p class="body">O TCE-PE inadmitiu a cautelar do processo 26100767-1 e determinou encaminhamento à DEX, enquanto uma representação por improbidade contra Juliana Lins Fialho, ligada ao Contrato 006/2025 e à dispensa emergencial da SAS, foi encaminhada ao MPPE.</p>
-                <div class="chips"><span class="chip critical">IASSEPE</span><span class="chip critical">SAS</span><span class="chip watch">MPPE/TCE</span></div>
+                <h3 class="title">SAS / Contrato 006/2025 continua em risco alto, agora com identificação mais precisa do caminho administrativo.</h3>
+                <p class="body">O material encaminhado pela Andrade referencia o processo TCE-PE 26100753-1, o número MPPE 01998.001.128/2026, a gestora Juliana Lins Fialho e a tese de rescisão arbitrária com uso indevido de cargos em comissão.</p>
+                <div class="chips"><span class="chip critical">SAS</span><span class="chip critical">Contrato 006/2025</span><span class="chip critical">Risco alto</span></div>
               </article>
               <article class="item">
-                <h3 class="title">0112247, 0007333 e 0011527 seguem como a espinha dorsal das frentes jurídicas já abertas.</h3>
-                <p class="body">0112247 permanece ativo no pós-audiência, 0007333 mudou de patamar com anulação da sentença ou acórdão e 0011527 continua como a frente penal sensível por mandado e diligência entregue ao destinatário.</p>
-                <div class="chips"><span class="chip critical">Pós-audiência</span><span class="chip critical">Anulação</span><span class="chip critical">Mandado</span></div>
+                <h3 class="title">PROCON / Dias Auto Peças virou pendência operacional crítica porque a prova foi preparada, mas não entregue.</h3>
+                <p class="body">A petição complementar sobre o Processo/Atendimento 2604014700600078301 foi assinada e trata de áudios e vídeos relevantes à defesa. O envio ao PROCON falhou porque a mensagem superou o limite de 10 MB do destinatário.</p>
+                <div class="chips"><span class="chip critical">PROCON</span><span class="chip critical">Falha de envio</span><span class="chip watch">Reenvio necessário</span></div>
               </article>
               <article class="item">
-                <h3 class="title">A operação também ganhou urgência real: cobrança de cliente visualizada, AURORA vencendo e recorte OAB interrompido.</h3>
-                <p class="body">Houve visualização de cobrança de ANA FRANCISCA DE PAULA no valor de R$ 500,00, lembrete de vencimento da AURORA para 23/05/2026 e alerta de serviço interrompido no recorte digital da OAB/PE, o que pode afetar cobertura de publicações.</p>
-                <div class="chips"><span class="chip watch">Cliente</span><span class="chip watch">AURORA</span><span class="chip watch">OAB/PE</span></div>
+                <h3 class="title">0018996-62.2025.8.17.8201 deixou a zona cinzenta e passou a ter publicação formal já datada para 25/05.</h3>
+                <p class="body">O e-mail do Jusbrasil das 12:22 BRT confirmou disponibilização em 22/05 e publicação em 25/05 no 8º Juizado Especial Cível da Capital. A ação agora é separar mera ciência de abertura de prazo útil antes de segunda-feira.</p>
+                <div class="chips"><span class="chip watch">0018996</span><span class="chip watch">25/05</span><span class="chip ok">Monitoramento dirigido</span></div>
               </article>
             </div>
           </section>
@@ -208,18 +233,17 @@
           <section class="panel">
             <div class="panel-head">
               <div>
-                <div class="eyebrow">Últimas 24 horas</div>
+                <div class="eyebrow">Últimas 24 Horas</div>
                 <h2>Desenvolvimentos materialmente relevantes</h2>
               </div>
-              <div class="head-note">Cronologia restrita ao intervalo verificado entre 21/05/2026 às 12:13 BRT e 22/05/2026 às 12:13 BRT.</div>
+              <div class="head-note">Cronologia consolidada entre 21/05/2026 às 18:13 BRT e 22/05/2026 às 18:13 BRT, com ênfase no que mudou o custo das próximas horas.</div>
             </div>
             <div class="list">
-              <article class="mail"><div class="mail-meta">21/05 12:13 a 17:30 BRT • virada jurídica</div><h3 class="title">0011527, 0007333 e a triagem TRT6/TJPE organizaram a tarde do dia 21.</h3><p class="body">Às 13:00, 0011527-56.2025.8.17.2480 recebeu diligência e mandado devolvido entregue ao destinatário. Às 13:22 e 14:22, 0007333-74.2021.8.17.2990 passou de conclusos para decisão para anulação da sentença ou acórdão. Entre 14:30 e 15:10, a agenda reservou triagem de andamentos novos em TRT6 e TJPE.</p></article>
-              <article class="mail"><div class="mail-meta">21/05 21:00 a 22/05 00:30 BRT • fim do dia ainda ativo</div><h3 class="title">0112247 continuou produzindo após a audiência e 0033541 virou decurso consolidado.</h3><p class="body">Às 21:02, 0112247-13.2025.8.17.2001 recebeu juntada de outros documentos no pós-audiência. Às 00:12 de 22/05, o TJPE 2º grau registrou o decurso de prazo de HUB HEALTH em 0033541-68.2025.8.17.9000, pedindo leitura do efeito prático do decurso no agravo.</p></article>
-              <article class="mail"><div class="mail-meta">22/05 07:09 a 08:56 BRT • abertura crítica da manhã</div><h3 class="title">O Gmail concentrou relatório PJe, pushes trabalhistas e alerta financeiro antes das consultorias.</h3><p class="body">Às 07:09 chegou push do TRT6 para 0000212-48.2026.5.06.0121 com prazo decorrido de ambas as partes. Às 07:14, o relatório PJe consolidou 5 vencidos, 0 urgentes e 137 movimentos diversos. Entre 07:37 e 08:22 vieram sinais de 0000579, 0000584, 0000396, 0000474 e interrupção do recorte OAB/PE. Às 08:56, a cobrança AURORA de R$ 485,54 foi lembrada como vencendo em 23/05.</p></article>
-              <article class="mail"><div class="mail-meta">22/05 09:00 a 10:35 BRT • consultoria e intake</div><h3 class="title">As consultorias ocorreram, foram registradas e deixaram material pronto para revisão.</h3><p class="body">Houve duas Primeiras Consultorias/Agendamento às 09:00 e 09:30. Às 09:45, o Fireflies enviou recap com sinais de confusão de processo, lacunas de comunicação, necessidade de ownership e pelo menos 3 ações detectadas. Às 10:35, o Tactiq confirmou a transcrição da consultoria “ANDRADE SOUZA INDICAÇÃO DE DANILO”.</p></article>
-              <article class="mail"><div class="mail-meta">22/05 10:18 a 10:45 BRT • frente administrativa sensível</div><h3 class="title">Chegaram dois encaminhamentos da Andrade com densidade jurídica real.</h3><p class="body">Às 10:18 foram encaminhados, por Gmail, materiais sobre IASSEPE e Secretaria de Assistência Social. Um PDF do TCE-PE mostrou a inadmissão da medida cautelar do processo 26100767-1 e remessa à DEX. Outro PDF ao MPPE descreveu possível improbidade administrativa ligada ao Processo de Dispensa Emergencial 3436.2025.CCD-SAS.CD.0001.SAS.FEAS e ao Contrato 006/2025.</p></article>
-              <article class="mail"><div class="mail-meta">22/05 11:10 a 12:13 BRT • fechamento da janela</div><h3 class="title">0000474, 0000145, 0007333 e a cobrança visualizada amarraram o fim do corte.</h3><p class="body">0000474-36.2018.5.06.0102 e 0000145-51.2024.5.06.0122 chegaram com publicações trabalhistas e intimações publicadas para 22/05. Às 11:45, a agenda já separava bloco específico para abrir a decisão anulatória de 0007333. Às 11:36, a cobrança de ANA FRANCISCA DE PAULA no valor de R$ 500,00 foi visualizada, criando uma ação comercial clara para follow-up.</p></article>
+              <article class="mail"><div class="mail-meta">21/05 19:24 a 22:24 BRT • publicações e novo material</div><h3 class="title">A noite já fechou com publicações trabalhistas e compartilhamento de pasta de processo.</h3><p class="body">Às 19:24 BRT, o Jusbrasil consolidou publicações de 0000145-51.2024.5.06.0122 e 0000474-36.2018.5.06.0102 para 22/05. Às 19:30 BRT, Jakeline Verissimo de Santana compartilhou a pasta “Edilsa - processo trabalhista”, adicionando material potencialmente acionável fora do fluxo PJe/TJPE.</p></article>
+              <article class="mail"><div class="mail-meta">22/05 07:09 a 11:10 BRT • manhã comprimida</div><h3 class="title">O dia abriu com PJe vencido, relatório de 5 vencidos, consultorias e blocos jurídicos em sequência.</h3><p class="body">Às 07:09 BRT, o TRT6 registrou prazo decorrido de ambas as partes em 0000212-48.2026.5.06.0121. Às 07:14 BRT, o relatório PJe apontou 5 vencidos. Entre 09:00 e 10:00 ocorreram duas Primeiras Consultorias; às 10:35 BRT, o Tactiq já devolveu a transcrição da consultoria “ANDRADE SOUZA INDICAÇÃO DE DANILO”.</p></article>
+              <article class="mail"><div class="mail-meta">22/05 10:05 a 10:17 BRT • PROCON e assinatura</div><h3 class="title">A defesa do PROCON foi concluída formalmente, mas a entrega das mídias não entrou nos autos por questão técnica.</h3><p class="body">A OAB/Certisign confirmou documento finalizado da petição complementar de mídias digitais para o Processo/Atendimento 2604014700600078301. Às 10:17 BRT, o Gmail recebeu retorno de falha: a mensagem para procon@jaboatao.pe.gov.br excedeu o limite do servidor remoto.</p></article>
+              <article class="mail"><div class="mail-meta">22/05 10:18 a 13:18 BRT • IASSEPE e SAS</div><h3 class="title">Os encaminhamentos da Andrade deixaram de ser abstratos e vieram com números, agentes e fundamentos jurídicos definidos.</h3><p class="body">No front IASSEPE, o TCE-PE 26100767-1 inadmitiu a cautelar sobre o Contrato 254/2025 e enviou o material à DEX; a representação ao MPPE tramita sob o número 01998.001.173/2026, com foco em Talita Sodré da Mota de Almeida, Cícero Braga e Rogério Feitosa. No front SAS, o material cita o TCE-PE 26100753-1, a representação MPPE 01998.001.128/2026, o Processo de Dispensa Emergencial 3436.2025.CCD-SAS.CD.0001.SAS.FEAS e o Contrato 006/2025.</p></article>
+              <article class="mail"><div class="mail-meta">22/05 12:22 a 17:31 BRT • tarde com reflexos concretos</div><h3 class="title">0018996 ganhou publicação formal, ANA FRANCISCA visualizou cobrança e Banco Toyota reapareceu com boleto vencendo hoje.</h3><p class="body">Às 12:22 BRT, o Jusbrasil confirmou para 0018996-62.2025.8.17.8201 disponibilização em 22/05 e publicação em 25/05. Às 11:36 BRT, refletido no e-mail das 14:36 UTC, ANA FRANCISCA DE PAULA visualizou cobrança de R$ 500,00. Às 17:31 BRT, chegou novo boleto Toyota de R$ 2.505,48 com vencimento em 22/05/2026.</p></article>
             </div>
           </section>
 
@@ -229,16 +253,14 @@
                 <div class="eyebrow">Agenda</div>
                 <h2>Próximos 2 dias e preparo</h2>
               </div>
-              <div class="head-note">Da tarde de 22/05 em diante, a agenda ainda traz blocos jurídicos antes da sexta financeira e do compromisso de sábado pela manhã.</div>
+              <div class="head-note">O restante da sexta já está desenhado. O risco agora está menos na agenda e mais na disciplina de fechamento.</div>
             </div>
             <div class="timeline">
-              <article class="event"><div class="when">22/05 14:30</div><div><h3 class="title">Frente penal sensível — 0011527-56.2025.8.17.2480</h3><p class="body">Bloco já reservado na agenda para ler o mandado, a diligência e a consequência prática do ato entregue ao destinatário.</p><ul class="prep"><li>Chegar com o push já lido e uma hipótese preliminar sobre urgência defensiva.</li></ul></div></article>
-              <article class="event"><div class="when">22/05 15:10</div><div><h3 class="title">Triagem de intimações publicadas 22/05</h3><p class="body">A agenda concentra 0000439, 0000474, 0000145, 0000786, 0033541 e 0018996 para separar publicação útil de mero decurso da parte contrária.</p><ul class="prep"><li>Entrar com prioridade clara: primeiro o que pode inaugurar prazo, depois o que é só ciência.</li></ul></div></article>
-              <article class="event"><div class="when">22/05 16:00</div><div><h3 class="title">Leitura prudente — 0003440-92.2022.8.17.2100</h3><p class="body">Bloco de acompanhamento sensível para abrir a nova petição e medir impacto antes de qualquer devolutiva externa.</p><ul class="prep"><li>Evitar resposta ao cliente sem leitura do inteiro teor da juntada.</li></ul></div></article>
-              <article class="event"><div class="when">23/05 10:00</div><div><h3 class="title">Vencimento da cobrança AURORA — R$ 485,54</h3><p class="body">A cobrança foi lembrada por e-mail e já está espelhada na agenda para sexta de manhã.</p><ul class="prep"><li>Confirmar se representa o próximo ciclo da Hapvida e não repetição da cobrança já quitada.</li></ul></div></article>
-              <article class="event"><div class="when">23/05 12:00</div><div><h3 class="title">Pagamento Paula Baia — R$ 1.300,00</h3><p class="body">Compromisso financeiro já confirmado, ideal para ser resolvido no mesmo bloco de AURORA.</p><ul class="prep"><li>Concentrar pagamentos e pendências financeiras em uma única passada.</li></ul></div></article>
-              <article class="event"><div class="when">23/05 19:00</div><div><h3 class="title">Aplicação mounjaro</h3><p class="body">Compromisso pessoal dentro da janela futura auditada.</p><ul class="prep"><li>Encerrar pendências jurídicas mais pesadas antes do início da noite.</li></ul></div></article>
-              <article class="event"><div class="when">24/05 10:00</div><div><h3 class="title">1º Exame de Suficiência de 2026 do CFC</h3><p class="body">Compromisso de sábado pela manhã dentro da janela futura de 48 horas.</p><ul class="prep"><li>Evitar carregar para sábado o que pode ser fechado ainda na sexta.</li></ul></div></article>
+              <article class="event"><div class="when">22/05 noite</div><div><h3 class="title">Sem novos eventos formais na agenda</h3><p class="body">A ausência de compromisso marcado é, nesta execução, uma janela de obrigação e não de folga operacional.</p><ul class="prep"><li>Reservar a noite para 0020001, reenvio PROCON e consolidação mínima de IASSEPE/SAS.</li></ul></div></article>
+              <article class="event"><div class="when">23/05 10:00</div><div><h3 class="title">Vencimento da cobrança AURORA — R$ 485,54</h3><p class="body">Continua valendo o lembrete de sexta pela manhã.</p><ul class="prep"><li>Resolver no mesmo bloco em que for tratada a nova pressão Toyota.</li></ul></div></article>
+              <article class="event"><div class="when">23/05 12:00</div><div><h3 class="title">Pagamento Paula Baia — R$ 1.300,00</h3><p class="body">Compromisso financeiro já espelhado em agenda e fácil de consolidar com AURORA.</p><ul class="prep"><li>Fechar toda a esteira financeira da sexta em uma única passada.</li></ul></div></article>
+              <article class="event"><div class="when">23/05 19:00</div><div><h3 class="title">Aplicação mounjaro</h3><p class="body">Compromisso pessoal dentro da janela de 48 horas.</p><ul class="prep"><li>Evitar carregar pendências jurídicas estruturais para a noite de sexta.</li></ul></div></article>
+              <article class="event"><div class="when">24/05 10:00</div><div><h3 class="title">1º Exame de Suficiência de 2026 do CFC</h3><p class="body">Evento de sábado pela manhã ainda dentro da faixa futura auditada.</p><ul class="prep"><li>Manter a sexta como dia de limpeza das frentes jurídicas e financeiras abertas.</li></ul></div></article>
             </div>
           </section>
         </div>
@@ -252,14 +274,13 @@
               </div>
             </div>
             <div class="list">
-              <article class="risk"><h3 class="title">0020001-64.2023.8.17.2810</h3><p class="body"><strong>Partes:</strong> não visíveis na evidência aberta desta janela. <strong>Advogado responsável:</strong> Petrônio Souza, por contexto operacional do briefing e da agenda. <strong>Evento:</strong> manifestação pendente com fatal indicado para 22/05/2026 às 23:59. <strong>Follow-up:</strong> fechar e protocolar ainda hoje. <strong>Risco:</strong> alto, por prazo fatal no mesmo dia.</p></article>
-              <article class="risk"><h3 class="title">0112247-13.2025.8.17.2001</h3><p class="body"><strong>Partes:</strong> Mayne Maria de Almeida x Banco Bradesco S/A e outros. <strong>Advogado responsável:</strong> Petrônio Souza, em frente interna do escritório. <strong>Evento:</strong> juntada de outros documentos às 21:02 de 21/05/2026, já no pós-audiência. <strong>Follow-up:</strong> consolidar leitura pós-audiência e definir próximo passo processual. <strong>Risco:</strong> alto.</p></article>
-              <article class="risk"><h3 class="title">0007333-74.2021.8.17.2990</h3><p class="body"><strong>Partes:</strong> Barbara Carneiro de Franca x Sabrina Oliveira de Miranda e outros. <strong>Advogado responsável:</strong> não identificável na prova aberta, mas caso está sob monitoramento do escritório. <strong>Evento:</strong> conclusos para decisão às 13:22 e anulação da sentença ou acórdão às 14:22 de 21/05/2026. <strong>Follow-up:</strong> abrir a decisão anulatória e recalibrar estratégia. <strong>Risco:</strong> alto.</p></article>
-              <article class="risk"><h3 class="title">0011527-56.2025.8.17.2480</h3><p class="body"><strong>Partes:</strong> Central de Inquéritos de Caruaru e outros x Jose Felipe Pedro da Silva e outros. <strong>Advogado responsável:</strong> Petrônio Souza aparece como defesa associada no histórico estruturado. <strong>Evento:</strong> mandado para cumprimento às 08:38 e diligência com mandado devolvido entregue ao destinatário às 13:00 de 21/05/2026. <strong>Follow-up:</strong> abrir o mandado e qualificar o impacto imediato sobre a defesa. <strong>Risco:</strong> alto.</p></article>
-              <article class="risk"><h3 class="title">26100767-1 • IASSEPE • medida cautelar no TCE-PE</h3><p class="body"><strong>Partes:</strong> Andrade Empreendimentos Ltda e Willian de Amorim Rozendo x IASSEPE. <strong>Advogado responsável:</strong> não identificado no e-mail aberto. <strong>Evento:</strong> decisão terminativa monocrática inadmitiu a medida cautelar e determinou remessa à DEX. <strong>Follow-up:</strong> avaliar impacto estratégico, vias próprias remanescentes e uso do material como prova em outras frentes. <strong>Risco:</strong> médio-alto, por repercussão administrativa e de controle externo.</p></article>
-              <article class="risk"><h3 class="title">Contrato 006/2025 • SAS/MPPE • representação por improbidade</h3><p class="body"><strong>Número base:</strong> Processo de Dispensa Emergencial 3436.2025.CCD-SAS.CD.0001.SAS.FEAS; Contrato 006/2025; SEI 1300000063.002533/2025-18 citado na peça. <strong>Partes:</strong> Andrade Empreendimentos Ltda x Juliana Lins Fialho / SAS. <strong>Advogado responsável:</strong> não identificado na evidência aberta. <strong>Evento:</strong> representação ao MPPE por ato de improbidade administrativa, ligada a rescisão arbitrária e desvio de finalidade. <strong>Follow-up:</strong> classificar a frente, definir dono e centralizar provas. <strong>Risco:</strong> alto, por potencial reputacional e contencioso administrativo.</p></article>
-              <article class="risk"><h3 class="title">0018996-62.2025.8.17.8201, 0033541-68.2025.8.17.9000, 0000474-36.2018.5.06.0102 e 0000145-51.2024.5.06.0122</h3><p class="body"><strong>Evento:</strong> publicação ao DJEN em 0018996, decurso em agravo de 0033541, e publicações/intimações trabalhistas em 0000474 e 0000145. <strong>Follow-up:</strong> separar ciência simples de ato útil ainda nesta sexta. <strong>Risco:</strong> médio, com chance de reclassificação para alto após leitura do teor.</p></article>
-              <article class="risk"><h3 class="title">0000212-48.2026.5.06.0121, 0000579-69.2026.5.06.0122, 0000584-94.2026.5.06.0121 e 0000396-46.2023.5.06.0141</h3><p class="body"><strong>Evento:</strong> prazo decorrido em 0000212, documento sigiloso em 0000579, intimação publicada em 0000584 e documento anexado em 0000396. <strong>Follow-up:</strong> triagem trabalhista dirigida, com prioridade para o que possa gerar reação útil. <strong>Risco:</strong> médio.</p></article>
+              <article class="risk"><h3 class="title">0020001-64.2023.8.17.2810</h3><p class="body"><strong>Partes:</strong> não visíveis na evidência aberta desta rodada. <strong>Advogado responsável:</strong> Petrônio Souza, por contexto operacional e agenda. <strong>Evento:</strong> manifestação pendente com fatal informado para 22/05/2026 às 23:59. <strong>Follow-up:</strong> fechar, revisar e protocolar hoje. <strong>Risco:</strong> crítico, porque há prazo fatal no mesmo dia e nenhuma nova folga de agenda o substitui.</p></article>
+              <article class="risk"><h3 class="title">0018996-62.2025.8.17.8201</h3><p class="body"><strong>Partes:</strong> Antonio Rafael de Arruda x GO Energia Solar Ltda, Itaú Unibanco e Renovera Energias Renováveis Ltda. <strong>Advogado responsável:</strong> Petrônio Souza aparece entre os patronos no e-mail de publicação. <strong>Evento:</strong> publicação com disponibilização em 22/05/2026 e veiculação em 25/05/2026. <strong>Follow-up:</strong> abrir o teor e classificar se a publicação inaugura prazo útil já para segunda-feira. <strong>Risco:</strong> médio.</p></article>
+              <article class="risk"><h3 class="title">26100767-1 • IASSEPE / TCE-PE</h3><p class="body"><strong>Partes:</strong> Andrade Empreendimentos Ltda e Willian de Amorim Rozendo x IASSEPE. <strong>Advogado responsável:</strong> não identificado no material aberto. <strong>Evento:</strong> decisão monocrática inadmitiu medida cautelar sobre o PAAP 0030319747.000024/2025-42 e determinou remessa dos autos à DEX como subsídio para controle. <strong>Follow-up:</strong> definir estratégia fora da via cautelar e organizar trilha probatória. <strong>Risco:</strong> médio-alto.</p></article>
+              <article class="risk"><h3 class="title">MPPE / IASSEPE — representação 01998.001.173/2026</h3><p class="body"><strong>Base:</strong> Contrato 254/2025 e PAAP 0030319747.000024/2025-42. <strong>Partes e agentes citados:</strong> Andrade Empreendimentos Ltda; Talita Sodré da Mota de Almeida; Cícero Braga; Rogério Feitosa de Carvalho. <strong>Evento:</strong> representação por ato de improbidade administrativa ligada a ingerência, LGPD, retenção de parcela incontroversa e desvio de finalidade. <strong>Follow-up:</strong> centralizar provas, checar cronologia e definir dono interno. <strong>Risco:</strong> alto.</p></article>
+              <article class="risk"><h3 class="title">SAS / MPPE — representação 01998.001.128/2026</h3><p class="body"><strong>Base documental:</strong> Processo de Dispensa Emergencial 3436.2025.CCD-SAS.CD.0001.SAS.FEAS, Contrato 006/2025 e SEI 1300000063.002533/2025-18. <strong>Partes e agente citado:</strong> Andrade Empreendimentos Ltda x Juliana Lins Fialho / SAS. <strong>Evento:</strong> representação por improbidade e pedido cautelar no TCE-PE 26100753-1 sobre rescisão arbitrária, exigências abusivas e possível uso indevido de cargos comissionados. <strong>Follow-up:</strong> classificar a frente e medir repercussão administrativa, reputacional e de controle. <strong>Risco:</strong> alto.</p></article>
+              <article class="risk"><h3 class="title">PROCON Jaboatão — Processo/Atendimento 2604014700600078301</h3><p class="body"><strong>Partes:</strong> Sandro José Lima Albuquerque x Dias Auto Peças / C J Antonio Dias Peças e Serviços. <strong>Advogado responsável:</strong> Petrônio Souza, OAB/PE 53.391, signatário da petição. <strong>Evento:</strong> petição complementar sobre mídias digitais foi assinada em 22/05, mas o e-mail para procon@jaboatao.pe.gov.br falhou por exceder 10 MB. <strong>Follow-up:</strong> reenviar mídias por link, compressão ou novo canal oficial ainda com certificação de entrega. <strong>Risco:</strong> médio-alto.</p></article>
+              <article class="risk"><h3 class="title">0000212-48.2026.5.06.0121, 0000474-36.2018.5.06.0102, 0000145-51.2024.5.06.0122 e 0000396-46.2023.5.06.0141</h3><p class="body"><strong>Evento:</strong> prazo decorrido bilateral em 0000212, publicações TRT6 para 0000474 e 0000145, e novo documento anexado em 0000396. <strong>Follow-up:</strong> triagem trabalhista dirigida para separar ciência simples de reação processual efetiva. <strong>Risco:</strong> médio.</p></article>
             </div>
           </section>
 
@@ -271,11 +292,11 @@
               </div>
             </div>
             <div class="list">
-              <article class="risk"><h3 class="title">Médio-alto: a fila do PJe pode sequestrar a tarde se não houver corte por relevância.</h3><p class="body">O relatório das 07:14 trouxe 5 vencidos e 137 movimentos diversos. Sem triagem disciplinada, a equipe corre o risco de trocar fechamento de prioridade alta por navegação difusa em pendências heterogêneas.</p></article>
-              <article class="risk"><h3 class="title">Médio-alto: o recorte digital da OAB/PE está interrompido.</h3><p class="body">O próprio e-mail informa suspensão do serviço e necessidade de atualização cadastral. Isso afeta a confiança no recebimento passivo de publicações e aumenta o risco de depender só de alertas paralelos.</p></article>
-              <article class="risk"><h3 class="title">Médio: a cobrança de ANA FRANCISCA DE PAULA foi visualizada, mas ainda não há fechamento comercial registrado.</h3><p class="body">O cliente visualizou a cobrança de R$ 500,00 às 11:36 de 22/05/2026. O próximo passo natural é checar conversão em pagamento ou preparar contato de follow-up.</p></article>
-              <article class="risk"><h3 class="title">Médio: Fireflies e Tactiq já entregaram material de consultoria, mas o conteúdo ainda não foi incorporado ao fluxo decisório.</h3><p class="body">O recap destaca confusão de processo, lacunas de comunicação, pressão por ownership e pelo menos 3 action items. Há valor executivo pronto, mas ele ainda está fora do circuito principal de execução.</p></article>
-              <article class="risk"><h3 class="title">Médio: AURORA e Paula Baia compõem uma sexta financeira que deve ser resolvida em um único bloco.</h3><p class="body">Os dois compromissos estão próximos e convivem com a ressaca do prazo fatal de hoje. Sem consolidação, viram distração recorrente em vez de tarefa fechável.</p></article>
+              <article class="risk"><h3 class="title">Crítico: 0020001 continua sem amortecedor de agenda.</h3><p class="body">A agenda já terminou a parte que competia a ela. Se o caso não andar agora, o atraso deixa de ser efeito de contexto e passa a ser opção operacional.</p></article>
+              <article class="risk"><h3 class="title">Alto: IASSEPE e SAS já exigem governança de frente, não só leitura de anexo.</h3><p class="body">Há números de processo, peças extensas, nomes de agentes e pedidos de cautelar ou improbidade. Sem dono interno, essas frentes começam a competir informalmente com o contencioso principal.</p></article>
+              <article class="risk"><h3 class="title">Médio-alto: o PROCON tem prova pronta, mas ainda sem ingresso útil por falha técnica.</h3><p class="body">A mensagem de erro do Gmail cria um risco simples de resolver, mas relevante o bastante para comprometer a narrativa defensiva se ficar sem saneamento.</p></article>
+              <article class="risk"><h3 class="title">Médio: 0018996 ganhou marco temporal novo e não deve ser redescoberto só na segunda-feira.</h3><p class="body">A publicação em 25/05 desloca o caso do campo de mera observação vaga para monitoramento com data concreta.</p></article>
+              <article class="risk"><h3 class="title">Médio: Toyota, AURORA e cobrança visualizada podem pulverizar atenção se não forem fechados em bloco.</h3><p class="body">O risco aqui não é jurídico, mas de fragmentação mental do encerramento da semana.</p></article>
             </div>
           </section>
 
@@ -287,11 +308,11 @@
               </div>
             </div>
             <div class="list">
-              <article class="todo"><div class="box"></div><div><h3 class="title">Protocolar 0020001 ainda em 22/05.</h3><p class="body">Nada nesta fila paralela é mais caro de perder do que esse prazo fatal.</p><div class="owner">Owner: Petrônio</div></div></article>
-              <article class="todo"><div class="box"></div><div><h3 class="title">Rodar triagem PJe em dois grupos: vencidos acionáveis e movimentos diversos que podem esperar.</h3><p class="body">Os quatro vencidos com potencial de resposta própria precisam ser qualificados ainda hoje; o prazo do MP fica como observação.</p><div class="owner">Owner: Petrônio</div></div></article>
-              <article class="todo"><div class="box"></div><div><h3 class="title">Abrir e classificar a frente IASSEPE/SAS com dono, risco e caminho processual.</h3><p class="body">O material do TCE-PE e do MPPE já é robusto demais para ficar como anexo solto em e-mail.</p><div class="owner">Owner: Petrônio</div></div></article>
-              <article class="todo"><div class="box"></div><div><h3 class="title">Consolidar 0112247, 0007333 e 0011527 antes de encerrar a sexta.</h3><p class="body">Esses três casos representam o núcleo jurídico mais vivo depois de 0020001.</p><div class="owner">Owner: Petrônio</div></div></article>
-              <article class="todo"><div class="box"></div><div><h3 class="title">Regularizar o recorte OAB/PE e transformar as saídas de consultoria em itens executáveis.</h3><p class="body">Isso reduz risco de perda passiva de publicação e evita que insights de atendimento morram no e-mail.</p><div class="owner">Owner: Petrônio</div></div></article>
+              <article class="todo"><div class="box"></div><div><h3 class="title">Protocolar 0020001 ainda hoje.</h3><p class="body">Nenhuma outra frente desta rodada tem custo maior de perda do que esse prazo fatal.</p><div class="owner">Owner: Petrônio</div></div></article>
+              <article class="todo"><div class="box"></div><div><h3 class="title">Reenviar a defesa de mídias do PROCON por canal tecnicamente viável.</h3><p class="body">Vale link, compactação ou novo meio indicado pelo órgão, desde que fique certificável.</p><div class="owner">Owner: Petrônio</div></div></article>
+              <article class="todo"><div class="box"></div><div><h3 class="title">Abrir célula própria para IASSEPE e SAS com linha do tempo, agente e risco.</h3><p class="body">As duas frentes já têm material suficiente para escapar do rótulo genérico de “assunto sensível”.</p><div class="owner">Owner: Petrônio</div></div></article>
+              <article class="todo"><div class="box"></div><div><h3 class="title">Classificar 0018996 antes de encerrar a sexta.</h3><p class="body">O caso ganhou data de publicação e não deve voltar à fila como surpresa de segunda-feira.</p><div class="owner">Owner: Petrônio</div></div></article>
+              <article class="todo"><div class="box"></div><div><h3 class="title">Fechar AURORA, Toyota e cobrança visualizada em uma passada só amanhã cedo.</h3><p class="body">Isso protege a sexta de dispersão financeira recorrente.</p><div class="owner">Owner: Petrônio</div></div></article>
             </div>
           </section>
 
@@ -303,18 +324,18 @@
               </div>
             </div>
             <div class="list">
-              <article class="coverage"><h3 class="title">Gmail consolidado</h3><p class="body">Foram revisados os e-mails materialmente relevantes da janela, incluindo pushes TJPE/TRT6, relatório PJe, Asaas, recorte OAB/PE, consultorias, encaminhamentos de IASSEPE/SAS e alertas comerciais.</p></article>
-              <article class="coverage"><h3 class="title">Google Calendar</h3><p class="body">A agenda foi auditada para as últimas 24 horas completas e para os próximos 48 horas, até 24/05/2026 às 12:13 BRT.</p></article>
-              <article class="coverage"><h3 class="title">Notion</h3><p class="body">Os casos já conhecidos foram preparados para atualização sem duplicidade e a nova página diária do briefing foi estruturada para registrar a rodada do meio-dia.</p></article>
-              <article class="coverage"><h3 class="title">Lacunas</h3><p class="body">Não há conector de chat corporativo nesta execução. O teor integral de petições, decisões e documentos sigilosos ainda depende de abertura direta nos portais oficiais. Os e-mails e pushes após 22/05/2026 às 12:13 BRT ficaram fora desta janela.</p></article>
+              <article class="coverage"><h3 class="title">Gmail consolidado</h3><p class="body">Foram revisados os e-mails materialmente relevantes da janela, incluindo pushes TRT6/TJPE, relatório PJe, Asaas, OAB, Tactiq, Jusbrasil, Toyota, PROCON e os encaminhamentos da Andrade com PDFs jurídicos.</p></article>
+              <article class="coverage"><h3 class="title">Google Calendar</h3><p class="body">A agenda foi auditada nas últimas 24 horas completas e nos próximos 2 dias, até 24/05/2026 às 18:13 BRT.</p></article>
+              <article class="coverage"><h3 class="title">Notion</h3><p class="body">Os casos afetados pela faixa da tarde foram preparados para atualização incremental sem duplicidade, além da nova página diária desta rodada de 18:13 BRT.</p></article>
+              <article class="coverage"><h3 class="title">Lacunas</h3><p class="body">Não há conector de chat corporativo nesta execução. Parte do teor integral de pushes e portais oficiais ainda depende de abertura direta nas fontes externas. O conteúdo recebido após 22/05/2026 às 18:13 BRT ficou fora do corte auditado desta publicação.</p></article>
             </div>
           </section>
         </div>
       </section>
 
       <section class="footer">
-        <div class="footer-note"><strong>Leitura principal:</strong> o escritório já sabe o que é urgente, mas a dificuldade desta rodada não é descobrir. É impedir que a nova massa de informação empurre 0020001 para o fim do dia e deixe IASSEPE, PJe vencidos e triagem trabalhista sem dono claro.</div>
-        <div class="footer-note"><strong>Resumo de risco:</strong> jurídico alto em 0020001, 0112247, 0007333, 0011527 e na frente SAS/MPPE; jurídico médio-alto em IASSEPE/TCE-PE; jurídico médio em 0018996, 0033541, 0000474, 0000145, 0000212, 0000579, 0000584 e 0000396; operacional médio-alto em PJe vencidos, OAB/PE, cobrança visualizada e backlog de consultorias.</div>
+        <div class="footer-note"><strong>Leitura principal:</strong> a noite de 22/05 precisa ser tratada como janela de execução concentrada. O prazo de 0020001 continua sendo o centro, mas a rodada revelou três tarefas que não deveriam amanhecer soltas: PROCON reenviado, IASSEPE/SAS organizados e 0018996 corretamente classificado.</div>
+        <div class="footer-note"><strong>Resumo de risco:</strong> jurídico crítico em 0020001; jurídico alto em IASSEPE/MPPE, SAS/MPPE e no custo reputacional de deixar essas frentes sem dono; jurídico médio-alto em PROCON por falha de envio; jurídico médio em 0018996 e nos processos trabalhistas de triagem; operacional médio em Toyota, AURORA e cobrança visualizada.</div>
       </section>
     </main>
   </body>
