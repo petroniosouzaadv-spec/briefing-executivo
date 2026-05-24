@@ -6,10 +6,7 @@
     <title>Briefing Executivo | 24 de maio de 2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <style>
       :root {
         --bg: #dae1e8;
@@ -25,7 +22,6 @@
         --shadow: 0 24px 70px rgba(17, 25, 31, 0.12);
         --radius: 8px;
       }
-
       * { box-sizing: border-box; }
       body {
         margin: 0;
@@ -37,7 +33,6 @@
           radial-gradient(circle at 100% 0%, rgba(23, 43, 73, 0.18), transparent 30%),
           linear-gradient(180deg, #eef2f6 0%, #dae1e8 58%, #ced6de 100%);
       }
-
       .page { width: min(1280px, calc(100vw - 28px)); margin: 0 auto; padding: 18px 0 34px; }
       .hero {
         position: relative;
@@ -49,7 +44,6 @@
         box-shadow: var(--shadow);
         padding: 26px;
       }
-
       .hero::before,
       .hero::after {
         content: "";
@@ -57,32 +51,18 @@
         border-radius: 999px;
         border: 1px solid rgba(187, 157, 109, 0.3);
       }
-
       .hero::before { width: 360px; height: 360px; right: -100px; top: -120px; }
       .hero::after { width: 220px; height: 220px; right: 120px; bottom: -110px; }
       .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.45fr 0.95fr; gap: 18px; align-items: stretch; }
       .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
       .brand-mark {
-        width: 58px;
-        height: 58px;
-        border-radius: 50%;
-        border: 1px solid rgba(187, 157, 109, 0.72);
-        display: grid;
-        place-items: center;
-        color: var(--gold);
-        font-weight: 700;
-        position: relative;
+        width: 58px; height: 58px; border-radius: 50%; border: 1px solid rgba(187, 157, 109, 0.72);
+        display: grid; place-items: center; color: var(--gold); font-weight: 700; position: relative;
       }
-
       .brand-mark::after {
-        content: "";
-        position: absolute;
-        width: 78px;
-        height: 78px;
-        border-radius: 50%;
+        content: ""; position: absolute; width: 78px; height: 78px; border-radius: 50%;
         border: 1px solid rgba(200, 182, 172, 0.22);
       }
-
       .brand-label { color: rgba(255, 255, 255, 0.72); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
       .brand-name { color: #fff; font-size: 23px; line-height: 1.08; font-weight: 600; max-width: 18ch; }
       .hero h1 { margin: 0 0 14px; color: #fff; font-size: clamp(31px, 4.3vw, 56px); line-height: 0.98; max-width: 11ch; }
@@ -95,14 +75,12 @@
       .glass-label { color: rgba(255, 255, 255, 0.64); margin-bottom: 10px; }
       .glass-value { color: #fff; font-size: 17px; font-weight: 700; line-height: 1.45; }
       .glass-note { color: rgba(255, 255, 255, 0.74); font-size: 13px; line-height: 1.58; margin-top: 8px; }
-
       .metrics { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
       .metric, .panel { border-radius: var(--radius); background: var(--panel); border: 1px solid rgba(255, 255, 255, 0.55); box-shadow: var(--shadow); }
       .metric { padding: 18px; }
       .metric .label { color: var(--muted); margin-bottom: 10px; }
       .metric .value { color: var(--navy); font-size: 34px; font-weight: 800; line-height: 1; }
       .metric .note { color: var(--muted); font-size: 13px; line-height: 1.5; margin-top: 8px; }
-
       .layout { display: grid; grid-template-columns: 1.16fr 0.84fr; gap: 18px; margin-top: 18px; }
       .stack { display: grid; gap: 18px; }
       .panel { padding: 20px; background: var(--panel-strong); }
@@ -132,11 +110,9 @@
       .footer { margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
       .footer-note { padding: 18px 20px; border-radius: var(--radius); background: rgba(17, 25, 31, 0.95); color: rgba(255, 255, 255, 0.8); box-shadow: var(--shadow); font-size: 13px; line-height: 1.66; }
       .footer-note strong { color: #fff; }
-
       @media (max-width: 1160px) {
         .hero-grid, .metrics, .layout, .footer { grid-template-columns: 1fr; }
       }
-
       @media (max-width: 760px) {
         .page { width: min(100vw - 16px, 1280px); }
         .hero, .panel, .metric { padding: 18px; }
@@ -161,37 +137,37 @@
                 <div class="brand-name">Petrônio Souza Advogados Associados</div>
               </div>
             </div>
-            <h1>A janela até 24 de maio às 06:13 abriu três novos decursos de prazo, manteve 0020001 sem fechamento verificável e deixou a audiência de 0000212 para ser concluída antes da segunda.</h1>
-            <p class="hero-copy"><strong>Janela auditada:</strong> 23/05/2026 às 06:13 BRT até 24/05/2026 às 06:13 BRT. A cobertura cruzou a agenda da banca, o Gmail consolidado e o controle de continuidade em Notion. Dentro do corte, houve um bloco forte de execução entre 07:20 e 15:20 de 23/05, um lote TJPE útil para a abertura de 25/05, novas saídas financeiras confirmadas por Cielo e Nubank e, já na madrugada de 24/05, três novos decursos em <strong>0006873</strong>, <strong>0007599</strong> e <strong>0007127</strong>.</p>
-            <p class="hero-copy"><strong>Leitura executiva:</strong> o caso <strong>0020001-64.2023.8.17.2810</strong> continua como o principal ponto de atenção porque a agenda reservou duas checagens pós-prazo em 23/05 e o recorte atual do Gmail ainda não trouxe confirmação externa de protocolo, perda reconhecida ou medida de contenção. Em paralelo, a audiência de <strong>0000212-48.2026.5.06.0121</strong> já não tem margem confortável para escorregar, porque o sábado está parcialmente ocupado pelo Exame de Suficiência do CFC e a segunda abre comprimida.</p>
-            <div class="hero-meta">Gerado em 24/05/2026 às 06:13 BRT | Cobertura futura auditada até 26/05/2026 às 06:13 BRT</div>
+            <h1>A janela até 24 de maio às 12:13 manteve 0020001 sem fechamento verificável, acrescentou 0815844 à fila jurídica e comprimiu ainda mais o preparo útil antes da audiência de 0000212.</h1>
+            <p class="hero-copy"><strong>Janela auditada:</strong> 23/05/2026 às 12:13 BRT até 24/05/2026 às 12:13 BRT. A cobertura cruzou agenda, Gmail consolidado e o controle de continuidade em Notion. Dentro do corte, a banca concentrou o dia 23/05 em reforço de preparo de audiência, checagem pós-prazo de <strong>0020001</strong>, monitoramento PROCON e frentes sensíveis; depois, o Gmail fechou a noite com pushes de <strong>0002413</strong>, <strong>0005844</strong> e <strong>0003440</strong>, e a madrugada abriu novos decursos em <strong>0006873</strong>, <strong>0007599</strong> e <strong>0007127</strong>.</p>
+            <p class="hero-copy"><strong>Leitura executiva:</strong> às 12:13 BRT de 24/05, o principal problema continua sendo <strong>0020001-64.2023.8.17.2810</strong>, porque ainda não apareceu confirmação objetiva de protocolo, perda reconhecida ou medida de contenção nas fontes lidas. O novo acréscimo material desta rodada foi o push do processo <strong>0815844-52.2026.8.15.0001</strong>, além do fato de que o restante do sábado útil já está comprimido entre o Exame do CFC e três blocos críticos de contenção, triagem e preparo final.</p>
+            <div class="hero-meta">Gerado em 24/05/2026 às 12:13 BRT | Cobertura futura auditada até 26/05/2026 às 12:13 BRT</div>
           </div>
           <div class="hero-side">
             <div class="glass">
               <div class="glass-label">Ponto mais sensível</div>
-              <div class="glass-value">0020001 segue sem confirmação externa nova no Gmail consolidado, apesar de duas checagens pós-prazo já lançadas na agenda de 23/05.</div>
-              <div class="glass-note">O que existe nesta rodada é monitoramento ativo, não resolução. O caso ainda depende de verificação direta no andamento oficial.</div>
+              <div class="glass-value">0020001 segue sem prova nova de protocolo, perda reconhecida ou contenção, embora a agenda tenha reservado checagens sucessivas para o pós-prazo.</div>
+              <div class="glass-note">Enquanto o estado real não for confirmado no andamento oficial, o risco permanece alto e já não é mais preventivo.</div>
             </div>
             <div class="glass">
-              <div class="glass-label">Mudança da madrugada</div>
-              <div class="glass-value">0006873, 0007599 e 0007127 adicionaram novos decursos entre 00:37 e 04:23 de 24/05, criando uma fila nova de leitura e definição de medida útil.</div>
-              <div class="glass-note">É o principal acréscimo jurídico em relação ao briefing publicado à 00:14 BRT.</div>
+              <div class="glass-label">Mudança desta rodada</div>
+              <div class="glass-value">0815844 entrou no corte com despacho de mero expediente e remessa dos autos ao NAPEM, somando-se ao trio de decursos da madrugada e ampliando a fila jurídica útil do fim de semana.</div>
+              <div class="glass-note">É o principal acréscimo frente ao briefing de 06:13 BRT.</div>
             </div>
             <div class="glass">
               <div class="glass-label">Operação em alerta</div>
-              <div class="glass-value">O `pje-gestor` recebeu aviso de pausa automática, e o repositório `rojeto-escudo-da-justi-a` teve falha de CI no workflow `Security & Build`, com quebra em `Secret Scan`.</div>
-              <div class="glass-note">A falha do canal `juridico@petroniosouza.com.br` não nasceu neste corte, mas reapareceu como pendência no relatório interno do dia.</div>
+              <div class="glass-value">O projeto `pje-gestor` pode ser pausado automaticamente pela Supabase se continuar sem atividade suficiente nos próximos dias.</div>
+              <div class="glass-note">No caixa, a janela confirmou a compra na Casa dos Frios, a transferência para Uber e o pagamento agendado de Paula Baia registrado na agenda.</div>
             </div>
           </div>
         </div>
       </section>
 
       <section class="metrics">
-        <article class="metric"><div class="label">Blocos de agenda</div><div class="value">10</div><div class="note">O calendário das últimas 24h foi dominado por triagem PJe, pós-prazo, preparo de audiência, lote TJPE e monitoramento de frentes sensíveis.</div></article>
-        <article class="metric"><div class="label">Itens jurídicos</div><div class="value">16</div><div class="note">Entraram na leitura material 0020001, 0000212, 0000439, 0000396, 0000580, 0000584, 0112247, 0025000, 0028651, 0009128, 0002413, 0003440, 0005844, 0006873, 0007599 e 0007127.</div></article>
-        <article class="metric"><div class="label">Novos decursos</div><div class="value">3</div><div class="note">A madrugada de 24/05 adicionou três processos com decurso comunicado por push: 0006873, 0007599 e 0007127.</div></article>
-        <article class="metric"><div class="label">Operação</div><div class="value">4</div><div class="note">Casa dos Frios, Uber, alerta Supabase e falha de CI com `Secret Scan` formaram o eixo operacional desta janela.</div></article>
-        <article class="metric"><div class="label">Agenda 48h</div><div class="value">4</div><div class="note">Exame do CFC, revisão semanal, leitura das publicações de 25/05 e audiência por videoconferência de 0000212.</div></article>
+        <article class="metric"><div class="label">Blocos futuros 48h</div><div class="value">7</div><div class="note">Exame do CFC, três blocos jurídicos ainda hoje, revisão semanal, leitura das publicações de 25/05 e audiência de 0000212.</div></article>
+        <article class="metric"><div class="label">Itens jurídicos</div><div class="value">9</div><div class="note">Entraram na leitura material 0020001, 0000212, 0002413, 0003440, 0005844, 0006873, 0007599, 0007127 e 0815844 como acréscimo desta rodada.</div></article>
+        <article class="metric"><div class="label">Novos decursos</div><div class="value">3</div><div class="note">A madrugada confirmou decurso em 0006873, 0007599 e 0007127, com duplicidade de push em 0007127.</div></article>
+        <article class="metric"><div class="label">Financeiro</div><div class="value">3</div><div class="note">Compra na Casa dos Frios, transferência para Uber e compromisso de pagamento Paula Baia já dentro do corte executivo.</div></article>
+        <article class="metric"><div class="label">Riscos altos</div><div class="value">3</div><div class="note">0020001 sem fechamento verificável, audiência de 0000212 com pouca gordura e 0007599 por envolver mandado de segurança com prazo decorrido.</div></article>
       </section>
 
       <section class="layout">
@@ -202,33 +178,33 @@
                 <div class="eyebrow">Executive Summary</div>
                 <h2>Prioridades críticas</h2>
               </div>
-              <div class="head-note">A banca já fez o trabalho de separar o que importa. O ganho agora é fechar pendências e impedir que a segunda comece com o mesmo volume e menos espaço de reação.</div>
+              <div class="head-note">A leitura deste corte não pede expansão de escopo. Ela pede fechamento rápido do que já está claro, antes que a segunda amanheça ocupada por pendências que já poderiam estar classificadas.</div>
             </div>
             <div class="list">
               <article class="item">
                 <h3 class="title">0020001-64.2023.8.17.2810 continua sendo a pendência mais perigosa da rodada.</h3>
-                <p class="body">A agenda registrou duas checagens pós-prazo em 23/05, mas o Gmail consolidado desta janela não confirmou protocolo, perda reconhecida ou contenção. Enquanto isso não for verificado no processo, o principal risco do dia segue em aberto.</p>
-                <div class="chips"><span class="chip critical">0020001</span><span class="chip critical">pós-prazo</span><span class="chip critical">confirmar agora</span></div>
+                <p class="body">A agenda marcou checagem pós-prazo em 23/05 e reservou nova contenção para 24/05 às 14:20, mas o Gmail consolidado e o relatório interno da manhã ainda não trouxeram confirmação objetiva de protocolo, perda reconhecida ou medida de reação. O problema segue aberto.</p>
+                <div class="chips"><span class="chip critical">0020001</span><span class="chip critical">pós-prazo</span><span class="chip critical">confirmar hoje</span></div>
               </article>
               <article class="item">
-                <h3 class="title">O preparo da audiência de 0000212 precisa ser encerrado antes do sábado virar desculpa operacional.</h3>
-                <p class="body">O compromisso de 25/05 às 12:00 já vinha sendo preparado em dois blocos no dia 23/05. Como o Exame do CFC ocupa o sábado e a segunda começa com revisão e leitura de publicações, o preparo útil já deveria sair da mesa como pendência fechada.</p>
+                <h3 class="title">A audiência de 0000212-48.2026.5.06.0121 já entrou em fase de fechamento, não mais de preparação ampla.</h3>
+                <p class="body">O sábado útil está comprimido pelo Exame do CFC até 14h e a segunda começa com revisão semanal, leitura de publicações e a própria audiência às 12h. O bloco de 15:50 a 16:25 precisa sair com link, pauta, documentos, estratégia e faixa de negociação resolvidos.</p>
                 <div class="chips"><span class="chip critical">0000212</span><span class="chip watch">audiência 25/05</span><span class="chip watch">fechar hoje</span></div>
               </article>
               <article class="item">
-                <h3 class="title">O lote TJPE do meio do dia já é material de abertura da semana.</h3>
-                <p class="body">0112247 recebeu termo de audiência e autos; 0025000 teve publicação ao DJe Nacional; 0028651 foi reativado e ficou concluso para despacho; 0009128 recebeu cálculo de custas. Separadamente não são crise, mas juntos ocupam a manhã útil de 25/05 se ficarem crus.</p>
-                <div class="chips"><span class="chip watch">0112247</span><span class="chip watch">0025000</span><span class="chip watch">0028651</span><span class="chip watch">0009128</span></div>
+                <h3 class="title">O trio 0006873, 0007599 e 0007127 ainda exige leitura de efeito prático, mas 0007599 merece tratamento acima dos demais.</h3>
+                <p class="body">Os três pushes apenas confirmam decurso em sistema. Em 0007599, porém, o contexto é mandado de segurança cível sobre CNH, o que eleva o potencial de impacto e justifica priorização dentro do bloco das 15h.</p>
+                <div class="chips"><span class="chip watch">0006873</span><span class="chip critical">0007599</span><span class="chip watch">0007127</span></div>
               </article>
               <article class="item">
-                <h3 class="title">A borda final do dia e a madrugada abriram uma fila nova de leitura.</h3>
-                <p class="body">0002413, 0005844 e 0003440 chegaram entre o fim da tarde e o começo da noite de 23/05. Depois, já em 24/05, 0006873, 0007599 e 0007127 acrescentaram novos decursos de prazo. É o principal grupo de novidades frente ao briefing da 00:14 BRT.</p>
-                <div class="chips"><span class="chip ok">0002413</span><span class="chip ok">0003440</span><span class="chip ok">0005844</span><span class="chip watch">0006873</span><span class="chip watch">0007599</span><span class="chip watch">0007127</span></div>
+                <h3 class="title">0815844-52.2026.8.15.0001 entrou como acréscimo jurídico relevante nesta rodada.</h3>
+                <p class="body">O push do TJPB comunicou despacho de mero expediente e remessa dos autos ao NAPEM em uma medida protetiva de urgência. Não há prazo fatal expresso no e-mail, mas o movimento pede registro estruturado e leitura do teor para classificar sensibilidade e necessidade de ação.</p>
+                <div class="chips"><span class="chip watch">0815844</span><span class="chip watch">violência doméstica</span><span class="chip ok">novo no corte</span></div>
               </article>
               <article class="item">
-                <h3 class="title">O alerta operacional desta janela veio mais por infraestrutura do que por comunicação.</h3>
-                <p class="body">A Supabase avisou que o projeto `pje-gestor` pode ser pausado por baixa atividade, e o GitHub reportou falha de CI em PR de vulnerabilidades críticas/altas. O problema do e-mail jurídico continua no pano de fundo, mas o evento original é anterior a este corte.</p>
-                <div class="chips"><span class="chip watch">Supabase</span><span class="chip watch">GitHub CI</span><span class="chip ok">risco herdado</span></div>
+                <h3 class="title">O alerta operacional efetivamente novo continua sendo o risco de pausa do `pje-gestor`.</h3>
+                <p class="body">A Supabase avisou que o projeto poderá ser pausado automaticamente por baixa atividade em poucos dias. Não concorre com o eixo jurídico principal, mas afeta a continuidade de uma ferramenta diretamente ligada à operação de prazos.</p>
+                <div class="chips"><span class="chip watch">Supabase</span><span class="chip watch">pje-gestor</span><span class="chip ok">decidir ainda hoje</span></div>
               </article>
             </div>
           </section>
@@ -239,16 +215,16 @@
                 <div class="eyebrow">Últimas 24 Horas</div>
                 <h2>Desenvolvimentos materialmente relevantes</h2>
               </div>
-              <div class="head-note">Recorte fechado de 23/05/2026 06:13 BRT até 24/05/2026 06:13 BRT, com prioridade para o que desloca atenção, cria risco, exige preparo ou altera a abertura da semana.</div>
+              <div class="head-note">Recorte fechado de 23/05/2026 12:13 BRT até 24/05/2026 12:13 BRT, priorizando o que desloca atenção executiva, cria risco, altera agenda útil ou demanda follow-up claro.</div>
             </div>
             <div class="list">
-              <article class="mail"><div class="mail-meta">23/05 07:20 a 15:20 BRT • agenda de execução</div><h3 class="title">O calendário confirmou um dia inteiro consumido por triagem, pós-prazo, preparo de audiência e monitoramento de frentes sensíveis.</h3><p class="body">Houve triagem crítica do relatório PJe, duas checagens pós-prazo de 0020001, preparo e reforço do preparo da audiência de 0000212, triagem de pushes TRT6 e TJPE e revisão do cluster Dias Auto/PROCON. Não é uma leitura inferida: o eixo prioritário do expediente esteve explicitamente ocupado por esses blocos.</p></article>
-              <article class="mail"><div class="mail-meta">23/05 10:34 a 10:59 BRT • lote TJPE</div><h3 class="title">0112247, 0025000, 0028651 e 0009128 formaram o principal lote útil para a segunda-feira.</h3><p class="body">Os pushes confirmaram termo de audiência e autos recebidos em 0112247; publicação ao DJe Nacional em 0025000; processo reativado e conclusos para despacho em 0028651; e cálculo de custas com devolução à secretaria em 0009128. O conjunto pede triagem curta, mas não pode entrar sem pré-leitura em 25/05.</p></article>
-              <article class="mail"><div class="mail-meta">23/05 13:54 BRT • relatório interno</div><h3 class="title">O relatório do Gestor de Prazos reforçou 0020001 como passivo crítico e confirmou que o preparo de 0000212 não deveria escorregar para o domingo.</h3><p class="body">O documento enviado para a própria caixa consolidou a hierarquia do restante do dia, preservou a leitura de publicações para 25/05 e ainda reiterou que o risco operacional do canal jurídico seguia pendente, embora o evento original seja anterior a esta janela.</p></article>
-              <article class="mail"><div class="mail-meta">23/05 16:02 a 16:16 BRT • operação e caixa</div><h3 class="title">Cielo e Nubank confirmaram o mesmo pagamento de R$ 407,70 para Casa dos Frios e uma saída adicional de R$ 19,81 para Uber.</h3><p class="body">Os comprovantes materializam caixa efetivamente movimentado dentro da janela. O item de Casa dos Frios ficou duplamente confirmado pelo pedido e pela transferência correspondente.</p></article>
-              <article class="mail"><div class="mail-meta">23/05 16:28 a 19:22 BRT • pushes tardios</div><h3 class="title">0002413, 0005844 e 0003440 entraram depois do eixo principal do expediente e já precisam estar no controle de 25/05.</h3><p class="body">0002413 recebeu publicação de despacho/intimação comunicada às 16:28; 0005844 recebeu juntada de manifestação do Ministério Público às 18:11; e 0003440 recebeu publicação de despacho/intimação no encerramento da janela. São os acréscimos processuais tardios do dia 23/05.</p></article>
-              <article class="mail"><div class="mail-meta">23/05 14:43 e 16:06 BRT • infraestrutura</div><h3 class="title">A operação técnica recebeu dois sinais que merecem atenção, embora não concorram com o eixo jurídico mais crítico.</h3><p class="body">O GitHub informou falha do workflow `Security & Build` em PR de vulnerabilidades críticas/altas, com quebra em `Secret Scan`. Em seguida, a Supabase avisou que o projeto `pje-gestor` poderá ser pausado automaticamente por baixa atividade nos próximos dias.</p></article>
-              <article class="mail"><div class="mail-meta">24/05 00:37 a 04:23 BRT • madrugada de 24/05</div><h3 class="title">A madrugada acrescentou três novos decursos de prazo: 0006873, 0007599 e 0007127.</h3><p class="body">0006873 apontou decurso simultâneo de várias partes; 0007599 registrou decurso do autor em mandado de segurança cível; e 0007127 recebeu dois pushes sucessivos de decurso em ação de guarda. É a principal diferença objetiva em relação ao briefing publicado à 00:14 BRT.</p></article>
+              <article class="mail"><div class="mail-meta">23/05 13:05 a 15:20 BRT • agenda jurídica</div><h3 class="title">O miolo útil da tarde de 23/05 foi consumido por reforço de preparo, checagem pós-prazo e monitoramento de frentes sensíveis.</h3><p class="body">A agenda confirmou reforço do preparo da audiência de 0000212, checagem pós-prazo de 0020001 e revisão do cluster PROCON Dias Auto + frentes sensíveis. O expediente foi explicitamente organizado em torno dessas prioridades, não por inferência posterior.</p></article>
+              <article class="mail"><div class="mail-meta">23/05 16:02 a 16:16 BRT • caixa e operação</div><h3 class="title">A janela confirmou saída financeira em Casa dos Frios e Uber, com o compromisso Paula Baia também registrado no calendário.</h3><p class="body">O pedido da Cielo e as duas confirmações do Nubank mostram compra de R$ 407,70 na Casa dos Frios e transferência de R$ 19,81 para Uber. No topo da janela, a agenda ainda carregou o pagamento de Paula Baia no valor de R$ 1.300,00.</p></article>
+              <article class="mail"><div class="mail-meta">23/05 16:06 BRT • infraestrutura</div><h3 class="title">A Supabase sinalizou risco de pausa automática do projeto `pje-gestor`.</h3><p class="body">O aviso fala em baixa atividade nos últimos dias e janela curta para que o projeto volte a registrar uso suficiente. Isso transforma uma pendência técnica silenciosa em risco operacional explícito.</p></article>
+              <article class="mail"><div class="mail-meta">23/05 16:28 a 19:22 BRT • pushes tardios</div><h3 class="title">0002413, 0005844 e 0003440 fecharam o dia 23/05 com novos movimentos que já precisam chegar classificados em 25/05.</h3><p class="body">0002413 recebeu publicação de despacho/intimação; 0005844 recebeu juntada de manifestação do Ministério Público; e 0003440 recebeu publicação de despacho/intimação no fim do expediente. Não são crise isoladamente, mas ocupam a abertura útil da semana se ficarem crus.</p></article>
+              <article class="mail"><div class="mail-meta">24/05 00:37 a 04:23 BRT • madrugada</div><h3 class="title">A madrugada abriu três novas frentes de decurso: 0006873, 0007599 e 0007127.</h3><p class="body">0006873 apontou decurso simultâneo de várias partes, 0007599 registrou decurso do autor em mandado de segurança cível, e 0007127 recebeu dois pushes sucessivos confirmando decurso na ação de guarda. É o eixo jurídico mais novo entre a noite e a manhã desta rodada.</p></article>
+              <article class="mail"><div class="mail-meta">24/05 07:19 BRT • relatório interno</div><h3 class="title">O relatório do Gestor de Prazos confirmou a mesma hierarquia de risco encontrada nesta leitura.</h3><p class="body">O documento preservou 0020001 como passivo mais sensível, tratou os três decursos como fila crítica de triagem e reforçou que o preparo de 0000212 não deve ser empurrado para a manhã de segunda.</p></article>
+              <article class="mail"><div class="mail-meta">24/05 08:36 BRT • push novo</div><h3 class="title">0815844-52.2026.8.15.0001 entrou na janela com despacho e remessa ao NAPEM.</h3><p class="body">O processo de medidas protetivas de urgência no TJPB recebeu despacho de mero expediente e remessa dos autos para o NAPEM - 2ª Circunscrição. O e-mail não traz prazo fatal, mas traz movimento suficiente para controle jurídico estruturado.</p></article>
             </div>
           </section>
 
@@ -258,13 +234,16 @@
                 <div class="eyebrow">Agenda</div>
                 <h2>Próximos 2 dias e preparo</h2>
               </div>
-              <div class="head-note">O horizonte até 26/05 está curto e quase sem gordura. O que não sair fechado agora volta a competir com a manhã de segunda e com a audiência.</div>
+              <div class="head-note">O horizonte até 26/05 já está denso. A chave é usar o restante do sábado como amortecedor e impedir que a segunda nasça reativa.</div>
             </div>
             <div class="timeline">
-              <article class="event"><div class="when">24/05 10:00</div><div><h3 class="title">1º Exame de Suficiência de 2026 do CFC</h3><p class="body">Compromisso longo, das 10h às 14h, que reduz bastante o sábado como reserva operacional para leitura jurídica densa.</p><ul class="prep"><li>Entrar no sábado com 0000212 preparado e o lote TJPE ao menos qualificado.</li></ul></div></article>
-              <article class="event"><div class="when">25/05 08:00</div><div><h3 class="title">Revisão semanal — Projuris + PJe + Google Calendar</h3><p class="body">A semana começa com manutenção preventiva do sistema de prazos, antes mesmo da leitura das publicações e da audiência.</p><ul class="prep"><li>Evitar que esse bloco seja consumido por descobertas que já estão claras no recorte atual.</li></ul></div></article>
-              <article class="event"><div class="when">25/05 09:10</div><div><h3 class="title">Leitura das publicações de 25/05 — 0018996 / 0804087 / 0025000</h3><p class="body">A agenda já protegeu a leitura logo cedo, mas ela concorre diretamente com o preparo final da audiência e com qualquer atraso herdado do sábado.</p><ul class="prep"><li>Deixar 0025000 com um próximo passo claro antes da abertura útil.</li></ul></div></article>
-              <article class="event"><div class="when">25/05 12:00</div><div><h3 class="title">Audiência por videoconferência — 0000212-48.2026.5.06.0121</h3><p class="body">Audiência de conciliação no CEJUSC Paulista, já aceita na agenda e tratada como compromisso central desde os blocos de preparo de 23/05.</p><ul class="prep"><li>Fechar hoje narrativa, documentos, link e faixa de negociação.</li></ul></div></article>
+              <article class="event"><div class="when">24/05 10:00</div><div><h3 class="title">1º Exame de Suficiência de 2026 do CFC</h3><p class="body">Compromisso em andamento até as 14h, reduzindo quase todo o sábado útil de trabalho jurídico pesado.</p><ul class="prep"><li>Preservar os blocos do pós-14h como faixa de execução real, não de replanejamento.</li></ul></div></article>
+              <article class="event"><div class="when">24/05 14:20</div><div><h3 class="title">Checagem pós-prazo — 0020001-64.2023.8.17.2810</h3><p class="body">Bloco de contenção para confirmar o estado real do processo após o vencimento fatal de 22/05 às 23:59.</p><ul class="prep"><li>Sair com um status objetivo: protocolo, perda, medida corretiva ou ausência de providência.</li></ul></div></article>
+              <article class="event"><div class="when">24/05 15:00</div><div><h3 class="title">Triagem dos decursos TJPE — 0007599 / 0007127 / 0006873</h3><p class="body">Faixa desenhada para separar mera ciência de perda efetiva e identificar qual frente ainda comporta reação útil.</p><ul class="prep"><li>Dar prioridade a 0007599 por ser mandado de segurança cível.</li></ul></div></article>
+              <article class="event"><div class="when">24/05 15:50</div><div><h3 class="title">Preparo final da audiência — 0000212-48.2026.5.06.0121</h3><p class="body">Última janela limpa antes da segunda para revisar pauta, documentos, estratégia, link e pontos de negociação.</p><ul class="prep"><li>Encerrar o bloco com checklist fechado e material pronto para segunda.</li></ul></div></article>
+              <article class="event"><div class="when">25/05 08:00</div><div><h3 class="title">Revisão semanal — Projuris + PJe + Google Calendar</h3><p class="body">Bloco preventivo que já nasce comprimido por tudo o que não sair resolvido no sábado.</p><ul class="prep"><li>Entrar nesse horário com 0020001, trio de decursos e 0815844 pelo menos classificados.</li></ul></div></article>
+              <article class="event"><div class="when">25/05 09:10</div><div><h3 class="title">Leitura das publicações de 25/05 — 0018996 / 0804087 / 0025000</h3><p class="body">A agenda reservou a leitura logo cedo, mas qualquer atraso herdado do sábado empurra esse bloco contra a audiência.</p><ul class="prep"><li>Deixar 0025000 com trilha clara de leitura e próxima ação antes da abertura útil.</li></ul></div></article>
+              <article class="event"><div class="when">25/05 12:00</div><div><h3 class="title">Audiência por videoconferência — 0000212-48.2026.5.06.0121</h3><p class="body">Audiência de conciliação no CEJUSC Paulista, já aceita na agenda e reiterada nos blocos de reforço e preparo final.</p><ul class="prep"><li>Manter a manhã de segunda só para revisão final e leitura curta, não para montagem de estratégia.</li></ul></div></article>
             </div>
           </section>
         </div>
@@ -278,18 +257,15 @@
               </div>
             </div>
             <div class="list">
-              <article class="risk"><h3 class="title">0020001-64.2023.8.17.2810</h3><p class="body"><strong>Partes:</strong> não reabertas nas fontes desta janela. <strong>Advogado:</strong> indício de condução interna. <strong>Evento:</strong> duas checagens pós-prazo registradas na agenda de 23/05, sem confirmação externa nova no Gmail consolidado. <strong>Follow-up:</strong> verificar o andamento oficial, confirmar protocolo ou medida de contenção e registrar o desfecho. <strong>Risco:</strong> alto, porque a incerteza persiste depois do prazo fatal.</p></article>
-              <article class="risk"><h3 class="title">0000212-48.2026.5.06.0121</h3><p class="body"><strong>Partes:</strong> já identificadas nas frentes anteriores da banca; não reabertas integralmente nesta rodada. <strong>Advogado:</strong> condução interna indicada pela agenda. <strong>Evento:</strong> audiência por videoconferência em 25/05/2026 às 12:00, com preparo e reforço de preparo lançados em 23/05. <strong>Follow-up:</strong> concluir pauta, documentos, estratégia, link e faixa de negociação. <strong>Risco:</strong> alto.</p></article>
-              <article class="risk"><h3 class="title">0000439-72.2026.5.06.0142</h3><p class="body"><strong>Partes:</strong> Manoel de Morais Ferreira x M &amp; R Serviços e Telecomunicações Ltda. <strong>Advogado:</strong> não identificado no push. <strong>Evento:</strong> documento sigiloso em 22/05/2026 às 02:13. <strong>Follow-up:</strong> abrir o teor e definir providência útil. <strong>Risco:</strong> médio.</p></article>
-              <article class="risk"><h3 class="title">0000396-46.2023.5.06.0141</h3><p class="body"><strong>Partes:</strong> M &amp; R Serviços e Telecomunicações Ltda x Josenildo Lourenço de Menezes e outros. <strong>Advogado:</strong> Petrônio Leonardo Ramos de Souza e Samela Mirella Moreira Moraes apareceram no push de 2º grau. <strong>Evento:</strong> alteração de classe para agravo de instrumento em agravo de petição e autos conclusos para julgamento em 22/05/2026 às 22:47. <strong>Follow-up:</strong> abrir o sigiloso e reposicionar a estratégia recursal. <strong>Risco:</strong> alto.</p></article>
-              <article class="risk"><h3 class="title">0000580-54.2026.5.06.0122</h3><p class="body"><strong>Partes:</strong> C J Antonio Dias Peças e Serviços para Autos Ltda x Itamar Gomes da Silva Junior. <strong>Advogado:</strong> não expresso no push. <strong>Evento:</strong> decurso de prazo da empresa em 21/05/2026. <strong>Follow-up:</strong> validar o efeito prático do decurso. <strong>Risco:</strong> médio.</p></article>
-              <article class="risk"><h3 class="title">0000584-94.2026.5.06.0121</h3><p class="body"><strong>Partes:</strong> C J Antonio Dias Peças e Serviços para Autos Ltda x Sabrina Suelyn Pereira Silva. <strong>Advogado:</strong> não expresso no push. <strong>Evento:</strong> decurso de prazo da empresa e documento sigiloso às 01:39 de 22/05/2026. <strong>Follow-up:</strong> abrir o sigiloso e medir o efeito útil do decurso. <strong>Risco:</strong> médio.</p></article>
-              <article class="risk"><h3 class="title">0112247-13.2025.8.17.2001</h3><p class="body"><strong>Partes:</strong> Mayne Maria de Almeida x Banco Bradesco S/A e outros. <strong>Advogado:</strong> não expresso no push. <strong>Evento:</strong> juntada de termo de audiência e autos recebidos em 22/05/2026 às 10:58 e 10:59. <strong>Follow-up:</strong> abrir o termo e ajustar a condução da frente. <strong>Risco:</strong> médio.</p></article>
-              <article class="risk"><h3 class="title">0025000-05.2023.8.17.2990</h3><p class="body"><strong>Partes:</strong> Selma Anselmo de Santana e outros x Josefa Maria de Santana e outros. <strong>Advogado:</strong> não identificado no push. <strong>Evento:</strong> expedição de publicação ao DJe Nacional em 22/05/2026 às 19:31. <strong>Follow-up:</strong> abrir o teor da publicação antes da manhã útil de 25/05. <strong>Risco:</strong> médio.</p></article>
-              <article class="risk"><h3 class="title">0028651-97.2021.8.17.8201</h3><p class="body"><strong>Partes:</strong> Carlos Henrique de Andrade Schuler x Luciana Carneiro da Cunha e outros. <strong>Advogado:</strong> não identificado no push. <strong>Evento:</strong> processo reativado e conclusos para despacho em 22/05/2026 às 08:37. <strong>Follow-up:</strong> conferir o teor do retorno e mapear o próximo ato. <strong>Risco:</strong> médio.</p></article>
-              <article class="risk"><h3 class="title">0009128-25.2023.8.17.2480</h3><p class="body"><strong>Partes:</strong> Renato Sena de Andrade x Elyclecia Glaciliane de Oliveira Sobral. <strong>Advogado:</strong> não identificado no push. <strong>Evento:</strong> cálculo de custas e devolução à secretaria em 22/05/2026 às 08:09. <strong>Follow-up:</strong> revisar o cálculo e definir a providência correspondente. <strong>Risco:</strong> médio.</p></article>
-              <article class="risk"><h3 class="title">0002413-78.2022.8.17.2810 | 0003440-92.2022.8.17.2100 | 0005844-05.2023.8.17.4001</h3><p class="body"><strong>Eventos:</strong> 0002413 recebeu push de despacho/intimação publicado em 19/05; 0003440 recebeu publicação de despacho/intimação em 18/05; 0005844 recebeu juntada de manifestação do Ministério Público às 18:11 de 23/05. <strong>Follow-up:</strong> abrir o teor de 0003440, validar o vínculo ativo de 0002413 e confirmar a necessidade de controle ativo de 0005844. <strong>Risco:</strong> médio.</p></article>
-              <article class="risk"><h3 class="title">0006873-06.2025.8.17.2810 | 0007599-45.2026.8.17.2001 | 0007127-84.2026.8.17.2990</h3><p class="body"><strong>Partes:</strong> Renato Mendes da Silva x Banco Bradesco Financiamentos S.A. e outros; Ivson Cezar Henriques de Araujo Pernambuco x DETRAN-PE e outros; Daniel Jose Ferreira da Silva x Jennifer Victoria dos Santos Leal. <strong>Evento:</strong> três novos decursos comunicados na madrugada de 24/05, sendo dois pushes sucessivos em 0007127. <strong>Follow-up:</strong> abrir cada andamento e definir a medida útil, com atenção especial ao mandado de segurança 0007599. <strong>Risco:</strong> médio a alto.</p></article>
+              <article class="risk"><h3 class="title">0020001-64.2023.8.17.2810</h3><p class="body"><strong>Partes:</strong> não reabertas nas fontes desta janela. <strong>Advogado:</strong> indício de condução interna. <strong>Evento:</strong> checagens pós-prazo na agenda e ausência de confirmação externa nova no Gmail consolidado. <strong>Follow-up:</strong> validar o andamento oficial e registrar o desfecho real. <strong>Risco:</strong> alto, porque o caso já saiu do campo preventivo e continua sem fechamento verificável.</p></article>
+              <article class="risk"><h3 class="title">0000212-48.2026.5.06.0121</h3><p class="body"><strong>Partes:</strong> não reabertas integralmente nesta rodada. <strong>Advogado:</strong> condução interna indicada pela agenda. <strong>Evento:</strong> audiência por videoconferência em 25/05/2026 às 12:00, com reforço de preparo em 23/05 e preparo final reservado para 24/05 às 15:50. <strong>Follow-up:</strong> concluir hoje pauta, documentos, estratégia, link e negociação. <strong>Risco:</strong> alto.</p></article>
+              <article class="risk"><h3 class="title">0002413-78.2022.8.17.2810</h3><p class="body"><strong>Partes:</strong> Rayssa Porto de Araujo Lima e outros x Uelinton Cesar de Araujo Lima. <strong>Advogado:</strong> não confirmado no push. <strong>Evento:</strong> publicação de despacho/intimação em 19/05, comunicada às 16:28 de 23/05. <strong>Follow-up:</strong> abrir o despacho e confirmar se o vínculo ativo da banca permanece. <strong>Risco:</strong> médio.</p></article>
+              <article class="risk"><h3 class="title">0003440-92.2022.8.17.2100</h3><p class="body"><strong>Partes:</strong> Cicero Marcos Lucas Sobrinho x Severino Felix de Araujo Santos e outros. <strong>Advogado:</strong> não expresso no push desta rodada. <strong>Evento:</strong> publicação de despacho/intimação em 18/05, comunicada às 19:22 de 23/05. <strong>Follow-up:</strong> abrir o despacho e medir reflexo prático antes da manhã útil de 25/05. <strong>Risco:</strong> médio.</p></article>
+              <article class="risk"><h3 class="title">0005844-05.2023.8.17.4001</h3><p class="body"><strong>Partes:</strong> 51º Promotor de Justiça Criminal da Capital x Jevesson de Souza. <strong>Advogado:</strong> membro do MP como parte ativa; patrocínio do escritório não confirmado no push. <strong>Evento:</strong> juntada de petição de manifestação do Ministério Público às 18:11 de 23/05. <strong>Follow-up:</strong> abrir o teor e confirmar necessidade de acompanhamento ativo. <strong>Risco:</strong> médio.</p></article>
+              <article class="risk"><h3 class="title">0006873-06.2025.8.17.2810</h3><p class="body"><strong>Partes:</strong> Renato Mendes da Silva x Banco Bradesco Financiamentos S.A. e outros. <strong>Advogado:</strong> não identificado no push. <strong>Evento:</strong> decurso de prazo simultâneo das partes em 22/05/2026 às 23:59, comunicado às 00:37 de 24/05. <strong>Follow-up:</strong> abrir o andamento e qualificar o efeito prático do decurso. <strong>Risco:</strong> médio.</p></article>
+              <article class="risk"><h3 class="title">0007599-45.2026.8.17.2001</h3><p class="body"><strong>Partes:</strong> Ivson Cezar Henriques de Araujo Pernambuco x Departamento Estadual de Trânsito de Pernambuco e outros. <strong>Advogado:</strong> não identificado no push. <strong>Evento:</strong> decurso de prazo do autor em 21/05/2026 às 23:59, comunicado às 03:02 de 24/05. <strong>Follow-up:</strong> abrir o teor e definir medida cabível no mandado de segurança sobre CNH. <strong>Risco:</strong> alto pelo potencial impacto do decurso.</p></article>
+              <article class="risk"><h3 class="title">0007127-84.2026.8.17.2990</h3><p class="body"><strong>Partes:</strong> Daniel Jose Ferreira da Silva x Jennifer Victoria dos Santos Leal. <strong>Advogado:</strong> não identificado no push. <strong>Evento:</strong> dois pushes sucessivos de decurso do autor em 22/05/2026 às 23:59, comunicados às 03:31 e 04:23 de 24/05. <strong>Follow-up:</strong> confirmar a providência cabível na frente de guarda. <strong>Risco:</strong> médio.</p></article>
+              <article class="risk"><h3 class="title">0815844-52.2026.8.15.0001</h3><p class="body"><strong>Partes:</strong> Maria da Paz da Silva x Rafaela Ramos da Silva e outros. <strong>Advogado:</strong> não identificado no push. <strong>Evento:</strong> despacho de mero expediente e remessa dos autos ao NAPEM - 2ª Circunscrição em 19/05/2026, comunicado pelo TJPB às 08:36 de 24/05. <strong>Follow-up:</strong> abrir o teor do despacho e classificar a necessidade de ação ou mera ciência. <strong>Risco:</strong> médio, com sensibilidade elevada por se tratar de medida protetiva de urgência.</p></article>
             </div>
           </section>
 
@@ -301,11 +277,11 @@
               </div>
             </div>
             <div class="list">
-              <article class="risk"><h3 class="title">Alto: 0020001 permanece sem fechamento verificável.</h3><p class="body">Enquanto o estado real não for checado diretamente no processo, a principal frente jurídica do dia segue aberta.</p></article>
-              <article class="risk"><h3 class="title">Alto: a audiência de 0000212 chega com pouca gordura de preparo.</h3><p class="body">O sábado será parcialmente consumido pelo Exame do CFC e a manhã de segunda já nasce congestionada.</p></article>
-              <article class="risk"><h3 class="title">Médio: a madrugada abriu três novas frentes de decurso.</h3><p class="body">0006873, 0007599 e 0007127 não estavam absorvidos no briefing de 00:14 BRT e agora entram no controle ativo.</p></article>
-              <article class="risk"><h3 class="title">Médio: o lote TJPE ocupa a abertura útil de 25/05 se não for triado antes.</h3><p class="body">0112247, 0025000, 0028651 e 0009128 são curtos isoladamente, mas perigosos em conjunto na primeira hora útil da semana.</p></article>
-              <article class="risk"><h3 class="title">Médio: `pje-gestor` e CI quebrada reduzem conforto operacional.</h3><p class="body">Não são a prioridade jurídica máxima, mas afetam apoio técnico e segurança de continuidade se forem empurrados sem decisão.</p></article>
+              <article class="risk"><h3 class="title">Alto: 0020001 permanece sem fechamento verificável.</h3><p class="body">A ausência de confirmação externa mantém o caso como principal ponto de contenção da rodada.</p></article>
+              <article class="risk"><h3 class="title">Alto: a audiência de 0000212 chega com pouca gordura operacional.</h3><p class="body">O sábado útil está encurtado e a segunda-feira já amanhece com revisão semanal, publicações e audiência no mesmo eixo.</p></article>
+              <article class="risk"><h3 class="title">Alto: 0007599 exige triagem acima do restante do trio de decursos.</h3><p class="body">O contexto de mandado de segurança sobre CNH aumenta o peso do decurso até que o teor completo seja conferido.</p></article>
+              <article class="risk"><h3 class="title">Médio: 0815844 entrou sem prazo fatal explícito, mas com sensibilidade material alta.</h3><p class="body">A natureza de medida protetiva exige registro estruturado e leitura do teor, mesmo sem prazo já desenhado no e-mail.</p></article>
+              <article class="risk"><h3 class="title">Médio: o `pje-gestor` pode ser pausado automaticamente.</h3><p class="body">É um risco de continuidade técnica que não deve competir com 0020001, mas também não deveria entrar silencioso na segunda.</p></article>
             </div>
           </section>
 
@@ -317,11 +293,11 @@
               </div>
             </div>
             <div class="list">
-              <article class="todo"><div class="box"></div><div><h3 class="title">Confirmar hoje o estado real de 0020001-64.2023.8.17.2810.</h3><p class="body">Registrar se houve protocolo, perda, relevação, nova medida ou simples ausência de providência.</p><div class="owner">Owner: Petrônio</div></div></article>
-              <article class="todo"><div class="box"></div><div><h3 class="title">Fechar o preparo da audiência de 0000212 antes da abertura útil de segunda.</h3><p class="body">Sair com link, documentos, estratégia, narrativa e faixa de negociação já consolidados.</p><div class="owner">Owner: Petrônio</div></div></article>
-              <article class="todo"><div class="box"></div><div><h3 class="title">Triar hoje o lote TJPE 0112247, 0025000, 0028651 e 0009128.</h3><p class="body">Deixar cada processo com um próximo passo claro para 25/05, mesmo que a leitura integral fique para a manhã útil.</p><div class="owner">Owner: Petrônio</div></div></article>
-              <article class="todo"><div class="box"></div><div><h3 class="title">Abrir os três novos decursos da madrugada: 0006873, 0007599 e 0007127.</h3><p class="body">Confirmar o efeito útil de cada decurso e priorizar o mandado de segurança 0007599 entre eles.</p><div class="owner">Owner: Petrônio</div></div></article>
-              <article class="todo"><div class="box"></div><div><h3 class="title">Decidir a resposta operacional para `pje-gestor` e para a falha de CI em `rojeto-escudo-da-justi-a`.</h3><p class="body">Evitar que a infraestrutura técnica chegue na segunda como pendência silenciosa.</p><div class="owner">Owner: Petrônio</div></div></article>
+              <article class="todo"><div class="box"></div><div><h3 class="title">Confirmar ainda hoje o estado real de 0020001-64.2023.8.17.2810.</h3><p class="body">Registrar se houve protocolo, perda, relevação, medida corretiva ou simples ausência de providência.</p><div class="owner">Owner: Petrônio</div></div></article>
+              <article class="todo"><div class="box"></div><div><h3 class="title">Sair do bloco das 15:50 com o preparo de 0000212 fechado.</h3><p class="body">A manhã de 25/05 deve ficar apenas para revisão final, não para montagem de estratégia.</p><div class="owner">Owner: Petrônio</div></div></article>
+              <article class="todo"><div class="box"></div><div><h3 class="title">Abrir o teor e classificar 0007599, 0007127 e 0006873 no bloco das 15h.</h3><p class="body">Separar mera ciência, perda efetiva e qualquer possibilidade de reação útil.</p><div class="owner">Owner: Petrônio</div></div></article>
+              <article class="todo"><div class="box"></div><div><h3 class="title">Registrar e ler o teor de 0815844-52.2026.8.15.0001.</h3><p class="body">Classificar se o movimento é apenas administrativo ou se abre frente prática imediata.</p><div class="owner">Owner: Petrônio</div></div></article>
+              <article class="todo"><div class="box"></div><div><h3 class="title">Decidir a ação sobre o projeto `pje-gestor` antes da pausa automática.</h3><p class="body">Retomar atividade suficiente ou definir se a pausa é aceitável para a operação.</p><div class="owner">Owner: Petrônio</div></div></article>
             </div>
           </section>
 
@@ -333,18 +309,18 @@
               </div>
             </div>
             <div class="list">
-              <article class="coverage"><h3 class="title">Gmail consolidado</h3><p class="body">Foram lidos os pushes TRT6 e TJPE da janela, o relatório interno do Gestor de Prazos, os comprovantes Cielo/Nubank, o alerta Supabase e o aviso de falha de CI do GitHub. O problema do canal `juridico@petroniosouza.com.br` foi tratado como risco herdado citado no dia, porque o bounce original está fora do corte de 06:13 BRT.</p></article>
-              <article class="coverage"><h3 class="title">Google Calendar</h3><p class="body">A agenda foi auditada em toda a janela fechada das últimas 24 horas e no horizonte futuro até 26/05/2026 às 06:13 BRT.</p></article>
-              <article class="coverage"><h3 class="title">Notion</h3><p class="body">O controle diário foi atualizado sem duplicidade, com nova página do briefing, atualização dos casos já existentes e criação apenas do caso que ainda não estava registrado na base.</p></article>
-              <article class="coverage"><h3 class="title">Lacunas</h3><p class="body">Não há conector de chat corporativo nesta execução. Parte do inteiro teor dos documentos sigilosos, despachos e publicações ainda depende de abertura direta nos portais oficiais. Conteúdos recebidos após 24/05/2026 às 06:13 BRT ficaram fora do corte auditado.</p></article>
+              <article class="coverage"><h3 class="title">Gmail consolidado</h3><p class="body">Foram lidos os pushes TJPB e TJPE do corte, o relatório interno do Gestor de Prazos, as confirmações Cielo/Nubank e o alerta da Supabase. GitHub e newsletters fora do eixo jurídico-operacional principal foram despriorizados quando não alteravam decisão executiva desta rodada.</p></article>
+              <article class="coverage"><h3 class="title">Google Calendar</h3><p class="body">A agenda foi auditada na janela exata das últimas 24 horas e no horizonte futuro até 26/05/2026 às 12:13 BRT, com destaque para os três blocos jurídicos ainda hoje e para a manhã comprimida de 25/05.</p></article>
+              <article class="coverage"><h3 class="title">Notion</h3><p class="body">A continuidade foi mantida com atualização dos casos já existentes, criação do registro novo de 0815844 e nova página diária do briefing no mesmo destino já usado pelo controle executivo.</p></article>
+              <article class="coverage"><h3 class="title">Lacunas</h3><p class="body">Não há conector de chat corporativo nesta execução. Parte do inteiro teor dos despachos, remessas e atos sigilosos ainda depende de abertura direta nos portais oficiais. Conteúdos recebidos após 24/05/2026 às 12:13 BRT ficaram fora do corte auditado.</p></article>
             </div>
           </section>
         </div>
       </section>
 
       <section class="footer">
-        <div class="footer-note"><strong>Leitura principal:</strong> o corte das 06:13 não mudou o problema central de 0020001, mas acrescentou uma madrugada nova de decursos e consolidou a segunda-feira como um ponto de compressão real se o preparo de 0000212 e o lote TJPE não saírem resolvidos antes.</div>
-        <div class="footer-note"><strong>Resumo de risco:</strong> alto em 0020001 até confirmação, alto no preparo final de 0000212, médio a alto no trio 0006873/0007599/0007127, médio no lote TJPE da manhã de 25/05 e médio na frente técnica `pje-gestor` + CI.</div>
+        <div class="footer-note"><strong>Leitura principal:</strong> o corte das 12:13 não resolveu o problema de 0020001, acrescentou 0815844 como item novo de controle e deixou o restante do sábado como a última faixa confortável para absorver os decursos e blindar a audiência de 0000212.</div>
+        <div class="footer-note"><strong>Resumo de risco:</strong> alto em 0020001 até confirmação, alto no fechamento do preparo de 0000212, alto em 0007599 até leitura do teor, médio em 0006873 e 0007127, médio em 0815844 e médio no alerta técnico do `pje-gestor`.</div>
       </section>
     </main>
   </body>
