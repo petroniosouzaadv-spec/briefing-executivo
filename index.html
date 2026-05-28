@@ -3,113 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Briefing Executivo | 28 de maio de 2026</title>
+  <title>Briefing Executivo | 28 de maio de 2026 | 18:13 BRT</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --bg: #dae1e8;
-      --panel: rgba(255,255,255,0.88);
-      --panel-strong: rgba(255,255,255,0.96);
-      --ink: #11191f;
-      --wine: #561c26;
-      --navy: #172b49;
-      --gold: #bb9d6d;
-      --muted: rgba(17,25,31,0.72);
-      --line: rgba(17,25,31,0.12);
-      --shadow: 0 24px 70px rgba(17,25,31,0.12);
-      --radius: 8px;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: "Montserrat", sans-serif;
-      color: var(--ink);
-      background:
-        radial-gradient(circle at 0 0, rgba(187,157,109,0.22), transparent 28%),
-        radial-gradient(circle at 100% 0, rgba(23,43,73,0.18), transparent 30%),
-        linear-gradient(180deg, #eef2f6 0, #dae1e8 58%, #ced6de 100%);
-    }
-    .page { width: min(1280px, calc(100vw - 28px)); margin: 0 auto; padding: 18px 0 34px; }
-    .hero {
-      position: relative; overflow: hidden; border-radius: var(--radius);
-      background: linear-gradient(135deg, rgba(17,25,31,0.98), rgba(23,43,73,0.95)), linear-gradient(180deg, rgba(86,28,38,0.18), rgba(187,157,109,0.08));
-      box-shadow: var(--shadow); padding: 26px;
-    }
-    .hero::before, .hero::after {
-      content: ""; position: absolute; border-radius: 999px; border: 1px solid rgba(187,157,109,0.3);
-    }
-    .hero::before { width: 360px; height: 360px; right: -100px; top: -120px; }
-    .hero::after { width: 220px; height: 220px; right: 120px; bottom: -110px; }
-    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.45fr 0.95fr; gap: 18px; align-items: stretch; }
-    .brand { display:flex; align-items:center; gap:14px; margin-bottom:24px; }
-    .brand-mark {
-      width:58px; height:58px; border-radius:50%; border:1px solid rgba(187,157,109,0.72);
-      display:grid; place-items:center; color:var(--gold); font-weight:700; position:relative;
-    }
-    .brand-mark::after { content:""; position:absolute; width:78px; height:78px; border-radius:50%; border:1px solid rgba(200,182,172,0.22); }
-    .brand-label,.glass-label,.metric .label,.eyebrow { font-size:11px; text-transform:uppercase; letter-spacing:0.08em; }
-    .brand-label { color: rgba(255,255,255,0.72); margin-bottom:6px; }
-    .brand-name { color:#fff; font-size:23px; line-height:1.08; font-weight:600; max-width:18ch; }
-    .hero h1 { margin:0 0 14px; color:#fff; font-size:clamp(31px, 4.3vw, 56px); line-height:0.98; max-width:12ch; }
-    .hero-copy { color: rgba(255,255,255,0.82); font-size:15px; line-height:1.72; max-width:82ch; margin:0; }
-    .hero-copy + .hero-copy { margin-top:10px; }
-    .hero-meta { margin-top:14px; color:#fff; font-size:clamp(18px,2.5vw,28px); line-height:1.2; font-weight:700; }
-    .hero-side { display:grid; gap:14px; }
-    .glass { border-radius: var(--radius); background: rgba(255,255,255,0.09); border:1px solid rgba(255,255,255,0.12); backdrop-filter: blur(12px); padding:18px; }
-    .glass-label { color: rgba(255,255,255,0.64); margin-bottom:10px; }
-    .glass-value { color:#fff; font-size:17px; font-weight:700; line-height:1.45; }
-    .glass-note { color: rgba(255,255,255,0.74); font-size:13px; line-height:1.58; margin-top:8px; }
-    .metrics { display:grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap:14px; margin-top:18px; }
-    .metric,.panel { border-radius: var(--radius); background: var(--panel); border:1px solid rgba(255,255,255,0.55); box-shadow: var(--shadow); }
-    .metric { padding:18px; }
-    .metric .label { color: var(--muted); margin-bottom:10px; }
-    .metric .value { color: var(--navy); font-size:34px; font-weight:800; line-height:1; }
-    .metric .note { color:var(--muted); font-size:13px; line-height:1.5; margin-top:8px; }
-    .layout { display:grid; grid-template-columns:1.16fr 0.84fr; gap:18px; margin-top:18px; }
-    .stack { display:grid; gap:18px; }
-    .panel { padding:20px; background:var(--panel-strong); }
-    .panel-head { display:flex; justify-content:space-between; gap:14px; align-items:flex-start; margin-bottom:16px; }
-    .eyebrow { color: var(--wine); margin-bottom:8px; }
-    .panel h2 { margin:0; font-size:24px; line-height:1.1; }
-    .head-note { color:var(--muted); font-size:13px; line-height:1.55; max-width:39ch; }
-    .list,.timeline { display:grid; gap:12px; }
-    .item,.risk,.coverage,.event,.mail,.todo {
-      border:1px solid var(--line); border-radius:var(--radius); background: linear-gradient(180deg, rgba(255,255,255,0.84), rgba(255,255,255,0.64));
-    }
-    .item,.risk,.coverage,.mail { padding:14px; }
-    .title { margin:0 0 6px; font-size:15px; line-height:1.38; font-weight:700; }
-    .body { margin:0; color:var(--muted); font-size:13px; line-height:1.62; }
-    .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
-    .chip { min-height:28px; border-radius:999px; padding:0 10px; display:inline-flex; align-items:center; font-size:11px; text-transform:uppercase; font-weight:700; letter-spacing:0.04em; }
-    .critical { background: rgba(86,28,38,0.12); color:var(--wine); }
-    .watch { background: rgba(187,157,109,0.18); color:#7a6540; }
-    .ok { background: rgba(23,43,73,0.1); color:var(--navy); }
-    .mail-meta { color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:8px; }
-    .event { display:grid; grid-template-columns:126px 1fr; gap:14px; padding:14px; }
-    .when { font-size:13px; font-weight:700; color:var(--navy); }
-    .prep { margin:10px 0 0; padding:0; list-style:none; display:grid; gap:7px; }
-    .prep li { font-size:13px; line-height:1.56; padding-left:15px; position:relative; }
-    .prep li::before { content:""; position:absolute; left:0; top:8px; width:6px; height:6px; border-radius:50%; background:var(--gold); }
-    .todo { padding:14px; display:grid; grid-template-columns:auto 1fr; gap:12px; }
-    .box { width:18px; height:18px; border-radius:4px; border:1px solid rgba(17,25,31,0.22); margin-top:1px; }
-    .owner { margin-top:6px; color:var(--wine); font-size:11px; text-transform:uppercase; letter-spacing:0.08em; }
-    .footer { margin-top:18px; display:grid; grid-template-columns:1fr 1fr; gap:18px; }
-    .footer-note { padding:18px 20px; border-radius:var(--radius); background:rgba(17,25,31,0.95); color:rgba(255,255,255,0.8); box-shadow:var(--shadow); font-size:13px; line-height:1.66; }
-    .footer-note strong { color:#fff; }
-    @media (max-width: 1160px) { .hero-grid,.metrics,.layout,.footer { grid-template-columns:1fr; } }
-    @media (max-width: 760px) {
-      .page { width: min(100vw - 16px, 1280px); }
-      .hero,.panel,.metric { padding:18px; }
-      .event { grid-template-columns:1fr; }
-      .brand-name { font-size:19px; }
-      .panel h2 { font-size:21px; }
-      .glass-value { font-size:16px; }
-      .hero-copy { font-size:14px; }
-      .hero-meta { font-size:20px; }
-    }
+    :root{--bg:#dae1e8;--ink:#11191f;--wine:#561c26;--navy:#172b49;--gold:#bb9d6d;--soft:#c8b6ac;--panel:rgba(255,255,255,.92);--muted:rgba(17,25,31,.7);--line:rgba(17,25,31,.12);--shadow:0 22px 64px rgba(17,25,31,.13);--r:8px}*{box-sizing:border-box}body{margin:0;font-family:Montserrat,Arial,sans-serif;color:var(--ink);background:linear-gradient(180deg,#edf2f6 0,#dae1e8 58%,#cdd6df 100%)}.page{width:min(1240px,calc(100vw - 28px));margin:auto;padding:18px 0 34px}.hero{position:relative;overflow:hidden;border-radius:var(--r);background:linear-gradient(135deg,rgba(17,25,31,.98),rgba(23,43,73,.95)),linear-gradient(180deg,rgba(86,28,38,.18),rgba(187,157,109,.08));box-shadow:var(--shadow);padding:26px}.hero:before,.hero:after{content:"";position:absolute;border-radius:999px;border:1px solid rgba(187,157,109,.32)}.hero:before{width:360px;height:360px;right:-110px;top:-140px}.hero:after{width:220px;height:220px;right:110px;bottom:-118px}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.35fr .9fr;gap:18px}.brand{display:flex;gap:14px;align-items:center;margin-bottom:22px}.mark{width:58px;height:58px;border-radius:50%;border:1px solid rgba(187,157,109,.74);display:grid;place-items:center;color:var(--gold);font-weight:800}.kicker,.eyebrow,.label{text-transform:uppercase;letter-spacing:.08em;font-size:11px}.kicker{color:rgba(255,255,255,.72);margin-bottom:6px}.brand-name{color:#fff;font-size:22px;line-height:1.12;font-weight:700;max-width:18ch}h1{margin:0 0 14px;color:#fff;font-size:clamp(32px,4.2vw,56px);line-height:1;max-width:13ch}.hero p{color:rgba(255,255,255,.82);font-size:15px;line-height:1.72;margin:0;max-width:80ch}.hero-time{margin-top:18px;color:#fff;font-size:clamp(19px,2.5vw,30px);line-height:1.24;font-weight:800}.hero-time small{display:block;margin-top:7px;color:rgba(255,255,255,.86);font-size:clamp(13px,1.6vw,17px);font-weight:600}.glass{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.09);border-radius:var(--r);padding:17px;backdrop-filter:blur(12px)}.glass+.glass{margin-top:14px}.glass .label{color:rgba(255,255,255,.64);margin-bottom:9px}.glass strong{display:block;color:#fff;font-size:17px;line-height:1.45}.glass span{display:block;color:rgba(255,255,255,.76);font-size:13px;line-height:1.55;margin-top:7px}.metrics{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:18px}.metric,.panel{background:var(--panel);border:1px solid rgba(255,255,255,.62);border-radius:var(--r);box-shadow:var(--shadow)}.metric{padding:17px}.metric .label{color:var(--muted);margin-bottom:10px}.metric b{display:block;color:var(--navy);font-size:34px;line-height:1}.metric p{margin:8px 0 0;color:var(--muted);font-size:12.5px;line-height:1.45}.layout{display:grid;grid-template-columns:1.12fr .88fr;gap:18px;margin-top:18px}.stack{display:grid;gap:18px}.panel{padding:20px}.head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;margin-bottom:16px}.eyebrow{color:var(--wine);font-weight:700;margin-bottom:8px}.panel h2{font-size:24px;line-height:1.1;margin:0}.head-note{color:var(--muted);font-size:13px;line-height:1.55;max-width:42ch}.list{display:grid;gap:12px}.item,.event,.mail,.risk,.todo,.case{border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(180deg,rgba(255,255,255,.88),rgba(255,255,255,.68));padding:14px}.title{font-size:15px;line-height:1.38;margin:0 0 6px;font-weight:800}.body{font-size:13px;line-height:1.62;color:var(--muted);margin:0}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.chip{min-height:27px;border-radius:999px;padding:0 10px;display:inline-flex;align-items:center;font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;font-weight:800}.critical{background:rgba(86,28,38,.12);color:var(--wine)}.watch{background:rgba(187,157,109,.2);color:#755f39}.ok{background:rgba(23,43,73,.11);color:var(--navy)}.event{display:grid;grid-template-columns:118px 1fr;gap:14px}.when{color:var(--wine);font-size:12px;font-weight:800;line-height:1.45}.mail-meta{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:7px}.todo{display:grid;grid-template-columns:24px 1fr;gap:12px}.box{width:20px;height:20px;border:2px solid var(--gold);border-radius:5px;margin-top:2px}.case-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.case .meta{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--wine);font-weight:800;margin-bottom:8px}.footer{margin-top:18px;border-radius:var(--r);background:rgba(17,25,31,.96);color:#fff;padding:18px 20px;display:grid;grid-template-columns:1fr 1fr;gap:14px}.footer p{margin:0;color:rgba(255,255,255,.82);font-size:13px;line-height:1.6}.footer strong{color:#fff}@media(max-width:900px){.hero-grid,.layout,.metrics,.case-grid,.footer{grid-template-columns:1fr}.hero{padding:22px}.brand-name{font-size:19px}.metrics{gap:10px}.event{grid-template-columns:1fr}.head{display:block}.head-note{margin-top:8px}.panel h2{font-size:21px}.case,.item,.event,.mail,.risk,.todo{padding:13px}.body{font-size:13px;line-height:1.7}}@media(max-width:560px){.page{width:min(100vw - 18px,540px);padding-top:9px}.hero{padding:18px}.mark{width:50px;height:50px}h1{font-size:34px}.hero p{font-size:14px;line-height:1.65}.hero-time{font-size:21px}.metric{padding:14px}.metric b{font-size:30px}.panel{padding:15px}.title{font-size:14px}.chips{gap:6px}.chip{font-size:10px;padding:0 8px}.footer{padding:15px}}
   </style>
 </head>
 <body>
@@ -117,167 +16,118 @@
     <section class="hero">
       <div class="hero-grid">
         <div>
-          <div class="brand">
-            <div class="brand-mark">PS</div>
-            <div>
-              <div class="brand-label">Briefing executivo visual</div>
-              <div class="brand-name">Petrônio Souza Advogados Associados</div>
-            </div>
-          </div>
-          <h1>A manhã mudou a fila jurídica e a audiência segue no centro do dia.</h1>
-          <p class="hero-copy"><strong>Janela auditada:</strong> 27/05/2026 às 12:13 BRT até 28/05/2026 às 12:13 BRT. A leitura cruzou Google Calendar, Gmail consolidado, memória recente e o controle do Notion, cobrindo agenda, jurídico, operação e e-mails administrativos com efeito prático.</p>
-          <p class="hero-copy"><strong>Leitura executiva:</strong> a carga jurídica veio em duas ondas. Ontem à tarde entraram <strong>0011527</strong>, <strong>0002671</strong>, <strong>0018996</strong>, <strong>0041008</strong>, <strong>0002307</strong> e a publicação confirmada de <strong>0000338</strong>. Hoje pela manhã a janela ganhou <strong>0000742</strong>, <strong>0000021</strong>, <strong>0007333</strong>, <strong>0028173</strong>, <strong>0005844</strong>, nova peça em <strong>0002671</strong>, além de <strong>0012850</strong> e <strong>0066605</strong> no TRF5.</p>
-          <div class="hero-meta">Gerado em 28/05/2026 às 12:13 BRT | Horizonte futuro auditado até 30/05/2026 às 12:13 BRT</div>
+          <div class="brand"><div class="mark">PS</div><div><div class="kicker">Petrônio Souza Advogados Associados</div><div class="brand-name">Briefing executivo jurídico-operacional</div></div></div>
+          <h1>Dia com risco processual vivo.</h1>
+          <p>A rodada das 18:13 mostra uma tarde mais carregada que o corte anterior: decurso crítico em ação penal, cliente pressionando por contestação em despejo, documentos OAB finalizados, audiência trabalhista já realizada sem gravação Loom e nova leva de pushes processuais.</p>
+          <div class="hero-time">Gerado em 28/05/2026 às 18:13 BRT<small>Cobertura: 27/05/2026 18:13 até 28/05/2026 18:13. Preparação prospectiva até 30/05/2026 18:13.</small></div>
         </div>
-        <div class="hero-side">
-          <div class="glass">
-            <div class="glass-label">Foco imediato</div>
-            <div class="glass-value">Fechar a triagem dos atos de hoje sem deixar a audiência TRT6 das 15:05 perder preparação ou margem operacional.</div>
-            <div class="glass-note">A ordem mais sensível nesta rodada é audiência 0000417, leitura de 0011527, retorno do TRT6 em 0000742 e checagem prática de 0028173, 0000021 e 0005844.</div>
-          </div>
-          <div class="glass">
-            <div class="glass-label">Próximas 48 horas</div>
-            <div class="glass-value">A audiência de Maria Graziele Pereira Silva em 28/05 às 15:05 continua dominante. Depois, a sexta-feira já abre com o prazo operacional de 0043310-48.2025.8.17.2001 às 08:00.</div>
-            <div class="glass-note">Terapia em 28/05 às 21:00 e pagamento do aluguel em 29/05 às 09:00 reduzem a folga depois da audiência e comprimem a manhã seguinte.</div>
-          </div>
-          <div class="glass">
-            <div class="glass-label">Faixa operacional</div>
-            <div class="glass-value">GitHub manteve falhas repetidas de Secret Scan; a BestContent avisou que a conexão do Facebook expira em 14 dias; houve novo boleto no CPF e um código do Design Builder disparado de Recife.</div>
-            <div class="glass-note">Esses pontos não superam a fila jurídica, mas exigem validação ainda nesta rodada para não virarem ruído de sexta-feira.</div>
-          </div>
-        </div>
+        <aside>
+          <div class="glass"><div class="label">Leitura principal</div><strong>O foco imediato é separar prazo real de monitoramento.</strong><span>0011527, Cicero/despejo, 0000452 e 0000742 exigem abertura de teor ou decisão executiva antes de virarem ruído de sexta-feira.</span></div>
+          <div class="glass"><div class="label">Próximo marco</div><strong>29/05 às 08:00: prazo operacional 0043310.</strong><span>O prazo fatal informado é 01/06 às 23:59, mas a sexta-feira é a margem segura para análise e minuta.</span></div>
+        </aside>
       </div>
     </section>
 
     <section class="metrics">
-      <article class="metric"><div class="label">Itens jurídicos materiais</div><div class="value">13</div><div class="note">A janela trouxe publicações, conclusos, expedição de alvará, mandado para cumprimento, mandado patrimonial, contrarrazões e atos ordinatórios.</div></article>
-      <article class="metric"><div class="label">Prioridades altas</div><div class="value">6</div><div class="note">Audiência 0000417, 0011527, 0000742, 0028173, 0000021 e 0005844 concentram a faixa de maior atenção.</div></article>
-      <article class="metric"><div class="label">Compromissos 48h</div><div class="value">4</div><div class="note">Preparo final da audiência, audiência TRT6, terapia e prazo operacional de 0043310 na manhã de sexta.</div></article>
-      <article class="metric"><div class="label">Alertas operacionais</div><div class="value">4</div><div class="note">Secret Scan, Facebook da BestContent, boleto do Nubank e código do Design Builder pedem confirmação simples, mas real.</div></article>
-      <article class="metric"><div class="label">Lacunas verificadas</div><div class="value">3</div><div class="note">Sem chat corporativo, sem inteiro teor de parte dos atos e sem confirmação documental do desfecho dos blocos operacionais da manhã.</div></article>
+      <div class="metric"><div class="label">Prioridades críticas</div><b>4</b><p>Dois prazos/atos sensíveis, um cliente vulnerável e documento sigiloso.</p></div>
+      <div class="metric"><div class="label">Processos citados</div><b>19</b><p>Movimentos jurídicos materiais extraídos do Gmail e da agenda.</p></div>
+      <div class="metric"><div class="label">Agenda auditada</div><b>9</b><p>Compromissos e blocos entre 28 e 29/05, incluindo audiência.</p></div>
+      <div class="metric"><div class="label">Docs OAB</div><b>2</b><p>Contrato Maria Graziele e acordo celebrado concluídos.</p></div>
+      <div class="metric"><div class="label">Lacunas</div><b>3</b><p>Sem chat, sem inteiro teor oficial e sem ata/desfecho da audiência.</p></div>
     </section>
 
     <section class="layout">
       <div class="stack">
         <section class="panel">
-          <div class="panel-head">
-            <div><div class="eyebrow">Executive Summary</div><h2>Prioridades críticas</h2></div>
-            <div class="head-note">O corte das 12:13 BRT mostra um dia em que a agenda e o contencioso andam juntos: a audiência precisa sair pronta e a nova carga de pushes não pode ficar sem qualificação.</div>
-          </div>
+          <div class="head"><div><div class="eyebrow">Prioridade</div><h2>O que exige atenção agora</h2></div><p class="head-note">Ordenado por risco jurídico, sensibilidade do cliente e dependência de abertura de teor.</p></div>
           <div class="list">
-            <article class="item">
-              <h3 class="title">A audiência TRT6 de 28/05 às 15:05 segue sendo a principal entrega do dia.</h3>
-              <p class="body">A agenda reservou preparo final às 14:00 para o processo 0000417-34.2026.5.06.0006. O risco desta tarde não é falta de prazo conhecido, mas dispersão da manhã sobre a faixa imediatamente anterior ao Zoom.</p>
-              <div class="chips"><span class="chip critical">agenda</span><span class="chip critical">hoje</span><span class="chip ok">zoom</span></div>
-            </article>
-            <article class="item">
-              <h3 class="title">0011527-56.2025.8.17.2480 continua alto porque a janela trouxe publicação e o histórico recente já apontava decurso.</h3>
-              <p class="body">O TJPE informou às 16:59 de 27/05 a publicação de despacho/intimação. Como o briefing anterior já havia capturado o decurso do prazo em 26/05 às 23:59, este caso continua no topo da revisão jurídica.</p>
-              <div class="chips"><span class="chip critical">tjpe</span><span class="chip critical">alto</span></div>
-            </article>
-            <article class="item">
-              <h3 class="title">0000742-23.2024.5.06.0121 virou o ato trabalhista novo mais denso desta manhã.</h3>
-              <p class="body">O TRT6 registrou documento sigiloso, expedição de mandado de pesquisa patrimonial e recebimento do mandado pelo oficial de justiça para cumprimento. O conteúdo exato ainda depende de abertura no portal.</p>
-              <div class="chips"><span class="chip critical">trt6</span><span class="chip watch">sigiloso</span><span class="chip watch">execução</span></div>
-            </article>
-            <article class="item">
-              <h3 class="title">0028173-84.2024.8.17.8201 ganhou mandado para cumprimento e pede checagem prática imediata.</h3>
-              <p class="body">O processo de cumprimento de sentença em que Petrônio Leonardo Ramos de Souza aparece no polo ativo recebeu mandado para cumprimento às 09:16 de 28/05. O próximo passo é identificar destinatário, obrigação e prazo decorrente.</p>
-              <div class="chips"><span class="chip critical">cumprimento</span><span class="chip critical">mandado</span></div>
-            </article>
-            <article class="item">
-              <h3 class="title">0000021-06.2024.8.17.2420 e 0005844-05.2023.8.17.4001 entraram na manhã com movimento que pode reposicionar a leitura penal.</h3>
-              <p class="body">No primeiro houve juntada de contrarrazões da apelação. No segundo, os autos foram recebidos com outras decisões às 09:20. Ambos exigem leitura de teor antes de cair para monitoramento simples.</p>
-              <div class="chips"><span class="chip critical">penal</span><span class="chip watch">teor pendente</span></div>
-            </article>
-            <article class="item">
-              <h3 class="title">0002671, 0012850 e 0066605 ampliaram a fila, mas com risco menor do que a audiência e os casos acima.</h3>
-              <p class="body">0002671 evoluiu de despacho/intimação em 27/05 para juntada de parecer em 28/05. 0012850 recebeu petição e 0066605 teve ato ordinatório, comunicação eletrônica e certidão no TRF5.</p>
-              <div class="chips"><span class="chip ok">cível</span><span class="chip ok">trf5</span></div>
-            </article>
+            <article class="item"><h3 class="title">0011527-56.2025.8.17.2480: decurso de prazo de Petrônio informado em ação penal do júri.</h3><p class="body">TJPE registrou em 28/05 02:07 o decurso em 26/05 23:59. Partes: Central de Inquéritos de Caruaru e outros x Jose Felipe Pedro da Silva e outros. Follow-up: abrir andamento, confirmar o ato que gerou o decurso e decidir se cabe reação, justa causa ou apenas registro. Advogado indicado no push: Petrônio Leonardo Ramos de Souza.</p><div class="chips"><span class="chip critical">Risco alto/crítico</span><span class="chip watch">Prazo decorrido</span></div></article>
+            <article class="item"><h3 class="title">Cicero Marcos Lucas Sobrinho pede devolutiva urgente sobre contestação em despejo.</h3><p class="body">O cliente relatou vulnerabilidade financeira, medo de revelia, preclusão e despejo imediato. Ele informa prazo defensivo/fatal em 03/06/2026 e se coloca à disposição para procuração, contrato e assinatura da contestação. Processo conexo citado: 0003440-92.2022.8.17.2100; número da ação de despejo não veio no e-mail.</p><div class="chips"><span class="chip critical">Risco alto</span><span class="chip watch">Resposta objetiva</span></div></article>
+            <article class="item"><h3 class="title">0000452-25.2016.5.06.0012: manifestação com documento sigiloso.</h3><p class="body">TRT6: Camila de Santana Siqueira x Vitabras Comércio de Vitaminas Eireli e outros. Evento em 27/05 10:09. Follow-up: abrir integralmente a manifestação e qualificar impacto processual. Responsável não aparece no push; o destinatário é Petrônio.</p><div class="chips"><span class="chip critical">Risco alto</span><span class="chip watch">Sigiloso</span></div></article>
+            <article class="item"><h3 class="title">0000742-23.2024.5.06.0121: mandado de pesquisa patrimonial e documento sigiloso.</h3><p class="body">TRT6: Luana Caroline Alves da Silva x C J Antonio Dias Peças e Serviços para Autos Ltda. Mandado recebido pelo Oficial de Justiça em 27/05 15:54. Follow-up: abrir o mandado, o documento sigiloso e mapear efeito executivo.</p><div class="chips"><span class="chip critical">Risco alto</span><span class="chip watch">Execução/patrimônio</span></div></article>
           </div>
         </section>
 
         <section class="panel">
-          <div class="panel-head">
-            <div><div class="eyebrow">Últimas 24 Horas</div><h2>Desenvolvimentos materialmente relevantes</h2></div>
-            <div class="head-note">A janela começou às 12:13 BRT de 27/05 e fechou às 12:13 BRT de 28/05, sem reaproveitar como novo o que ficou fora desse corte.</div>
-          </div>
+          <div class="head"><div><div class="eyebrow">Agenda</div><h2>Compromissos e preparo</h2></div></div>
           <div class="list">
-            <article class="mail"><div class="mail-meta">27/05 12:20 a 12:37 • jurídico</div><h3 class="title">0002671 recebeu despacho/intimação com publicação ao DJEN e 0018996 ganhou expedição de alvará.</h3><p class="body">Os dois casos pedem registro imediato porque um abriu nova leitura de conteúdo e o outro sinaliza avanço patrimonial favorável.</p></article>
-            <article class="mail"><div class="mail-meta">27/05 15:06 a 18:11 • tarde jurídica</div><h3 class="title">Entraram 0041008 conclusos para despacho, 0011527 publicado, 0002307 conclusos para decisão e a confirmação Jusbrasil da publicação em 0000338.</h3><p class="body">Essa faixa mudou a ordem de prioridade do fim da tarde e empurrou 0011527 e 0000338 para o núcleo de revisão do dia seguinte.</p></article>
-            <article class="mail"><div class="mail-meta">27/05 13:08 • operação</div><h3 class="title">O Design Builder disparou código de verificação solicitado de Recife às 16:08 UTC.</h3><p class="body">Se a solicitação foi legítima, basta ignorar o alerta. Se não foi, o evento vira sinal de validação de conta e sessão.</p></article>
-            <article class="mail"><div class="mail-meta">28/05 01:29 • trabalhista</div><h3 class="title">0000742 trouxe mandado de pesquisa patrimonial, documento sigiloso e recebimento do mandado pelo oficial.</h3><p class="body">Foi o push mais completo da madrugada e exige abertura do inteiro teor antes de qualquer conclusão sobre prazo ou impacto executivo.</p></article>
-            <article class="mail"><div class="mail-meta">28/05 07:17 a 09:35 • manhã jurídica</div><h3 class="title">Chegaram 0000021 com contrarrazões, 0007333 com certidão e DJEN, 0028173 com mandado para cumprimento, 0005844 com outras decisões, 0002671 com parecer, 0012850 com petição e 0066605 com ato ordinatório.</h3><p class="body">A manhã alargou a fila de leitura, mas sem substituir a audiência como compromisso dominante do dia.</p></article>
-            <article class="mail"><div class="mail-meta">28/05 08:58 a 11:01 • operação</div><h3 class="title">Além da fila jurídica, houve novo boleto no CPF, alerta de Facebook expirando em 14 dias e falhas repetidas de Secret Scan no repositório rojeto-escudo-da-justi-a.</h3><p class="body">São itens fáceis de fechar, mas vale tratá-los ainda hoje para evitar que virem acúmulo administrativo no fim da semana.</p></article>
+            <article class="event"><div class="when">28/05<br>15:05</div><div><h3 class="title">Audiência - Maria Graziele Pereira Silva</h3><p class="body">TRT6, processo 0000417-34.2026.5.06.0006, Zoom Sala E. Reclamante Maria Graziele Pereira Silva; advogado Petrônio Leonardo Ramos de Souza; reclamado 34.959.289 Priscila Nayara Gomes da Costa de Brito e outros. Fireflies emitiu recap; Loom informou que a gravação não ocorreu por falta de permissão. Falta ata/desfecho nas fontes conectadas.</p></div></article>
+            <article class="event"><div class="when">28/05<br>21:00</div><div><h3 class="title">Terapia</h3><p class="body">Compromisso pessoal registrado na agenda. Sem preparação operacional associada.</p></div></article>
+            <article class="event"><div class="when">29/05<br>08:00</div><div><h3 class="title">Prazo processual - 0043310-48.2025.8.17.2001</h3><p class="body">Manifestação em 15 dias. Prazo fatal informado: 01/06/2026 23:59; data operacional antecipada para 29/05. Follow-up: abrir intimação e protocolar manifestação cabível.</p></div></article>
+            <article class="event"><div class="when">29/05<br>09:00</div><div><h3 class="title">Pagamento do aluguel</h3><p class="body">Item financeiro simples, mas com data concreta. Confirmar pagamento ou agendamento.</p></div></article>
           </div>
         </section>
 
         <section class="panel">
-          <div class="panel-head">
-            <div><div class="eyebrow">Agenda</div><h2>Próximas 48 horas e preparo</h2></div>
-            <div class="head-note">O horizonte futuro está curto e objetivo: audiência hoje, prazo cedo amanhã e pouca folga entre um bloco e outro.</div>
-          </div>
-          <div class="timeline">
-            <article class="event"><div class="when">28/05 14:00</div><div><h3 class="title">Preparo final da audiência — 0000417-34.2026.5.06.0006</h3><p class="body">Bloco reservado para revisar pauta, link do Zoom, peças e pontos de fala antes da entrada em sala.</p><ul class="prep"><li>Chegar nesse horário com a triagem crítica encerrada.</li><li>Separar documentos essenciais e confirmação final de acesso.</li></ul></div></article>
-            <article class="event"><div class="when">28/05 15:05</div><div><h3 class="title">Audiência — Maria Graziele Pereira Silva</h3><p class="body">Audiência telepresencial do processo 0000417-34.2026.5.06.0006 perante o TRT6, Sala E, via Zoom.</p><ul class="prep"><li>Acessar a sala com antecedência mínima de 10 minutos.</li><li>Evitar deixar leituras de 0011527 e 0000742 para a faixa imediatamente anterior.</li></ul></div></article>
-            <article class="event"><div class="when">28/05 21:00</div><div><h3 class="title">Terapia</h3><p class="body">Compromisso pessoal recorrente que reduz a janela útil da noite.</p><ul class="prep"><li>Se houver desdobramento da audiência, consolidar antes desse horário.</li></ul></div></article>
-            <article class="event"><div class="when">29/05 08:00</div><div><h3 class="title">Prazo processual — 0043310-48.2025.8.17.2001</h3><p class="body">A agenda mantém a sexta-feira cedo como data operacional do prazo cuja data fatal conhecida é 01/06/2026 às 23:59.</p><ul class="prep"><li>Entrar na sexta com a intimação já lida.</li><li>Não deixar a peça para a borda do fim de semana.</li></ul></div></article>
-            <article class="event"><div class="when">29/05 09:00</div><div><h3 class="title">Pagamento do aluguel</h3><p class="body">Compromisso recorrente que ocupa a faixa seguinte ao prazo operacional de 0043310.</p><ul class="prep"><li>Separar o administrativo do jurídico para não misturar urgências na manhã.</li></ul></div></article>
+          <div class="head"><div><div class="eyebrow">Processos</div><h2>Movimentos processuais materiais</h2></div></div>
+          <div class="case-grid">
+            <article class="case"><div class="meta">Saúde | médio</div><h3 class="title">0075599-05.2023.8.17.2001</h3><p class="body">E. G. D. S. e outros x You Assistência Médica Ltda e outros. Juntada de apelação em 28/05 17:23. Abrir peça e mapear contrarrazões/prazo.</p></article>
+            <article class="case"><div class="meta">Criminal | médio</div><h3 class="title">0041008-46.2025.8.17.2001</h3><p class="body">Petrônio x 50º Promotor de Justiça Criminal da Capital. Despacho de mero expediente em apelação criminal. Conferir teor.</p></article>
+            <article class="case"><div class="meta">Família | médio</div><h3 class="title">0002671-24.2022.8.17.3090</h3><p class="body">Juntada de parecer e publicação Jusbrasil com publicação em 29/05. Abrir publicação/parecer.</p></article>
+            <article class="case"><div class="meta">Civil | médio</div><h3 class="title">0051393-53.2025.8.17.2001</h3><p class="body">Expedição de publicação ao DJEN em 28/05 14:06. Monitorar data de publicação e eventual contagem.</p></article>
+            <article class="case"><div class="meta">Consumidor | baixo/médio</div><h3 class="title">0800038-76.2024.8.15.0411</h3><p class="body">Edjane Maria da Silva x Banco Daycoval. Expedição de documentos e despacho de mero expediente.</p></article>
+            <article class="case"><div class="meta">Previdenciário | médio</div><h3 class="title">0012850-56.2025.4.05.8303</h3><p class="body">E. G. A. B. x INSS. Juntada de petição em 28/05 09:14. Ver se demanda resposta.</p></article>
+            <article class="case"><div class="meta">Previdenciário | médio</div><h3 class="title">0066605-04.2025.4.05.8300</h3><p class="body">Deise de Lima Gouveia x INSS. Ato ordinatório, comunicação eletrônica e certidão. Abrir comunicação/certidão.</p></article>
+            <article class="case"><div class="meta">Cumprimento | médio-alto</div><h3 class="title">0028173-84.2024.8.17.8201</h3><p class="body">Petrônio x Thiago Silva Magalhães. Ofícios expedidos e mandado recebido para cumprimento. Acompanhar efetivação.</p></article>
+            <article class="case"><div class="meta">Criminal | médio</div><h3 class="title">0005844-05.2023.8.17.4001</h3><p class="body">Outras decisões e autos recebidos em ação de descumprimento de medida protetiva. Abrir decisão.</p></article>
+            <article class="case"><div class="meta">Despejo | médio</div><h3 class="title">0007333-74.2021.8.17.2990</h3><p class="body">Expedição de publicação ao DJEN e certidão em 28/05. Checar publicação/certidão.</p></article>
+            <article class="case"><div class="meta">Criminal | médio</div><h3 class="title">0000021-06.2024.8.17.2420</h3><p class="body">Juntada de contrarrazões de apelação. Verificar se encerra etapa recursal ou exige ciência.</p></article>
+            <article class="case"><div class="meta">Trabalhista | médio</div><h3 class="title">0000338-95.2026.5.06.0122</h3><p class="body">Intimação publicada em 28/05. Abrir teor e contar prazo se houver.</p></article>
+            <article class="case"><div class="meta">Trabalhista | médio</div><h3 class="title">0000212-48.2026.5.06.0121</h3><p class="body">Autos remetidos à Vara do Trabalho por encerradas as atribuições do CEJUSC. Ver próximos atos.</p></article>
+            <article class="case"><div class="meta">Consumidor | médio</div><h3 class="title">0000982-27.2026.8.17.8223</h3><p class="body">Decurso de prazo das partes ativas em 27/05 23:59. Classificar consequência.</p></article>
+            <article class="case"><div class="meta">Civil | médio</div><h3 class="title">0082905-25.2023.8.17.2001</h3><p class="body">Publicado despacho/intimação em 28/05. Abrir teor antes de baixar prioridade.</p></article>
+            <article class="case"><div class="meta">TJPI | médio</div><h3 class="title">0000496-13.2009.8.18.0042</h3><p class="body">Certidão de inclusão em pauta publicada em 28/05. Confirmar pauta e preparação.</p></article>
           </div>
         </section>
       </div>
 
-      <div class="stack">
+      <aside class="stack">
         <section class="panel">
-          <div class="panel-head"><div><div class="eyebrow">Jurídico</div><h2>Extração estruturada</h2></div></div>
+          <div class="head"><div><div class="eyebrow">Inbox</div><h2>E-mails não processuais relevantes</h2></div></div>
           <div class="list">
-            <article class="risk"><h3 class="title">0011527-56.2025.8.17.2480</h3><p class="body"><strong>Partes:</strong> Central de Inquéritos de Caruaru e outros x Jose Felipe Pedro da Silva e outros. <strong>Advogado:</strong> Petrônio Leonardo Ramos de Souza aparece vinculado no histórico recente do controle. <strong>Evento:</strong> despacho/intimação publicado em 27/05/2026 às 16:59, somando-se ao decurso de prazo já registrado na rodada anterior. <strong>Follow-up:</strong> abrir o andamento e medir reação ainda cabível. <strong>Risco:</strong> alto, porque há sinal de perda útil ou de necessidade de resposta defensiva imediata.</p></article>
-            <article class="risk"><h3 class="title">0000742-23.2024.5.06.0121</h3><p class="body"><strong>Partes:</strong> Luana Caroline Alves da Silva x C J Antonio Dias Peças e Serviços para Autos Ltda. <strong>Advogado:</strong> o push chegou ao escritório e o caso já estava no controle. <strong>Evento:</strong> documento sigiloso, mandado de pesquisa patrimonial e recebimento do mandado pelo oficial em 27/05/2026. <strong>Follow-up:</strong> abrir o inteiro teor no TRT6 e medir impacto executivo. <strong>Risco:</strong> alto, porque o conteúdo relevante não aparece no e-mail.</p></article>
-            <article class="risk"><h3 class="title">0028173-84.2024.8.17.8201</h3><p class="body"><strong>Partes:</strong> Petronio Leonardo Ramos de Souza x Thiago Silva Magalhaes. <strong>Advogado:</strong> Petrônio figura no polo ativo. <strong>Evento:</strong> recebido o mandado para cumprimento em 28/05/2026 às 09:16. <strong>Follow-up:</strong> identificar a ordem, o destinatário e o prazo prático de acompanhamento. <strong>Risco:</strong> médio-alto, porque é fase de cumprimento com efeito direto na execução.</p></article>
-            <article class="risk"><h3 class="title">0000021-06.2024.8.17.2420</h3><p class="body"><strong>Partes:</strong> 37ª Delegacia de Polícia de Camaragibe/PE e outros x Rodrigo Vaz Borba e outros. <strong>Advogado:</strong> não confirmado no push aberto desta rodada. <strong>Evento:</strong> juntada de contrarrazões da apelação em 28/05/2026 às 07:17. <strong>Follow-up:</strong> revisar teor e estágio recursal. <strong>Risco:</strong> médio, porque o ato pode deslocar a próxima janela defensiva.</p></article>
-            <article class="risk"><h3 class="title">0005844-05.2023.8.17.4001</h3><p class="body"><strong>Partes:</strong> 51º Promotor de Justiça Criminal da Capital x Jevesson de Souza. <strong>Advogado:</strong> não confirmado no corpo do push. <strong>Evento:</strong> outras decisões e recebimento dos autos em 28/05/2026 às 09:20. <strong>Follow-up:</strong> abrir o teor antes de classificar o movimento como rotina. <strong>Risco:</strong> médio.</p></article>
-            <article class="risk"><h3 class="title">0002671-24.2022.8.17.3090</h3><p class="body"><strong>Partes:</strong> Maria Inez da Silva e outros x Rafael Carlos Pereira e outros. <strong>Advogado:</strong> não confirmado diretamente no push. <strong>Evento:</strong> despacho/intimação com publicação ao DJEN em 27/05/2026 às 12:20 e juntada de parecer em 28/05/2026 às 09:18. <strong>Follow-up:</strong> abrir o despacho, entender o parecer e ajustar estratégia. <strong>Risco:</strong> médio.</p></article>
-            <article class="risk"><h3 class="title">0018996-62.2025.8.17.8201, 0041008-46.2025.8.17.2001, 0002307-82.2022.8.17.5990, 0007333-74.2021.8.17.2990, 0012850-56.2025.4.05.8303 e 0066605-04.2025.4.05.8300</h3><p class="body"><strong>Eventos:</strong> alvará em 0018996; conclusos para despacho em 0041008; conclusos para decisão em 0002307; certidão e publicação ao DJEN em 0007333; juntada de petição em 0012850; ato ordinatório, comunicação eletrônica e certidão em 0066605. <strong>Follow-up:</strong> registrar, abrir teor do que puder gerar prazo e manter monitoramento ativo. <strong>Risco:</strong> baixo a médio, conforme o conteúdo ainda não aberto.</p></article>
+            <article class="mail"><div class="mail-meta">Portal OAB | concluído</div><h3 class="title">Contrato Maria Graziele e acordo celebrado foram finalizados.</h3><p class="body">IDs 96701559 e 96700376. Follow-up: baixar/arquivar versões assinadas e vincular ao dossiê correto.</p></article>
+            <article class="mail"><div class="mail-meta">Audiência | registro</div><h3 class="title">Fireflies gerou recap; Loom não gravou.</h3><p class="body">Há indício de recap disponível, mas a gravação Loom falhou por permissão. Follow-up: consultar recap e registrar ata/desfecho manualmente.</p></article>
+            <article class="mail"><div class="mail-meta">GitHub | segurança</div><h3 class="title">PR #66 ainda recebeu alerta P2 de escape insuficiente em seletor CSS.</h3><p class="body">A revisão aponta que remover poucos caracteres não impede injeção de escopo por metacaracteres. Tratar antes de considerar a correção encerrada.</p></article>
+            <article class="mail"><div class="mail-meta">Google Cloud | planejamento</div><h3 class="title">Endpoints preview Gemini Image aposentam em 17/07/2026.</h3><p class="body">Sem urgência de hoje, mas vale registrar migração para os endpoints GA antes do corte.</p></article>
           </div>
         </section>
 
         <section class="panel">
-          <div class="panel-head"><div><div class="eyebrow">Operação</div><h2>Riscos, bloqueios e follow-ups</h2></div></div>
+          <div class="head"><div><div class="eyebrow">Riscos</div><h2>Bloqueios e decisões</h2></div></div>
           <div class="list">
-            <article class="risk"><h3 class="title">Médio: o repositório rojeto-escudo-da-justi-a segue com falhas repetidas de Secret Scan em múltiplas PRs.</h3><p class="body">As execuções das 14:18, 14:21 e 14:24 BRT de 28/05 repetiram o mesmo padrão: Secret Scan falhou, enquanto build e audit passaram.</p></article>
-            <article class="risk"><h3 class="title">Médio: a BestContent informou que a conexão do Facebook da marca expira em 14 dias.</h3><p class="body">Sem reconexão, os agendamentos automáticos de posts deixam de funcionar. É simples de resolver, mas tem data concreta.</p></article>
-            <article class="risk"><h3 class="title">Médio: o Nubank encontrou novo boleto emitido por Banco Toyota do Brasil S.A.</h3><p class="body">O ponto aqui é só decidir se o boleto deve ser pago, agendado ou descartado, para que ele não fique solto no radar administrativo.</p></article>
-            <article class="risk"><h3 class="title">Baixo a médio: o Design Builder enviou código de verificação solicitado de Recife.</h3><p class="body">Se a solicitação foi legítima, não há problema. Se não foi, o evento merece revisão simples de acesso.</p></article>
+            <article class="risk"><h3 class="title">Alto: cliente vulnerável sem sinalização objetiva sobre despejo.</h3><p class="body">A combinação de prazo 03/06, pedido de contratação e risco de revelia pede resposta objetiva, mesmo que seja para delimitar condições de atuação.</p></article>
+            <article class="risk"><h3 class="title">Alto: documento sigiloso e mandado patrimonial não podem ficar só como push.</h3><p class="body">0000452 e 0000742 precisam de leitura direta nos portais. O push não basta para medir prazo, risco ou providência.</p></article>
+            <article class="risk"><h3 class="title">Médio-alto: audiência sem registro automático completo.</h3><p class="body">Fireflies parece ter recap; Loom falhou. Sem ata/desfecho, ainda há lacuna de controle sobre encaminhamentos da audiência.</p></article>
+            <article class="risk"><h3 class="title">Médio: revisão técnica de segurança segue aberta no projeto Escudo.</h3><p class="body">O comentário P2 sobre CSS.escape/atributo deve ser tratado antes de fusão ou encerramento da frente de XSS/CSS injection.</p></article>
           </div>
         </section>
 
         <section class="panel">
-          <div class="panel-head"><div><div class="eyebrow">Next Actions</div><h2>Ações recomendadas</h2></div></div>
+          <div class="head"><div><div class="eyebrow">Next Actions</div><h2>Ações recomendadas</h2></div></div>
           <div class="list">
-            <article class="todo"><div class="box"></div><div><h3 class="title">Encerrar a preparação da audiência 0000417 antes das 14:00.</h3><p class="body">Chegar ao bloco final com link, peças e orientação já resolvidos é a forma mais segura de absorver a carga jurídica sem contaminar a audiência.</p><div class="owner">Owner: Petrônio</div></div></article>
-            <article class="todo"><div class="box"></div><div><h3 class="title">Abrir hoje os teores de 0011527, 0000742, 0028173, 0000021 e 0005844.</h3><p class="body">Esses cinco itens concentram o maior risco de esconder prazo, ordem judicial ou repercussão prática não visível pelo push.</p><div class="owner">Owner: Petrônio</div></div></article>
-            <article class="todo"><div class="box"></div><div><h3 class="title">Registrar 0002671, 0018996, 0012850, 0066605, 0041008 e 0002307 como fila de revisão de segundo nível.</h3><p class="body">São movimentos materiais, mas subordinados à audiência e aos casos de maior fricção jurídica desta manhã.</p><div class="owner">Owner: Petrônio</div></div></article>
-            <article class="todo"><div class="box"></div><div><h3 class="title">Validar ainda hoje o alerta do Facebook, o boleto do Nubank e o código do Design Builder.</h3><p class="body">São verificações rápidas e tiram ruído administrativo da sexta-feira.</p><div class="owner">Owner: Petrônio</div></div></article>
-            <article class="todo"><div class="box"></div><div><h3 class="title">Deixar a leitura da intimação de 0043310 pronta antes do início da manhã de 29/05.</h3><p class="body">Isso protege a primeira hora da sexta-feira e evita mistura entre prazo e rotina administrativa.</p><div class="owner">Owner: Petrônio</div></div></article>
+            <article class="todo"><div class="box"></div><div><h3 class="title">Responder Cicero com posição objetiva sobre atuação, documentos e prazo.</h3><p class="body">Owner: Petrônio. Ideal: ainda hoje, para reduzir risco de revelia/preclusão e pressão reputacional.</p></div></article>
+            <article class="todo"><div class="box"></div><div><h3 class="title">Abrir 0011527, 0000452, 0000742 e 0000338 nos portais oficiais.</h3><p class="body">Owner: Petrônio. Separar o que gera prazo do que é apenas movimentação ordinária.</p></div></article>
+            <article class="todo"><div class="box"></div><div><h3 class="title">Registrar resultado/ata da audiência 0000417.</h3><p class="body">Owner: Petrônio. Usar Fireflies se acessível; não depender do Loom, que não gravou.</p></div></article>
+            <article class="todo"><div class="box"></div><div><h3 class="title">Preparar manifestação do prazo 0043310 na manhã de 29/05.</h3><p class="body">Owner: Petrônio. Prazo fatal em 01/06, mas a data operacional segura é sexta-feira.</p></div></article>
+            <article class="todo"><div class="box"></div><div><h3 class="title">Arquivar documentos OAB concluídos e vincular ao caso Maria Graziele/acordo.</h3><p class="body">Owner: operação. Baixar as versões assinadas anexas aos e-mails do Portal OAB.</p></div></article>
           </div>
         </section>
 
         <section class="panel">
-          <div class="panel-head"><div><div class="eyebrow">Cobertura</div><h2>Fontes e lacunas verificadas</h2></div></div>
+          <div class="head"><div><div class="eyebrow">Cobertura</div><h2>Fontes e lacunas</h2></div></div>
           <div class="list">
-            <article class="coverage"><h3 class="title">Gmail consolidado</h3><p class="body">Foram revisados os e-mails jurídicos, operacionais e de agenda recebidos entre 27/05/2026 às 12:13 BRT e 28/05/2026 às 12:13 BRT, incluindo mensagens originais no Gmail e itens encaminhados de outras caixas para esta conta.</p></article>
-            <article class="coverage"><h3 class="title">Google Calendar</h3><p class="body">A agenda foi auditada na mesma janela e no horizonte futuro até 30/05/2026 às 12:13 BRT, com foco em compromissos materiais, blocos de preparo e colisões de disponibilidade.</p></article>
-            <article class="coverage"><h3 class="title">Notion e memória</h3><p class="body">A rodada atualiza o briefing diário, reaproveita registros canônicos já existentes dos casos e salva o histórico desta execução para deduplicação das próximas.</p></article>
-            <article class="coverage"><h3 class="title">Lacunas</h3><p class="body">Não há conector de chat corporativo nesta execução. Parte do inteiro teor de 0011527, 0000742, 0000021, 0005844, 0028173, 0012850 e 0066605 ainda depende de abertura nos portais oficiais. As fontes conectadas também não confirmaram documentalmente o desfecho dos blocos operacionais da manhã nem, até este corte, o resultado da audiência que ainda não havia ocorrido.</p></article>
+            <article class="risk"><h3 class="title">Gmail consolidado</h3><p class="body">Foram revisados os e-mails materialmente relevantes das últimas 24 horas, incluindo PJe/TJPE, TRT6, TJPI, TRF5, Jusbrasil, Portal OAB, clientes e alertas técnicos.</p></article>
+            <article class="risk"><h3 class="title">Google Calendar</h3><p class="body">Agenda auditada de 27/05 18:13 até 30/05 18:13 BRT, cobrindo blocos operacionais, audiência, terapia, prazo 0043310 e aluguel.</p></article>
+            <article class="risk"><h3 class="title">Notion</h3><p class="body">Página diária criada no CRM e novos registros de caso criados onde a busca não trouxe registro canônico claro. Itens conhecidos foram tratados como continuidade.</p></article>
+            <article class="risk"><h3 class="title">Lacunas</h3><p class="body">Sem conector de chat corporativo. Inteiro teor oficial ainda depende dos portais. Não houve confirmação documental do desfecho da audiência nas fontes conectadas.</p></article>
           </div>
         </section>
-      </div>
+      </aside>
     </section>
 
     <section class="footer">
-      <div class="footer-note"><strong>Leitura principal:</strong> a audiência não deixou de ser a prioridade do dia, mas a manhã ficou mais pesada do que o corte anterior mostrava. O risco real está em entrar na faixa do Zoom sem ter separado o que é leitura crítica do que é só monitoramento.</div>
-      <div class="footer-note"><strong>Resumo de risco:</strong> alto em 0011527 e 0000742; médio-alto em 0028173; médio em 0000021, 0005844, 0002671 e nos alertas operacionais; baixo a médio nos demais pushes de confirmação, conclusão ou movimentação ordinatória.</div>
+      <p><strong>Leitura executiva:</strong> esta não é uma rodada de simples monitoramento. Há pelo menos quatro pontos em que a fonte conectada indica risco, mas a decisão depende do inteiro teor ou de uma resposta humana objetiva.</p>
+      <p><strong>Link estável:</strong> https://petroniosouzaadv-spec.github.io/briefing-executivo/</p>
     </section>
   </main>
 </body>
