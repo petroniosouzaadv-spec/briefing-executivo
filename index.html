@@ -1,98 +1,509 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Briefing Executivo | 19/06/2026 | 06:13 BRT</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{--ink:#11191f;--wine:#561c26;--navy:#172b49;--bg:#dae1e8;--gold:#bb9d6d;--stone:#c8b6ac;--muted:rgba(17,25,31,.72);--line:rgba(17,25,31,.14);--panel:rgba(255,255,255,.94);--r:8px;--shadow:0 24px 70px rgba(17,25,31,.13)}
-    *{box-sizing:border-box}body{margin:0;font-family:Montserrat,Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at 0 0,rgba(187,157,109,.20),transparent 31%),radial-gradient(circle at 100% 0,rgba(23,43,73,.16),transparent 30%),linear-gradient(180deg,#eef2f6 0,var(--bg) 58%,#ced6de 100%)}a{color:inherit}.page{width:min(1240px,calc(100vw - 28px));margin:auto;padding:18px 0 34px}.hero{position:relative;overflow:hidden;border-radius:var(--r);padding:26px;background:linear-gradient(135deg,rgba(17,25,31,.99),rgba(23,43,73,.96)),linear-gradient(180deg,rgba(86,28,38,.18),rgba(187,157,109,.08));box-shadow:var(--shadow)}.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(187,157,109,.32)}.hero:before{width:360px;height:360px;right:-110px;top:-135px}.hero:after{width:220px;height:220px;right:110px;bottom:-112px}.grid{position:relative;z-index:1;display:grid;grid-template-columns:1.28fr 1fr;gap:18px}.brand{display:flex;gap:14px;align-items:center;margin-bottom:24px}.mark{width:58px;height:58px;border-radius:50%;border:1px solid rgba(187,157,109,.75);display:grid;place-items:center;color:var(--gold);font-weight:800}.label,.eyebrow,.metric span,.todo p,.case span{text-transform:uppercase;letter-spacing:.08em}.label{color:rgba(255,255,255,.74);font-size:11px}.name{color:#fff;font-size:23px;line-height:1.08;font-weight:700;max-width:18ch}.hero h1{margin:0 0 14px;color:#fff;font-size:clamp(32px,4.4vw,58px);line-height:.98;max-width:13ch}.hero p{margin:0;color:rgba(255,255,255,.84);font-size:15px;line-height:1.68}.time{margin-top:18px;color:#fff;font-size:clamp(24px,2.65vw,35px);font-weight:800;line-height:1.22}.time small{display:block;margin-top:8px;font-size:clamp(14px,1.55vw,17px);font-weight:700;color:rgba(255,255,255,.96);line-height:1.45}.glass{border-radius:var(--r);padding:18px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.13);margin-bottom:14px}.glass b{display:block;color:#fff;font-size:16px;line-height:1.42}.glass p{font-size:13px;line-height:1.58;margin-top:8px;color:rgba(255,255,255,.78)}.metrics,.layout{display:grid;gap:14px;margin-top:18px}.metrics{grid-template-columns:repeat(5,1fr)}.metric,.panel{border-radius:var(--r);background:var(--panel);border:1px solid rgba(255,255,255,.58);box-shadow:var(--shadow)}.metric{padding:17px}.metric span{display:block;font-size:11px;color:var(--muted);margin-bottom:9px}.metric b{display:block;color:var(--navy);font-size:33px;line-height:1}p{color:var(--muted);font-size:12.8px;line-height:1.58;margin:8px 0 0}.layout{grid-template-columns:1.05fr .95fr}.stack{display:grid;gap:18px}.panel{padding:20px}.eyebrow{color:var(--wine);font-size:11px;font-weight:800;margin-bottom:8px}.panel h2{font-size:24px;line-height:1.1;margin:0 0 16px}.list{display:grid;gap:12px}.item,.case,.todo,.event,.coverage{border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(180deg,#fff,rgba(255,255,255,.78));padding:14px}h3{font-size:15px;line-height:1.38;margin:0 0 6px;font-weight:800}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.chip{border-radius:999px;min-height:27px;padding:0 10px;display:inline-flex;align-items:center;font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;font-weight:800}.critical{background:rgba(86,28,38,.12);color:var(--wine)}.watch{background:rgba(187,157,109,.22);color:#725d39}.ok{background:rgba(23,43,73,.1);color:var(--navy)}.case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.case strong{display:block;color:var(--navy);font-size:13.5px;line-height:1.35;margin-bottom:7px}.case span,.todo p{color:var(--wine);font-size:10.5px;font-weight:800;margin:0 0 8px;display:block}.todo{display:grid;grid-template-columns:24px 1fr;gap:12px}.box{width:20px;height:20px;border:2px solid var(--gold);border-radius:5px;margin-top:2px}.event{display:grid;grid-template-columns:118px 1fr;gap:14px}.when{color:var(--wine);font-size:12px;font-weight:800;line-height:1.45}.footer{margin-top:18px;border-radius:var(--r);background:rgba(17,25,31,.96);color:#fff;padding:18px 20px;display:grid;grid-template-columns:1fr 1fr;gap:14px}.footer div{font-size:13px;line-height:1.6;color:rgba(255,255,255,.84)}.footer strong{color:#fff}@media(max-width:900px){.page{width:min(100% - 20px,680px);padding-top:10px}.grid,.metrics,.layout,.case-grid,.footer{grid-template-columns:1fr}.event{grid-template-columns:1fr}.hero{padding:22px}.hero h1{font-size:36px;max-width:12ch}.time{font-size:26px}.panel{padding:16px}p{font-size:12.8px;line-height:1.68}.brand{align-items:flex-start}.name{font-size:20px}.mark{width:52px;height:52px}.item,.case,.todo,.event,.coverage{padding:13px}.metrics{gap:10px}.metric{padding:14px}}
-  </style>
-</head>
-<body>
-<main class="page">
-  <section class="hero">
-    <div class="grid">
-      <div>
-        <div class="brand"><div class="mark">PS</div><div><div class="label">Petrônio Souza Advogados Associados</div><div class="name">Briefing executivo jurídico-operacional</div></div></div>
-        <h1>Prazos fatais, acordo homologado e novos pushes</h1>
-        <p>Rodada das 06:13 revisou Google Calendar, Gmail consolidado e memória de deduplicação. A prioridade é entrar no dia com David Marcelo e Renato Mendes controlados, validar Expedito antes de qualquer baixa, registrar o resultado de Jakeline e tratar os alertas operacionais de PDPJ, Projuris e Recorte Digital.</p>
-        <div class="time">19/06/2026 · 06:13 BRT<small>Janela auditada: 18/06/2026 06:13 até 19/06/2026 06:13 BRT. Agenda prospectiva: até 21/06/2026 06:13 BRT.</small></div>
-      </div>
-      <div>
-        <div class="glass"><div class="label">Atenção imediata</div><b>David Marcelo vence hoje às 23:59.</b><p>Processo 0002671-24.2022.8.17.3090 exige conferência do inteiro teor e decisão sobre manifestação antes do encerramento do dia.</p></div>
-        <div class="glass"><div class="label">Próximo fatal</div><b>Renato Mendes tem preparação às 09:00 e fatal em 20/06 às 23:59.</b><p>Confirmar contagem oficial antes de protocolar contrarrazões no processo 0006873-06.2025.8.17.2810.</p></div>
-        <div class="glass"><div class="label">Segurança e operação</div><b>PDPJ e Projuris pedem validação de conta.</b><p>Acesso PDPJ iOS/Chrome em 18/06 às 14:05 e recuperação de senha Projuris recebida às 02:30 BRT. Confirmar se ambos foram reconhecidos.</p></div>
-      </div>
-    </div>
-  </section>
-  <section class="metrics">
-    <article class="metric"><span>Prioridades altas</span><b>7</b><p>David, Renato, Expedito, Jakeline, PJe vencidos, PDPJ/Projuris e Recorte.</p></article>
-    <article class="metric"><span>Processos materiais</span><b>18+</b><p>Com prazo, acordo, publicação, decurso, despacho, mandado, sentença ou juntada relevante.</p></article>
-    <article class="metric"><span>Agenda 48h</span><b>3</b><p>Renato preparação, David fatal e Renato fatal. Eventos pessoais separados.</p></article>
-    <article class="metric"><span>Novidades 00:13-06:13</span><b>6</b><p>Jakeline homologado, 0043310 publicado, 0003440 diligência, 0071925 decurso, Projuris senha e Recorte extras.</p></article>
-    <article class="metric"><span>Lacunas</span><b>4</b><p>Sem chat, inteiro teor oficial, anexos protegidos e sistemas externos.</p></article>
-  </section>
-  <section class="layout">
-    <div class="stack">
-      <section class="panel"><div class="eyebrow">Resumo executivo</div><h2>O foco do dia é baixa segura e prazo fatal</h2><div class="list">
-        <article class="item"><h3>1. David Marcelo é o prazo de maior risco do dia.</h3><p>Fatal registrado para 19/06/2026 às 23:59. A agenda aponta ciência em 29/05 e prazo de 15 dias. Ação recomendada: abrir inteiro teor, decidir e protocolar manifestação se cabível antes do fim do expediente.</p><div class="chips"><span class="chip critical">risco alto</span><span class="chip watch">prazo fatal</span></div></article>
-        <article class="item"><h3>2. Renato Mendes precisa começar pela conferência de contagem.</h3><p>Bloco operacional às 09:00 de 19/06 e fatal informado para 20/06 às 23:59. A própria agenda marca grau de certeza médio, portanto a contagem oficial deve vir antes da peça.</p><div class="chips"><span class="chip critical">risco alto</span><span class="chip watch">confirmar prazo</span></div></article>
-        <article class="item"><h3>3. Expedito segue como baixa dependente de prova oficial.</h3><p>Houve manifestação às 23:10 de 17/06 e decurso às 00:12 de 18/06. A baixa só é segura após validar protocolo, teor, tempestividade e suficiência no PJe.</p><div class="chips"><span class="chip critical">risco alto</span><span class="chip watch">validar no PJe</span></div></article>
-        <article class="item"><h3>4. Jakeline mudou de status: acordo homologado.</h3><p>O TRT6 registrou audiência una realizada em 18/06 às 09:15, transação homologada, custas dispensadas, gratuidade concedida, execução iniciada e processo suspenso por acordo/transação. Agora o follow-up é registrar ata, condições e cumprimento.</p><div class="chips"><span class="chip ok">resultado confirmado</span><span class="chip watch">monitorar cumprimento</span></div></article>
-        <article class="item"><h3>5. Controle de acesso merece checagem humana.</h3><p>PDPJ registrou novo acesso em iOS/Chrome às 14:05 de 18/06. Projuris enviou recuperação de senha com link válido até 03:30 de 19/06. Se algum não foi reconhecido, trocar senha e revisar sessões.</p><div class="chips"><span class="chip critical">risco operacional</span></div></article>
-      </div></section>
-      <section class="panel"><div class="eyebrow">Próximas 48 horas</div><h2>Agenda e preparação</h2><div class="list">
-        <article class="event"><div class="when">19/06<br>09:00</div><div><h3>Renato Mendes - preparar contrarrazões</h3><p>Processo 0006873-06.2025.8.17.2810. Conferir contagem no sistema oficial e preparar/apresentar contrarrazões se cabível.</p></div></article>
-        <article class="event"><div class="when">19/06<br>23:59</div><div><h3>David Marcelo - prazo fatal</h3><p>Processo 0002671-24.2022.8.17.3090. Assunto reconhecimento/dissolução. Partes: Maria Inez da Silva e outros x Rafael Carlos Pereira e outros.</p></div></article>
-        <article class="event"><div class="when">20/06<br>23:59</div><div><h3>Renato Mendes - prazo fatal</h3><p>Autor: Renato Mendes da Silva. Réus: Banco Bradesco Financiamentos S.A. e Via Prime Gestão Energética Ltda. Órgão: 6ª Vara Cível de Jaboatão dos Guararapes.</p></div></article>
-      </div></section>
-      <section class="panel"><div class="eyebrow">Follow-ups</div><h2>Lista prática</h2><div class="list">
-        <article class="todo"><div class="box"></div><div><p>hoje</p><h3>Fechar David Marcelo antes do fim do expediente.</h3><p>Conferir inteiro teor, validar ciência de 29/05 e protocolar manifestação se cabível.</p></div></article>
-        <article class="todo"><div class="box"></div><div><p>hoje</p><h3>Iniciar Renato Mendes pela contagem oficial.</h3><p>Preparar contrarrazões somente depois de confirmar a data fatal e o teor da intimação.</p></div></article>
-        <article class="todo"><div class="box"></div><div><p>hoje</p><h3>Validar Expedito antes de baixar.</h3><p>Checar protocolo de 17/06 às 23:10 contra o decurso de 18/06 às 00:12.</p></div></article>
-        <article class="todo"><div class="box"></div><div><p>controle</p><h3>Registrar resultado de Jakeline.</h3><p>Arquivar ata, condições do acordo, eventual cronograma de pagamento/cumprimento e novo controle de execução.</p></div></article>
-        <article class="todo"><div class="box"></div><div><p>segurança</p><h3>Confirmar PDPJ e Projuris.</h3><p>Validar acesso PDPJ de 18/06 14:05 e recuperação de senha Projuris de 19/06 02:30 BRT.</p></div></article>
-        <article class="todo"><div class="box"></div><div><p>operação</p><h3>Regularizar Recorte Digital/OAB-PE.</h3><p>Serviço ainda indica interrupção cadastral, embora tenha enviado 3 publicações e informe possibilidade de Estados Extras.</p></div></article>
-      </div></section>
-    </div>
-    <div class="stack">
-      <section class="panel"><div class="eyebrow">Extração jurídica</div><h2>Casos com visibilidade executiva</h2><div class="case-grid">
-        <article class="case"><span>alto</span><strong>0002671-24.2022.8.17.3090</strong><p>Partes: Maria Inez da Silva e outros x Rafael Carlos Pereira e outros. Advogado: não indicado na fonte. Evento: prazo fatal em 19/06 23:59. Follow-up: inteiro teor e manifestação se cabível.</p></article>
-        <article class="case"><span>alto</span><strong>0006873-06.2025.8.17.2810</strong><p>Renato Mendes da Silva x Banco Bradesco Financiamentos S.A. e Via Prime Gestão Energética Ltda. Evento: contrarrazões; fatal informado 20/06 23:59. Follow-up: confirmar contagem oficial.</p></article>
-        <article class="case"><span>alto</span><strong>0003051-29.2026.8.17.9000</strong><p>Julia Torreão Pecly e outros x Expedito Alexandre Q Sial e outros. Evento: manifestação antes do fatal e decurso após o fatal. Follow-up: validar tempestividade e suficiência no PJe.</p></article>
-        <article class="case"><span>médio</span><strong>0000279-38.2026.5.06.0145</strong><p>Edilza Maria da Silva x Jakeline Veríssimo de Santana. Evento: audiência una realizada, acordo homologado, execução iniciada e processo suspenso por transação. Follow-up: registrar ata e cumprimento.</p></article>
-        <article class="case"><span>médio</span><strong>0000307-78.2026.5.06.0121</strong><p>Lenilson Azevedo Dantas Junior x C J Antonio Dias Peças e Serviços. Advogados: Petrônio Souza e Daniela Valadares. Evento: duas intimações publicadas em 19/06; audiência de instrução em 17/03/2027. Follow-up: conferir teor e prazos.</p></article>
-        <article class="case"><span>médio</span><strong>0043310-48.2025.8.17.2001</strong><p>Marcela Mayne de Almeida Sial e outros x Angela Maria Torreão Sial e outros. Advogados: Petrônio Souza e outros. Evento: despacho/intimação publicado em 19/06 às 04:58. Follow-up: abrir inteiro teor.</p></article>
-        <article class="case"><span>médio</span><strong>0003440-92.2022.8.17.2100</strong><p>Cicero Marcos Lucas Sobrinho x Severino Felix de Araujo Santos e outros. Evento: petição de diligência e mandado devolvido entregue ao destinatário em 19/06 03:41. Follow-up: avaliar cumprimento e próximo ato.</p></article>
-        <article class="case"><span>médio</span><strong>0071925-24.2020.8.17.2001</strong><p>Maria Inez da Silva e outros x Jose Carlos Pereira Irmão. Evento: decorrido prazo de Josefa Bezerra da Silva em 18/06 23:59. Follow-up: verificar efeito no inventário.</p></article>
-        <article class="case"><span>médio</span><strong>0000474-36.2018.5.06.0102</strong><p>Josiane Damasceno da Silva x Comercial L M de Alimentação Ltda e outro. Evento: sentença em 18/06 14:19 prejudicando embargos de declaração. Follow-up: avaliar impacto e eventual prazo recursal.</p></article>
-        <article class="case"><span>médio</span><strong>0066605-04.2025.4.05.8300</strong><p>Deise de Lima Gouveia x INSS. Evento: embargos de declaração juntados em 18/06 22:26. Follow-up: abrir teor e avaliar resposta/prazo.</p></article>
-        <article class="case"><span>médio</span><strong>0061659-02.2025.8.17.2001</strong><p>Keylla Andrea Alexsandra Silva dos Santos x Hapvida. Evento: certidão e conclusos para despacho em 18/06. Follow-up: monitorar por assunto urgência.</p></article>
-        <article class="case"><span>médio</span><strong>0000496-13.2009.8.18.0042</strong><p>Euclides de Carli e outros x Vitório Antonio Lopes. Evento: despacho publicado, manifestação de esclarecimentos e nova manifestação. Follow-up: conferir inteiro teor no TJPI.</p></article>
-        <article class="case"><span>médio</span><strong>0036552-19.2026.8.17.2001</strong><p>Deise de Lima Gouveia x Banco Bradesco S/A e outros. Evento: despacho/intimação publicado em 18/06. Follow-up: validar prazo e providência.</p></article>
-        <article class="case"><span>médio</span><strong>0011527-56.2025.8.17.2480</strong><p>Central de Inquéritos de Caruaru e outros x José Felipe Pedro da Silva e outros. Evento: juntada de outros documentos em ação penal de júri. Follow-up: conferir teor.</p></article>
-        <article class="case"><span>baixo</span><strong>0002394-71.2023.8.17.3090</strong><p>Panificadora Rainha Ltda x Neoenergia Pernambuco. Evento: certidão, recebimento dos autos e arquivamento definitivo. Follow-up: confirmar encerramento.</p></article>
-        <article class="case"><span>médio</span><strong>0005844-05.2023.8.17.4001</strong><p>51º Promotor de Justiça Criminal x Jevesson de Souza. Evento: mandados, ofício, certidão, DJEN e recebimento de mandado. Follow-up: conferir intimação/publicação.</p></article>
-        <article class="case"><span>baixo</span><strong>0000677-25.2024.5.06.0122</strong><p>Gerson Batista de Oliveira x Malibu Consultoria. Evento: petição de acordo e documento sigiloso. Follow-up: acompanhar homologação.</p></article>
-        <article class="case"><span>baixo</span><strong>0837703-80.2022.8.15.2001</strong><p>Marcel Luciano da Silva x Cebraspe e outros. Evento: decurso de prazo do Cebraspe. Follow-up: verificar efeito para estratégia.</p></article>
-      </div></section>
-      <section class="panel"><div class="eyebrow">Controle operacional</div><h2>Itens não processuais materiais</h2><div class="list">
-        <article class="item"><h3>Relatório PJe de 18/06 segue com 5 vencidos</h3><p>0000536-68.2025.8.17.9901, 0051393-53.2025.8.17.2001, 0017706-81.2019.8.17.0001, 0000021-06.2024.8.17.2420 e 0000982-27.2026.8.17.8223. Exige qualificação individual e providência registrada.</p></article>
-        <article class="item"><h3>Documento OAB finalizado</h3><p>Procuração e declaração de hipossuficiência de Maria Graziele, ID 97584001, concluída com PDF anexo. Arquivar no dossiê correspondente.</p></article>
-        <article class="item"><h3>Pagamento Asaas confirmado</h3><p>Pagamento de R$ 982,15 ao Itaú concluído em 18/06. Registrar conciliação financeira e comprovante.</p></article>
-        <article class="item"><h3>Informativos e promoções sem urgência executiva</h3><p>OAB Nacional, Projuris marketing, Serasa, Volvo, Sem Parar, LinkedIn, Drogasil, Zernio e newsletters foram revisados e não superam as prioridades jurídicas e operacionais do dia.</p></article>
-      </div></section>
-      <section class="panel"><div class="eyebrow">Lacunas de fonte</div><h2>Limites da verificação</h2><div class="list">
-        <article class="coverage"><h3>Cobertura verificada</h3><p>Google Calendar, Gmail consolidado, memória de briefing e histórico de Notion. Não há conector de chat corporativo ativo nesta execução.</p></article>
-        <article class="coverage"><h3>Cautela processual</h3><p>Alertas PJe Push, Jusbrasil, Recorte Digital e relatórios automatizados não substituem conferência em fonte oficial, especialmente antes de baixar prazos.</p></article>
-      </div></section>
-    </div>
-  </section>
-  <section class="footer"><div><strong>Link estável:</strong><br>https://petroniosouzaadv-spec.github.io/briefing-executivo/</div><div><strong>Entrega:</strong><br>Briefing gerado para publicação em GitHub Pages, registro no Notion e envio por Gmail.</div></section>
-</main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Briefing Executivo | 19 de junho de 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #dae1e8;
+        --panel: rgba(255, 255, 255, 0.9);
+        --panel-strong: rgba(255, 255, 255, 0.98);
+        --ink: #11191f;
+        --wine: #561c26;
+        --navy: #172b49;
+        --gold: #bb9d6d;
+        --stone: #c8b6ac;
+        --muted: rgba(17, 25, 31, 0.68);
+        --line: rgba(17, 25, 31, 0.13);
+        --shadow: 0 24px 70px rgba(17, 25, 31, 0.12);
+        --radius: 8px;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Montserrat", Arial, sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 0% 0%, rgba(187, 157, 109, 0.2), transparent 28%),
+          radial-gradient(circle at 100% 0%, rgba(23, 43, 73, 0.16), transparent 30%),
+          linear-gradient(180deg, #eef2f6 0%, #dae1e8 58%, #ced6de 100%);
+      }
+
+      a { color: inherit; }
+      .page {
+        width: min(1280px, calc(100vw - 28px));
+        margin: 0 auto;
+        padding: 18px 0 34px;
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        border-radius: var(--radius);
+        background:
+          linear-gradient(135deg, rgba(17, 25, 31, 0.98), rgba(23, 43, 73, 0.96)),
+          linear-gradient(180deg, rgba(86, 28, 38, 0.22), rgba(187, 157, 109, 0.1));
+        box-shadow: var(--shadow);
+        padding: 26px;
+      }
+
+      .hero::before,
+      .hero::after {
+        content: "";
+        position: absolute;
+        border-radius: 999px;
+        border: 1px solid rgba(187, 157, 109, 0.3);
+      }
+
+      .hero::before { width: 360px; height: 360px; right: -110px; top: -135px; }
+      .hero::after { width: 220px; height: 220px; right: 118px; bottom: -112px; }
+
+      .hero-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1.36fr 1fr;
+        gap: 18px;
+        align-items: stretch;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 24px;
+      }
+
+      .brand-mark {
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        border: 1px solid rgba(187, 157, 109, 0.72);
+        display: grid;
+        place-items: center;
+        color: var(--gold);
+        font-weight: 700;
+        position: relative;
+      }
+
+      .brand-mark::after {
+        content: "";
+        position: absolute;
+        width: 78px;
+        height: 78px;
+        border-radius: 50%;
+        border: 1px solid rgba(200, 182, 172, 0.22);
+      }
+
+      .brand-label {
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 6px;
+      }
+
+      .brand-name {
+        color: #fff;
+        font-size: 23px;
+        line-height: 1.08;
+        font-weight: 600;
+        max-width: 18ch;
+      }
+
+      h1 {
+        margin: 0 0 14px;
+        color: #fff;
+        font-size: clamp(34px, 4vw, 58px);
+        line-height: 0.98;
+        max-width: 11ch;
+      }
+
+      .hero-copy {
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 15px;
+        line-height: 1.68;
+        max-width: 70ch;
+        margin: 0;
+      }
+
+      .hero-side { display: grid; gap: 14px; }
+      .glass {
+        border-radius: var(--radius);
+        background: rgba(255, 255, 255, 0.09);
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        backdrop-filter: blur(12px);
+        padding: 18px;
+      }
+
+      .glass-label,
+      .mini-label {
+        color: rgba(255, 255, 255, 0.67);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 10px;
+      }
+
+      .glass-value {
+        color: #fff;
+        font-size: 17px;
+        font-weight: 800;
+        line-height: 1.42;
+      }
+
+      .glass-note {
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 13px;
+        line-height: 1.6;
+        margin-top: 8px;
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 18px;
+      }
+
+      .metric,
+      .panel {
+        border-radius: var(--radius);
+        background: var(--panel);
+        border: 1px solid rgba(255, 255, 255, 0.58);
+        box-shadow: var(--shadow);
+      }
+
+      .metric { padding: 18px; }
+      .metric .label {
+        color: var(--muted);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 10px;
+      }
+
+      .metric .value {
+        color: var(--navy);
+        font-size: 34px;
+        font-weight: 800;
+        line-height: 1;
+      }
+
+      .metric .note {
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.48;
+        margin-top: 8px;
+      }
+
+      .content {
+        display: grid;
+        grid-template-columns: 1.08fr 0.92fr;
+        gap: 18px;
+        margin-top: 18px;
+        align-items: start;
+      }
+
+      .stack { display: grid; gap: 18px; }
+      .panel { padding: 22px; }
+      .panel h2 {
+        margin: 0 0 16px;
+        color: var(--navy);
+        font-size: 18px;
+        line-height: 1.2;
+      }
+
+      .section-kicker {
+        color: var(--wine);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-weight: 800;
+        margin-bottom: 8px;
+      }
+
+      .priority-list,
+      .matter-list,
+      .source-list { display: grid; gap: 12px; }
+
+      .item {
+        border-top: 1px solid var(--line);
+        padding-top: 12px;
+      }
+
+      .item:first-child { border-top: 0; padding-top: 0; }
+      .item-title {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        justify-content: space-between;
+        color: var(--ink);
+        font-size: 14px;
+        font-weight: 800;
+        line-height: 1.42;
+      }
+
+      .item p {
+        margin: 7px 0 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.62;
+      }
+
+      .tag {
+        flex: 0 0 auto;
+        border-radius: 999px;
+        border: 1px solid rgba(86, 28, 38, 0.16);
+        background: rgba(86, 28, 38, 0.08);
+        color: var(--wine);
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        padding: 5px 8px;
+        text-transform: uppercase;
+      }
+
+      .tag.high { border-color: rgba(86, 28, 38, 0.28); background: rgba(86, 28, 38, 0.13); }
+      .tag.medium { border-color: rgba(187, 157, 109, 0.4); background: rgba(187, 157, 109, 0.16); color: #6f5424; }
+      .tag.low { border-color: rgba(23, 43, 73, 0.16); background: rgba(23, 43, 73, 0.07); color: var(--navy); }
+
+      .timeline {
+        display: grid;
+        gap: 12px;
+      }
+
+      .time-row {
+        display: grid;
+        grid-template-columns: 86px 1fr;
+        gap: 12px;
+        border-top: 1px solid var(--line);
+        padding-top: 12px;
+      }
+
+      .time-row:first-child { border-top: 0; padding-top: 0; }
+      .time {
+        color: var(--wine);
+        font-weight: 800;
+        font-size: 13px;
+        line-height: 1.4;
+      }
+
+      .time-card strong {
+        display: block;
+        color: var(--ink);
+        font-size: 14px;
+        line-height: 1.42;
+      }
+
+      .time-card span {
+        display: block;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.58;
+        margin-top: 4px;
+      }
+
+      .matter-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .matter {
+        background: var(--panel-strong);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 14px;
+      }
+
+      .matter strong {
+        display: block;
+        color: var(--navy);
+        font-size: 13px;
+        line-height: 1.42;
+        margin-bottom: 7px;
+      }
+
+      .matter p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.58;
+      }
+
+      .footer {
+        color: rgba(17, 25, 31, 0.58);
+        font-size: 12px;
+        line-height: 1.6;
+        text-align: center;
+        margin-top: 22px;
+      }
+
+      @media (max-width: 980px) {
+        .hero-grid,
+        .content,
+        .matter-grid { grid-template-columns: 1fr; }
+        .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+
+      @media (max-width: 620px) {
+        .page { width: min(100vw - 18px, 1280px); padding-top: 9px; }
+        .hero { padding: 20px; }
+        .brand { margin-bottom: 20px; }
+        .brand-name { font-size: 19px; }
+        h1 { font-size: 36px; max-width: 10ch; }
+        .hero-copy { font-size: 14px; line-height: 1.62; }
+        .glass-value { font-size: 16px; }
+        .metrics { gap: 9px; }
+        .metric { padding: 14px; }
+        .metric .value { font-size: 28px; }
+        .panel { padding: 18px; }
+        .item-title { display: block; }
+        .tag { display: inline-block; margin-top: 8px; }
+        .time-row { grid-template-columns: 1fr; gap: 5px; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="hero-grid">
+          <div>
+            <div class="brand">
+              <div class="brand-mark">PS</div>
+              <div>
+                <div class="brand-label">Petrônio Souza</div>
+                <div class="brand-name">Advogados Associados</div>
+              </div>
+            </div>
+            <h1>Briefing Executivo</h1>
+            <p class="hero-copy">Prioridade máxima para prazos e segurança operacional: manifestação de David Marcelo vence hoje, Renato precisa estar preparado antes do fatal de amanhã, e os cinco vencidos do PJe seguem exigindo triagem individual.</p>
+          </div>
+          <div class="hero-side">
+            <div class="glass">
+              <div class="glass-label">Gerado em</div>
+              <div class="glass-value">19/06/2026 às 12:13 BRT</div>
+              <div class="glass-note">Janela auditada: 18/06/2026 12:13 até 19/06/2026 12:13. Agenda prospectiva até 21/06/2026 12:13.</div>
+            </div>
+            <div class="glass">
+              <div class="glass-label">Atenção imediata</div>
+              <div class="glass-value">Prazo fatal hoje às 23:59 e validações processuais antes de qualquer baixa.</div>
+              <div class="glass-note">Fontes: Google Agenda, Gmail consolidado, memória de briefing e registros Notion anteriores.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="metrics" aria-label="Indicadores do briefing">
+        <div class="metric"><div class="label">Prioridades</div><div class="value">5</div><div class="note">Itens executivos imediatos.</div></div>
+        <div class="metric"><div class="label">Jurídico</div><div class="value">18</div><div class="note">Matérias com movimento ou prazo.</div></div>
+        <div class="metric"><div class="label">Prazos</div><div class="value">2</div><div class="note">Hoje e amanhã à noite.</div></div>
+        <div class="metric"><div class="label">PJe</div><div class="value">5</div><div class="note">Vencidos a qualificar.</div></div>
+        <div class="metric"><div class="label">Operação</div><div class="value">6</div><div class="note">Segurança, financeiro, OAB e CI.</div></div>
+      </section>
+
+      <section class="content">
+        <div class="stack">
+          <section class="panel">
+            <div class="section-kicker">Resumo executivo</div>
+            <h2>Foco recomendado para as próximas horas</h2>
+            <div class="priority-list">
+              <div class="item">
+                <div class="item-title">Finalizar David Marcelo no processo 0002671-24.2022.8.17.3090 antes do fim do dia. <span class="tag high">Crítico</span></div>
+                <p>Prazo fatal registrado para 19/06/2026 às 23:59. Partes: Maria Inez da Silva e outros x Rafael Carlos Pereira e outros. Follow-up: abrir inteiro teor, validar ciência de 29/05, conferir decurso de terceiro e protocolar manifestação se cabível.</p>
+              </div>
+              <div class="item">
+                <div class="item-title">Preparar Renato Mendes no processo 0006873-06.2025.8.17.2810 hoje, sem depender do sábado. <span class="tag high">Alto</span></div>
+                <p>Fatal informado para 20/06/2026 às 23:59, com grau de certeza médio na agenda. Partes: Renato Mendes da Silva x Banco Bradesco Financiamentos S.A. e Via Prime Gestão Energética Ltda. Follow-up: confirmar contagem oficial e preparar contrarrazões.</p>
+              </div>
+              <div class="item">
+                <div class="item-title">Validar Expedito antes de baixar qualquer pendência no 0003051-29.2026.8.17.9000. <span class="tag high">Alto</span></div>
+                <p>Há continuidade de risco por conflito operacional entre protocolo/manifestação e decurso anterior. Follow-up: conferir teor, tempestividade e suficiência no PJe antes de considerar concluído.</p>
+              </div>
+              <div class="item">
+                <div class="item-title">Qualificar os cinco vencidos do Relatório PJe de 19/06. <span class="tag high">Crítico</span></div>
+                <p>Processos: 0000536-68.2025.8.17.9901, 0051393-53.2025.8.17.2001, 0017706-81.2019.8.17.0001, 0000021-06.2024.8.17.2420 e 0000982-27.2026.8.17.8223. Follow-up: distinguir prazo próprio, prazo de terceiro, monitoramento, medida corretiva ou baixa cautelosa.</p>
+              </div>
+              <div class="item">
+                <div class="item-title">Confirmar legitimidade dos alertas PDPJ e Projuris. <span class="tag medium">Médio/Alto</span></div>
+                <p>PDPJ registrou acessos em 18/06 às 14:05 e 19/06 às 09:25; Projuris enviou recuperação de senha às 02:30. Se algum acesso não for reconhecido, trocar senha e revisar sessões/dispositivos.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="section-kicker">Matérias jurídicas</div>
+            <h2>Movimentos e follow-ups extraídos</h2>
+            <div class="matter-grid">
+              <div class="matter"><strong>0000279-38.2026.5.06.0145 | Jakeline</strong><p>Edilza Maria da Silva x Jakeline Veríssimo de Santana. Audiência una realizada; acordo homologado; execução iniciada; processo suspenso por transação. Advogado: não indicado no push. Follow-up: registrar ata, condições, parcelas e controle de cumprimento. Risco médio.</p></div>
+              <div class="matter"><strong>0043310-48.2025.8.17.2001 | Inventário Sial</strong><p>Marcela Mayne de Almeida Sial e outros x Angela Maria Torreão Sial e outros. Despacho/intimação publicado em 19/06. Advogados citados: Petrônio Souza e outros. Follow-up: abrir inteiro teor e prazo. Risco médio.</p></div>
+              <div class="matter"><strong>0000307-78.2026.5.06.0121 | Lenilson</strong><p>Lenilson Azevedo Dantas Junior x C J Antonio Dias Peças e Serviços. Intimação publicada em 19/06; Jusbrasil duplicou duas publicações. Advogados: Petrônio Souza e Daniela Valadares. Follow-up: conferir teor, prazo e obrigações da ata. Risco médio.</p></div>
+              <div class="matter"><strong>0000474-36.2018.5.06.0102 | Josiane</strong><p>Josiane Damasceno da Silva x Comercial L M de Alimentação Ltda e outro. Sentença em 18/06; embargos de Raimundo José da Silva prejudicados. Advogado: não indicado no push. Follow-up: avaliar impacto e prazo recursal. Risco médio.</p></div>
+              <div class="matter"><strong>0000417-34.2026.5.06.0006 | Maria Graziele</strong><p>Maria Graziele Pereira Silva x Priscila Nayara Gomes da Costa de Brito e outro. Manifestação juntada e documento sigiloso em 18/06. Follow-up: abrir documento sigiloso e validar providência. Risco médio.</p></div>
+              <div class="matter"><strong>0003440-92.2022.8.17.2100 | Abreu e Lima</strong><p>Cícero Marcos Lucas Sobrinho x Severino Félix de Araújo Santos e outros. Juntada de diligência e mandado devolvido entregue. Follow-up: avaliar cumprimento e próximo ato. Risco médio.</p></div>
+              <div class="matter"><strong>0066605-04.2025.4.05.8300 | Deise x INSS</strong><p>Embargos de declaração juntados em 18/06. Follow-up: abrir teor e avaliar resposta/prazo. Risco médio.</p></div>
+              <div class="matter"><strong>0061659-02.2025.8.17.2001 | Keylla x Hapvida</strong><p>Certidão expedida e autos conclusos para despacho em caso de urgência. Follow-up: monitorar decisão e eventual cumprimento. Risco médio.</p></div>
+              <div class="matter"><strong>0000496-13.2009.8.18.0042 | TJPI</strong><p>Euclides de Carli e outros x Vitório Antonio Lopes. Expedição de AR e outros documentos em 19/06. Follow-up: conferir teor no TJPI. Risco médio.</p></div>
+              <div class="matter"><strong>0017706-81.2019.8.17.0001 | Júri Capital</strong><p>MPPE e outros x Matheus Silva Alves Pereira. Juntada de outros documentos; também consta nos vencidos PJe como prazo do MP. Follow-up: conferir efeito para a defesa. Risco médio.</p></div>
+              <div class="matter"><strong>0071925-24.2020.8.17.2001 | Inventário</strong><p>Maria Inez da Silva e outros x José Carlos Pereira Irmão. Decorrido prazo de Josefa Bezerra da Silva em 18/06. Follow-up: verificar efeito sucessório. Risco médio.</p></div>
+              <div class="matter"><strong>0036552-19.2026.8.17.2001 | Deise x Bradesco</strong><p>Despacho/intimação publicado em 18/06. Follow-up: validar prazo e providência. Risco médio.</p></div>
+              <div class="matter"><strong>0011527-56.2025.8.17.2480 | Júri Caruaru</strong><p>Central de Inquéritos de Caruaru e outros x José Felipe Pedro da Silva e outros. Juntada de documentos em ação penal de júri. Follow-up: conferir teor. Risco médio.</p></div>
+              <div class="matter"><strong>0002394-71.2023.8.17.3090 | Panificadora</strong><p>Panificadora Rainha Ltda x Neoenergia Pernambuco. Arquivado definitivamente em 18/06. Follow-up: confirmar encerramento e baixa. Risco baixo.</p></div>
+              <div class="matter"><strong>0005844-05.2023.8.17.4001 | Violência doméstica</strong><p>51º Promotor de Justiça Criminal x Jevesson de Souza. Mandado recebido para cumprimento. Follow-up: acompanhar cumprimento. Risco médio.</p></div>
+              <div class="matter"><strong>0043310/0000307 | Publicações Jusbrasil</strong><p>Jusbrasil confirmou publicações em 19/06, mas não substitui fonte oficial. Follow-up: usar como alerta e validar nos tribunais. Risco médio por possível prazo.</p></div>
+            </div>
+          </section>
+        </div>
+
+        <div class="stack">
+          <section class="panel">
+            <div class="section-kicker">Agenda</div>
+            <h2>Próximas 48 horas</h2>
+            <div class="timeline">
+              <div class="time-row"><div class="time">19/06 08:00</div><div class="time-card"><strong>Triagem crítica - PJe vencidos e segurança operacional</strong><span>Bloco já reservado para qualificar vencidos, checar PDPJ e Projuris.</span></div></div>
+              <div class="time-row"><div class="time">19/06 09:00</div><div class="time-card"><strong>Renato Mendes - preparar contrarrazões</strong><span>Confirmar contagem e preparar antes do fatal de 20/06 às 23:59.</span></div></div>
+              <div class="time-row"><div class="time">19/06 10:00</div><div class="time-card"><strong>David Marcelo - finalizar manifestação</strong><span>Prazo fatal às 23:59 de hoje. Prioridade do dia.</span></div></div>
+              <div class="time-row"><div class="time">19/06 11:00</div><div class="time-card"><strong>Conferir publicações e pushes novos</strong><span>0043310, 0000307, 0000474, 0003440, 0066605, 0061659 e 0000417.</span></div></div>
+              <div class="time-row"><div class="time">19/06 21:00</div><div class="time-card"><strong>Terapia</strong><span>Compromisso pessoal já marcado.</span></div></div>
+              <div class="time-row"><div class="time">19/06 23:59</div><div class="time-card"><strong>Prazo - David Marcelo</strong><span>Data limite prevista para manifestação no 0002671-24.2022.8.17.3090.</span></div></div>
+              <div class="time-row"><div class="time">20/06 19:00</div><div class="time-card"><strong>Aplicação Mounjaro</strong><span>Compromisso pessoal.</span></div></div>
+              <div class="time-row"><div class="time">20/06 23:59</div><div class="time-card"><strong>Prazo - Renato Mendes</strong><span>Contrarrazões no 0006873-06.2025.8.17.2810; confirmar contagem oficial.</span></div></div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="section-kicker">Operação e financeiro</div>
+            <h2>Itens não processuais relevantes</h2>
+            <div class="matter-list">
+              <div class="item"><div class="item-title">Portal OAB/Certisign: documento Maria Graziele finalizado. <span class="tag medium">Ação</span></div><p>Identificação 97584001, “Procuração e Declaração de HIP - Assinatura Digital - Maria Graziele”, com PDF anexo. Follow-up: arquivar no dossiê e conferir se atende ao processo 0000417.</p></div>
+              <div class="item"><div class="item-title">Asaas: pagamento de R$ 982,15 concluído. <span class="tag low">Controle</span></div><p>Beneficiário Itaú Unibanco Holding S.A.; vencimento 17/06 e pagamento em 18/06. Follow-up: salvar comprovante.</p></div>
+              <div class="item"><div class="item-title">Asaas: cobrança de Ana Francisca de Paula visualizada. <span class="tag low">Recebível</span></div><p>Valor de R$ 500,00, vencimento em 30/06/2026, visualizada em 19/06 às 10:05. Follow-up: acompanhar pagamento.</p></div>
+              <div class="item"><div class="item-title">GitHub: PRs #133 e #134 com falhas de Security & Build. <span class="tag medium">Produto</span></div><p>No projeto rojeto-escudo-da-justi-a, Dependency Audit falhou e o Secret Scan falhou em runs anteriores; Codex apontou bug de ordem de hooks no PR #133. Follow-up: corrigir antes de merge/deploy.</p></div>
+              <div class="item"><div class="item-title">Serasa: alerta recorrente sobre pendências de sócio. <span class="tag medium">Reputação</span></div><p>Mensagem comercial, mas com possível risco de CNPJ/crédito se o dado for real. Follow-up: validar em canal oficial antes de contratar ou agir.</p></div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="section-kicker">Lacunas</div>
+            <h2>Cuidados de fonte</h2>
+            <div class="source-list">
+              <div class="item"><p>Sem conector de chat corporativo nesta execução.</p></div>
+              <div class="item"><p>PJe Push, Jusbrasil, Recorte Digital e relatórios automatizados são alertas; prazos e baixas devem ser confirmados no sistema oficial.</p></div>
+              <div class="item"><p>Não houve acesso ao inteiro teor oficial, documentos sigilosos, anexos protegidos ou sistemas externos além dos conectores disponíveis.</p></div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <div class="footer">Briefing executivo gerado para Petrônio Souza Advogados Associados. Link estável: https://petroniosouzaadv-spec.github.io/briefing-executivo/</div>
+    </main>
+  </body>
 </html>
