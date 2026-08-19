@@ -1,105 +1,932 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#11191F">
-<meta name="description" content="Briefing executivo diário de Petrônio Souza Advogados Associados">
-<title>Briefing Executivo | 18 de agosto de 2026</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--ink:#11191f;--wine:#561c26;--navy:#172b49;--paper:#dae1e8;--gold:#bb9d6d;--stone:#c8b6ac;--muted:#5b6871;--line:rgba(17,25,31,.13);--panel:rgba(255,255,255,.96);--shadow:0 18px 50px rgba(17,25,31,.11);--r:8px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#dce3e9;color:var(--ink);font-family:Montserrat,Arial,sans-serif;letter-spacing:0}.page{width:min(1160px,calc(100% - 28px));margin:auto;padding:18px 0 36px}.hero{position:relative;overflow:hidden;border-radius:var(--r);background:linear-gradient(128deg,#11191f 0%,#172b49 66%,#561c26 140%);box-shadow:var(--shadow);color:#fff;padding:28px}.hero:after{content:"";position:absolute;right:-110px;bottom:-210px;width:430px;height:430px;border:1px solid rgba(187,157,109,.3);border-radius:50%}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.38fr .92fr;gap:22px}.brand{display:flex;align-items:center;gap:14px;margin-bottom:30px}.brand-mark{width:62px;height:62px;display:grid;place-items:center;border:1px solid rgba(187,157,109,.75);border-radius:50%;color:var(--gold);font-weight:700}.brand small,.eyebrow,.label{text-transform:uppercase;font-size:10px;font-weight:700;letter-spacing:.08em}.brand small{display:block;color:rgba(255,255,255,.65);margin-bottom:5px}.brand strong{display:block;font-size:20px;line-height:1.15;max-width:24ch}.hero h1{font-size:clamp(34px,5vw,62px);line-height:1;max-width:12ch;margin:0 0 16px}.lead{max-width:66ch;line-height:1.7;color:rgba(255,255,255,.82);font-size:15px;margin:0;text-wrap:pretty}.hero-side{display:grid;gap:12px}.hero-note{border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.075);padding:17px;border-radius:var(--r);backdrop-filter:blur(10px)}.hero-note .label{color:var(--gold);margin-bottom:8px}.hero-note b{font-size:15px;line-height:1.4}.hero-note p{margin:7px 0 0;color:rgba(255,255,255,.75);font-size:12px;line-height:1.55;text-wrap:pretty}.hero-meta{font-weight:700;font-size:14px;line-height:1.65;color:#fff}.status-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}.status,.panel{background:var(--panel);border:1px solid rgba(255,255,255,.72);border-radius:var(--r);box-shadow:var(--shadow)}.status{padding:17px}.status .label{color:var(--muted);margin-bottom:9px}.status b{font-size:22px;line-height:1.15;color:var(--navy)}.status p{font-size:12px;line-height:1.5;color:var(--muted);margin:7px 0 0;text-wrap:pretty}.priority-band{margin-top:16px;padding:18px 20px;background:var(--wine);color:#fff;border-radius:var(--r);display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;box-shadow:var(--shadow)}.signal{width:12px;height:12px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 7px rgba(187,157,109,.16);animation:pulse 2.2s ease-in-out infinite}.priority-band b{display:block;font-size:15px}.priority-band p{margin:4px 0 0;color:rgba(255,255,255,.82);font-size:13px;line-height:1.55;text-wrap:pretty}.layout{display:grid;grid-template-columns:1.12fr .88fr;gap:16px;margin-top:16px}.stack{display:grid;gap:16px;align-content:start}.panel{padding:21px}.eyebrow{color:var(--wine);margin-bottom:8px}.panel h2{font-size:22px;margin:0 0 14px;color:var(--navy)}.item{padding:15px 0;border-top:1px solid var(--line)}.item:first-of-type{border-top:0;padding-top:4px}.item-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}.item h3{font-size:15px;line-height:1.45;margin:0}.item p{font-size:13px;line-height:1.62;color:var(--muted);margin:7px 0 0;text-wrap:pretty}.badge{white-space:nowrap;border:1px solid var(--line);padding:5px 8px;border-radius:999px;font-size:10px;font-weight:800;text-transform:uppercase}.badge.critical{background:var(--wine);color:#fff;border-color:var(--wine)}.badge.high{background:var(--navy);color:#fff;border-color:var(--navy)}.badge.med{background:#f0e7da;color:var(--wine)}.badge.low{background:#e5ebf0;color:var(--navy)}.checklist{display:grid;gap:10px}.check{display:grid;grid-template-columns:24px 1fr;gap:10px;align-items:start;padding:11px 0;border-top:1px solid var(--line)}.check:first-child{border-top:0}.num{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:#fff;font-weight:700;font-size:11px}.check b{font-size:13px;line-height:1.45}.check p{margin:4px 0 0;color:var(--muted);font-size:12px;line-height:1.55;text-wrap:pretty}.timeline{display:grid;gap:11px}.slot{display:grid;grid-template-columns:72px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--line)}.slot:first-child{border-top:0}.time{font-size:11px;font-weight:800;color:var(--wine)}.slot b{font-size:13px;line-height:1.45}.slot p{font-size:12px;color:var(--muted);line-height:1.5;margin:4px 0 0}.source-note{font-size:11px;line-height:1.6;color:var(--muted);margin:0}.footer{margin-top:16px;padding:17px 20px;background:var(--ink);color:rgba(255,255,255,.72);border-radius:var(--r);font-size:11px;line-height:1.65}.footer strong{color:#fff}.footer a{color:var(--gold)}@keyframes pulse{50%{transform:scale(.82);opacity:.7}}
-@media(max-width:840px){.hero-grid,.layout{grid-template-columns:1fr}.status-row{grid-template-columns:repeat(2,1fr)}.hero h1{max-width:14ch}.brand{margin-bottom:24px}.hero-side{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.page{width:min(100% - 18px,1160px);padding:9px 0 22px}.hero{padding:20px}.hero-grid{gap:18px}.brand-mark{width:54px;height:54px}.brand strong{font-size:17px}.hero h1{font-size:35px;line-height:1.04}.lead{font-size:13px;line-height:1.62}.hero-side{grid-template-columns:1fr}.hero-note{padding:15px}.hero-meta{font-size:15px;line-height:1.58}.status-row{gap:8px}.status{padding:14px}.status b{font-size:19px}.priority-band{padding:16px;gap:14px}.layout{gap:10px;margin-top:10px}.panel{padding:17px}.panel h2{font-size:20px}.item-head{display:block}.badge{display:inline-block;margin-top:8px}.slot{grid-template-columns:62px 1fr}.item p,.check p,.slot p,.source-note{overflow-wrap:anywhere;text-align:left}}
-</style>
-</head>
-<body>
-<main class="page">
-<section class="hero">
-  <div class="hero-grid">
-    <div>
-      <div class="brand"><div class="brand-mark">PS</div><div><small>Inteligência jurídico-operacional</small><strong>Petrônio Souza Advogados Associados</strong></div></div>
-      <h1>Briefing executivo</h1>
-      <p class="lead">A manhã combina prazo imediato, duas decisões relevantes e preparação concentrada para compromissos de amanhã. O foco é confirmar protocolos, abrir os atos oficiais e preservar comunicação clara com clientes.</p>
-    </div>
-    <div class="hero-side">
-      <div class="hero-note"><div class="label">Geração e cobertura</div><div class="hero-meta">18/08/2026 · 07:14 BRT<br>Últimas 24h: 17/08 07:14 → 18/08 07:14<br>Agenda futura: até 20/08 07:14</div></div>
-      <div class="hero-note"><div class="label">Atenção imediata</div><b>Fechar o prazo de hoje e confirmar uma entrega sensível.</b><p>Há compromisso processual pela manhã, vencimento potencial amanhã e expectativa de protocolo ainda não conciliada com comprovante.</p></div>
-    </div>
-  </div>
-</section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Briefing Executivo | 19 de agosto de 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #dae1e8;
+        --panel: rgba(255, 255, 255, 0.88);
+        --panel-strong: rgba(255, 255, 255, 0.96);
+        --ink: #11191f;
+        --wine: #561c26;
+        --navy: #172b49;
+        --gold: #bb9d6d;
+        --stone: #c8b6ac;
+        --muted: rgba(17, 25, 31, 0.7);
+        --line: rgba(17, 25, 31, 0.12);
+        --shadow: 0 24px 70px rgba(17, 25, 31, 0.12);
+        --radius: 8px;
+      }
 
-<section class="status-row" aria-label="Panorama executivo">
-  <article class="status"><div class="label">Prazo hoje</div><b>1</b><p>Controle trabalhista com vencimento informado em 18/08.</p></article>
-  <article class="status"><div class="label">Atos amanhã</div><b>2</b><p>Dois compromissos exigem preparação e logística prévias.</p></article>
-  <article class="status"><div class="label">Decisões críticas</div><b>2</b><p>Resultados desfavoráveis exigem leitura e definição de medida.</p></article>
-  <article class="status"><div class="label">Risco sistêmico</div><b>1</b><p>Controladoria diverge novamente das fontes primárias.</p></article>
-</section>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Montserrat", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 0% 0%, rgba(187, 157, 109, 0.22), transparent 28%),
+          radial-gradient(circle at 100% 0%, rgba(23, 43, 73, 0.18), transparent 30%),
+          linear-gradient(180deg, #eef2f6 0%, #dae1e8 58%, #ced6de 100%);
+      }
 
-<section class="priority-band"><div class="signal" aria-hidden="true"></div><div><b>Prioridade recomendada</b><p>Até o meio-dia, confirmar o protocolo do prazo de hoje, validar a contagem potencial de amanhã e abrir duas decisões relevantes. À tarde, fechar a preparação dos compromissos futuros e uma resposta objetiva ao cliente.</p></div></section>
+      a { color: inherit; text-decoration: none; }
+      a[href="#"] { display: none; }
+      #root { min-height: 100vh; }
 
-<div class="layout">
-  <div class="stack">
-    <section class="panel">
-      <div class="eyebrow">Decisão e execução</div><h2>Prioridades críticas</h2>
-      <article class="item"><div class="item-head"><h3>Prazo trabalhista vence hoje</h3><span class="badge critical">Crítico</span></div><p>A Agenda registra prazo final para manifestação em processo trabalhista e audiência futura em setembro. <strong>Ação:</strong> abrir o ato oficial, confirmar comando e termo inicial, fechar anexos e protocolar com margem.</p></article>
-      <article class="item"><div class="item-head"><h3>Entrega técnica e comunicação com cliente</h3><span class="badge critical">Crítico</span></div><p>O escritório informou que uma peça estava em elaboração; a última mensagem do cliente ainda aguardava protocolo e apreciação de pontos técnicos. <strong>Ação:</strong> conciliar o sistema oficial, enviar recibo se existente e responder de forma objetiva e urbana.</p></article>
-      <article class="item"><div class="item-head"><h3>Duas decisões exigem reação</h3><span class="badge high">Alto</span></div><p>Dois resultados foram desfavoráveis. <strong>Ação:</strong> abrir decisões, conferir publicação e termo inicial, comunicar interessados e decidir a medida subsequente.</p></article>
-      <article class="item"><div class="item-head"><h3>Prazo potencial em 19/08</h3><span class="badge high">Alto</span></div><p>A Agenda reservou hoje a preparação de prova e testemunhas; o vencimento de amanhã é estimado e ainda depende de validação oficial. <strong>Ação:</strong> conferir calendário, ciência e destinatário no PJe.</p></article>
-    </section>
+      .page {
+        width: min(1280px, calc(100vw - 28px));
+        margin: 0 auto;
+        padding: 18px 0 34px;
+      }
 
-    <section class="panel">
-      <div class="eyebrow">Movimentos jurídicos</div><h2>Leitura e follow-up</h2>
-      <article class="item"><div class="item-head"><h3>Apelação protocolada no prazo controlado</h3><span class="badge med">Médio</span></div><p>O PJe confirmou juntada de apelação em 17/08. <strong>Ação:</strong> validar recibo, assinatura, anexos e correspondência com o ato antes da baixa definitiva.</p></article>
-      <article class="item"><div class="item-head"><h3>Documento restrito após marco de prazo</h3><span class="badge high">Alto</span></div><p>Um processo recebeu documento de acesso restrito no dia do vencimento. <strong>Ação:</strong> acessar com credencial, identificar autoria e efeito sobre a providência anterior.</p></article>
-      <article class="item"><div class="item-head"><h3>Medida patrimonial deferida</h3><span class="badge med">Médio</span></div><p>Um despacho determinou reserva de crédito em processos relacionados. <strong>Ação:</strong> acompanhar comunicações e eventual disponibilidade de valores.</p></article>
-      <article class="item"><div class="item-head"><h3>Nova intimação sem comando visível</h3><span class="badge high">Alto</span></div><p>O alerta automático não trouxe o inteiro teor. <strong>Ação:</strong> abrir o documento, identificar destinatário, prazo, responsável e medida.</p></article>
-      <article class="item"><div class="item-head"><h3>Movimentos de acompanhamento</h3><span class="badge low">Monitorar</span></div><p>Houve juntada de petição e retificação de classe em frentes distintas. <strong>Ação:</strong> qualificar os efeitos e manter o acompanhamento.</p></article>
-    </section>
+      .hero {
+        position: relative;
+        overflow: hidden;
+        border-radius: var(--radius);
+        background:
+          linear-gradient(135deg, rgba(17, 25, 31, 0.98), rgba(23, 43, 73, 0.95)),
+          linear-gradient(180deg, rgba(86, 28, 38, 0.18), rgba(187, 157, 109, 0.08));
+        box-shadow: var(--shadow);
+        padding: 26px;
+      }
 
-    <section class="panel">
-      <div class="eyebrow">Operação e tecnologia</div><h2>Sinais materiais</h2>
-      <article class="item"><div class="item-head"><h3>Controladoria segue produzindo falso vazio</h3><span class="badge critical">Crítico</span></div><p>O resumo automático aponta zero prazos e compromissos, em conflito com Agenda e publicações. <strong>Ação:</strong> corrigir ingestão e impedir baixa automática baseada no painel.</p></article>
-      <article class="item"><div class="item-head"><h3>Fluxo de tecnologia bloqueado</h3><span class="badge high">Alto</span></div><p>Validações automatizadas falharam e uma entrega foi interrompida. <strong>Ação:</strong> manter a publicação bloqueada até a correção e nova validação.</p></article>
-      <article class="item"><div class="item-head"><h3>Cálculos: validação necessária</h3><span class="badge med">Médio</span></div><p>Uma atualização externa apontou mudança metodológica. <strong>Ação:</strong> confirmar a fonte oficial antes de alterar planilhas ou sistemas.</p></article>
-      <article class="item"><div class="item-head"><h3>CRM e agenda</h3><span class="badge low">Baixo</span></div><p>O CRM informou zero pastas pendentes. Novos compromissos futuros devem ser reconciliados com a Agenda.</p></article>
-    </section>
-  </div>
+      .hero::before,
+      .hero::after {
+        content: "";
+        position: absolute;
+        border-radius: 999px;
+        border: 1px solid rgba(187, 157, 109, 0.3);
+      }
 
-  <aside class="stack">
-    <section class="panel">
-      <div class="eyebrow">Próximas 48 horas</div><h2>Agenda essencial</h2>
-      <div class="timeline">
-        <div class="slot"><div class="time">Hoje<br>Manhã</div><div><b>Prazo processual</b><p>Manifestação com vencimento informado hoje; confirmar inteiro teor e protocolar.</p></div></div>
-        <div class="slot"><div class="time">Hoje<br>Manhã</div><div><b>Preparação probatória</b><p>Bloco de trabalho com vencimento potencial amanhã ainda sujeito a validação.</p></div></div>
-        <div class="slot"><div class="time">Qua 19<br>Manhã</div><div><b>Compromisso judicial</b><p>Conferir acesso, participantes, documentos e roteiro.</p></div></div>
-        <div class="slot"><div class="time">Qua 19<br>Manhã</div><div><b>Compromisso externo</b><p>Confirmar representação, documentos, orientação e logística.</p></div></div>
-        <div class="slot"><div class="time">Qua 19<br>Noite</div><div><b>Tarefas administrativas sobrepostas</b><p>Quatro controles precisam ser redistribuídos.</p></div></div>
-      </div>
-    </section>
+      .hero::before {
+        width: 360px;
+        height: 360px;
+        right: -100px;
+        top: -120px;
+      }
 
-    <section class="panel">
-      <div class="eyebrow">Plano de ação</div><h2>Ordem recomendada</h2>
-      <div class="checklist">
-        <div class="check"><div class="num">1</div><div><b>Fechar o prazo de hoje</b><p>Confirmar comando, termo, peça, anexos e recibo.</p></div></div>
-        <div class="check"><div class="num">2</div><div><b>Abrir decisões relevantes</b><p>Fundamentos, publicação, comunicação e próxima medida.</p></div></div>
-        <div class="check"><div class="num">3</div><div><b>Responder a entrega técnica</b><p>Conciliar protocolo e pontos pendentes; comunicar sem ampliar atrito.</p></div></div>
-        <div class="check"><div class="num">4</div><div><b>Preparar os atos de amanhã</b><p>Teams, testemunhas, documentos, delegacia e logística.</p></div></div>
-        <div class="check"><div class="num">5</div><div><b>Sanear sistemas</b><p>Controladoria, pipeline de segurança e cálculos.</p></div></div>
-      </div>
-    </section>
+      .hero::after {
+        width: 220px;
+        height: 220px;
+        right: 120px;
+        bottom: -110px;
+      }
 
-    <section class="panel">
-      <div class="eyebrow">Limites de evidência</div><h2>Leitura responsável</h2>
-      <p class="source-note">Notificações automáticas e estimativas não substituem a conferência do inteiro teor, representação, sigilo, termo inicial, feriados, suspensão e prazo fatal. Informações externas requerem confirmação oficial. Não há fonte conectada de chat corporativo. Conteúdo público sanitizado para preservar dados sensíveis.</p>
-    </section>
-  </aside>
-</div>
+      .hero-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1.45fr 0.95fr;
+        gap: 18px;
+        align-items: stretch;
+      }
 
-<footer class="footer"><strong>Fontes verificadas:</strong> Google Calendar, Gmail consolidado, Notion e memória operacional. Atualizado em 18/08/2026 às 07:14 BRT.</footer>
-</main>
-</body>
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 24px;
+      }
+
+      .brand-mark {
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        border: 1px solid rgba(187, 157, 109, 0.72);
+        display: grid;
+        place-items: center;
+        color: var(--gold);
+        font-weight: 700;
+        position: relative;
+      }
+
+      .brand-mark::after {
+        content: "";
+        position: absolute;
+        width: 78px;
+        height: 78px;
+        border-radius: 50%;
+        border: 1px solid rgba(200, 182, 172, 0.22);
+      }
+
+      .brand-label {
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 6px;
+      }
+
+      .brand-name {
+        color: #fff;
+        font-size: 23px;
+        line-height: 1.08;
+        font-weight: 600;
+        max-width: 18ch;
+      }
+
+      .hero h1 {
+        margin: 0 0 14px;
+        color: #fff;
+        font-size: clamp(32px, 4.4vw, 58px);
+        line-height: 0.98;
+        max-width: 10ch;
+      }
+
+      .hero-copy {
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 15px;
+        line-height: 1.68;
+        max-width: 64ch;
+        margin: 0;
+      }
+
+      .hero-side {
+        display: grid;
+        gap: 14px;
+      }
+
+      .glass {
+        border-radius: var(--radius);
+        background: rgba(255, 255, 255, 0.09);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(12px);
+        padding: 18px;
+      }
+
+      .glass-label,
+      .mini-label {
+        color: rgba(255, 255, 255, 0.64);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 10px;
+      }
+
+      .glass-value {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.4;
+      }
+
+      .glass-note {
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 13px;
+        line-height: 1.58;
+        margin-top: 8px;
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 18px;
+      }
+
+      .metric,
+      .panel {
+        border-radius: var(--radius);
+        background: var(--panel);
+        border: 1px solid rgba(255, 255, 255, 0.55);
+        box-shadow: var(--shadow);
+      }
+
+      .metric { padding: 18px; }
+      .metric .label {
+        color: var(--muted);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 10px;
+      }
+
+      .metric .value {
+        color: var(--navy);
+        font-size: 34px;
+        font-weight: 800;
+        line-height: 1;
+      }
+
+      .metric .note {
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.5;
+        margin-top: 8px;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: 1.16fr 0.84fr;
+        gap: 18px;
+        margin-top: 18px;
+      }
+
+      .stack { display: grid; gap: 18px; }
+      .panel { padding: 20px; background: var(--panel-strong); }
+
+      .panel-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 14px;
+        align-items: flex-start;
+        margin-bottom: 16px;
+      }
+
+      .eyebrow {
+        color: var(--wine);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 8px;
+      }
+
+      .panel h2 {
+        margin: 0;
+        font-size: 24px;
+        line-height: 1.1;
+      }
+
+      .head-note {
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.55;
+        max-width: 32ch;
+      }
+
+      .list { display: grid; gap: 12px; }
+
+      .item,
+      .mail,
+      .todo,
+      .risk,
+      .coverage,
+      .event {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: linear-gradient(180deg, rgba(255,255,255,.82), rgba(255,255,255,.62));
+      }
+
+      .item,
+      .mail,
+      .risk,
+      .coverage { padding: 14px; }
+
+      .title {
+        margin: 0 0 6px;
+        font-size: 15px;
+        line-height: 1.36;
+        font-weight: 700;
+      }
+
+      .body {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.62;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .chip {
+        min-height: 28px;
+        border-radius: 999px;
+        padding: 0 10px;
+        display: inline-flex;
+        align-items: center;
+        font-size: 11px;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .critical { background: rgba(86, 28, 38, 0.12); color: var(--wine); }
+      .watch { background: rgba(187, 157, 109, 0.18); color: #7a6540; }
+      .ok { background: rgba(23, 43, 73, 0.1); color: var(--navy); }
+
+      .link {
+        display: inline-flex;
+        margin-top: 10px;
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--navy);
+      }
+
+      .timeline { display: grid; gap: 12px; }
+
+      .event {
+        display: grid;
+        grid-template-columns: 96px 1fr;
+        gap: 14px;
+        padding: 14px;
+      }
+
+      .when {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--navy);
+      }
+
+      .prep {
+        margin: 10px 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 7px;
+      }
+
+      .prep li {
+        font-size: 13px;
+        line-height: 1.56;
+        padding-left: 15px;
+        position: relative;
+      }
+
+      .prep li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--gold);
+      }
+
+      .mail-meta {
+        color: var(--muted);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 8px;
+      }
+
+      .todo {
+        padding: 14px;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 12px;
+      }
+
+      .box {
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+        border: 1px solid rgba(17, 25, 31, 0.22);
+        margin-top: 1px;
+      }
+
+      .owner {
+        margin-top: 6px;
+        color: var(--wine);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .footer {
+        margin-top: 18px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+
+      .footer-note {
+        padding: 18px 20px;
+        border-radius: var(--radius);
+        background: rgba(17, 25, 31, 0.95);
+        color: rgba(255, 255, 255, 0.78);
+        box-shadow: var(--shadow);
+        font-size: 13px;
+        line-height: 1.66;
+      }
+
+      .footer-note strong { color: #fff; }
+
+      @media (max-width: 1160px) {
+        .hero-grid, .metrics, .layout, .footer { grid-template-columns: 1fr; }
+      }
+
+      @media (max-width: 760px) {
+        .page { width: min(100vw - 16px, 1280px); }
+        .hero, .panel, .metric { padding: 18px; }
+        .event { grid-template-columns: 1fr; }
+        .brand-name { font-size: 19px; }
+        .panel h2 { font-size: 21px; }
+        .hero-copy { text-align: left; line-height: 1.62; }
+        .hero-side .glass:first-child {
+          border-color: rgba(187, 157, 109, 0.72);
+          background: rgba(255, 255, 255, 0.13);
+        }
+        .hero-side .glass:first-child .glass-label,
+        .hero-side .glass:first-child .glass-note { color: #fff; }
+        .hero-side .glass:first-child .glass-value { font-size: 17px; line-height: 1.48; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module">
+      import React from "https://esm.sh/react@18.3.1";
+      import { createRoot } from "https://esm.sh/react-dom@18.3.1/client";
+      import htm from "https://esm.sh/htm@3.1.1";
+
+      const html = htm.bind(React.createElement);
+
+      const briefing = {
+        generatedAt: "19 de agosto de 2026, 07:14 (-03, America/Sao_Paulo)",
+        coverageWindow: "18 de agosto de 2026, 07:14 → 19 de agosto de 2026, 07:14",
+        executiveLead:
+          "A manhã começa com três verificações que não admitem baixa automática: comprovar o cumprimento do prazo encerrado no processo prazo trabalhista A, confirmar e concluir hoje a prova e as testemunhas do prazo trabalhista B e corrigir, antes de qualquer protocolo, a divergência de identidade encontrada no novo intake trabalhista de urgência máxima.",
+        executiveBody:
+          "O recorte oficial acrescentou uma sentença, uma negativa liminar em habeas corpus e uma decisão de embargos. A agenda concentra preparação de audiência e oitiva ainda nesta manhã, dois atos processuais simultâneos amanhã e blocos administrativos sobrepostos à noite. Em tecnologia, quatro execuções de segurança e build falharam, mantendo merge e produção bloqueados.",
+        topCards: [
+          {
+            label: "Ponto mais sensível",
+            value: "Prazo do prazo trabalhista A encerrou ontem; prazo estimado do prazo trabalhista B vence hoje.",
+            note: "Nenhum painel vazio substitui a conferência do inteiro teor, do protocolo e do recibo."
+          },
+          {
+            label: "Exposição jurídica",
+            value: "Novo intake urgente contém nomes divergentes entre cliente e objeto contratual.",
+            note: "Revisar procuração, declaração, contrato e peças antes de assinatura, distribuição ou envio."
+          }
+        ],
+        metrics: [
+          { label: "Mensagens auditadas", value: "49", note: "Gmail consolidado, sem spam ou lixeira, dentro da janela exata." },
+          { label: "Eventos mapeados", value: "13", note: "Últimas 24 horas e próximos dois dias no calendário principal." },
+          { label: "Movimentos jurídicos", value: "7", note: "Novidades materiais agrupadas por processo, sem duplicar pushes." },
+          { label: "Falhas de CI", value: "4", note: "Security & Build falhou; produção foi pulada nas execuções lidas." },
+          { label: "Inconsistência crítica", value: "1", note: "Nome do cliente diverge do objeto contratual do novo intake." }
+        ],
+        priorities: [
+          {
+            title: "Fechar a cadeia de prova dos prazos prazo trabalhista A e prazo trabalhista B.",
+            body:
+              "A Agenda informa prazo final em 18/08 para o prazo trabalhista A e data fatal estimada em 19/08 para o prazo trabalhista B. A fonte não comprova protocolo nem cumprimento. Abrir os autos, conferir termo inicial e calendário, concluir a providência cabível e preservar recibo antes de baixar qualquer tarefa.",
+            tags: [
+              ["Crítico", "critical"],
+              ["Prazo", "critical"],
+              ["Conferência oficial", "watch"]
+            ],
+            href: "#",
+            label: "Abrir bloco do prazo"
+          },
+          {
+            title: "Interromper a automação do intake até corrigir a identidade das peças.",
+            body:
+              "O intake trabalhista recebido com urgência 5 identifica um cliente, mas o texto automatizado do objeto contratual menciona outra pessoa. Como procuração e declaração já aparecem finalizadas, qualquer protocolo ou envio sem revisão cria risco de erro material, sigilo e representação.",
+            tags: [
+              ["Crítico", "critical"],
+              ["Qualidade de dados", "watch"],
+              ["Sigilo", "critical"]
+            ],
+            href: "#",
+            label: "Abrir intake"
+          },
+          {
+            title: "Ler hoje as três decisões publicadas no recorte oficial.",
+            body:
+              "O caso de família trouxe sentença com possibilidade de renúncia ao prazo recursal; o HC habeas corpus teve a liminar indeferida e seguirá para informações e parecer; o caso cível acolheu embargos parcialmente, sem efeito infringente, preservando o resultado e reabrindo a análise recursal a partir da intimação.",
+            tags: [
+              ["Jurídico", "ok"],
+              ["Publicação 20/08", "watch"],
+              ["Estratégia recursal", "watch"]
+            ],
+            href: "#",
+            label: "Abrir recorte OAB"
+          },
+          {
+            title: "Manter o Projeto Escudo bloqueado até a cadeia de CI ficar verde.",
+            body:
+              "Quatro execuções de Security & Build falharam em correções de XSS/sanitização e otimização. Houve falhas em Secret Scan e Dependency Audit, com Production Build pulado. O sinal disponível não autoriza merge nem deploy.",
+            tags: [
+              ["Segurança", "critical"],
+              ["CI bloqueado", "watch"],
+              ["Produção pulada", "watch"]
+            ],
+            href: "#",
+            label: "Abrir falha crítica"
+          }
+        ],
+        meetings: [
+          {
+            time: "Hoje · 08:00-08:30",
+            title: "Preparar audiência híbrida · audiência híbrida",
+            body:
+              "O calendário reserva preparação via Teams. O controle do Notion indica audiência de instrução hoje, mas registra horário de 09:00; a divergência entre bloco de preparação e ato exige confirmação no documento oficial.",
+            prep: [
+              "Confirmar horário oficial, link do Teams, partes e testemunhas.",
+              "Separar documentos, roteiro e objetivos da instrução.",
+              "Registrar presença e desfecho antes de encerrar o controle."
+            ],
+            href: "#"
+          },
+          {
+            time: "Hoje · 10:00-11:00",
+            title: "Oitiva na Delegacia de Moreno",
+            body:
+              "Ato presencial para prestar esclarecimentos. A fonte exige identidade e CPF e alerta para desobediência em caso de ausência. O cadastro anterior ainda apontava envio à autoridade policial sem destinatário confirmado.",
+            prep: [
+              "Confirmar representação, protocolo de habilitação e ciência do intimado.",
+              "Planejar deslocamento e chegada antecipada ao endereço da intimação.",
+              "Levar documentos e registrar o resultado da diligência."
+            ],
+            href: "#"
+          },
+          {
+            time: "Hoje · 21:00-21:30",
+            title: "Quatro tarefas simultâneas",
+            body:
+              "Retenção de clientes OAuth, retificação do retificação processual e duas rotinas financeiras foram marcadas no mesmo intervalo. Os ícones de tarefa não comprovam conclusão.",
+            prep: [
+              "Executar primeiro a retificação processual se ainda estiver pendente.",
+              "Redistribuir ou reagendar os itens administrativos sem perda de controle.",
+              "Não interpretar sobreposição como quatro entregas concluídas."
+            ],
+            href: "#"
+          },
+          {
+            time: "Amanhã · 09:00-10:30",
+            title: "Dois atos processuais simultâneos",
+            body:
+              "O manifestação familiar tem manifestação/apelação indicada até 20/08 23:59, enquanto o decisão trabalhista exige análise da decisão recursal no mesmo início de manhã. Ambos já possuem controles no Notion.",
+            prep: [
+              "Antecipar hoje a leitura integral e a estratégia do manifestação familiar.",
+              "Confirmar prazo e efeito da decisão no decisão trabalhista.",
+              "Definir responsáveis antes do choque de agenda de amanhã."
+            ],
+            href: "#"
+          },
+          {
+            time: "Amanhã · 21:00-22:00",
+            title: "Compromisso pessoal e duas tarefas administrativas",
+            body:
+              "Terapia, pagamento de fatura e validação da Resolução CJF 990/2026 ocupam o mesmo horário. A terapia deve ser preservada; as tarefas administrativas precisam de janela separada.",
+            prep: [
+              "Reprogramar as tarefas administrativas antes do fim do expediente.",
+              "Validar a resolução apenas em fonte oficial antes de alterar cálculos.",
+              "Manter o compromisso pessoal livre de sobreposição operacional."
+            ],
+            href: "#"
+          }
+        ],
+        inbox: [
+          {
+            meta: "19/08/2026 06:30 • Recorte OAB/PE • Publicação 20/08",
+            title: "caso de família: sentença homologatória permite manifestação sobre renúncia ao prazo recursal.",
+            body:
+              "Partes abreviadas por sigilo. Advogado: Petrônio Souza, do escritório. Follow-up: abrir sentença, confirmar alcance e decidir se a renúncia acelera o encerramento sem prejuízo. Risco médio.",
+            href: "#"
+          },
+          {
+            meta: "19/08/2026 06:30 • Recorte OAB/PE • Criminal",
+            title: "habeas corpus: liminar indeferida; autoridades devem prestar informações em cinco dias.",
+            body:
+              "Impetrantes incluem Petrônio Souza e advogada externa; paciente omitido na versão pública. Follow-up: revisar fundamentos, acompanhar informações e preparar a tese de mérito. Risco alto pela negativa em matéria criminal.",
+            href: "#"
+          },
+          {
+            meta: "19/08/2026 06:30 • Recorte OAB/PE • JEC",
+            title: "caso cível: embargos acolhidos parcialmente, sem efeitos infringentes.",
+            body:
+              "Partes omitidas na versão pública. Advogados: Petrônio Souza, do escritório, e patrono externo. Follow-up: avaliar recurso inominado, preparo e termo inicial; a condenação moral foi mantida. Risco alto por prazo recursal.",
+            href: "#"
+          },
+          {
+            meta: "18/08/2026 21:14 • PJe Push • Cível",
+            title: "ação locatícia: juntada de petição após despacho/intimação e decurso já monitorados.",
+            body:
+              "Partes e advogado estão no controle privado. Follow-up: identificar autoria e conteúdo da petição e recalibrar o próximo impulso. Risco médio até leitura.",
+            href: "#"
+          },
+          {
+            meta: "18/08/2026 18:17-19:11 • PJe Push • Tutela",
+            title: "tutela de serviço essencial: processo ficou concluso para decisão em dois pushes sucessivos.",
+            body:
+              "A tutela sobre serviço essencial segue dependente de decisão. Follow-up: monitorar despacho e manter resposta objetiva ao cliente com protocolo e status. Risco alto pelo impacto material e reputacional.",
+            href: "#"
+          },
+          {
+            meta: "18/08/2026 11:20-11:22 • PJe Push • Novos movimentos",
+            title: "ação cível monitorada teve certidão expedida; apelação criminal recebeu manifestação do Ministério Público.",
+            body:
+              "No ação cível monitorada, abrir a certidão e identificar efeito. No apelação criminal, revisar a manifestação ministerial e preparar o retorno esperado à defesa. Risco médio e alto, respectivamente, pela natureza criminal do segundo.",
+            href: "#"
+          }
+        ],
+        todos: [
+          {
+            title: "Comprovar o cumprimento do prazo trabalhista A e fechar o prazo trabalhista B hoje.",
+            body:
+              "Conferir prazo oficial, providência, protocolo e recibo; sem evidência, manter ambos abertos.",
+            owner: "Petrônio",
+            href: "#"
+          },
+          {
+            title: "Corrigir a identidade do intake trabalhista antes de usar as peças.",
+            body:
+              "Revisar contrato, procuração, declaração e documentos automatizados; confirmar cliente e objeto corretos.",
+            owner: "Petrônio",
+            href: "#"
+          },
+          {
+            title: "Preparar audiência híbrida e oitiva desta manhã.",
+            body:
+              "Confirmar horários, representação, documentos, logística e registro pós-ato.",
+            owner: "Petrônio",
+            href: "#"
+          },
+          {
+            title: "Abrir decisões do caso de família, habeas corpus e caso cível.",
+            body:
+              "Definir renúncia, estratégia do HC e medida recursal com datas oficiais anotadas.",
+            owner: "Petrônio",
+            href: "#"
+          },
+          {
+            title: "Antecipar hoje os atos do manifestação familiar e decisão trabalhista.",
+            body:
+              "Dois controles começam às 09:00 de amanhã; leitura e estratégia devem estar prontas antes da sobreposição.",
+            owner: "Petrônio",
+            href: "#"
+          },
+          {
+            title: "Manter merge e deploy do Projeto Escudo bloqueados.",
+            body:
+              "Revisar logs e só liberar a cadeia quando Secret Scan, Dependency Audit e Production Build passarem.",
+            owner: "Petrônio",
+            href: "#"
+          }
+        ],
+        risks: [
+          {
+            title: "Risco crítico de prazo",
+            body: "prazo trabalhista A encerrou ontem e prazo trabalhista B vence hoje por contagem ainda estimada; ausência de comprovante impede tratar como concluídos."
+          },
+          {
+            title: "Risco crítico de representação",
+            body: "Intake de urgência máxima contém identidade divergente no objeto contratual, com peças automatizadas e documento assinado já disponíveis."
+          },
+          {
+            title: "Risco alto processual",
+            body: "Decisões novas em matéria criminal e recursal exigem inteiro teor, termo inicial e escolha de medida antes de qualquer comunicação conclusiva."
+          },
+          {
+            title: "Risco alto de segurança e entrega",
+            body: "Falhas repetidas de CI em correções de XSS e sanitização impedem liberar merge ou produção com base apenas em comentários de bots."
+          }
+        ],
+        coverage: [
+          {
+            title: "Agenda",
+            body:
+              "Foram auditados o intervalo de 18/08/2026 07:14 a 19/08/2026 07:14 e os compromissos até 21/08/2026 07:14, em America/Sao_Paulo. Treze eventos foram revisados."
+          },
+          {
+            title: "Gmail",
+            body:
+              "As 49 mensagens retornadas foram abertas e interpretadas. Promoções e repetições foram excluídas da síntese, sem estreitar a leitura apenas ao jurídico."
+          },
+          {
+            title: "Chat interno",
+            body:
+              "Não existe conector de chat nesta execução. Pedidos, decisões e bloqueios tratados somente em canais internos podem estar ausentes."
+          },
+          {
+            title: "Cautela jurídica",
+            body:
+              "Notificações, pushes e datas estimadas não substituem inteiro teor, representação, sigilo, termo inicial, feriados, prazo fatal e recibo de protocolo."
+          }
+        ]
+      };
+
+      const chip = (text, variant) => html`<span className=${`chip ${variant}`}>${text}</span>`;
+
+      const App = () => html`
+        <main className="page">
+          <section className="hero">
+            <div className="hero-grid">
+              <div>
+                <div className="brand">
+                  <div className="brand-mark">PS</div>
+                  <div>
+                    <div className="brand-label">Briefing executivo visual</div>
+                    <div className="brand-name">Petrônio Souza Advogados Associados</div>
+                  </div>
+                </div>
+                <h1>Prazo, identidade e decisão antes da baixa.</h1>
+                <p className="hero-copy">${briefing.executiveLead}</p>
+                <p className="hero-copy" style=${{ marginTop: "10px" }}>${briefing.executiveBody}</p>
+              </div>
+              <div className="hero-side">
+                <div className="glass">
+                  <div className="glass-label">Janela auditada</div>
+                  <div className="glass-value">${briefing.coverageWindow}</div>
+                  <div className="glass-note">Gerado em ${briefing.generatedAt}.</div>
+                </div>
+                ${briefing.topCards.map(
+                  (card) => html`
+                    <div className="glass" key=${card.label}>
+                      <div className="glass-label">${card.label}</div>
+                      <div className="glass-value">${card.value}</div>
+                      <div className="glass-note">${card.note}</div>
+                    </div>
+                  `
+                )}
+              </div>
+            </div>
+          </section>
+
+          <section className="metrics">
+            ${briefing.metrics.map(
+              (metric) => html`
+                <article className="metric" key=${metric.label}>
+                  <div className="label">${metric.label}</div>
+                  <div className="value">${metric.value}</div>
+                  <div className="note">${metric.note}</div>
+                </article>
+              `
+            )}
+          </section>
+
+          <section className="layout">
+            <div className="stack">
+              <section className="panel">
+                <div className="panel-head">
+                  <div>
+                    <div className="eyebrow">Executive Summary</div>
+                    <h2>Prioridades críticas</h2>
+                  </div>
+                  <div className="head-note">
+                    O recorte prioriza prazo, representação, decisão judicial, segurança e preparo das próximas 48 horas.
+                  </div>
+                </div>
+                <div className="list">
+                  ${briefing.priorities.map(
+                    (item) => html`
+                      <article className="item" key=${item.title}>
+                        <h3 className="title">${item.title}</h3>
+                        <p className="body">${item.body}</p>
+                        <div className="chips">
+                          ${item.tags.map(([text, variant]) => chip(text, variant))}
+                        </div>
+                        <a className="link" href=${item.href} target="_blank" rel="noreferrer">${item.label}</a>
+                      </article>
+                    `
+                  )}
+                </div>
+              </section>
+
+              <section className="panel">
+                <div className="panel-head">
+                  <div>
+                    <div className="eyebrow">Hoje na agenda</div>
+                    <h2>Reuniões e preparação essencial</h2>
+                  </div>
+                  <div className="head-note">
+                    A manhã concentra os atos presenciais; amanhã há dois choques de agenda que pedem antecipação hoje.
+                  </div>
+                </div>
+                <div className="timeline">
+                  ${briefing.meetings.map(
+                    (meeting) => html`
+                      <article className="event" key=${meeting.title}>
+                        <div className="when">${meeting.time}</div>
+                        <div>
+                          <h3 className="title">${meeting.title}</h3>
+                          <p className="body">${meeting.body}</p>
+                          <ul className="prep">
+                            ${meeting.prep.map((tip) => html`<li key=${tip}>${tip}</li>`)}
+                          </ul>
+                          <a className="link" href=${meeting.href} target="_blank" rel="noreferrer">Abrir evento</a>
+                        </div>
+                      </article>
+                    `
+                  )}
+                </div>
+              </section>
+
+              <section className="panel">
+                <div className="panel-head">
+                  <div>
+                    <div className="eyebrow">Inbox</div>
+                    <h2>E-mails que realmente mexem no dia</h2>
+                  </div>
+                  <div className="head-note">
+                    Novidades materiais agrupadas por processo, sem contar pushes repetidos como fatos distintos.
+                  </div>
+                </div>
+                <div className="list">
+                  ${briefing.inbox.map(
+                    (mail) => html`
+                      <article className="mail" key=${mail.title}>
+                        <div className="mail-meta">${mail.meta}</div>
+                        <h3 className="title">${mail.title}</h3>
+                        <p className="body">${mail.body}</p>
+                        <a className="link" href=${mail.href} target="_blank" rel="noreferrer">Abrir e-mail</a>
+                      </article>
+                    `
+                  )}
+                </div>
+              </section>
+            </div>
+
+            <div className="stack">
+              <section className="panel">
+                <div className="panel-head">
+                  <div>
+                    <div className="eyebrow">Next Actions</div>
+                    <h2>Follow-ups e donos</h2>
+                  </div>
+                </div>
+                <div className="list">
+                  ${briefing.todos.map(
+                    (todo) => html`
+                      <article className="todo" key=${todo.title}>
+                        <div className="box"></div>
+                        <div>
+                          <h3 className="title">${todo.title}</h3>
+                          <p className="body">${todo.body}</p>
+                          <div className="owner">Owner: ${todo.owner}</div>
+                          <a className="link" href=${todo.href} target="_blank" rel="noreferrer">Abrir fonte</a>
+                        </div>
+                      </article>
+                    `
+                  )}
+                </div>
+              </section>
+
+              <section className="panel">
+                <div className="panel-head">
+                  <div>
+                    <div className="eyebrow">Riscos e bloqueios</div>
+                    <h2>O que pede cuidado explícito</h2>
+                  </div>
+                </div>
+                <div className="list">
+                  ${briefing.risks.map(
+                    (risk) => html`
+                      <article className="risk" key=${risk.title}>
+                        <h3 className="title">${risk.title}</h3>
+                        <p className="body">${risk.body}</p>
+                      </article>
+                    `
+                  )}
+                </div>
+              </section>
+
+              <section className="panel">
+                <div className="panel-head">
+                  <div>
+                    <div className="eyebrow">Cobertura</div>
+                    <h2>Fontes e lacunas verificadas</h2>
+                  </div>
+                </div>
+                <div className="list">
+                  ${briefing.coverage.map(
+                    (item) => html`
+                      <article className="coverage" key=${item.title}>
+                        <h3 className="title">${item.title}</h3>
+                        <p className="body">${item.body}</p>
+                      </article>
+                    `
+                  )}
+                </div>
+              </section>
+            </div>
+          </section>
+
+          <section className="footer">
+            <div className="footer-note">
+              <strong>Leitura principal:</strong> o maior retorno desta manhã está em comprovar os dois
+              prazos, corrigir o intake antes de qualquer uso e entrar nos atos de hoje com horários,
+              representação e documentos confirmados.
+            </div>
+            <div className="footer-note">
+              <strong>Metodologia:</strong> síntese de 49 mensagens e 13 eventos, cruzada com o controle
+              persistente para evitar duplicidade. Fatos, inferências e recomendações foram separados;
+              dados sensíveis foram reduzidos na versão pública.
+            </div>
+          </section>
+        </main>
+      `;
+
+      createRoot(document.getElementById("root")).render(html`<${App} />`);
+    </script>
+  </body>
 </html>
