@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Briefing Executivo | 19 de agosto de 2026</title>
+    <title>Briefing Executivo | 20 de agosto de 2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -39,7 +39,6 @@
       }
 
       a { color: inherit; text-decoration: none; }
-      a[href="#"] { display: none; }
       #root { min-height: 100vh; }
 
       .page {
@@ -422,19 +421,14 @@
       }
 
       @media (max-width: 760px) {
+        .hero .glass-label, .hero .glass-value, .hero .glass-note { color: #fff; opacity: 1; }
+        .hero .glass-value { font-size: 16px; line-height: 1.5; }
+        .body, .hero-copy, .head-note { overflow-wrap: anywhere; text-wrap: pretty; }
         .page { width: min(100vw - 16px, 1280px); }
         .hero, .panel, .metric { padding: 18px; }
         .event { grid-template-columns: 1fr; }
         .brand-name { font-size: 19px; }
         .panel h2 { font-size: 21px; }
-        .hero-copy { text-align: left; line-height: 1.62; }
-        .hero-side .glass:first-child {
-          border-color: rgba(187, 157, 109, 0.72);
-          background: rgba(255, 255, 255, 0.13);
-        }
-        .hero-side .glass:first-child .glass-label,
-        .hero-side .glass:first-child .glass-note { color: #fff; }
-        .hero-side .glass:first-child .glass-value { font-size: 17px; line-height: 1.48; }
       }
     </style>
   </head>
@@ -448,272 +442,306 @@
       const html = htm.bind(React.createElement);
 
       const briefing = {
-        generatedAt: "19 de agosto de 2026, 07:14 (-03, America/Sao_Paulo)",
-        coverageWindow: "18 de agosto de 2026, 07:14 → 19 de agosto de 2026, 07:14",
-        executiveLead:
-          "A manhã começa com três verificações que não admitem baixa automática: comprovar o cumprimento do prazo encerrado no processo prazo trabalhista A, confirmar e concluir hoje a prova e as testemunhas do prazo trabalhista B e corrigir, antes de qualquer protocolo, a divergência de identidade encontrada no novo intake trabalhista de urgência máxima.",
-        executiveBody:
-          "O recorte oficial acrescentou uma sentença, uma negativa liminar em habeas corpus e uma decisão de embargos. A agenda concentra preparação de audiência e oitiva ainda nesta manhã, dois atos processuais simultâneos amanhã e blocos administrativos sobrepostos à noite. Em tecnologia, quatro execuções de segurança e build falharam, mantendo merge e produção bloqueados.",
-        topCards: [
-          {
-            label: "Ponto mais sensível",
-            value: "Prazo do prazo trabalhista A encerrou ontem; prazo estimado do prazo trabalhista B vence hoje.",
-            note: "Nenhum painel vazio substitui a conferência do inteiro teor, do protocolo e do recibo."
-          },
-          {
-            label: "Exposição jurídica",
-            value: "Novo intake urgente contém nomes divergentes entre cliente e objeto contratual.",
-            note: "Revisar procuração, declaração, contrato e peças antes de assinatura, distribuição ou envio."
-          }
+  "generatedAt": "20 de agosto de 2026, 07:14 (-03, America/Sao_Paulo)",
+  "coverageWindow": "19 de agosto de 2026, 07:14 -> 20 de agosto de 2026, 07:14",
+  "executiveLead": "O ciclo abre com um prazo final hoje, duas analises simultaneas pela manha e um follow-up sensivel que depende de comprovacao objetiva. A decisao executiva e simples: fechar prazo, preservar evidencia e responder com objetividade antes de absorver o restante do fluxo.",
+  "executiveBody": "A leitura integral do Gmail revelou dez frentes juridicas novas e divergencias entre fontes internas. A pagina publica apresenta somente prioridades e indicadores agregados; nomes, numeros, valores, detalhes pessoais e dados operacionais permanecem no controle privado e no e-mail autorizado.",
+  "topCards": [
+    {
+      "label": "Atencao imediata",
+      "value": "Um prazo processual termina hoje; a estrategia deve estar definida antes do fim da manha.",
+      "note": "Confirmar inteiro teor, termo inicial, medida cabivel, protocolo e recibo."
+    },
+    {
+      "label": "Atencao ao cliente",
+      "value": "Um follow-up sensivel depende de evidencia objetiva de cumprimento.",
+      "note": "Tratar no controle privado antes de uma nova comunicacao externa."
+    }
+  ],
+  "metrics": [
+    {
+      "label": "Mensagens auditadas",
+      "value": "64",
+      "note": "Gmail consolidado, sem spam ou lixeira, na janela exata."
+    },
+    {
+      "label": "Eventos mapeados",
+      "value": "19",
+      "note": "Ultimas 24 horas e agenda das proximas 48 horas."
+    },
+    {
+      "label": "Processos com novidade",
+      "value": "10",
+      "note": "Movimentos agrupados sem contar alertas repetidos como fatos distintos."
+    },
+    {
+      "label": "Prazo fatal hoje",
+      "value": "1",
+      "note": "Manifestacao ou apelacao indicada ate 20/08, 23:59."
+    },
+    {
+      "label": "Inconsistencia de controle",
+      "value": "1",
+      "note": "Resumo interno diverge de prazos, agenda e cobrancas verificadas."
+    }
+  ],
+  "priorities": [
+    {
+      "title": "Fechar o prazo de hoje com prova de cumprimento.",
+      "body": "A Agenda registra manifestacao ou apelacao ate 23:59, com ciencia em 04/08. Abrir a sentenca, confirmar contagem e alcance, definir a medida e preservar protocolo e recibo. A tarefa nao deve ser baixada apenas porque o bloco esta na Agenda.",
+      "tags": [
+        [
+          "Critico",
+          "critical"
         ],
-        metrics: [
-          { label: "Mensagens auditadas", value: "49", note: "Gmail consolidado, sem spam ou lixeira, dentro da janela exata." },
-          { label: "Eventos mapeados", value: "13", note: "Últimas 24 horas e próximos dois dias no calendário principal." },
-          { label: "Movimentos jurídicos", value: "7", note: "Novidades materiais agrupadas por processo, sem duplicar pushes." },
-          { label: "Falhas de CI", value: "4", note: "Security & Build falhou; produção foi pulada nas execuções lidas." },
-          { label: "Inconsistência crítica", value: "1", note: "Nome do cliente diverge do objeto contratual do novo intake." }
+        [
+          "Prazo hoje",
+          "critical"
         ],
-        priorities: [
-          {
-            title: "Fechar a cadeia de prova dos prazos prazo trabalhista A e prazo trabalhista B.",
-            body:
-              "A Agenda informa prazo final em 18/08 para o prazo trabalhista A e data fatal estimada em 19/08 para o prazo trabalhista B. A fonte não comprova protocolo nem cumprimento. Abrir os autos, conferir termo inicial e calendário, concluir a providência cabível e preservar recibo antes de baixar qualquer tarefa.",
-            tags: [
-              ["Crítico", "critical"],
-              ["Prazo", "critical"],
-              ["Conferência oficial", "watch"]
-            ],
-            href: "#",
-            label: "Abrir bloco do prazo"
-          },
-          {
-            title: "Interromper a automação do intake até corrigir a identidade das peças.",
-            body:
-              "O intake trabalhista recebido com urgência 5 identifica um cliente, mas o texto automatizado do objeto contratual menciona outra pessoa. Como procuração e declaração já aparecem finalizadas, qualquer protocolo ou envio sem revisão cria risco de erro material, sigilo e representação.",
-            tags: [
-              ["Crítico", "critical"],
-              ["Qualidade de dados", "watch"],
-              ["Sigilo", "critical"]
-            ],
-            href: "#",
-            label: "Abrir intake"
-          },
-          {
-            title: "Ler hoje as três decisões publicadas no recorte oficial.",
-            body:
-              "O caso de família trouxe sentença com possibilidade de renúncia ao prazo recursal; o HC habeas corpus teve a liminar indeferida e seguirá para informações e parecer; o caso cível acolheu embargos parcialmente, sem efeito infringente, preservando o resultado e reabrindo a análise recursal a partir da intimação.",
-            tags: [
-              ["Jurídico", "ok"],
-              ["Publicação 20/08", "watch"],
-              ["Estratégia recursal", "watch"]
-            ],
-            href: "#",
-            label: "Abrir recorte OAB"
-          },
-          {
-            title: "Manter o Projeto Escudo bloqueado até a cadeia de CI ficar verde.",
-            body:
-              "Quatro execuções de Security & Build falharam em correções de XSS/sanitização e otimização. Houve falhas em Secret Scan e Dependency Audit, com Production Build pulado. O sinal disponível não autoriza merge nem deploy.",
-            tags: [
-              ["Segurança", "critical"],
-              ["CI bloqueado", "watch"],
-              ["Produção pulada", "watch"]
-            ],
-            href: "#",
-            label: "Abrir falha crítica"
-          }
-        ],
-        meetings: [
-          {
-            time: "Hoje · 08:00-08:30",
-            title: "Preparar audiência híbrida · audiência híbrida",
-            body:
-              "O calendário reserva preparação via Teams. O controle do Notion indica audiência de instrução hoje, mas registra horário de 09:00; a divergência entre bloco de preparação e ato exige confirmação no documento oficial.",
-            prep: [
-              "Confirmar horário oficial, link do Teams, partes e testemunhas.",
-              "Separar documentos, roteiro e objetivos da instrução.",
-              "Registrar presença e desfecho antes de encerrar o controle."
-            ],
-            href: "#"
-          },
-          {
-            time: "Hoje · 10:00-11:00",
-            title: "Oitiva na Delegacia de Moreno",
-            body:
-              "Ato presencial para prestar esclarecimentos. A fonte exige identidade e CPF e alerta para desobediência em caso de ausência. O cadastro anterior ainda apontava envio à autoridade policial sem destinatário confirmado.",
-            prep: [
-              "Confirmar representação, protocolo de habilitação e ciência do intimado.",
-              "Planejar deslocamento e chegada antecipada ao endereço da intimação.",
-              "Levar documentos e registrar o resultado da diligência."
-            ],
-            href: "#"
-          },
-          {
-            time: "Hoje · 21:00-21:30",
-            title: "Quatro tarefas simultâneas",
-            body:
-              "Retenção de clientes OAuth, retificação do retificação processual e duas rotinas financeiras foram marcadas no mesmo intervalo. Os ícones de tarefa não comprovam conclusão.",
-            prep: [
-              "Executar primeiro a retificação processual se ainda estiver pendente.",
-              "Redistribuir ou reagendar os itens administrativos sem perda de controle.",
-              "Não interpretar sobreposição como quatro entregas concluídas."
-            ],
-            href: "#"
-          },
-          {
-            time: "Amanhã · 09:00-10:30",
-            title: "Dois atos processuais simultâneos",
-            body:
-              "O manifestação familiar tem manifestação/apelação indicada até 20/08 23:59, enquanto o decisão trabalhista exige análise da decisão recursal no mesmo início de manhã. Ambos já possuem controles no Notion.",
-            prep: [
-              "Antecipar hoje a leitura integral e a estratégia do manifestação familiar.",
-              "Confirmar prazo e efeito da decisão no decisão trabalhista.",
-              "Definir responsáveis antes do choque de agenda de amanhã."
-            ],
-            href: "#"
-          },
-          {
-            time: "Amanhã · 21:00-22:00",
-            title: "Compromisso pessoal e duas tarefas administrativas",
-            body:
-              "Terapia, pagamento de fatura e validação da Resolução CJF 990/2026 ocupam o mesmo horário. A terapia deve ser preservada; as tarefas administrativas precisam de janela separada.",
-            prep: [
-              "Reprogramar as tarefas administrativas antes do fim do expediente.",
-              "Validar a resolução apenas em fonte oficial antes de alterar cálculos.",
-              "Manter o compromisso pessoal livre de sobreposição operacional."
-            ],
-            href: "#"
-          }
-        ],
-        inbox: [
-          {
-            meta: "19/08/2026 06:30 • Recorte OAB/PE • Publicação 20/08",
-            title: "caso de família: sentença homologatória permite manifestação sobre renúncia ao prazo recursal.",
-            body:
-              "Partes abreviadas por sigilo. Advogado: Petrônio Souza, do escritório. Follow-up: abrir sentença, confirmar alcance e decidir se a renúncia acelera o encerramento sem prejuízo. Risco médio.",
-            href: "#"
-          },
-          {
-            meta: "19/08/2026 06:30 • Recorte OAB/PE • Criminal",
-            title: "habeas corpus: liminar indeferida; autoridades devem prestar informações em cinco dias.",
-            body:
-              "Impetrantes incluem Petrônio Souza e advogada externa; paciente omitido na versão pública. Follow-up: revisar fundamentos, acompanhar informações e preparar a tese de mérito. Risco alto pela negativa em matéria criminal.",
-            href: "#"
-          },
-          {
-            meta: "19/08/2026 06:30 • Recorte OAB/PE • JEC",
-            title: "caso cível: embargos acolhidos parcialmente, sem efeitos infringentes.",
-            body:
-              "Partes omitidas na versão pública. Advogados: Petrônio Souza, do escritório, e patrono externo. Follow-up: avaliar recurso inominado, preparo e termo inicial; a condenação moral foi mantida. Risco alto por prazo recursal.",
-            href: "#"
-          },
-          {
-            meta: "18/08/2026 21:14 • PJe Push • Cível",
-            title: "ação locatícia: juntada de petição após despacho/intimação e decurso já monitorados.",
-            body:
-              "Partes e advogado estão no controle privado. Follow-up: identificar autoria e conteúdo da petição e recalibrar o próximo impulso. Risco médio até leitura.",
-            href: "#"
-          },
-          {
-            meta: "18/08/2026 18:17-19:11 • PJe Push • Tutela",
-            title: "tutela de serviço essencial: processo ficou concluso para decisão em dois pushes sucessivos.",
-            body:
-              "A tutela sobre serviço essencial segue dependente de decisão. Follow-up: monitorar despacho e manter resposta objetiva ao cliente com protocolo e status. Risco alto pelo impacto material e reputacional.",
-            href: "#"
-          },
-          {
-            meta: "18/08/2026 11:20-11:22 • PJe Push • Novos movimentos",
-            title: "ação cível monitorada teve certidão expedida; apelação criminal recebeu manifestação do Ministério Público.",
-            body:
-              "No ação cível monitorada, abrir a certidão e identificar efeito. No apelação criminal, revisar a manifestação ministerial e preparar o retorno esperado à defesa. Risco médio e alto, respectivamente, pela natureza criminal do segundo.",
-            href: "#"
-          }
-        ],
-        todos: [
-          {
-            title: "Comprovar o cumprimento do prazo trabalhista A e fechar o prazo trabalhista B hoje.",
-            body:
-              "Conferir prazo oficial, providência, protocolo e recibo; sem evidência, manter ambos abertos.",
-            owner: "Petrônio",
-            href: "#"
-          },
-          {
-            title: "Corrigir a identidade do intake trabalhista antes de usar as peças.",
-            body:
-              "Revisar contrato, procuração, declaração e documentos automatizados; confirmar cliente e objeto corretos.",
-            owner: "Petrônio",
-            href: "#"
-          },
-          {
-            title: "Preparar audiência híbrida e oitiva desta manhã.",
-            body:
-              "Confirmar horários, representação, documentos, logística e registro pós-ato.",
-            owner: "Petrônio",
-            href: "#"
-          },
-          {
-            title: "Abrir decisões do caso de família, habeas corpus e caso cível.",
-            body:
-              "Definir renúncia, estratégia do HC e medida recursal com datas oficiais anotadas.",
-            owner: "Petrônio",
-            href: "#"
-          },
-          {
-            title: "Antecipar hoje os atos do manifestação familiar e decisão trabalhista.",
-            body:
-              "Dois controles começam às 09:00 de amanhã; leitura e estratégia devem estar prontas antes da sobreposição.",
-            owner: "Petrônio",
-            href: "#"
-          },
-          {
-            title: "Manter merge e deploy do Projeto Escudo bloqueados.",
-            body:
-              "Revisar logs e só liberar a cadeia quando Secret Scan, Dependency Audit e Production Build passarem.",
-            owner: "Petrônio",
-            href: "#"
-          }
-        ],
-        risks: [
-          {
-            title: "Risco crítico de prazo",
-            body: "prazo trabalhista A encerrou ontem e prazo trabalhista B vence hoje por contagem ainda estimada; ausência de comprovante impede tratar como concluídos."
-          },
-          {
-            title: "Risco crítico de representação",
-            body: "Intake de urgência máxima contém identidade divergente no objeto contratual, com peças automatizadas e documento assinado já disponíveis."
-          },
-          {
-            title: "Risco alto processual",
-            body: "Decisões novas em matéria criminal e recursal exigem inteiro teor, termo inicial e escolha de medida antes de qualquer comunicação conclusiva."
-          },
-          {
-            title: "Risco alto de segurança e entrega",
-            body: "Falhas repetidas de CI em correções de XSS e sanitização impedem liberar merge ou produção com base apenas em comentários de bots."
-          }
-        ],
-        coverage: [
-          {
-            title: "Agenda",
-            body:
-              "Foram auditados o intervalo de 18/08/2026 07:14 a 19/08/2026 07:14 e os compromissos até 21/08/2026 07:14, em America/Sao_Paulo. Treze eventos foram revisados."
-          },
-          {
-            title: "Gmail",
-            body:
-              "As 49 mensagens retornadas foram abertas e interpretadas. Promoções e repetições foram excluídas da síntese, sem estreitar a leitura apenas ao jurídico."
-          },
-          {
-            title: "Chat interno",
-            body:
-              "Não existe conector de chat nesta execução. Pedidos, decisões e bloqueios tratados somente em canais internos podem estar ausentes."
-          },
-          {
-            title: "Cautela jurídica",
-            body:
-              "Notificações, pushes e datas estimadas não substituem inteiro teor, representação, sigilo, termo inicial, feriados, prazo fatal e recibo de protocolo."
-          }
+        [
+          "Conferencia oficial",
+          "watch"
         ]
-      };
+      ],
+      "href": "#",
+      "label": "Detalhamento no controle privado"
+    },
+    {
+      "title": "Responder ao follow-up sensivel com evidencia objetiva.",
+      "body": "A comunicacao recente exige confirmacao documental de cumprimento. O tratamento integral, inclusive contexto contratual e processual, permanece restrito ao controle privado.",
+      "tags": [
+        [
+          "Critico",
+          "critical"
+        ],
+        [
+          "Cliente sensivel",
+          "watch"
+        ],
+        [
+          "Evidencia",
+          "critical"
+        ]
+      ],
+      "href": "#",
+      "label": "Detalhamento no controle privado"
+    },
+    {
+      "title": "Abrir as decisoes e documentos sigilosos antes de comunicar conclusoes.",
+      "body": "Houve publicacao de sentenca no Juizado, juntadas de manifestacao e documentos sigilosos no trabalhista, alem de conclusoes e peticoes novas em materias civel, familiar e criminal. Inteiro teor, autoria e impacto ainda precisam de classificacao oficial.",
+      "tags": [
+        [
+          "Juridico",
+          "ok"
+        ],
+        [
+          "Sigilo",
+          "watch"
+        ],
+        [
+          "Estrategia",
+          "watch"
+        ]
+      ],
+      "href": "#",
+      "label": "Detalhamento no controle privado"
+    },
+    {
+      "title": "Corrigir divergencias entre fontes e manter bloqueios tecnicos.",
+      "body": "Um resumo interno divergiu da Agenda e do Gmail. Validacoes tecnicas tambem nao concluiram com sucesso; nenhuma liberacao deve ocorrer antes da reconciliacao privada das fontes e dos controles.",
+      "tags": [
+        [
+          "Operacao",
+          "watch"
+        ],
+        [
+          "Seguranca",
+          "critical"
+        ],
+        [
+          "Dados divergentes",
+          "critical"
+        ]
+      ],
+      "href": "#",
+      "label": "Detalhamento no controle privado"
+    }
+  ],
+  "meetings": [
+    {
+      "time": "Hoje - 09:00-10:30",
+      "title": "Prazo familiar: manifestacao ou apelacao",
+      "body": "O compromisso termina hoje as 23:59 e se sobrepoe a outra analise processual. A leitura e a escolha da medida precisam sair do bloco com responsavel e evidencia definida.",
+      "prep": [
+        "Abrir a sentenca e confirmar termo inicial e calendario.",
+        "Definir medida, documentos e responsavel pelo protocolo.",
+        "Guardar recibo e atualizar o controle antes de concluir."
+      ],
+      "href": "#"
+    },
+    {
+      "time": "Hoje - 09:00-10:00",
+      "title": "Analise de decisao recursal trabalhista",
+      "body": "A Agenda deriva de publicacao DJEN e exige leitura da decisao antes de qualquer conclusao. O horario coincide com o prazo familiar.",
+      "prep": [
+        "Ler o inteiro teor da decisao e a manifestacao referida.",
+        "Confirmar efeito, prazo e medida cabivel.",
+        "Redistribuir responsavel para evitar perda pela sobreposicao."
+      ],
+      "href": "#"
+    },
+    {
+      "time": "Hoje - fim do dia",
+      "title": "Janela protegida com tarefas administrativas sobrepostas",
+      "body": "Um compromisso reservado ocupa o mesmo periodo de tarefas administrativas. O bloco deve permanecer livre; os itens de trabalho precisam de outra janela.",
+      "prep": [
+        "Reprogramar as tarefas antes do fim do expediente.",
+        "Validar referencias somente em fonte oficial.",
+        "Nao interpretar icone de tarefa como conclusao."
+      ],
+      "href": "#"
+    },
+    {
+      "time": "Ate 22/08 - 07:14",
+      "title": "Nenhum novo compromisso localizado apos hoje",
+      "body": "A busca na Agenda principal nao retornou outros eventos entre o fim desta noite e o encerramento da janela prospectiva.",
+      "prep": [
+        "Usar a janela livre para fechar os follow-ups processuais.",
+        "Revisar tarefas antigas que ficaram concentradas em horarios artificiais.",
+        "Conferir calendarios secundarios se houver uso operacional fora do principal."
+      ],
+      "href": "#"
+    }
+  ],
+  "inbox": [
+    {
+      "meta": "20/08 - madrugada - TRT6",
+      "title": "Prazo decorrido foi certificado em processo trabalhista.",
+      "body": "Os prazos das partes foram marcados como decorridos em 18/08. A fonte automatica nao demonstra cumprimento, protocolo ou saneamento.",
+      "href": "#"
+    },
+    {
+      "meta": "20/08 - madrugada - TJPE",
+      "title": "Sentenca publicada em demanda de consumo.",
+      "body": "O controle privado preserva partes, advogado, resultado anterior e necessidade de avaliar termo inicial e recurso.",
+      "href": "#"
+    },
+    {
+      "meta": "19/08 - noite - TRT6",
+      "title": "Duas manifestacoes e dois documentos sigilosos foram juntados.",
+      "body": "Os autos ficaram conclusos para despacho. Abrir os sigilos, identificar autoria e registrar impacto antes de comunicar o cliente.",
+      "href": "#"
+    },
+    {
+      "meta": "19/08 - noite - cliente",
+      "title": "Follow-up sensivel elevou a necessidade de resposta documentada.",
+      "body": "A evidencia de cumprimento precisa ser confirmada no controle privado antes de nova comunicacao.",
+      "href": "#"
+    },
+    {
+      "meta": "19/08 - tarde - TJPE",
+      "title": "Movimentos novos em materia familiar, criminal, inventario e apelacao.",
+      "body": "Foram registradas peticoes, certidoes, alteracao de parte/assunto, conclusoes e despacho de mero expediente. Cada ato foi vinculado ao controle correspondente.",
+      "href": "#"
+    },
+    {
+      "meta": "19/08 - tarde/noite - administrativo",
+      "title": "Pendencias de continuidade, renovacao e documentos exigem validacao.",
+      "body": "Os detalhes financeiros e pessoais foram preservados exclusivamente no controle privado.",
+      "href": "#"
+    },
+    {
+      "meta": "19/08 - tarde - tecnologia",
+      "title": "Novas falhas de validacao mantem a liberacao bloqueada.",
+      "body": "A cadeia tecnica nao foi concluida; o detalhamento permanece no controle privado.",
+      "href": "#"
+    }
+  ],
+  "todos": [
+    {
+      "title": "Protocolar ou comprovar o prazo familiar de hoje.",
+      "body": "Conferir decisao, contagem, medida, protocolo e recibo antes das 23:59.",
+      "owner": "Petronio",
+      "href": "#"
+    },
+    {
+      "title": "Fechar a demanda do cliente sobre a pericia e prova emprestada.",
+      "body": "Confirmar protocolo e chave do PJe; responder objetivamente sobre quesitos e trabalhos periciais.",
+      "owner": "Petronio",
+      "href": "#"
+    },
+    {
+      "title": "Abrir sentenca, sigilos e novos movimentos processuais.",
+      "body": "Classificar impacto, prazo, responsavel e proxima medida para cada processo.",
+      "owner": "Petronio",
+      "href": "#"
+    },
+    {
+      "title": "Regularizar a pendencia de continuidade administrativa.",
+      "body": "Validar origem, evitar duplicidade e guardar comprovantes no controle privado.",
+      "owner": "Petronio",
+      "href": "#"
+    },
+    {
+      "title": "Corrigir a divergencia da Controladoria.",
+      "body": "Reconciliar fontes, regras de leitura e itens ignorados antes do proximo resumo automatico.",
+      "owner": "Petronio",
+      "href": "#"
+    },
+    {
+      "title": "Manter alteracoes tecnicas bloqueadas.",
+      "body": "Liberar apenas quando toda a cadeia de validacao concluir com sucesso.",
+      "owner": "Petronio",
+      "href": "#"
+    },
+    {
+      "title": "Tratar pendencias administrativas novas.",
+      "body": "Validar renovacoes, documentos, cobrancas e mensagens apenas nos canais oficiais.",
+      "owner": "Petronio",
+      "href": "#"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Risco critico de prazo",
+      "body": "Ha termo final hoje as 23:59 e sobreposicao de analises as 09:00; sem recibo, a tarefa permanece aberta."
+    },
+    {
+      "title": "Risco critico de relacionamento",
+      "body": "Follow-up sensivel depende de evidencia objetiva de cumprimento e resposta tempestiva."
+    },
+    {
+      "title": "Risco alto de sigilo e estrategia",
+      "body": "Documentos sigilosos, sentenca e movimentos criminais exigem leitura oficial antes de conclusoes."
+    },
+    {
+      "title": "Risco alto operacional",
+      "body": "A Controladoria declarou ausencia de itens que existem nas fontes, comprometendo confianca no painel."
+    },
+    {
+      "title": "Risco alto de continuidade",
+      "body": "Uma pendencia administrativa ja afeta servico, e validacoes tecnicas impedem liberacao segura."
+    }
+  ],
+  "coverage": [
+    {
+      "title": "Agenda",
+      "body": "Foram auditados 19 eventos entre 19/08/2026 07:14 e 22/08/2026 07:14, no calendario principal e no fuso America/Sao_Paulo."
+    },
+    {
+      "title": "Gmail",
+      "body": "As 64 mensagens da janela exata foram lidas em lotes. Promocoes foram descartadas somente depois da triagem; fatos materiais foram agrupados sem duplicar pushes."
+    },
+    {
+      "title": "Chat interno",
+      "body": "Nao existe conector direto de chat nesta execucao. Pedidos e decisoes mantidos apenas em canais internos podem estar ausentes."
+    },
+    {
+      "title": "Cautela juridica",
+      "body": "Notificacoes automaticas nao substituem inteiro teor, representacao, sigilo, termo inicial, feriados, prazo fatal e recibo de protocolo."
+    }
+  ]
+};
 
       const chip = (text, variant) => html`<span className=${`chip ${variant}`}>${text}</span>`;
 
@@ -729,7 +757,7 @@
                     <div className="brand-name">Petrônio Souza Advogados Associados</div>
                   </div>
                 </div>
-                <h1>Prazo, identidade e decisão antes da baixa.</h1>
+                <h1>Prazo, prova e controle antes da baixa.</h1>
                 <p className="hero-copy">${briefing.executiveLead}</p>
                 <p className="hero-copy" style=${{ marginTop: "10px" }}>${briefing.executiveBody}</p>
               </div>
@@ -773,7 +801,7 @@
                     <h2>Prioridades críticas</h2>
                   </div>
                   <div className="head-note">
-                    O recorte prioriza prazo, representação, decisão judicial, segurança e preparo das próximas 48 horas.
+                    O recorte prioriza prazo, prova, cliente sensivel, continuidade e preparo das proximas 48 horas.
                   </div>
                 </div>
                 <div className="list">
@@ -799,7 +827,7 @@
                     <h2>Reuniões e preparação essencial</h2>
                   </div>
                   <div className="head-note">
-                    A manhã concentra os atos presenciais; amanhã há dois choques de agenda que pedem antecipação hoje.
+                    A manha concentra duas analises simultaneas; a noite pede redistribuicao de tarefas.
                   </div>
                 </div>
                 <div className="timeline">
@@ -828,7 +856,7 @@
                     <h2>E-mails que realmente mexem no dia</h2>
                   </div>
                   <div className="head-note">
-                    Novidades materiais agrupadas por processo, sem contar pushes repetidos como fatos distintos.
+                    Itens promocionais e avisos sem efeito executivo foram excluídos.
                   </div>
                 </div>
                 <div className="list">
@@ -913,14 +941,14 @@
 
           <section className="footer">
             <div className="footer-note">
-              <strong>Leitura principal:</strong> o maior retorno desta manhã está em comprovar os dois
-              prazos, corrigir o intake antes de qualquer uso e entrar nos atos de hoje com horários,
-              representação e documentos confirmados.
+              <strong>Leitura principal:</strong> o maior retorno desta manhã está em fechar segurança e
+              triagem processual antes do meio-dia, porque os blocos de 12h a 14h já exigem direção
+              executiva, não mais coleta.
             </div>
             <div className="footer-note">
-              <strong>Metodologia:</strong> síntese de 49 mensagens e 13 eventos, cruzada com o controle
-              persistente para evitar duplicidade. Fatos, inferências e recomendações foram separados;
-              dados sensíveis foram reduzidos na versão pública.
+              <strong>Metodologia:</strong> tudo aqui vem de fatos acessados em Google Calendar e Gmail.
+              Onde a relação entre itens é provável, mas não documentalmente fechada, isso foi tratado como
+              inferência e não como fato consumado.
             </div>
           </section>
         </main>
