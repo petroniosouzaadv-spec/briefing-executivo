@@ -1,967 +1,120 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Briefing Executivo | 21 de agosto de 2026</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --bg: #dae1e8;
-        --panel: rgba(255, 255, 255, 0.88);
-        --panel-strong: rgba(255, 255, 255, 0.96);
-        --ink: #11191f;
-        --wine: #561c26;
-        --navy: #172b49;
-        --gold: #bb9d6d;
-        --stone: #c8b6ac;
-        --muted: rgba(17, 25, 31, 0.7);
-        --line: rgba(17, 25, 31, 0.12);
-        --shadow: 0 24px 70px rgba(17, 25, 31, 0.12);
-        --radius: 8px;
-      }
-
-      * { box-sizing: border-box; }
-      body {
-        margin: 0;
-        min-height: 100vh;
-        font-family: "Montserrat", sans-serif;
-        color: var(--ink);
-        background:
-          radial-gradient(circle at 0% 0%, rgba(187, 157, 109, 0.22), transparent 28%),
-          radial-gradient(circle at 100% 0%, rgba(23, 43, 73, 0.18), transparent 30%),
-          linear-gradient(180deg, #eef2f6 0%, #dae1e8 58%, #ced6de 100%);
-      }
-
-      a { color: inherit; text-decoration: none; }
-      #root { min-height: 100vh; }
-
-      .page {
-        width: min(1280px, calc(100vw - 28px));
-        margin: 0 auto;
-        padding: 18px 0 34px;
-      }
-
-      .hero {
-        position: relative;
-        overflow: hidden;
-        border-radius: var(--radius);
-        background:
-          linear-gradient(135deg, rgba(17, 25, 31, 0.98), rgba(23, 43, 73, 0.95)),
-          linear-gradient(180deg, rgba(86, 28, 38, 0.18), rgba(187, 157, 109, 0.08));
-        box-shadow: var(--shadow);
-        padding: 26px;
-      }
-
-      .hero::before,
-      .hero::after {
-        content: "";
-        position: absolute;
-        border-radius: 999px;
-        border: 1px solid rgba(187, 157, 109, 0.3);
-      }
-
-      .hero::before {
-        width: 360px;
-        height: 360px;
-        right: -100px;
-        top: -120px;
-      }
-
-      .hero::after {
-        width: 220px;
-        height: 220px;
-        right: 120px;
-        bottom: -110px;
-      }
-
-      .hero-grid {
-        position: relative;
-        z-index: 1;
-        display: grid;
-        grid-template-columns: 1.45fr 0.95fr;
-        gap: 18px;
-        align-items: stretch;
-      }
-
-      .brand {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-        margin-bottom: 24px;
-      }
-
-      .brand-mark {
-        width: 58px;
-        height: 58px;
-        border-radius: 50%;
-        border: 1px solid rgba(187, 157, 109, 0.72);
-        display: grid;
-        place-items: center;
-        color: var(--gold);
-        font-weight: 700;
-        position: relative;
-      }
-
-      .brand-mark::after {
-        content: "";
-        position: absolute;
-        width: 78px;
-        height: 78px;
-        border-radius: 50%;
-        border: 1px solid rgba(200, 182, 172, 0.22);
-      }
-
-      .brand-label {
-        color: rgba(255, 255, 255, 0.72);
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        margin-bottom: 6px;
-      }
-
-      .brand-name {
-        color: #fff;
-        font-size: 23px;
-        line-height: 1.08;
-        font-weight: 600;
-        max-width: 18ch;
-      }
-
-      .hero h1 {
-        margin: 0 0 14px;
-        color: #fff;
-        font-size: clamp(32px, 4.4vw, 58px);
-        line-height: 0.98;
-        max-width: 10ch;
-      }
-
-      .hero-copy {
-        color: rgba(255, 255, 255, 0.78);
-        font-size: 15px;
-        line-height: 1.68;
-        max-width: 64ch;
-        margin: 0;
-      }
-
-      .hero-side {
-        display: grid;
-        gap: 14px;
-      }
-
-      .glass {
-        border-radius: var(--radius);
-        background: rgba(255, 255, 255, 0.09);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        backdrop-filter: blur(12px);
-        padding: 18px;
-      }
-
-      .glass-label,
-      .mini-label {
-        color: rgba(255, 255, 255, 0.64);
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        margin-bottom: 10px;
-      }
-
-      .glass-value {
-        color: #fff;
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 1.4;
-      }
-
-      .glass-note {
-        color: rgba(255, 255, 255, 0.72);
-        font-size: 13px;
-        line-height: 1.58;
-        margin-top: 8px;
-      }
-
-      .metrics {
-        display: grid;
-        grid-template-columns: repeat(5, minmax(0, 1fr));
-        gap: 14px;
-        margin-top: 18px;
-      }
-
-      .metric,
-      .panel {
-        border-radius: var(--radius);
-        background: var(--panel);
-        border: 1px solid rgba(255, 255, 255, 0.55);
-        box-shadow: var(--shadow);
-      }
-
-      .metric { padding: 18px; }
-      .metric .label {
-        color: var(--muted);
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        margin-bottom: 10px;
-      }
-
-      .metric .value {
-        color: var(--navy);
-        font-size: 34px;
-        font-weight: 800;
-        line-height: 1;
-      }
-
-      .metric .note {
-        color: var(--muted);
-        font-size: 13px;
-        line-height: 1.5;
-        margin-top: 8px;
-      }
-
-      .layout {
-        display: grid;
-        grid-template-columns: 1.16fr 0.84fr;
-        gap: 18px;
-        margin-top: 18px;
-      }
-
-      .stack { display: grid; gap: 18px; }
-      .panel { padding: 20px; background: var(--panel-strong); }
-
-      .panel-head {
-        display: flex;
-        justify-content: space-between;
-        gap: 14px;
-        align-items: flex-start;
-        margin-bottom: 16px;
-      }
-
-      .eyebrow {
-        color: var(--wine);
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        margin-bottom: 8px;
-      }
-
-      .panel h2 {
-        margin: 0;
-        font-size: 24px;
-        line-height: 1.1;
-      }
-
-      .head-note {
-        color: var(--muted);
-        font-size: 13px;
-        line-height: 1.55;
-        max-width: 32ch;
-      }
-
-      .list { display: grid; gap: 12px; }
-
-      .item,
-      .mail,
-      .todo,
-      .risk,
-      .coverage,
-      .event {
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        background: linear-gradient(180deg, rgba(255,255,255,.82), rgba(255,255,255,.62));
-      }
-
-      .item,
-      .mail,
-      .risk,
-      .coverage { padding: 14px; }
-
-      .title {
-        margin: 0 0 6px;
-        font-size: 15px;
-        line-height: 1.36;
-        font-weight: 700;
-      }
-
-      .body {
-        margin: 0;
-        color: var(--muted);
-        font-size: 13px;
-        line-height: 1.62;
-      }
-
-      .chips {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 10px;
-      }
-
-      .chip {
-        min-height: 28px;
-        border-radius: 999px;
-        padding: 0 10px;
-        display: inline-flex;
-        align-items: center;
-        font-size: 11px;
-        text-transform: uppercase;
-        font-weight: 700;
-        letter-spacing: 0.04em;
-      }
-
-      .critical { background: rgba(86, 28, 38, 0.12); color: var(--wine); }
-      .watch { background: rgba(187, 157, 109, 0.18); color: #7a6540; }
-      .ok { background: rgba(23, 43, 73, 0.1); color: var(--navy); }
-
-      .link {
-        display: inline-flex;
-        margin-top: 10px;
-        font-size: 12px;
-        font-weight: 700;
-        color: var(--navy);
-      }
-
-      .timeline { display: grid; gap: 12px; }
-
-      .event {
-        display: grid;
-        grid-template-columns: 96px 1fr;
-        gap: 14px;
-        padding: 14px;
-      }
-
-      .when {
-        font-size: 13px;
-        font-weight: 700;
-        color: var(--navy);
-      }
-
-      .prep {
-        margin: 10px 0 0;
-        padding: 0;
-        list-style: none;
-        display: grid;
-        gap: 7px;
-      }
-
-      .prep li {
-        font-size: 13px;
-        line-height: 1.56;
-        padding-left: 15px;
-        position: relative;
-      }
-
-      .prep li::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 8px;
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: var(--gold);
-      }
-
-      .mail-meta {
-        color: var(--muted);
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        margin-bottom: 8px;
-      }
-
-      .todo {
-        padding: 14px;
-        display: grid;
-        grid-template-columns: auto 1fr;
-        gap: 12px;
-      }
-
-      .box {
-        width: 18px;
-        height: 18px;
-        border-radius: 4px;
-        border: 1px solid rgba(17, 25, 31, 0.22);
-        margin-top: 1px;
-      }
-
-      .owner {
-        margin-top: 6px;
-        color: var(--wine);
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-      }
-
-      .footer {
-        margin-top: 18px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 18px;
-      }
-
-      .footer-note {
-        padding: 18px 20px;
-        border-radius: var(--radius);
-        background: rgba(17, 25, 31, 0.95);
-        color: rgba(255, 255, 255, 0.78);
-        box-shadow: var(--shadow);
-        font-size: 13px;
-        line-height: 1.66;
-      }
-
-      .footer-note strong { color: #fff; }
-
-      @media (max-width: 1160px) {
-        .hero-grid, .metrics, .layout, .footer { grid-template-columns: 1fr; }
-      }
-
-      @media (max-width: 760px) {
-        .page { width: min(100vw - 16px, 1280px); }
-        .hero, .panel, .metric { padding: 18px; }
-        .event { grid-template-columns: 1fr; }
-        .brand-name { font-size: 19px; }
-        .panel h2 { font-size: 21px; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module">
-      import React from "https://esm.sh/react@18.3.1";
-      import { createRoot } from "https://esm.sh/react-dom@18.3.1/client";
-      import htm from "https://esm.sh/htm@3.1.1";
-
-      const html = htm.bind(React.createElement);
-
-      const briefing = {
-  "generatedAt": "21 de agosto de 2026, 07:14 (-03, America/Sao_Paulo)",
-  "coverageWindow": "20 de agosto de 2026, 07:14 -> 21 de agosto de 2026, 07:14",
-  "executiveLead": "A manhã pede três confirmações objetivas: prova de fechamento do prazo encerrado ontem, decisão estratégica após uma tutela de urgência negada e recibo verificável de peticionamento antes do início de trabalhos periciais.",
-  "executiveBody": "O ciclo trouxe duas publicações, seis movimentos processuais atuais e quatro frentes operacionais. Capturas históricas foram separadas de novidades. A versão pública preserva apenas prioridades agregadas; dados processuais, partes e detalhes operacionais permanecem no controle privado e no e-mail autorizado.",
-  "topCards": [
-    {
-      "label": "Atenção imediata",
-      "value": "Um prazo passou sem prova de protocolo nas fontes auditadas.",
-      "note": "Confirmar autos, recibo e baixa antes de qualquer conclusão operacional."
-    },
-    {
-      "label": "Decisão estratégica",
-      "value": "Uma tutela de urgência foi indeferida em matéria de emprego e saúde.",
-      "note": "Abrir sigilos, confirmar termo inicial e definir a resposta processual e ao cliente."
-    }
-  ],
-  "metrics": [
-    {
-      "label": "Mensagens auditadas",
-      "value": "38",
-      "note": "Gmail consolidado, sem spam ou lixeira, na janela exata."
-    },
-    {
-      "label": "Eventos mapeados",
-      "value": "9",
-      "note": "Últimas 24 horas e agenda principal das próximas 48 horas."
-    },
-    {
-      "label": "Processos em atenção",
-      "value": "9",
-      "note": "Sete novidades atuais e dois controles críticos sem prova de fechamento."
-    },
-    {
-      "label": "Publicações materiais",
-      "value": "2",
-      "note": "Decisão trabalhista e audiência criminal futura."
-    },
-    {
-      "label": "Inconsistência de controle",
-      "value": "1",
-      "note": "O resumo automático voltou a declarar agenda e tarefas vazias."
-    }
-  ],
-  "priorities": [
-    {
-      "title": "Comprovar o fechamento do prazo encerrado ontem.",
-      "body": "A Agenda registrava termo final às 23:59. O Gmail consolidado não trouxe protocolo, recibo ou baixa verificável. A primeira ação é conferir os autos e preservar a evidência; sem recibo, o controle permanece crítico.",
-      "tags": [
-        [
-          "Crítico",
-          "critical"
-        ],
-        [
-          "Prazo",
-          "critical"
-        ],
-        [
-          "Evidência",
-          "watch"
-        ]
-      ],
-      "href": "#",
-      "label": "Detalhamento no controle privado"
-    },
-    {
-      "title": "Definir resposta à tutela de urgência indeferida.",
-      "body": "A decisão negou, em análise inicial, reintegração, salários, benefícios e restabelecimento liminar de assistência médica. A estratégia depende da leitura dos sigilos, do termo inicial e do reforço probatório disponível.",
-      "tags": [
-        [
-          "Alto",
-          "critical"
-        ],
-        [
-          "Trabalhista",
-          "ok"
-        ],
-        [
-          "Cliente sensível",
-          "watch"
-        ]
-      ],
-      "href": "#",
-      "label": "Detalhamento no controle privado"
-    },
-    {
-      "title": "Confirmar peticionamento com recibo antes da perícia.",
-      "body": "Foi enviado um PDF ao cliente, mas a conversa recuperada não contém recibo nem chave de validação. A prova de transmissão e a resposta objetiva sobre os quesitos precisam estar fechadas antes do início dos trabalhos técnicos.",
-      "tags": [
-        [
-          "Crítico",
-          "critical"
-        ],
-        [
-          "Prova técnica",
-          "watch"
-        ],
-        [
-          "Relacionamento",
-          "critical"
-        ]
-      ],
-      "href": "#",
-      "label": "Detalhamento no controle privado"
-    },
-    {
-      "title": "Preparar a audiência futura e abrir as publicações de hoje.",
-      "body": "Uma audiência de instrução foi designada para setembro e outros atos geraram publicação, despacho e conclusão para decisão. Teor, representação, termo inicial e providência devem ser qualificados em fonte oficial.",
-      "tags": [
-        [
-          "Jurídico",
-          "ok"
-        ],
-        [
-          "Audiência",
-          "watch"
-        ],
-        [
-          "Inteiro teor",
-          "watch"
-        ]
-      ],
-      "href": "#",
-      "label": "Detalhamento no controle privado"
-    },
-    {
-      "title": "Corrigir o painel vazio e proteger a continuidade operacional.",
-      "body": "O resumo interno omitiu tarefas e compromissos existentes. Backup, mensagem comercial, boleto sem dados completos e cancelamento de serviço também exigem validação, sem baixa automática ou pagamento fora dos canais oficiais.",
-      "tags": [
-        [
-          "Operação",
-          "watch"
-        ],
-        [
-          "Dados divergentes",
-          "critical"
-        ],
-        [
-          "Continuidade",
-          "watch"
-        ]
-      ],
-      "href": "#",
-      "label": "Detalhamento no controle privado"
-    }
-  ],
-  "meetings": [
-    {
-      "time": "Hoje - agenda principal",
-      "title": "Nenhum compromisso agendado até o fim do dia",
-      "body": "A busca da agenda principal não retornou reunião, audiência ou perícia para 21/08. A janela deve ser usada para confirmação de prazo, decisões e respostas pendentes.",
-      "prep": [
-        "Conferir protocolo e recibo do prazo encerrado.",
-        "Abrir decisões e documentos sigilosos.",
-        "Fechar respostas de cliente e controles operacionais."
-      ],
-      "href": "#"
-    },
-    {
-      "time": "22/08 - 20:59",
-      "title": "Preservação de backup",
-      "body": "Há uma tarefa agendada para exportar e preservar backup. O ticket de suporte foi encerrado, mas isso não comprova download ou integridade.",
-      "prep": [
-        "Confirmar que arquivos e CSV foram baixados.",
-        "Validar integridade e armazenamento seguro.",
-        "Reabrir o chamado imediatamente se houver falha."
-      ],
-      "href": "#"
-    },
-    {
-      "time": "22/09 - 12:30",
-      "title": "Audiência de instrução e julgamento",
-      "body": "A publicação de hoje designou audiência futura em matéria criminal. Embora esteja fora das próximas 48 horas, a preparação probatória merece registro imediato.",
-      "prep": [
-        "Confirmar ciência e representação nos autos.",
-        "Planejar presença, prova, testemunhas e documentos.",
-        "Registrar lembretes e marcos internos com antecedência."
-      ],
-      "href": "#"
-    },
-    {
-      "time": "Carry-over de 20/08",
-      "title": "Blocos vencidos ainda precisam de evidência",
-      "body": "Dois blocos jurídicos da manhã e tarefas administrativas da noite passaram sem comprovação de conclusão nas fontes lidas.",
-      "prep": [
-        "Não interpretar ícone de tarefa como baixa.",
-        "Anexar recibos e resultados aos controles.",
-        "Reprogramar somente o que permanecer aberto."
-      ],
-      "href": "#"
-    }
-  ],
-  "inbox": [
-    {
-      "meta": "21/08 - Recorte Digital",
-      "title": "Duas publicações mudam a preparação jurídica.",
-      "body": "Uma decisão trabalhista negou tutela de urgência e uma audiência criminal foi designada para setembro. Ambas foram vinculadas ao controle privado com advogado, partes, ação e risco.",
-      "href": "#"
-    },
-    {
-      "meta": "21/08 - Projuris e tribunais",
-      "title": "Seis movimentos atuais exigem qualificação de inteiro teor.",
-      "body": "Houve arquivamento definitivo, despachos, conclusões e publicação. Capturas históricas foram excluídas do total de novidades.",
-      "href": "#"
-    },
-    {
-      "meta": "20/08 - cliente",
-      "title": "O envio de uma peça não substitui prova de protocolo.",
-      "body": "A conversa contém PDF anexo, mas não contém recibo nem chave de validação. A próxima resposta deve ser objetiva e documental.",
-      "href": "#"
-    },
-    {
-      "meta": "20/08 - operações",
-      "title": "Backup encerrado, cancelamento de serviço e boleto sem detalhes.",
-      "body": "Cada item foi registrado para validação em canal oficial, com atenção a integridade, estorno, beneficiário, valor e vencimento.",
-      "href": "#"
-    },
-    {
-      "meta": "20/08 - comercial",
-      "title": "Uma mensagem direta do escritório segue sem conteúdo visível.",
-      "body": "A DM pode ser intake, cliente, fornecedor ou spam. O controle permanece aberto até leitura e classificação.",
-      "href": "#"
-    },
-    {
-      "meta": "21/08 - Controladoria",
-      "title": "O resumo automático voltou a omitir fatos existentes.",
-      "body": "O painel declarou ausência de tarefas e compromissos apesar de sinais verificados. A recorrência elevou o risco operacional.",
-      "href": "#"
-    }
-  ],
-  "todos": [
-    {
-      "title": "Localizar recibo ou tratar possível perda de prazo.",
-      "body": "Conferir autos, protocolo, anexos e baixa; registrar evidência ou definir saneamento imediato.",
-      "owner": "Petrônio",
-      "href": "#"
-    },
-    {
-      "title": "Abrir a decisão trabalhista e os documentos sigilosos.",
-      "body": "Confirmar termo inicial, estratégia, prova complementar e comunicação ao cliente.",
-      "owner": "Petrônio",
-      "href": "#"
-    },
-    {
-      "title": "Comprovar o peticionamento antes da perícia.",
-      "body": "Obter recibo/chave e responder sobre quesitos contábeis e documentoscópicos.",
-      "owner": "Petrônio",
-      "href": "#"
-    },
-    {
-      "title": "Qualificar despachos, conclusões e publicação.",
-      "body": "Identificar comando, polo, responsável, prazo e próxima medida em cada processo.",
-      "owner": "Petrônio",
-      "href": "#"
-    },
-    {
-      "title": "Preparar a audiência futura.",
-      "body": "Registrar data, presença, prova, testemunhas e documentos no controle privado.",
-      "owner": "Petrônio",
-      "href": "#"
-    },
-    {
-      "title": "Validar continuidade administrativa.",
-      "body": "Conferir backup, boleto, cancelamento de serviço, DM e divergência da Controladoria.",
-      "owner": "Petrônio",
-      "href": "#"
-    }
-  ],
-  "risks": [
-    {
-      "title": "Risco crítico de prazo",
-      "body": "O termo final passou sem prova de protocolo nas fontes auditadas."
-    },
-    {
-      "title": "Risco alto jurídico e humano",
-      "body": "A tutela negada envolve emprego, renda e assistência médica, exigindo resposta tempestiva e bem documentada."
-    },
-    {
-      "title": "Risco crítico de relacionamento",
-      "body": "A ausência de recibo em demanda formal do cliente afeta prova, confiança e continuidade do mandato."
-    },
-    {
-      "title": "Risco alto de matéria criminal",
-      "body": "A audiência futura exige organização antecipada de presença, prova e testemunhas."
-    },
-    {
-      "title": "Risco crítico operacional",
-      "body": "O painel interno voltou a omitir tarefas e compromissos, e o sistema recapturou movimentos históricos como novidade."
-    }
-  ],
-  "coverage": [
-    {
-      "title": "Agenda",
-      "body": "Foram auditados 9 eventos entre 20/08/2026 07:14 e 23/08/2026 07:14, no calendário principal e no fuso America/Sao_Paulo."
-    },
-    {
-      "title": "Gmail",
-      "body": "As 38 mensagens da janela exata foram triadas; 20 itens materiais foram lidos integralmente. Mensagens promocionais e sociais sem efeito executivo foram descartadas após classificação."
-    },
-    {
-      "title": "Notion",
-      "body": "Doze controles existentes foram atualizados, sete tiveram status ou data corrigidos e três tarefas novas foram criadas após busca de duplicidade."
-    },
-    {
-      "title": "Chat interno",
-      "body": "Não existe conector direto de chat nesta execução. Pedidos e decisões mantidos apenas em canais internos podem estar ausentes."
-    },
-    {
-      "title": "Cautela jurídica",
-      "body": "Alertas automáticos não substituem inteiro teor, representação, sigilo, termo inicial, feriados, prazo fatal e recibo de protocolo."
-    }
-  ]
-};
-
-      const chip = (text, variant) => html`<span className=${`chip ${variant}`}>${text}</span>`;
-
-      const App = () => html`
-        <main className="page">
-          <section className="hero">
-            <div className="hero-grid">
-              <div>
-                <div className="brand">
-                  <div className="brand-mark">PS</div>
-                  <div>
-                    <div className="brand-label">Briefing executivo visual</div>
-                    <div className="brand-name">Petrônio Souza Advogados Associados</div>
-                  </div>
-                </div>
-                <h1>Prova, decisão e resposta antes da baixa.</h1>
-                <p className="hero-copy">${briefing.executiveLead}</p>
-                <p className="hero-copy" style=${{ marginTop: "10px" }}>${briefing.executiveBody}</p>
-              </div>
-              <div className="hero-side">
-                <div className="glass">
-                  <div className="glass-label">Janela auditada</div>
-                  <div className="glass-value">${briefing.coverageWindow}</div>
-                  <div className="glass-note">Gerado em ${briefing.generatedAt}.</div>
-                </div>
-                ${briefing.topCards.map(
-                  (card) => html`
-                    <div className="glass" key=${card.label}>
-                      <div className="glass-label">${card.label}</div>
-                      <div className="glass-value">${card.value}</div>
-                      <div className="glass-note">${card.note}</div>
-                    </div>
-                  `
-                )}
-              </div>
-            </div>
-          </section>
-
-          <section className="metrics">
-            ${briefing.metrics.map(
-              (metric) => html`
-                <article className="metric" key=${metric.label}>
-                  <div className="label">${metric.label}</div>
-                  <div className="value">${metric.value}</div>
-                  <div className="note">${metric.note}</div>
-                </article>
-              `
-            )}
-          </section>
-
-          <section className="layout">
-            <div className="stack">
-              <section className="panel">
-                <div className="panel-head">
-                  <div>
-                    <div className="eyebrow">Executive Summary</div>
-                    <h2>Prioridades críticas</h2>
-                  </div>
-                  <div className="head-note">
-                    O recorte prioriza prazo, decisão, prova, cliente e continuidade nas próximas 48 horas.
-                  </div>
-                </div>
-                <div className="list">
-                  ${briefing.priorities.map(
-                    (item) => html`
-                      <article className="item" key=${item.title}>
-                        <h3 className="title">${item.title}</h3>
-                        <p className="body">${item.body}</p>
-                        <div className="chips">
-                          ${item.tags.map(([text, variant]) => chip(text, variant))}
-                        </div>
-                        <a className="link" href=${item.href} target="_blank" rel="noreferrer">${item.label}</a>
-                      </article>
-                    `
-                  )}
-                </div>
-              </section>
-
-              <section className="panel">
-                <div className="panel-head">
-                  <div>
-                    <div className="eyebrow">Hoje na agenda</div>
-                    <h2>Reuniões e preparação essencial</h2>
-                  </div>
-                  <div className="head-note">
-                    Todas as janelas críticas de hoje estão concentradas entre 12h e 14h.
-                  </div>
-                </div>
-                <div className="timeline">
-                  ${briefing.meetings.map(
-                    (meeting) => html`
-                      <article className="event" key=${meeting.title}>
-                        <div className="when">${meeting.time}</div>
-                        <div>
-                          <h3 className="title">${meeting.title}</h3>
-                          <p className="body">${meeting.body}</p>
-                          <ul className="prep">
-                            ${meeting.prep.map((tip) => html`<li key=${tip}>${tip}</li>`)}
-                          </ul>
-                          <a className="link" href=${meeting.href} target="_blank" rel="noreferrer">Abrir evento</a>
-                        </div>
-                      </article>
-                    `
-                  )}
-                </div>
-              </section>
-
-              <section className="panel">
-                <div className="panel-head">
-                  <div>
-                    <div className="eyebrow">Inbox</div>
-                    <h2>E-mails que realmente mexem no dia</h2>
-                  </div>
-                  <div className="head-note">
-                    Itens promocionais e avisos sem efeito executivo foram excluídos.
-                  </div>
-                </div>
-                <div className="list">
-                  ${briefing.inbox.map(
-                    (mail) => html`
-                      <article className="mail" key=${mail.title}>
-                        <div className="mail-meta">${mail.meta}</div>
-                        <h3 className="title">${mail.title}</h3>
-                        <p className="body">${mail.body}</p>
-                        <a className="link" href=${mail.href} target="_blank" rel="noreferrer">Abrir e-mail</a>
-                      </article>
-                    `
-                  )}
-                </div>
-              </section>
-            </div>
-
-            <div className="stack">
-              <section className="panel">
-                <div className="panel-head">
-                  <div>
-                    <div className="eyebrow">Next Actions</div>
-                    <h2>Follow-ups e donos</h2>
-                  </div>
-                </div>
-                <div className="list">
-                  ${briefing.todos.map(
-                    (todo) => html`
-                      <article className="todo" key=${todo.title}>
-                        <div className="box"></div>
-                        <div>
-                          <h3 className="title">${todo.title}</h3>
-                          <p className="body">${todo.body}</p>
-                          <div className="owner">Owner: ${todo.owner}</div>
-                          <a className="link" href=${todo.href} target="_blank" rel="noreferrer">Abrir fonte</a>
-                        </div>
-                      </article>
-                    `
-                  )}
-                </div>
-              </section>
-
-              <section className="panel">
-                <div className="panel-head">
-                  <div>
-                    <div className="eyebrow">Riscos e bloqueios</div>
-                    <h2>O que pede cuidado explícito</h2>
-                  </div>
-                </div>
-                <div className="list">
-                  ${briefing.risks.map(
-                    (risk) => html`
-                      <article className="risk" key=${risk.title}>
-                        <h3 className="title">${risk.title}</h3>
-                        <p className="body">${risk.body}</p>
-                      </article>
-                    `
-                  )}
-                </div>
-              </section>
-
-              <section className="panel">
-                <div className="panel-head">
-                  <div>
-                    <div className="eyebrow">Cobertura</div>
-                    <h2>Fontes e lacunas verificadas</h2>
-                  </div>
-                </div>
-                <div className="list">
-                  ${briefing.coverage.map(
-                    (item) => html`
-                      <article className="coverage" key=${item.title}>
-                        <h3 className="title">${item.title}</h3>
-                        <p className="body">${item.body}</p>
-                      </article>
-                    `
-                  )}
-                </div>
-              </section>
-            </div>
-          </section>
-
-          <section className="footer">
-            <div className="footer-note">
-              <strong>Leitura principal:</strong> o maior retorno desta manhã está em transformar alertas em evidência: recibo localizado, decisão qualificada, cliente respondido e controle reconciliado.
-            </div>
-            <div className="footer-note">
-              <strong>Metodologia:</strong> tudo aqui vem de fatos acessados em Google Calendar e Gmail.
-              Onde a relação entre itens é provável, mas não documentalmente fechada, isso foi tratado como
-              inferência e não como fato consumado.
-            </div>
-          </section>
-        </main>
-      `;
-
-      createRoot(document.getElementById("root")).render(html`<${App} />`);
-    </script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#11191F">
+  <meta name="description" content="Briefing executivo diario de Petronio Souza Advogados Associados.">
+  <title>Briefing Executivo | 22 de agosto de 2026</title>
+  <style>
+    :root{--ink:#11191F;--wine:#561C26;--navy:#172B49;--bg:#DAE1E8;--gold:#BB9D6D;--stone:#C8B6AC;--white:#fff;--muted:#55616b;--line:rgba(17,25,31,.12);--panel:rgba(255,255,255,.94);--shadow:0 18px 52px rgba(17,25,31,.12);--r:8px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:linear-gradient(180deg,#eef2f5 0%,var(--bg) 70%,#cdd6df 100%);font-family:Montserrat,"Segoe UI",Arial,sans-serif;letter-spacing:0}a{color:inherit}.page{width:min(1260px,calc(100% - 28px));margin:auto;padding:18px 0 34px}
+    .hero{position:relative;overflow:hidden;padding:28px;background:linear-gradient(132deg,var(--ink),var(--navy) 70%,#233957);color:#fff;border-radius:var(--r);box-shadow:var(--shadow)}.hero:after{content:"";position:absolute;width:340px;height:340px;right:-130px;top:-145px;border:1px solid rgba(187,157,109,.45);border-radius:50%}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.35fr .85fr;gap:22px}.brand{display:flex;align-items:center;gap:14px;margin-bottom:26px}.mark{width:62px;height:62px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:18px;font-weight:700}.kicker,.label,.eyebrow,.meta,.owner{text-transform:uppercase;font-size:11px;font-weight:700;letter-spacing:.08em}.kicker{color:rgba(255,255,255,.7);margin-bottom:5px}.brand-name{font-size:21px;font-weight:600;line-height:1.14;max-width:24ch}.hero h1{font-size:clamp(34px,5vw,60px);line-height:1;margin:0 0 16px;max-width:12ch}.lead{margin:0;max-width:66ch;color:rgba(255,255,255,.82);font-size:15px;line-height:1.68}.hero-side{display:grid;gap:12px}.glass{padding:18px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.09);border-radius:var(--r)}.glass .label{color:rgba(255,255,255,.72);margin-bottom:10px}.glass strong{display:block;color:#fff;font-size:17px;line-height:1.38}.glass p{margin:8px 0 0;color:rgba(255,255,255,.76);font-size:13px;line-height:1.55}
+    .metrics{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:18px}.metric,.panel{background:var(--panel);border:1px solid rgba(255,255,255,.65);border-radius:var(--r);box-shadow:var(--shadow)}.metric{padding:18px}.metric .label{color:var(--muted);margin-bottom:10px}.metric b{display:block;color:var(--navy);font-size:33px;line-height:1}.metric p{margin:8px 0 0;color:var(--muted);font-size:12px;line-height:1.5}
+    .layout{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;margin-top:18px}.stack{display:grid;gap:18px}.panel{padding:20px}.panel-head{display:flex;justify-content:space-between;gap:14px;align-items:start;margin-bottom:15px}.eyebrow{color:var(--wine);margin-bottom:7px}.panel h2{margin:0;font-size:23px;line-height:1.12}.head-note{max-width:31ch;color:var(--muted);font-size:12px;line-height:1.5}.list{display:grid;gap:12px}.item,.event,.todo,.risk,.source{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.9),rgba(255,255,255,.62));border-radius:var(--r);padding:14px}.item h3,.event h3,.todo h3,.risk h3,.source h3{margin:0 0 6px;font-size:15px;line-height:1.36}.item p,.event p,.todo p,.risk p,.source p{margin:0;color:var(--muted);font-size:13px;line-height:1.62}.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.chip{min-height:27px;padding:0 9px;display:inline-flex;align-items:center;border-radius:999px;font-size:10px;font-weight:800;text-transform:uppercase}.critical{background:rgba(86,28,38,.12);color:var(--wine)}.watch{background:rgba(187,157,109,.21);color:#725e39}.steady{background:rgba(23,43,73,.1);color:var(--navy)}
+    .event{display:grid;grid-template-columns:96px 1fr;gap:14px}.when{color:var(--navy);font-size:12px;font-weight:800;line-height:1.4}.prep{margin:9px 0 0;padding:0;list-style:none;display:grid;gap:6px}.prep li{position:relative;padding-left:14px;font-size:12px;line-height:1.55}.prep li:before{content:"";position:absolute;left:0;top:7px;width:6px;height:6px;border-radius:50%;background:var(--gold)}.todo{display:grid;grid-template-columns:18px 1fr;gap:11px}.check{width:18px;height:18px;border:1px solid rgba(17,25,31,.25);border-radius:4px}.owner{color:var(--wine);margin-top:7px}.risk{border-left:4px solid var(--wine)}.source{border-left:4px solid var(--navy)}
+    .footer{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}.footer div{padding:18px 20px;background:var(--ink);color:rgba(255,255,255,.78);border-radius:var(--r);font-size:12px;line-height:1.65;box-shadow:var(--shadow)}.footer strong{color:#fff}.privacy{margin-top:18px;text-align:center;color:var(--muted);font-size:11px;line-height:1.5}
+    @media(max-width:1060px){.hero-grid,.layout,.footer{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:620px){.page{width:calc(100% - 16px);padding-top:8px}.hero,.panel,.metric{padding:17px}.hero{min-height:calc(100svh - 16px);display:flex;align-items:center}.hero h1{font-size:38px}.brand{margin-bottom:20px}.brand-name{font-size:18px}.lead{text-align:left;font-size:14px;line-height:1.62}.hero-side{margin-top:4px}.glass strong{font-size:16px}.glass:first-child .label,.glass:first-child p{color:#fff;font-size:12px}.glass:first-child strong{font-size:17px}.metrics{grid-template-columns:1fr 1fr;gap:8px}.metric{min-height:128px}.metric b{font-size:29px}.panel-head{display:block}.head-note{max-width:none;margin-top:8px}.event{grid-template-columns:1fr}.footer{gap:8px}}
+    @media(max-width:380px){.metrics{grid-template-columns:1fr}.hero h1{font-size:34px}.mark{width:54px;height:54px}.panel h2{font-size:21px}}
+  </style>
+</head>
+<body>
+<main class="page">
+  <section class="hero">
+    <div class="hero-grid">
+      <div>
+        <div class="brand"><div class="mark">PS</div><div><div class="kicker">Briefing executivo visual</div><div class="brand-name">Petrônio Souza Advogados Associados</div></div></div>
+        <h1>Prazo, sigilo e prova antes da baixa.</h1>
+        <p class="lead">O ciclo exige transformar alertas automáticos em evidência verificável. Dois decursos de prazo, documentos sigilosos, decisões recentes e uma conclusão processual precisam de leitura oficial, enquanto a operação mantém pendências de assinatura, segurança de software e continuidade de dados.</p>
+      </div>
+      <div class="hero-side">
+        <div class="glass"><div class="label">Janela auditada</div><strong>21/08/2026 07:14 → 22/08/2026 07:14</strong><p>Gerado em 22/08/2026, 07:14 BRT · America/Sao_Paulo</p></div>
+        <div class="glass"><div class="label">Atenção imediata</div><strong>Confirmar consequência dos decursos e abrir os atos sob sigilo.</strong><p>Alertas automáticos não comprovam termo inicial, representação nem providência.</p></div>
+        <div class="glass"><div class="label">Próximas 48 horas</div><strong>Preservação de backup hoje e compromisso financeiro amanhã.</strong><p>Ambos exigem prova de conclusão e registro no controle.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="metrics">
+    <article class="metric"><div class="label">Mensagens auditadas</div><b>50</b><p>Gmail consolidado, excluídos spam e lixeira.</p></article>
+    <article class="metric"><div class="label">Eventos futuros</div><b>2</b><p>Agenda principal nas próximas 48 horas.</p></article>
+    <article class="metric"><div class="label">Frentes jurídicas</div><b>7</b><p>Novidades materiais consolidadas sem duplicatas.</p></article>
+    <article class="metric"><div class="label">Execuções de CI</div><b>6</b><p>Falhas agrupadas em um único risco operacional.</p></article>
+    <article class="metric"><div class="label">Lacuna de fonte</div><b>1</b><p>Sem conector direto de chat corporativo.</p></article>
+  </section>
+
+  <section class="layout">
+    <div class="stack">
+      <section class="panel">
+        <div class="panel-head"><div><div class="eyebrow">Executive Summary</div><h2>Prioridades críticas</h2></div><div class="head-note">Ordem recomendada por urgência, impacto jurídico e risco operacional.</div></div>
+        <div class="list">
+          <article class="item"><h3>Validar imediatamente dois decursos de prazo.</h3><p>Um processo executivo cível e um cumprimento de sentença trabalhista tiveram decurso certificado. A equipe deve conferir polo representado, protocolo, efeito do ato e medida cabível antes de qualquer baixa.</p><div class="chips"><span class="chip critical">Crítico</span><span class="chip critical">Prazo</span><span class="chip watch">Inteiro teor</span></div></article>
+          <article class="item"><h3>Abrir documentos sigilosos e decisões recentes.</h3><p>Uma ação trabalhista recebeu três documentos sigilosos; uma matéria criminal teve decisão e retorno dos autos. O conteúdo não está disponível nos avisos, portanto estratégia e prazo permanecem indeterminados.</p><div class="chips"><span class="chip critical">Alto</span><span class="chip steady">Trabalhista</span><span class="chip steady">Criminal</span></div></article>
+          <article class="item"><h3>Assinar a petição de acordo somente após conferência final.</h3><p>O portal profissional indica uma petição conjunta de homologação aguardando assinatura digital. Conferir versão, poderes, termos, anexos e eventual prazo antes de assinar.</p><div class="chips"><span class="chip critical">Alto</span><span class="chip watch">Assinatura</span><span class="chip steady">Acordo</span></div></article>
+          <article class="item"><h3>Manter merge e produção bloqueados enquanto o pipeline falhar.</h3><p>Seis execuções de segurança e build falharam em alterações ligadas a correção de XSS e desempenho. Auditoria de dependências e varredura de segredos não ficaram integralmente verdes; o build de produção foi pulado.</p><div class="chips"><span class="chip critical">Alto</span><span class="chip critical">Segurança</span><span class="chip watch">Entrega</span></div></article>
+          <article class="item"><h3>Não usar o resumo automático zerado como evidência de ausência de trabalho.</h3><p>O painel declarou zero tarefas e compromissos, mas outro digest do mesmo ciclo registra backlog relevante e as fontes verificadas mostram atos e agenda ativos. A divergência precisa ser corrigida.</p><div class="chips"><span class="chip critical">Alto</span><span class="chip watch">Controle</span><span class="chip watch">Dados divergentes</span></div></article>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><div><div class="eyebrow">Agenda</div><h2>Compromissos e preparação</h2></div><div class="head-note">Calendário principal entre o fim da janela e 24/08 às 07:14 BRT.</div></div>
+        <div class="list">
+          <article class="event"><div class="when">Hoje<br>20:59</div><div><h3>Exportar e preservar backup</h3><p>A tarefa está agendada por 30 minutos. O controle anterior aparece concluído, mas a ocorrência no calendário exige prova atual de exportação e integridade.</p><ul class="prep"><li>Baixar o arquivo e verificar abertura.</li><li>Armazenar em local seguro e redundante.</li><li>Registrar tamanho, data e evidência de restauração.</li></ul></div></article>
+          <article class="event"><div class="when">Domingo<br>12:00</div><div><h3>Compromisso financeiro programado</h3><p>A agenda contém favorecido e valor, mas não apresenta autorização, finalidade ou comprovante preparado.</p><ul class="prep"><li>Confirmar legitimidade, dados e causa do pagamento.</li><li>Executar apenas pelo canal oficial.</li><li>Anexar comprovante ao controle correspondente.</li></ul></div></article>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><div><div class="eyebrow">Últimas 24 horas</div><h2>Desenvolvimentos materiais</h2></div><div class="head-note">Duplicatas técnicas e mensagens promocionais foram consolidadas ou excluídas.</div></div>
+        <div class="list">
+          <article class="source"><h3>Contencioso: sete novidades atuais.</h3><p>Houve dois decursos, três despachos/decisões, três documentos sigilosos e uma conclusão para decisão. Um mesmo processo gerou alertas duplicados, consolidados em uma única frente.</p></article>
+          <article class="source"><h3>Operação: assinatura, backup e pagamento.</h3><p>A assinatura digital requer validação de conteúdo; o backup tem janela operacional hoje; e um compromisso financeiro está marcado para domingo.</p></article>
+          <article class="source"><h3>Tecnologia: falhas repetidas de segurança e build.</h3><p>As seis notificações representam um único problema recorrente, não seis tarefas separadas. O risco permanece aberto até execução integralmente bem-sucedida.</p></article>
+          <article class="source"><h3>Controle: fontes internas continuam divergentes.</h3><p>O CRM informa nenhuma pasta pendente, dado positivo e específico; já o resumo geral zerado conflita com backlog, atos jurídicos e calendário verificados.</p></article>
+        </div>
+      </section>
+    </div>
+
+    <div class="stack">
+      <section class="panel">
+        <div class="panel-head"><div><div class="eyebrow">Next Actions</div><h2>Follow-ups e donos</h2></div></div>
+        <div class="list">
+          <article class="todo"><div class="check"></div><div><h3>Conferir decursos e recibos.</h3><p>Identificar polo, efeito, prova de protocolo e eventual saneamento.</p><div class="owner">Owner: Petrônio / responsável do caso</div></div></article>
+          <article class="todo"><div class="check"></div><div><h3>Abrir sigilos, decisões e despachos.</h3><p>Registrar comando, termo inicial, risco, próxima ação e comunicação necessária.</p><div class="owner">Owner: Petrônio</div></div></article>
+          <article class="todo"><div class="check"></div><div><h3>Conferir e assinar a petição de acordo.</h3><p>Validar versão, anexos, poderes e termos antes da assinatura.</p><div class="owner">Owner: Petrônio</div></div></article>
+          <article class="todo"><div class="check"></div><div><h3>Fechar a triagem da intimação com vencimento na segunda.</h3><p>Confirmar inteiro teor e prazo oficial antes do início do expediente útil.</p><div class="owner">Owner: Petrônio</div></div></article>
+          <article class="todo"><div class="check"></div><div><h3>Corrigir CI e reconciliar a Controladoria.</h3><p>Separar dois fluxos: segurança de software e confiabilidade do painel operacional.</p><div class="owner">Owner: Técnico / Controladoria</div></div></article>
+          <article class="todo"><div class="check"></div><div><h3>Preservar backup e comprovante financeiro.</h3><p>Concluir os dois compromissos com evidência, não apenas com marcação de calendário.</p><div class="owner">Owner: Petrônio</div></div></article>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><div><div class="eyebrow">Riscos e bloqueios</div><h2>O que pede cuidado explícito</h2></div></div>
+        <div class="list">
+          <article class="risk"><h3>Crítico · prazo e representação</h3><p>Decurso sem confirmação de polo e recibo pode exigir saneamento imediato.</p></article>
+          <article class="risk"><h3>Alto · conteúdo sob sigilo</h3><p>Não é possível classificar medida, prazo ou comunicação sem acesso oficial.</p></article>
+          <article class="risk"><h3>Alto · segurança de software</h3><p>Correção de XSS não deve avançar com auditoria ou varredura de segredos falhando.</p></article>
+          <article class="risk"><h3>Alto · confiabilidade do controle</h3><p>Resumo zerado e backlog coexistem; qualquer baixa automática é insegura.</p></article>
+          <article class="risk"><h3>Médio · continuidade e financeiro</h3><p>Backup e pagamento dependem de validação e prova de conclusão.</p></article>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><div><div class="eyebrow">Cobertura</div><h2>Fontes e limites</h2></div></div>
+        <div class="list">
+          <article class="source"><h3>Google Calendar</h3><p>Agenda principal auditada de 21/08 07:14 a 24/08 07:14 BRT; dois eventos encontrados.</p></article>
+          <article class="source"><h3>Gmail consolidado</h3><p>50 mensagens lidas na janela exata; todas foram classificadas, com consolidação de duplicatas.</p></article>
+          <article class="source"><h3>Notion</h3><p>Controles existentes foram localizados por identificador e assunto antes de qualquer escrita.</p></article>
+          <article class="source"><h3>Chat interno</h3><p>Não há fonte conectada. Decisões mantidas apenas em chat podem estar ausentes.</p></article>
+          <article class="source"><h3>Cautela jurídica</h3><p>Push e automações não substituem inteiro teor, representação, sigilo, termo inicial, feriados e recibo.</p></article>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="footer"><div><strong>Leitura principal:</strong> o maior retorno desta manhã está em converter alerta em prova: protocolo localizado, ato qualificado, assinatura conferida, pipeline verde e controle reconciliado.</div><div><strong>Privacidade:</strong> esta versão pública foi sanitizada. Números processuais, nomes, valores e detalhes sensíveis permanecem no e-mail privado e no controle interno.</div></section>
+  <p class="privacy">Petrônio Souza Advogados Associados · Briefing executivo gerado a partir de fontes verificadas.</p>
+</main>
+</body>
 </html>
