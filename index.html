@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Briefing Executivo | 7 de setembro de 2026</title>
+    <title>Briefing Executivo | 8 de setembro de 2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -147,7 +147,6 @@
         line-height: 1.68;
         max-width: 64ch;
         margin: 0;
-        overflow-wrap: anywhere;
       }
 
       .hero-side {
@@ -427,9 +426,6 @@
         .event { grid-template-columns: 1fr; }
         .brand-name { font-size: 19px; }
         .panel h2 { font-size: 21px; }
-        .glass-value { font-size: 17px; line-height: 1.5; }
-        .glass-note { color: rgba(255, 255, 255, 0.9); font-size: 14px; }
-        .hero-copy, .body, .head-note { overflow-wrap: anywhere; }
       }
     </style>
   </head>
@@ -443,226 +439,245 @@
       const html = htm.bind(React.createElement);
 
       const briefing = {
-        generatedAt: "7 de setembro de 2026, 07:14 BRT",
-        coverageWindow: "06/09/2026, 07:14 → 07/09/2026, 07:14 · America/Sao_Paulo",
+        generatedAt: "8 de setembro de 2026, 07:14 BRT",
+        coverageWindow: "07/09/2026, 07:14 → 08/09/2026, 07:14 · America/Sao_Paulo",
         executiveLead:
-          "O ciclo abre com continuidade jurídica crítica e cinco novidades operacionais: duas publicações ainda sem inteiro teor, nova movimentação postal, cobrança de telecom com vencimento próximo, expansão faturada do ambiente de IA e falhas de segurança e dependências em duas mudanças do Projeto Escudo.",
+          "A manhã exige preparação coordenada para quatro compromissos jurídicos em 9 de setembro, incluindo dois controles simultâneos às 09:00, um ato presencial à tarde e um marco recursal no fim do dia.",
         executiveBody:
-          "A agenda profissional permanece livre nas próximas 48 horas, com apenas um compromisso pessoal. A janela deve ser usada para confirmar recibos e contagens, abrir publicações, regularizar cobranças e impedir merge ou produção enquanto os controles de segurança não estiverem integralmente verdes.",
+          "O ciclo também traz um laudo pericial relevante, um recurso recém-distribuído, renovação de certificado digital e uma exportação de dados concluída. A Controladoria voltou a informar fila zerada apesar de agenda e e-mails ativos; nenhuma baixa deve depender desse resumo isolado.",
         topCards: [
           {
             label: "Atenção imediata",
-            value: "Não baixar atos sem recibo, inteiro teor, representação e contagem oficial.",
-            note: "O painel mantém passivos críticos e a Controladoria continua informando fila zerada em conflito com outras fontes."
+            value: "Distribuir hoje os atos de 09/09 e validar todos os recibos.",
+            note: "Há sobreposição matinal, deslocamento presencial e controle recursal no mesmo dia."
           },
           {
             label: "Horizonte operacional",
-            value: "Próximas 48 horas · até 09/09 às 07:14 BRT",
-            note: "Sem reunião profissional localizada; um compromisso pessoal hoje à noite, sem conflito identificado."
+            value: "Próximas 48 horas · 5 compromissos",
+            note: "Quatro frentes jurídicas em 09/09 e um compromisso pessoal já realizado na noite anterior."
           }
         ],
         metrics: [
-          { label: "Mensagens · 24h", value: "24", note: "Todas recuperadas; sinais repetidos foram consolidados." },
-          { label: "Passivos críticos", value: "14", note: "Controles processuais reiterados sem prova objetiva de baixa." },
-          { label: "Publicações sem teor", value: "2", note: "Exigem abertura, identificação e contagem oficial." },
-          { label: "Frentes operacionais", value: "5", note: "Financeiro, licenças, CI, automação e publicações." },
-          { label: "Agenda · 48h", value: "1", note: "Compromisso pessoal, sem reunião profissional." }
+          { label: "Mensagens · 24h", value: "14", note: "Todas recuperadas; duplicatas e relatórios repetidos foram consolidados." },
+          { label: "Anexos jurídicos", value: "2", note: "Laudo pericial e autos de recurso, com 75 páginas lidas." },
+          { label: "Agenda · 48h", value: "5", note: "Quatro compromissos jurídicos e um pessoal." },
+          { label: "Passivos críticos", value: "14", note: "Reiterados pelo painel, ainda sem prova objetiva de baixa." },
+          { label: "Frentes novas", value: "5", note: "Perícia, recurso, certificado, dados e automação." }
         ],
         priorities: [
           {
-            title: "Preservar os controles jurídicos críticos antes de qualquer baixa.",
+            title: "Dividir agora os dois controles simultâneos da manhã de 09/09.",
             body:
-              "O painel consolidado mantém passivos vencidos, recibos ausentes e uma sessão virtual em curso. A ação executiva é abrir os atos oficiais, confirmar representação, termo inicial e protocolos, e registrar contingência onde não houver prova de cumprimento.",
-            tags: [["Crítico", "critical"], ["Jurídico", "ok"], ["Imediato", "critical"]],
+              "Duas providências jurídicas começam às 09:00. Cada frente precisa de responsável, peça, documento, termo inicial e recibo definidos ainda hoje para evitar disputa de capacidade operacional.",
+            tags: [["Crítico", "critical"], ["Prazo", "watch"], ["09/09", "critical"]],
             href: null,
             label: ""
           },
           {
-            title: "Abrir duas novas publicações antes de estimar qualquer prazo.",
+            title: "Preparar o ato policial presencial e confirmar a logística.",
             body:
-              "O resumo recebido informa duas publicações no Diário Oficial, mas não traz processo, partes, advogado, comando ou prazo. Até a leitura do inteiro teor, o risco é alto pela possibilidade de obrigação ainda invisível.",
-            tags: [["Alto", "critical"], ["Publicações", "watch"]],
+              "O compromisso está marcado para 14:45 em Recife. Confirmar representação, documentos, orientação do assistido, deslocamento e registro do resultado.",
+            tags: [["Alto", "critical"], ["Presencial", "watch"], ["Criminal", "ok"]],
             href: null,
             label: ""
           },
           {
-            title: "Bloquear merge e produção nas duas mudanças do Projeto Escudo.",
+            title: "Revisar o laudo pericial e antecipar os pontos de manifestação.",
             body:
-              "As prévias foram implantadas, mas o pipeline de Security & Build falhou em auditoria de dependências; uma correção de XSS também registrou falha no Secret Scan e teve o build de produção ignorado. Preview verde não equivale a liberação segura.",
-            tags: [["Alto", "critical"], ["Segurança", "watch"], ["CI", "ok"]],
+              "A perícia contábil registra lacunas documentais relevantes e não resolve a controvérsia jurídica central. Organizar impugnações, esclarecimentos e documentos complementares antes da intimação formal.",
+            tags: [["Alto", "critical"], ["Perícia", "ok"], ["Cliente sensível", "watch"]],
             href: null,
             label: ""
           },
           {
-            title: "Conciliar cobranças novas sem usar links recebidos por e-mail.",
+            title: "Monitorar o recurso recém-distribuído sem esperar a intimação.",
             body:
-              "Chegaram uma fatura corporativa com vencimento em 10/09 e uma cobrança proporcional por assento adicional no ambiente de IA, acompanhada de compra internacional no cartão. Confirmar contrato, usuário, fatura e pagamento apenas nos portais oficiais.",
-            tags: [["Médio", "watch"], ["Financeiro", "ok"], ["Validação", "watch"]],
+              "O agravo busca reverter a suspensão de uma ação de despejo e obter tutela antecipada. Ainda não há decisão, mas a minuta de contrarrazões e a estratégia de resposta devem ser preparadas preventivamente.",
+            tags: [["Alto", "critical"], ["Recurso", "ok"], ["Monitoramento", "watch"]],
             href: null,
             label: ""
           },
           {
-            title: "Tratar o resumo automático como fonte não confiável para baixa.",
+            title: "Renovar o certificado e corrigir a fonte automática divergente.",
             body:
-              "A Controladoria informou ausência de contas, prazos e audiências, mas Gmail, painel processual e agenda trazem pendências ativas. O falso negativo persiste e exige reconciliação técnica antes de automatizar conclusões.",
-            tags: [["Alto", "critical"], ["Automação", "ok"]],
+              "A credencial de assinatura expira em poucos dias, enquanto a Controladoria segue reportando ausência de prazos e audiências. Renovação, instalação, teste e reconciliação de fontes são controles de continuidade essenciais.",
+            tags: [["Alto", "critical"], ["Continuidade", "ok"], ["Automação", "watch"]],
             href: null,
             label: ""
           }
         ],
         meetings: [
           {
-            time: "Hoje · 19:00–20:00",
-            title: "Compromisso pessoal",
+            time: "09/09 · 09:00–10:30",
+            title: "Dois controles jurídicos simultâneos",
             body:
-              "Único evento localizado nas próximas 48 horas. A agenda não contém descrição, local, convidados ou material preparatório.",
+              "Uma providência trabalhista e uma manifestação cível ocupam a mesma faixa da manhã, com contexto insuficiente no calendário.",
             prep: [
-              "Manter o compromisso protegido e não deslocar pendências críticas para esse horário.",
-              "Usar o restante do dia para saneamento jurídico e validações administrativas.",
-              "Não há conflito com outra reunião localizada."
+              "Atribuir um responsável por frente e confirmar representação.",
+              "Abrir atos oficiais, validar termo inicial e conferir peças.",
+              "Exigir protocolo e recibo antes de qualquer baixa."
             ],
             href: null
           },
           {
-            time: "Até 09/09 · 07:14",
-            title: "Sem reunião profissional localizada",
+            time: "09/09 · 14:45–15:45",
+            title: "Ato policial presencial",
             body:
-              "A janela prospectiva está livre de compromissos profissionais no calendário conectado.",
+              "Interrogatório agendado em Recife, sem participantes ou anexos detalhados no evento conectado.",
             prep: [
-              "Antecipar a leitura das publicações e a distribuição de responsáveis.",
-              "Revisar a concentração de audiências já sinalizada para a semana seguinte.",
-              "Preservar evidências antes de encerrar qualquer tarefa processual."
+              "Confirmar comparecimento, local e deslocamento.",
+              "Revisar habilitação, documentos e orientação prévia.",
+              "Registrar o resultado e os próximos passos no mesmo dia."
+            ],
+            href: null
+          },
+          {
+            time: "09/09 · 23:00–23:59",
+            title: "Controle recursal criminal",
+            body:
+              "Há indicação anterior de peticionamento, mas o conjunto consultado ainda não comprova protocolo, recibo e chave de validação.",
+            prep: [
+              "Conciliar o evento com o andamento oficial.",
+              "Localizar e arquivar comprovante verificável.",
+              "Escalar imediatamente qualquer ausência de prova."
             ],
             href: null
           }
         ],
         inbox: [
           {
-            meta: "07/09 · Justiça estadual · Movimento processual",
-            title: "Nova juntada de entrega postal em processo cível já acompanhado.",
+            meta: "07/09 · Perícia contábil · Movimento novo",
+            title: "Laudo pericial foi juntado e exige leitura estratégica.",
             body:
-              "Abrir a petição e o comprovante de entrega, identificar destinatário e efeito processual, e atualizar o controle existente sem criar duplicidade.",
+              "O documento reconhece pagamentos parcialmente comprovados, aponta divergências e registra ausência de prova de despesas alegadas. A conclusão não substitui a perícia de autenticidade nem decide a tese jurídica.",
             href: null
           },
           {
-            meta: "07/09 · Diário Oficial · Triagem",
-            title: "Duas publicações novas foram sinalizadas sem qualquer dado identificador.",
+            meta: "07/09 · Recurso cível · Distribuição",
+            title: "Novo agravo pede tutela para retomar ação suspensa.",
             body:
-              "A falta de processo, partes, responsável e comando impede classificação segura até a abertura no portal.",
+              "Os autos recebidos estão em fase inicial, sem decisão ou intimação. Monitorar distribuição e preparar resposta preventiva.",
             href: null
           },
           {
-            meta: "07/09 · Telecom · Financeiro",
-            title: "Nova fatura corporativa vence em três dias.",
+            meta: "08/09 · Prazo · Alerta duplicado",
+            title: "O mesmo prazo foi avisado duas vezes com vencimento próximo.",
             body:
-              "Confirmar titularidade, competência e programação no portal oficial; o valor e o número da fatura permanecem apenas nos canais privados.",
+              "Atualizar o controle existente, abrir o ato no sistema oficial e confirmar comando, polo, termo inicial e providência antes de criar qualquer nova tarefa.",
             href: null
           },
           {
-            meta: "06/09 · Ambiente de IA · Administração",
-            title: "Um assento premium adicional foi faturado de forma proporcional.",
+            meta: "07/09 · Certificado digital · Continuidade",
+            title: "Credencial de assinatura expira em poucos dias.",
             body:
-              "Validar se a expansão e o convite de proprietário foram intencionais e reconciliar a cobrança internacional correspondente.",
+              "Validar a renovação no canal oficial, concluir instalação e testar assinatura antes da data-limite.",
             href: null
           },
           {
-            meta: "06/09 · Projeto Escudo · Engenharia",
-            title: "Duas PRs tiveram preview publicado, mas os gates de segurança falharam.",
+            meta: "07/09 · Dados · Backup",
+            title: "Exportação do banco de dados foi concluída.",
             body:
-              "A auditoria de dependências não passou; a correção de XSS também precisa resolver o Secret Scan antes de merge ou produção.",
+              "Baixar pela área oficial do projeto, validar integridade e registrar local de custódia e política de retenção.",
             href: null
           },
           {
-            meta: "07/09 · CRM · Sinal positivo",
-            title: "Nenhum cliente aguardava criação de pasta no Drive.",
+            meta: "08/09 · CRM e Controladoria · Fontes divergentes",
+            title: "CRM sem pastas pendentes; Controladoria novamente reporta fila vazia.",
             body:
-              "O dado é favorável, mas limitado ao fluxo específico do CRM e não compensa o falso negativo da Controladoria.",
+              "O indicador do CRM é positivo e específico. Já o resumo geral conflita com compromissos e prazos confirmados e não pode sustentar baixas automáticas.",
             href: null
           }
         ],
         todos: [
           {
-            title: "Conferir atos, recibos e contagens dos controles críticos.",
-            body: "Começar pela sessão virtual em curso e pelos passivos sem comprovante de protocolo.",
-            owner: "Responsável jurídico a confirmar",
+            title: "Distribuir os dois controles de 09/09 às 09:00.",
+            body: "Definir responsáveis, validar peças e exigir recibos independentes.",
+            owner: "Coordenação jurídica",
             href: null
           },
           {
-            title: "Abrir e classificar as duas publicações do Diário Oficial.",
-            body: "Extrair processo, partes, advogado, comando, termo inicial, prazo e providência.",
-            owner: "Controladoria jurídica",
+            title: "Preparar o ato policial presencial.",
+            body: "Confirmar representação, documentos, orientação e logística de deslocamento.",
+            owner: "Responsável criminal",
             href: null
           },
           {
-            title: "Verificar a nova entrega postal no processo já acompanhado.",
-            body: "Ler a petição e o comprovante e registrar o efeito no controle original.",
-            owner: "Responsável do caso a confirmar",
+            title: "Revisar o laudo e preparar manifestação técnica.",
+            body: "Mapear esclarecimentos, inconsistências, documentos complementares e comunicação ao cliente.",
+            owner: "Dr. Petrônio Souza",
             href: null
           },
           {
-            title: "Regularizar a fatura corporativa com vencimento em 10/09.",
-            body: "Validar e programar pelo portal do fornecedor, preservando o comprovante.",
-            owner: "Administrativo financeiro",
+            title: "Monitorar o recurso novo e antecipar contrarrazões.",
+            body: "Acompanhar decisão inicial e deixar estratégia e documentos organizados.",
+            owner: "Dr. Petrônio Souza",
             href: null
           },
           {
-            title: "Validar assento, convite e cobrança do ambiente de IA.",
-            body: "Confirmar necessidade do novo assento e reconciliar fatura e cartão antes do fechamento.",
-            owner: "Administrador do workspace",
+            title: "Renovar, instalar e testar o certificado digital.",
+            body: "Usar o portal oficial e concluir com margem antes da expiração.",
+            owner: "Administrativo / TI",
             href: null
           },
           {
-            title: "Corrigir os gates de segurança das duas PRs do Projeto Escudo.",
-            body: "Resolver auditoria de dependências e Secret Scan, repetir o pipeline e só então liberar merge.",
+            title: "Baixar e custodiar a exportação do banco de dados.",
+            body: "Validar integridade, acesso, retenção e cópia segura do arquivo gerado.",
             owner: "Responsável técnico",
+            href: null
+          },
+          {
+            title: "Corrigir a divergência da Controladoria.",
+            body: "Auditar janela, filtros e integrações; impedir baixa por relatório vazio.",
+            owner: "Controladoria / responsável técnico",
             href: null
           }
         ],
         risks: [
           {
-            title: "Crítico · perda de prazo ou baixa indevida",
-            body: "Passivos processuais seguem sem prova objetiva de saneamento; o risco permanece até recibos e atos oficiais serem conferidos."
+            title: "Crítico · capacidade e prazo em 09/09",
+            body: "Dois controles simultâneos, ato presencial e marco recursal no mesmo dia exigem distribuição e comprovação antecipadas."
           },
           {
-            title: "Alto · publicação ainda invisível",
-            body: "Duas publicações não trazem metadados suficientes para saber se há prazo imediato."
+            title: "Alto · prova técnica e relação com cliente",
+            body: "O laudo traz conclusões relevantes e limitações expressas; demora na análise pode ampliar risco processual e reputacional."
           },
           {
-            title: "Alto · segurança de software",
-            body: "Preview implantado com pipeline incompleto pode criar falsa sensação de prontidão, especialmente em mudança ligada a XSS."
+            title: "Alto · recurso com pedido urgente",
+            body: "A ausência de decisão hoje não elimina a necessidade de resposta pronta para eventual intimação ou tutela."
           },
           {
-            title: "Alto · fonte automática divergente",
-            body: "O resumo de fila zerada não pode fundamentar encerramento enquanto conflitar com Gmail, Agenda e controles internos."
+            title: "Alto · continuidade de assinatura digital",
+            body: "A expiração da credencial pode bloquear assinaturas e acesso a sistemas em período com prazos ativos."
           },
           {
-            title: "Médio · custo e licença",
-            body: "Fatura próxima e assento adicional exigem validação para evitar atraso, suspensão ou despesa não planejada."
+            title: "Alto · falsa sensação de fila zerada",
+            body: "O resumo automático diverge das fontes verificadas e não deve fundamentar encerramentos."
           }
         ],
         coverage: [
           {
             title: "Agenda verificada",
-            body: "Todos os eventos de 06/09 às 07:14 até 09/09 às 07:14 BRT foram pesquisados, sem paginação pendente."
+            body: "Todos os eventos de 07/09 às 07:14 até 10/09 às 07:14 BRT foram pesquisados, sem paginação pendente."
           },
           {
             title: "Gmail consolidado verificado",
-            body: "Vinte e quatro mensagens da janela foram recuperadas e lidas. Promoções, duplicatas e relatórios internos repetidos foram descartados ou consolidados."
+            body: "Quatorze mensagens da janela foram recuperadas e lidas; dois anexos jurídicos, somando 75 páginas, foram examinados."
           },
           {
             title: "Controle sem duplicidade",
-            body: "Novos fatos em processos e frentes recorrentes devem atualizar o registro original; controles novos são reservados a obrigações realmente novas."
+            body: "Alertas repetidos e frentes recorrentes atualizam registros existentes; controles novos ficam restritos a obrigações efetivamente novas."
           },
           {
             title: "Limites",
-            body: "Sem chat corporativo conectado. Inteiro teor, sigilo, representação, termo inicial, feriados, prazos fatais e recibos exigem conferência oficial."
+            body: "Sem chat corporativo conectado. Datas, inteiro teor, representação, sigilo, termo inicial, feriados e recibos exigem conferência oficial."
           },
           {
             title: "Privacidade",
-            body: "Esta página pública omite processos, partes, valores, saúde, contatos e referências internas; o detalhamento permanece no e-mail e no Notion."
+            body: "Esta página pública omite números processuais, nomes, valores, saúde, contatos e links internos; detalhes permanecem no e-mail e no Notion."
           }
         ]
       };
+
 
       const chip = (text, variant) => html`<span className=${`chip ${variant}`}>${text}</span>`;
 
@@ -678,7 +693,7 @@
                     <div className="brand-name">Petrônio Souza Advogados Associados</div>
                   </div>
                 </div>
-                <h1>Controle antes da semana ganhar velocidade.</h1>
+                <h1>24 horas que pedem decisão, não só leitura.</h1>
                 <p className="hero-copy">${briefing.executiveLead}</p>
                 <p className="hero-copy" style=${{ marginTop: "10px" }}>${briefing.executiveBody}</p>
               </div>
@@ -722,7 +737,7 @@
                     <h2>Prioridades críticas</h2>
                   </div>
                   <div className="head-note">
-                    Ordem por risco jurídico, continuidade operacional e impacto financeiro.
+                    O recorte abaixo prioriza o que pode alterar segurança, prazo, caixa ou preparo do dia.
                   </div>
                 </div>
                 <div className="list">
@@ -744,11 +759,11 @@
               <section className="panel">
                 <div className="panel-head">
                   <div>
-                    <div className="eyebrow">Hoje na agenda</div>
+                    <div className="eyebrow">Próximas 48 horas</div>
                     <h2>Reuniões e preparação essencial</h2>
                   </div>
                   <div className="head-note">
-                    Horários em America/Sao_Paulo; nenhuma reunião profissional no período.
+                    O dia 09/09 concentra quatro compromissos jurídicos e uma sobreposição às 09:00.
                   </div>
                 </div>
                 <div className="timeline">
@@ -777,7 +792,7 @@
                     <h2>E-mails que realmente mexem no dia</h2>
                   </div>
                   <div className="head-note">
-                    Sinais repetidos foram consolidados; ruído promocional foi excluído.
+                    Itens promocionais e avisos sem efeito executivo foram excluídos.
                   </div>
                 </div>
                 <div className="list">
@@ -862,14 +877,13 @@
 
           <section className="footer">
             <div className="footer-note">
-              <strong>Leitura principal:</strong> o maior retorno desta manhã está em recuperar a confiança
-              do controle: abrir publicações, preservar recibos, validar cobranças e manter mudanças técnicas
-              bloqueadas até os gates de segurança passarem.
+              <strong>Leitura principal:</strong> o maior retorno desta manhã está em distribuir os atos
+              de 09/09, antecipar a resposta ao laudo e ao recurso e eliminar dependências sem recibo.
             </div>
             <div className="footer-note">
-              <strong>Metodologia:</strong> Gmail consolidado, Google Calendar, Notion, memória de deduplicação,
-              Manual de Marca e HTML aprovado. A versão pública é sanitizada; detalhes operacionais ficam nos
-              canais privados do escritório.
+              <strong>Metodologia:</strong> Gmail consolidado, Google Calendar, Notion, memória de
+              deduplicação, Manual de Marca e HTML aprovado. A versão pública é sanitizada; detalhes
+              operacionais permanecem nos canais privados.
             </div>
           </section>
         </main>
