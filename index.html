@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#11191F" />
-  <title>Briefing Executivo | 11 de setembro de 2026</title>
+  <title>Briefing Executivo | 12 de setembro de 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -24,38 +24,95 @@
   import htm from "https://esm.sh/htm@3.1.1";
   const html=htm.bind(React.createElement);
   const data={
-    priorities:[
-      ["Prazo vencido ainda sem segunda conferência","Alerta reiterado após o vencimento de 10/09. Abrir o ato oficial, localizar peça e recibo e obter validação independente imediatamente.","Crítico"],
-      ["Demanda urgente de cliente com risco de medida liminar","Houve dois pedidos de providência e confirmação de protocolo durante a noite. Responder, validar os autos e definir a reação processual com registro do retorno.","Crítico"],
-      ["Licença do sistema jurídico sob risco de desativação","Fornecedor condicionou a manutenção do cadastro à regularização financeira no dia. Confirmar contrato, cobrança e continuidade operacional.","Alto"],
-      ["Certificado digital deve ser instalado e testado","A credencial renovada precisa ser validada nos sistemas judiciais antes da expiração da anterior, com guarda segura dos dados de revogação.","Alto"]
+    "priorities": [
+      [
+        "Prazo com vencimento hoje ainda sem prova de revisão independente",
+        "Vinte e um alertas automáticos foram consolidados em três conversas. A data objetiva é hoje, embora parte dos avisos use a expressão 'amanhã'. Confirmar o marco no sistema oficial, concluir a revisão por quatro olhos e preservar o recibo.",
+        "Crítico"
+      ],
+      [
+        "Cliente enviou nova prova após protocolo urgente",
+        "A petição de reação foi protocolada e comunicada, mas chegaram documentos adicionais sobre fato sensível que podem justificar aditamento. É preciso analisar os anexos, decidir a utilidade processual e retornar com cronograma.",
+        "Crítico"
+      ],
+      [
+        "Intimações e documentos fechados pedem leitura oficial",
+        "Há publicação marcada para o próximo dia útil, despacho com intimação, múltiplos decursos e documentos sigilosos. O e-mail não revela comando, destinatário ou prazo final.",
+        "Alto"
+      ],
+      [
+        "Continuidade digital e financeira segue exposta",
+        "Certificado digital com expiração hoje, licença do sistema jurídico em risco e crédito relevante sem origem formal exigem validação e evidência de regularização.",
+        "Alto"
+      ]
     ],
-    legal:[
-      ["Publicações e atos novos","Cinco publicações foram consolidadas em dois processos: uma abriu prazo de 15 dias para resposta recursal e outra confirmou audiência virtual em 17/09 às 09:14, além de despacho intermediário."],
-      ["Sessão recursal próxima","Processo incluído em pauta para 14/09 às 10:00. Conferir sessão, estratégia, representação e eventual providência de destaque ou sustentação antes do fim do dia útil."],
-      ["Protocolos a validar","Duas manifestações sigilosas foram juntadas. Em ambos os casos, confirmar autoria, tempestividade, integridade e recibo antes de considerar os controles concluídos."],
-      ["Conclusões e despacho criminal","Um agravo foi concluso para decisão e uma ação penal foi conclusa para despacho com novo documento. Abrir os autos e recalibrar o monitoramento."],
-      ["Processo sem andamento há 90 dias","O alerta automático persiste. Confirmar se a resposta pendente foi protocolada e definir impulso, evitando que repetição de alerta substitua ação efetiva."]
+    "legal": [
+      [
+        "Dezesseis frentes jurídicas com sinal direto",
+        "A janela reuniu prazos, publicações, intimações, decursos, conclusões, documentos sigilosos e juntada de alvará. Os registros detalhados foram atualizados no controle interno."
+      ],
+      [
+        "Publicação no próximo dia útil",
+        "Uma intimação foi disponibilizada e indicada como publicada na segunda-feira. Abrir o inteiro teor, identificar destinatário e comando e calcular a data final no calendário oficial."
+      ],
+      [
+        "Quatro decursos em matéria de saúde",
+        "O sistema registrou expiração simultânea para vários polos. A prioridade é identificar a parte representada e o efeito concreto antes de definir qualquer resposta."
+      ],
+      [
+        "Despejo com nova prova do cliente",
+        "O protocolo urgente foi confirmado; documentos complementares chegaram depois. A decisão agora é técnica: aditar, preservar para outra medida ou responder justificadamente ao cliente."
+      ],
+      [
+        "Sinais de sistemas em conflito",
+        "Um processo apontado como parado recebeu conclusão para despacho no mesmo dia. A Controladoria também indicou zero prazos, em desacordo com os alertas efetivamente recebidos."
+      ],
+      [
+        "Alvará e crédito não conciliados",
+        "Houve juntada de alvará e, separadamente, registro de entrada bancária sem remetente formal. Valores e origem devem ser conciliados antes de baixa, repasse ou prestação de contas."
+      ]
     ],
-    actions:[
-      ["Fechar o prazo vencido e a revisão por quatro olhos","Responsável: Dr. Petrônio / segundo advogado · agora"],
-      ["Responder ao cliente e documentar estratégia e protocolo","Responsável: Dr. Petrônio · início da manhã"],
-      ["Preparar a contraminuta do recurso especial","Responsável: Dr. Petrônio · bloco 09:00-10:00"],
-      ["Regularizar o Projuris e testar o certificado digital","Responsável: administrativo / Dr. Petrônio · hoje"],
-      ["Conciliar entrada financeira relevante e pagamento de energia","Responsável: financeiro · hoje"],
-      ["Corrigir a divergência entre Controladoria, Agenda e Gmail","Responsável: operações · prioridade alta"]
+    "actions": [
+      [
+        "Confirmar o prazo de hoje, obter quatro olhos e arquivar o recibo",
+        "Responsável: Dr. Petrônio / segundo advogado · imediato"
+      ],
+      [
+        "Revisar os novos documentos do cliente e decidir eventual aditamento",
+        "Responsável: Dr. Petrônio · manhã"
+      ],
+      [
+        "Abrir intimações, despachos e documentos sigilosos prioritários",
+        "Responsável: jurídico · primeira janela útil"
+      ],
+      [
+        "Instalar e testar o certificado digital nos sistemas judiciais",
+        "Responsável: Dr. Petrônio / suporte · hoje"
+      ],
+      [
+        "Regularizar a licença do sistema jurídico e testar continuidade",
+        "Responsável: administrativo · hoje"
+      ],
+      [
+        "Identificar a origem do crédito e reconciliar o alvará separadamente",
+        "Responsável: financeiro · hoje"
+      ],
+      [
+        "Corrigir os falsos negativos da Controladoria e do monitor de parados",
+        "Responsável: operações · alta"
+      ]
     ]
   };
   const Chip=({level})=>html`<span className=${"chip "+(level==="Crítico"?"critical":level==="Alto"?"high":"watch")}>${level}</span>`;
   const Panel=({eyebrow,title,note,children})=>html`<section className="panel"><div className="panel-head"><div><div className="eyebrow">${eyebrow}</div><h2>${title}</h2></div>${note&&html`<div className="head-note">${note}</div>`}</div>${children}</section>`;
   function App(){return html`<div className="page">
-    <header className="hero fade"><div className="hero-grid"><div><div className="brand"><div className="mark">PS</div><div><div className="kicker">Inteligência jurídica e operacional</div><div className="brand-name">Petrônio Souza Advogados Associados</div></div></div><h1>Briefing executivo</h1><p className="hero-copy">A manhã combina risco processual imediato, demanda sensível de cliente e continuidade de sistemas. O foco é fechar evidências de protocolo, confirmar os atos oficiais e proteger os canais de trabalho antes de avançar para a preparação recursal.</p></div><div className="hero-side"><div className="glass"><div className="label">Gerado em</div><strong>11 de setembro de 2026 · 07:14 BRT</strong><p>America/Sao_Paulo</p></div><div className="glass"><div className="label">Janela verificada</div><strong>10/09 07:14 → 11/09 07:14</strong><p>Agenda prospectiva até 13/09 07:14</p></div><div className="glass"><div className="label">Atenção executiva</div><strong>Prazo vencido, cliente urgente e risco de desativação</strong><p>Três frentes exigem evidência de encerramento ainda pela manhã.</p></div></div></div></header>
-    <section className="metrics fade d2"><div className="metric"><div className="label">Mensagens</div><b>76</b><span>26 conversas após consolidação</span></div><div className="metric"><div className="label">Alertas repetidos</div><b>42</b><span>agrupados em três threads</span></div><div className="metric"><div className="label">Eventos passados</div><b>4</b><span>na janela de 24 horas</span></div><div className="metric"><div className="label">Próximas 48h</div><b>1</b><span>compromisso operacional</span></div><div className="metric"><div className="label">Publicações</div><b>5</b><span>consolidadas em dois processos</span></div></section>
+    <header className="hero fade"><div className="hero-grid"><div><div className="brand"><div className="mark">PS</div><div><div className="kicker">Inteligência jurídica e operacional</div><div className="brand-name">Petrônio Souza Advogados Associados</div></div></div><h1>Briefing executivo</h1><p className="hero-copy">A manhã pede fechamento de evidências: confirmar um prazo com vencimento hoje, decidir o uso de novos documentos em demanda sensível e proteger certificado, sistema jurídico e conciliação financeira. A agenda formal está livre nas próximas 48 horas, abrindo espaço para saneamento concentrado.</p></div><div className="hero-side"><div className="glass"><div className="label">Gerado em</div><strong>12 de setembro de 2026 · 07:14 BRT</strong><p>America/Sao_Paulo</p></div><div className="glass"><div className="label">Janela verificada</div><strong>11/09 07:14 → 12/09 07:14</strong><p>Agenda prospectiva até 14/09 07:14</p></div><div className="glass"><div className="label">Atenção executiva</div><strong>Prazo hoje, nova prova e continuidade operacional</strong><p>Conclusão só com ato oficial, segunda conferência e comprovante preservado.</p></div></div></div></header>
+    <section className="metrics fade d2"><div className="metric"><div className="label">Mensagens</div><b>53</b><span>32 conversas após consolidação</span></div><div className="metric"><div className="label">Alertas repetidos</div><b>21</b><span>agrupados em três threads</span></div><div className="metric"><div className="label">Frentes jurídicas</div><b>16</b><span>com sinal direto na janela</span></div><div className="metric"><div className="label">Próximas 48h</div><b>0</b><span>sem eventos na Agenda formal</span></div><div className="metric"><div className="label">Controles Notion</div><b>20</b><span>19 atualizados e 1 criado</span></div></section>
     <div className="layout fade d3"><div className="stack"><${Panel} eyebrow="Agora" title="Prioridades críticas" note="Ordenadas por prazo, impacto jurídico e continuidade operacional"><div className="list">${data.priorities.map(x=>html`<article className="item"><h3>${x[0]}</h3><p>${x[1]}</p><div className="chips"><${Chip} level=${x[2]}/></div></article>`)}</div></${Panel}>
     <${Panel} eyebrow="Radar jurídico" title="Movimentos e preparação" note="Resumo sanitizado para publicação"><div className="list">${data.legal.map((x,i)=>html`<article className="item"><h3>${x[0]}</h3><p>${x[1]}</p><div className="chips"><${Chip} level=${i<2?"Alto":"Monitorar"}/></div></article>`)}</div></${Panel}></div>
-    <div className="stack"><${Panel} eyebrow="Agenda" title="Próximas 48 horas" note="Compromissos confirmados na Agenda Google"><div className="list"><article className="event"><div className="when">Hoje<br/>09:00-10:00</div><div><h3>Bloco de prazo recursal</h3><p>Finalizar a minuta, conferir requisitos, obter revisão por quatro olhos e custodiar o recibo. Não há outros eventos na Agenda até 13/09 às 07:14.</p></div></article></div></${Panel}>
+    <div className="stack"><${Panel} eyebrow="Agenda" title="Próximas 48 horas" note="Compromissos confirmados na Agenda Google"><div className="list"><article className="event"><div className="when">Janela<br/>livre</div><div><h3>Nenhum evento localizado</h3><p>A Agenda formal não contém compromissos entre 12/09 às 07:14 e 14/09 às 07:14. Use o intervalo para fechar prazos, documentos, sistemas e conciliações pendentes.</p></div></article></div></${Panel}>
     <${Panel} eyebrow="Execução" title="Próximas ações" note="Ações abertas; conclusão depende de evidência"><div className="list">${data.actions.map(x=>html`<article className="todo"><div className="box"></div><div><h3>${x[0]}</h3><p>${x[1]}</p></div></article>`)}</div></${Panel}>
-    <${Panel} eyebrow="Operações" title="Sinais complementares"><div className="list"><article className="item"><h3>Controladoria segue divergente</h3><p>O resumo automático informou ausência de prazos e agenda, enquanto Gmail e Agenda confirmam prazo vencido, prazo próximo, sessão e audiência futura. Não usar o “zero” como baixa.</p></article><article className="item"><h3>CRM sem pastas pendentes</h3><p>Relatório matinal confirmou zero clientes aguardando criação de pasta.</p></article><article className="item"><h3>Financeiro requer conciliação</h3><p>Entrada relevante, pagamento de energia e notas fiscais foram identificados. Confirmar origem, competência, baixa e documentação contábil.</p></article></div></${Panel}></div></div>
-    <footer className="footer"><div className="foot"><strong>Cobertura verificada.</strong> Gmail consolidado integralmente revisado dentro da janela; Agenda revisada nas últimas 24 horas e nas próximas 48 horas. Não há conector de chat corporativo.</div><div className="foot"><strong>Limite de evidência.</strong> Inteiro teor, representação, sigilo, termo inicial, feriados, prazo fatal e recibos devem ser confirmados nos sistemas oficiais. Esta versão pública omite dados sensíveis.</div></footer>
+    <${Panel} eyebrow="Operações" title="Sinais complementares"><div className="list"><article className="item"><h3>Controladoria zerada não autoriza baixa</h3><p>O resumo automático informou ausência de contas, prazos e agenda. Gmail e sistemas processuais, porém, confirmam prazo hoje e diversos atos novos. O zero deve ser tratado como falso negativo até correção.</p></article><article className="item"><h3>CRM sem pastas pendentes</h3><p>O relatório matinal confirmou que não há clientes aguardando criação de pasta no Drive.</p></article><article className="item"><h3>Horizonte adjacente</h3><p>Relatório interno cita compromisso jurídico para a manhã de segunda-feira, fora do corte estrito das próximas 48 horas. Conferir e preparar antes do início do expediente.</p></article></div></${Panel}></div></div>
+    <footer className="footer"><div className="foot"><strong>Cobertura verificada.</strong> As 53 mensagens da janela foram consolidadas em 32 conversas; a Agenda foi auditada das 24 horas passadas até as 48 horas futuras. Não há conector de chat corporativo.</div><div className="foot"><strong>Limite de evidência.</strong> Inteiro teor, representação, sigilo, termo inicial, feriados, prazo fatal e recibos devem ser confirmados nos sistemas oficiais. Esta versão pública omite dados sensíveis.</div></footer>
   </div>`}createRoot(document.getElementById("root")).render(html`<${App}/>`);
 </script></body></html>
